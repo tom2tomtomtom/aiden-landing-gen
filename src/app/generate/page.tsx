@@ -3,11 +3,9 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import LandingPageForm from '@/components/LandingPageForm'
-import LandingPagePreview, { GeneratedContent } from '@/components/LandingPagePreview'
-import CopyScore from '@/components/CopyScore'
+import BriefAnalysis, { BriefAnalysisData } from '@/components/BriefAnalysis'
 import ErrorBoundary from '@/components/ErrorBoundary'
 import { ToastProvider, useToast } from '@/components/Toast'
-import { TemplateId, DEFAULT_TEMPLATE_ID } from '@/lib/templates'
 import { createClient } from '@/lib/supabase/client'
 
 type Status = 'idle' | 'loading' | 'done' | 'error' | 'unauthenticated'
@@ -30,32 +28,20 @@ export default function GeneratePage() {
 function GeneratePageInner() {
   const { showToast } = useToast()
   const [status, setStatus] = useState<Status>('idle')
-  const [generatedData, setGeneratedData] = useState<GeneratedContent | null>(null)
+  const [analysisData, setAnalysisData] = useState<BriefAnalysisData | null>(null)
   const [generationId, setGenerationId] = useState<string | null>(null)
   const [apiError, setApiError] = useState<string | null>(null)
-  const [productName, setProductName] = useState('')
-  const [activeTemplateId, setActiveTemplateId] = useState<TemplateId>(DEFAULT_TEMPLATE_ID)
-  const [isPaidUser, setIsPaidUser] = useState(false)
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null)
   const [isFormFilled, setIsFormFilled] = useState(false)
   const [lastFormData, setLastFormData] = useState<GenerateFormData | null>(null)
 
   useEffect(() => {
-    async function checkPlan() {
+    async function checkAuth() {
       const supabase = createClient()
       const { data: { user } } = await supabase.auth.getUser()
       setIsAuthenticated(!!user)
-      if (!user) return
-      const { data } = await supabase
-        .from('subscriptions')
-        .select('plan')
-        .eq('user_id', user.id)
-        .single()
-      if (data?.plan === 'pro' || data?.plan === 'single') {
-        setIsPaidUser(true)
-      }
     }
-    checkPlan()
+    checkAuth()
   }, [])
 
   async function handleGenerate(formData: GenerateFormData) {
@@ -65,26 +51,30 @@ function GeneratePageInner() {
     }
     setStatus('loading')
     setApiError(null)
-    setProductName(formData.brandName ?? '')
     setLastFormData(formData)
 
     try {
-      const response = await fetch('/api/generate', {
+      const response = await fetch('/api/analyze-brief', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          briefText: formData.briefText,
+          brandName: formData.brandName,
+          industry: formData.industry,
+          briefType: formData.briefType,
+        }),
       })
 
       if (!response.ok) {
         const err = await response.json()
-        throw new Error(err.error || 'Generation failed')
+        throw new Error(err.error || 'Analysis failed')
       }
 
       const { generationId: newGenerationId, ...data } = await response.json()
-      setGeneratedData(data as GeneratedContent)
+      setAnalysisData(data as BriefAnalysisData)
       setGenerationId(newGenerationId ?? null)
       setStatus('done')
-      showToast('Landing page generated!')
+      showToast('Brief analysis complete!')
     } catch (err) {
       setApiError(err instanceof Error ? err.message : 'Something went wrong. Please try again.')
       setStatus('error')
@@ -102,7 +92,7 @@ function GeneratePageInner() {
               AIDEN
             </Link>
             <p className="mt-0.5 text-sm text-gray-500">
-              Describe your product and get high-converting copy instantly.
+              AI-powered brief intelligence.
             </p>
           </div>
           <Link href="/pricing" className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors">
@@ -126,11 +116,11 @@ function GeneratePageInner() {
             </div>
           </div>
 
-          {/* Right: Preview / Loading / Empty */}
+          {/* Right: Analysis / Loading / Empty */}
           <div className="min-w-0 flex-1">
             {status === 'loading' && <LoadingState />}
             {status === 'unauthenticated' && <AuthPrompt />}
-            {status === 'done' && generatedData && (
+            {status === 'done' && analysisData && (
               <div>
                 <div className="mb-4 flex items-center justify-between rounded-xl border border-gray-200 bg-white px-4 py-3 shadow-sm sticky top-0 z-10">
                   <div className="flex items-center gap-3">
@@ -142,7 +132,7 @@ function GeneratePageInner() {
                       Regenerate
                     </button>
                     <button
-                      onClick={() => { setGeneratedData(null); setGenerationId(null); setStatus('idle'); setLastFormData(null) }}
+                      onClick={() => { setAnalysisData(null); setGenerationId(null); setStatus('idle'); setLastFormData(null) }}
                       className="text-xs font-medium text-gray-500 hover:text-gray-700 transition-colors"
                     >
                       Start over
@@ -152,18 +142,17 @@ function GeneratePageInner() {
                     <span className="text-xs text-gray-400">ID: {generationId.slice(0, 8)}</span>
                   )}
                 </div>
-                <LandingPagePreview data={generatedData} productName={productName} templateId={activeTemplateId} isPaidUser={isPaidUser} onToast={showToast} />
-                <CopyScore data={generatedData} />
+                <BriefAnalysis data={analysisData} />
               </div>
             )}
-            {(status === 'idle' || status === 'error') && !generatedData && (
+            {(status === 'idle' || status === 'error') && !analysisData && (
               <EmptyPreview />
             )}
-            {status === 'done' && !generatedData && <EmptyPreview />}
+            {status === 'done' && !analysisData && <EmptyPreview />}
           </div>
         </div>
       </div>
-      {/* Sticky mobile generate button */}
+      {/* Sticky mobile interrogate button */}
       {isFormFilled && (
         <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-gray-200 bg-white p-4 shadow-lg lg:hidden">
           <button
@@ -175,10 +164,10 @@ function GeneratePageInner() {
             {status === 'loading' ? (
               <>
                 <span className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
-                Generating…
+                Interrogating…
               </>
             ) : (
-              'Generate landing page'
+              'Interrogate brief'
             )}
           </button>
         </div>
@@ -188,11 +177,11 @@ function GeneratePageInner() {
   )
 }
 
-const GENERATION_STEPS = [
-  { label: 'Analyzing your product' },
-  { label: 'Writing headlines' },
-  { label: 'Generating features and FAQ' },
-  { label: 'Polishing copy' },
+const ANALYSIS_STEPS = [
+  { label: 'Reading your brief' },
+  { label: 'Extracting key elements' },
+  { label: 'Identifying gaps' },
+  { label: 'Building strategic analysis' },
 ]
 
 function LoadingState() {
@@ -208,9 +197,9 @@ function LoadingState() {
 
   return (
     <div className="flex flex-col items-center justify-center rounded-2xl border border-gray-200 bg-white py-24 px-8 text-center shadow-sm">
-      <p className="mb-8 text-base font-semibold text-gray-800">Generating your landing page…</p>
+      <p className="mb-8 text-base font-semibold text-gray-800">Interrogating your brief…</p>
       <ol className="w-full max-w-xs space-y-4 text-left">
-        {GENERATION_STEPS.map((step, i) => {
+        {ANALYSIS_STEPS.map((step, i) => {
           const isDone = i < currentStep
           const isActive = i === currentStep
           const isPending = i > currentStep
@@ -260,9 +249,9 @@ function AuthPrompt() {
           />
         </svg>
       </div>
-      <h2 className="mt-4 text-lg font-semibold text-gray-900">Sign up free to generate your page</h2>
+      <h2 className="mt-4 text-lg font-semibold text-gray-900">Sign up free to interrogate your brief</h2>
       <p className="mt-2 text-sm text-gray-600 max-w-xs">
-        Get 3 free generations per month. No credit card required.
+        Get 3 free analyses per month. No credit card required.
       </p>
       <Link
         href="/login?redirect=/generate"
@@ -299,8 +288,8 @@ function EmptyPreview() {
           />
         </svg>
       </div>
-      <p className="mt-4 text-sm font-medium text-gray-700">Your preview will appear here</p>
-      <p className="mt-1 text-xs text-gray-400">Fill in the form and click Generate</p>
+      <p className="mt-4 text-sm font-medium text-gray-700">Paste your brief for AIDEN interrogation</p>
+      <p className="mt-1 text-xs text-gray-400">Fill in the form and click Interrogate</p>
     </div>
   )
 }

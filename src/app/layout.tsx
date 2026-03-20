@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { validateEnvOnStartup } from '@/lib/env'
 import './globals.css'
+
+validateEnvOnStartup()
 
 const siteUrl = process.env.NEXT_PUBLIC_URL || 'https://aiden.services'
 

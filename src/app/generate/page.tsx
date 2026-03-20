@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import LandingPageForm from '@/components/LandingPageForm'
 import LandingPagePreview, { GeneratedContent } from '@/components/LandingPagePreview'
+import ErrorBoundary from '@/components/ErrorBoundary'
 import { TemplateId, DEFAULT_TEMPLATE_ID } from '@/lib/templates'
 import { createClient } from '@/lib/supabase/client'
 
@@ -79,6 +80,7 @@ export default function GeneratePage() {
   }
 
   return (
+    <ErrorBoundary>
     <main className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="border-b border-gray-200 bg-white px-4 py-4 sm:px-6 lg:px-8">
@@ -126,6 +128,7 @@ export default function GeneratePage() {
         </div>
       </div>
     </main>
+    </ErrorBoundary>
   )
 }
 

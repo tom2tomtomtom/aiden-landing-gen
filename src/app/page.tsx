@@ -1,6 +1,20 @@
 import Link from 'next/link'
 import FAQAccordion from '@/components/FAQAccordion'
 import TryDemoSection from '@/components/TryDemoSection'
+import type { StatsResponse } from '@/app/api/stats/route'
+
+async function getStats(): Promise<StatsResponse> {
+  try {
+    const vercelUrl = process.env.VERCEL_URL
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+    const baseUrl = siteUrl ?? (vercelUrl ? `https://${vercelUrl}` : 'http://localhost:3000')
+    const res = await fetch(`${baseUrl}/api/stats`, { next: { revalidate: 300 } })
+    if (!res.ok) throw new Error('Stats fetch failed')
+    return res.json() as Promise<StatsResponse>
+  } catch {
+    return { briefCount: 0, avgScore: 72, gapCount: 0 }
+  }
+}
 
 const steps = [
   {
@@ -55,7 +69,9 @@ const gapTypes = [
   { icon: '🔗', title: 'No single-minded proposition', description: 'Briefs that try to say five things say nothing. AIDEN isolates the one thing worth saying and builds a brief around it.' },
 ]
 
-export default function MarketingPage() {
+export default async function MarketingPage() {
+  const stats = await getStats()
+
   return (
     <main className="min-h-screen bg-white">
       {/* Nav */}
@@ -81,6 +97,27 @@ export default function MarketingPage() {
           </div>
         </div>
       </nav>
+
+      {/* Live stats bar */}
+      {stats.briefCount > 0 && (
+        <section className="border-b border-indigo-100 bg-indigo-600 py-2.5">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-1 text-sm font-medium text-indigo-100">
+              <span>
+                <span className="font-bold text-white">{stats.briefCount.toLocaleString()}</span> briefs interrogated
+              </span>
+              <span className="hidden sm:inline text-indigo-400">·</span>
+              <span>
+                Average score: <span className="font-bold text-white">{stats.avgScore}/100</span>
+              </span>
+              <span className="hidden sm:inline text-indigo-400">·</span>
+              <span>
+                <span className="font-bold text-white">{stats.gapCount.toLocaleString()}</span> gaps found
+              </span>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Hero */}
       <section className="bg-gradient-to-b from-indigo-50 to-white px-4 pt-20 pb-24 sm:px-6 lg:px-8">
@@ -115,11 +152,25 @@ export default function MarketingPage() {
         </div>
       </section>
 
-      {/* Social proof bar */}
-      <section className="border-y border-gray-100 bg-gray-50 py-5">
-        <p className="text-center text-sm font-medium text-gray-500">
-          Used by strategists, planners, and creative directors &nbsp;·&nbsp; 340+ creative phantoms &nbsp;·&nbsp; Built with Claude AI
-        </p>
+      {/* Trust badges */}
+      <section className="border-y border-gray-100 bg-gray-50 py-6">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {[
+              { label: 'Powered by AIDEN Brain V2' },
+              { label: '340+ Creative Phantoms' },
+              { label: 'Used by agencies and brands' },
+              { label: 'Built with Claude AI' },
+            ].map(({ label }) => (
+              <span
+                key={label}
+                className="rounded-full border border-gray-200 bg-white px-4 py-1.5 text-xs font-medium text-gray-600 shadow-sm"
+              >
+                {label}
+              </span>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* How it works */}

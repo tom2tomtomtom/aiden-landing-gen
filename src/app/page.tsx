@@ -1,20 +1,32 @@
 import Link from 'next/link'
 
+const demoInput = {
+  productName: 'FlowDesk',
+  tagline: 'Project management for async-first remote teams',
+  audience: 'Startup founders and distributed engineering teams',
+  features: 'Smart task automation, time-zone aware scheduling, async video updates, one-click standups',
+  template: 'SaaS',
+  tone: 'Professional but approachable',
+}
+
 const demoOutput = {
-  headline: 'Ship landing pages in minutes, not days',
-  subheadline: 'Describe your product. AIDEN writes conversion-optimised copy and delivers a ready-to-publish page.',
+  headline: 'Ship projects faster — without the 9am standup',
+  subheadline: 'FlowDesk keeps your remote team in sync across time zones. Automate the busywork. Focus on the work that ships.',
   features: [
-    { title: 'AI-generated copy', description: 'Claude writes headlines, feature blurbs, and FAQs tailored to your product and tone.' },
-    { title: '5 battle-tested templates', description: 'SaaS, agency, freelancer, e-commerce, local business — pick a style and go.' },
-    { title: 'One-click HTML export', description: 'Download a self-contained HTML file ready to drop into any host.' },
+    { icon: '⚡', title: 'Smart task automation', description: 'Recurring tasks, status updates, and blockers handled automatically so you never miss a deadline.' },
+    { icon: '🌍', title: 'Time-zone aware scheduling', description: 'FlowDesk knows where your team is. Meetings, reviews, and reminders land at the right local time — always.' },
+    { icon: '🎬', title: 'Async video updates', description: 'Replace status meetings with 90-second video updates your team can watch when they\'re ready.' },
   ],
   faq: [
-    { question: 'Does the copy actually convert?', answer: 'AIDEN uses proven copywriting frameworks — AIDA, benefit-led headlines, social proof — so the output is structured to convert from day one.' },
-    { question: 'Can I edit the output?', answer: 'Yes. Download the HTML file and edit it in any code editor or drag it into Webflow, Framer, or Notion.' },
+    { question: 'Does it work for teams spread across many time zones?', answer: 'Absolutely. FlowDesk was built for async-first teams. Every feature — from scheduling to notifications — is designed around time-zone awareness.' },
+    { question: 'How is FlowDesk different from Jira or Linear?', answer: 'FlowDesk automates the coordination layer that tools like Jira leave to humans. Less ceremony, more shipping.' },
   ],
-  cta: 'Generate My Landing Page',
-  socialProof: '1,200+ founders and freelancers trust AIDEN',
+  cta: 'Start your free 14-day trial',
+  socialProof: 'Trusted by 800+ remote engineering teams',
+  badge: 'AI-generated in 8 seconds',
 }
+
+const socialProofText = '1,200+ founders and freelancers trust AIDEN'
 
 const steps = [
   {
@@ -120,7 +132,7 @@ export default function MarketingPage() {
       {/* Social proof bar */}
       <section className="border-y border-gray-100 bg-gray-50 py-5">
         <p className="text-center text-sm font-medium text-gray-500">
-          {demoOutput.socialProof} &nbsp;·&nbsp; Built with Claude AI &nbsp;·&nbsp; Export to HTML in one click
+          {socialProofText} &nbsp;·&nbsp; Built with Claude AI &nbsp;·&nbsp; Export to HTML in one click
         </p>
       </section>
 
@@ -145,66 +157,129 @@ export default function MarketingPage() {
         </div>
       </section>
 
-      {/* Example output */}
+      {/* Before / After demo */}
       <section className="bg-gray-50 px-4 py-24 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-5xl">
-          <div className="text-center mb-12">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-14">
+            <span className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700 mb-4">
+              Live example
+            </span>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              See what AIDEN produces
+              From idea to landing page in seconds
             </h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Here is an example output for a SaaS product. Every section is AI-generated.
+            <p className="mt-4 text-lg text-gray-600 max-w-xl mx-auto">
+              Fill in the form. AIDEN writes the copy. Here&apos;s exactly what that looks like for a real SaaS product.
             </p>
           </div>
 
-          {/* Demo card */}
-          <div className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
-            {/* Demo hero */}
-            <div className="bg-gradient-to-r from-indigo-600 to-indigo-700 px-8 py-12 text-white text-center">
-              <p className="text-xs font-semibold uppercase tracking-widest text-indigo-300 mb-3">AI-generated headline</p>
-              <h3 className="text-3xl font-bold mb-3">{demoOutput.headline}</h3>
-              <p className="text-indigo-100 text-base max-w-xl mx-auto mb-6">{demoOutput.subheadline}</p>
-              <div className="inline-block rounded-lg bg-white px-6 py-2.5 text-sm font-semibold text-indigo-600">
-                {demoOutput.cta}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
+            {/* Input side */}
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-2 text-sm font-semibold text-gray-500 uppercase tracking-widest">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gray-200 text-xs font-bold text-gray-600">1</span>
+                You fill in the form
               </div>
-            </div>
-
-            {/* Demo features */}
-            <div className="px-8 py-10">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-6">AI-generated features</p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                {demoOutput.features.map((f) => (
-                  <div key={f.title} className="rounded-xl bg-indigo-50 p-5">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-1">{f.title}</h4>
-                    <p className="text-sm text-gray-600 leading-relaxed">{f.description}</p>
+              <div className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+                <div className="border-b border-gray-100 bg-gray-50 px-5 py-3 flex items-center gap-2">
+                  <span className="h-3 w-3 rounded-full bg-red-300" />
+                  <span className="h-3 w-3 rounded-full bg-yellow-300" />
+                  <span className="h-3 w-3 rounded-full bg-green-300" />
+                  <span className="ml-2 text-xs text-gray-400">aiden.so/generate</span>
+                </div>
+                <div className="px-6 py-6 space-y-5">
+                  {[
+                    { label: 'Product name', value: demoInput.productName },
+                    { label: 'Tagline', value: demoInput.tagline },
+                    { label: 'Target audience', value: demoInput.audience },
+                    { label: 'Key features', value: demoInput.features },
+                    { label: 'Template', value: demoInput.template },
+                    { label: 'Tone of voice', value: demoInput.tone },
+                  ].map((field) => (
+                    <div key={field.label}>
+                      <label className="block text-xs font-semibold text-gray-500 mb-1.5">{field.label}</label>
+                      <div className="rounded-lg border border-gray-200 bg-gray-50 px-3.5 py-2.5 text-sm text-gray-800">
+                        {field.value}
+                      </div>
+                    </div>
+                  ))}
+                  <div className="pt-2">
+                    <div className="w-full rounded-xl bg-indigo-600 py-3 text-center text-sm font-semibold text-white">
+                      Generate landing page ✨
+                    </div>
                   </div>
-                ))}
+                </div>
               </div>
             </div>
 
-            {/* Demo FAQ */}
-            <div className="border-t border-gray-100 px-8 py-8">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-6">AI-generated FAQ</p>
-              <div className="space-y-4">
-                {demoOutput.faq.map((item) => (
-                  <div key={item.question} className="rounded-lg border border-gray-100 bg-gray-50 p-5">
-                    <p className="text-sm font-semibold text-gray-900 mb-1">{item.question}</p>
-                    <p className="text-sm text-gray-600 leading-relaxed">{item.answer}</p>
+            {/* Output side */}
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2 text-sm font-semibold text-gray-500 uppercase tracking-widest">
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-indigo-600 text-xs font-bold text-white">2</span>
+                  AIDEN generates the page
+                </div>
+                <span className="rounded-full bg-green-100 px-2.5 py-1 text-xs font-semibold text-green-700">
+                  {demoOutput.badge}
+                </span>
+              </div>
+              <div className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+                <div className="border-b border-gray-100 bg-gray-50 px-5 py-3 flex items-center gap-2">
+                  <span className="h-3 w-3 rounded-full bg-red-300" />
+                  <span className="h-3 w-3 rounded-full bg-yellow-300" />
+                  <span className="h-3 w-3 rounded-full bg-green-300" />
+                  <span className="ml-2 text-xs text-gray-400">preview — FlowDesk landing page</span>
+                </div>
+
+                {/* Generated hero */}
+                <div className="bg-gradient-to-br from-indigo-700 via-indigo-600 to-violet-600 px-6 py-10 text-white text-center">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-indigo-300 mb-2">{demoOutput.socialProof}</p>
+                  <h3 className="text-2xl font-extrabold leading-tight mb-3">{demoOutput.headline}</h3>
+                  <p className="text-indigo-100 text-sm max-w-sm mx-auto mb-5 leading-relaxed">{demoOutput.subheadline}</p>
+                  <div className="inline-block rounded-lg bg-white px-5 py-2 text-sm font-semibold text-indigo-700 shadow-md">
+                    {demoOutput.cta}
                   </div>
-                ))}
+                </div>
+
+                {/* Generated features */}
+                <div className="px-6 py-7">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-5">Key features</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    {demoOutput.features.map((f) => (
+                      <div key={f.title} className="rounded-xl bg-indigo-50 p-4">
+                        <div className="text-xl mb-2">{f.icon}</div>
+                        <h4 className="text-xs font-semibold text-gray-900 mb-1">{f.title}</h4>
+                        <p className="text-xs text-gray-600 leading-relaxed">{f.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Generated FAQ */}
+                <div className="border-t border-gray-100 px-6 py-6">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">FAQ</p>
+                  <div className="space-y-3">
+                    {demoOutput.faq.map((item) => (
+                      <div key={item.question} className="rounded-lg border border-gray-100 bg-gray-50 px-4 py-4">
+                        <p className="text-xs font-semibold text-gray-900 mb-1">{item.question}</p>
+                        <p className="text-xs text-gray-600 leading-relaxed">{item.answer}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
 
-            {/* CTA inside demo */}
-            <div className="border-t border-gray-100 bg-gray-50 px-8 py-6 text-center">
-              <p className="text-sm text-gray-500 mb-3">Ready to generate yours?</p>
-              <Link
-                href="/generate"
-                className="inline-block rounded-xl bg-indigo-600 px-8 py-3 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors"
-              >
-                Sign up free — 3 free generations
-              </Link>
-            </div>
+          {/* CTA below demo */}
+          <div className="mt-12 text-center">
+            <p className="text-sm text-gray-500 mb-4">Your product. Your copy. Ready in under a minute.</p>
+            <Link
+              href="/generate"
+              className="inline-block rounded-xl bg-indigo-600 px-8 py-3.5 text-sm font-semibold text-white shadow-lg hover:bg-indigo-700 transition-colors"
+            >
+              Generate my landing page — free
+            </Link>
+            <p className="mt-3 text-xs text-gray-400">No credit card required</p>
           </div>
         </div>
       </section>

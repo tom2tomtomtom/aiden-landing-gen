@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { GenerateFormData } from '@/app/generate/page'
+import { GenerateFormData } from '@/app/generate/GenerateClient'
 
 const EXAMPLE_BRIEFS = [
   {

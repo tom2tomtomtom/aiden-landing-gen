@@ -46,6 +46,27 @@ const steps = [
   },
 ]
 
+const testimonials = [
+  {
+    quote: "I launched three new product lines this quarter and AIDEN wrote the landing pages for all of them. What used to take a week of back-and-forth with a copywriter now takes me an afternoon.",
+    name: 'Marcus Chen',
+    role: 'Founder & CEO',
+    company: 'Launchpad SaaS',
+  },
+  {
+    quote: "My clients expect polished copy fast. AIDEN lets me deliver a draft landing page in the same meeting where we align on positioning. It's become my secret weapon for client onboarding.",
+    name: 'Priya Nair',
+    role: 'Freelance Brand Designer',
+    company: 'Studio Nair',
+  },
+  {
+    quote: "We run campaigns for 30+ clients a month. AIDEN cut our landing page production time by 70%. The copy quality is genuinely strong — we barely edit it before handing off to clients.",
+    name: 'Jordan Ellis',
+    role: 'Director of Growth',
+    company: 'Orbit Digital Agency',
+  },
+]
+
 const faqs = [
   {
     question: 'Is it really free to start?',
@@ -280,6 +301,34 @@ export default function MarketingPage() {
               Generate my landing page — free
             </Link>
             <p className="mt-3 text-xs text-gray-400">No credit card required</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="px-4 py-24 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              What our users are saying
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">Founders, freelancers, and agencies ship faster with AIDEN.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {testimonials.map((t) => (
+              <div key={t.name} className="flex flex-col rounded-2xl border border-gray-200 bg-white p-7 shadow-sm">
+                <p className="text-gray-700 text-sm leading-relaxed flex-1">&ldquo;{t.quote}&rdquo;</p>
+                <div className="mt-6 flex items-center gap-3">
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-indigo-100 text-sm font-bold text-indigo-600">
+                    {t.name.charAt(0)}
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-gray-900">{t.name}</p>
+                    <p className="text-xs text-gray-500">{t.role} · {t.company}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

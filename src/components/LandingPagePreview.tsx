@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import { TemplateId, getTemplate, Template } from '@/lib/templates'
 
 export interface GeneratedContent {
@@ -352,10 +352,76 @@ function escapeHtml(str: string): string {
     .replace(/'/g, '&#39;')
 }
 
+// Copy icon SVG
+function CopyIcon() {
+  return (
+    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+    </svg>
+  )
+}
+
+// Check icon SVG
+function CheckIcon() {
+  return (
+    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+    </svg>
+  )
+}
+
+interface CopyButtonProps {
+  text: string
+  copiedKey: string | null
+  id: string
+  onCopy: (text: string, id: string) => void
+  light?: boolean
+}
+
+function CopyButton({ text, copiedKey, id, onCopy, light = false }: CopyButtonProps) {
+  const copied = copiedKey === id
+  return (
+    <button
+      onClick={(e) => {
+        e.stopPropagation()
+        onCopy(text, id)
+      }}
+      className={`
+        inline-flex items-center gap-1 rounded px-1.5 py-1 text-xs font-medium
+        opacity-0 transition-opacity duration-150 group-hover:opacity-100
+        ${light
+          ? 'bg-white/20 text-white hover:bg-white/30'
+          : 'bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-gray-700'
+        }
+        ${copied ? (light ? 'opacity-100 bg-white/30' : 'opacity-100 bg-green-50 text-green-600') : ''}
+      `}
+      title="Copy to clipboard"
+      aria-label="Copy to clipboard"
+    >
+      {copied ? (
+        <>
+          <CheckIcon />
+          <span>Copied!</span>
+        </>
+      ) : (
+        <CopyIcon />
+      )}
+    </button>
+  )
+}
+
 export default function LandingPagePreview({ data, productName, templateId, isPaidUser = false }: LandingPagePreviewProps) {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
+  const [copiedKey, setCopiedKey] = useState<string | null>(null)
   const template = getTemplate(templateId)
   const theme = template.previewTheme
+
+  const handleCopy = useCallback((text: string, id: string) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setCopiedKey(id)
+      setTimeout(() => setCopiedKey(null), 2000)
+    })
+  }, [])
 
   function handleDownload() {
     const html = generateHtml(data, productName, template, isPaidUser)
@@ -388,18 +454,45 @@ export default function LandingPagePreview({ data, productName, templateId, isPa
         {/* Hero */}
         <section className={`${theme.heroGradient} px-6 py-16 text-center sm:px-12 sm:py-24`}>
           <div className="mx-auto max-w-3xl">
-            <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
-              {data.headline}
-            </h1>
-            <p className={`mx-auto mt-4 max-w-xl text-base sm:text-lg ${theme.heroSubtext}`}>
-              {data.subheadline}
-            </p>
-            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-              <button className={`w-full rounded-lg px-8 py-3 text-sm font-semibold shadow-md transition sm:w-auto ${theme.ctaButton}`}>
-                {data.cta}
-              </button>
+            {/* Headline */}
+            <div className="group relative inline-block">
+              <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
+                {data.headline}
+              </h1>
+              <div className="absolute -right-2 top-0 translate-x-full pl-1">
+                <CopyButton text={data.headline} copiedKey={copiedKey} id="headline" onCopy={handleCopy} light />
+              </div>
             </div>
-            <p className={`mt-4 text-xs sm:text-sm ${theme.heroSubtext} opacity-80`}>{data.socialProof}</p>
+
+            {/* Subheadline */}
+            <div className="group relative mx-auto mt-4 max-w-xl">
+              <p className={`text-base sm:text-lg ${theme.heroSubtext}`}>
+                {data.subheadline}
+              </p>
+              <div className="absolute -right-2 top-0 translate-x-full pl-1">
+                <CopyButton text={data.subheadline} copiedKey={copiedKey} id="subheadline" onCopy={handleCopy} light />
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+              <div className="group relative">
+                <button className={`w-full rounded-lg px-8 py-3 text-sm font-semibold shadow-md transition sm:w-auto ${theme.ctaButton}`}>
+                  {data.cta}
+                </button>
+                <div className="absolute -right-2 top-1/2 -translate-y-1/2 translate-x-full pl-1">
+                  <CopyButton text={data.cta} copiedKey={copiedKey} id="cta" onCopy={handleCopy} light />
+                </div>
+              </div>
+            </div>
+
+            {/* Social proof */}
+            <div className="group relative mx-auto mt-4 inline-block">
+              <p className={`text-xs sm:text-sm ${theme.heroSubtext} opacity-80`}>{data.socialProof}</p>
+              <div className="absolute -right-2 top-0 translate-x-full pl-1">
+                <CopyButton text={data.socialProof} copiedKey={copiedKey} id="socialProof" onCopy={handleCopy} light />
+              </div>
+            </div>
           </div>
         </section>
 
@@ -416,13 +509,21 @@ export default function LandingPagePreview({ data, productName, templateId, isPa
               {data.features.map((feature, i) => (
                 <div
                   key={i}
-                  className={`rounded-xl border border-gray-100 bg-gray-50 p-6 transition ${theme.featureHover}`}
+                  className={`group relative rounded-xl border border-gray-100 bg-gray-50 p-6 transition ${theme.featureHover}`}
                 >
                   <div className={`mb-3 flex h-10 w-10 items-center justify-center rounded-lg text-lg ${theme.featureIconBg}`}>
                     {FEATURE_ICONS[i % FEATURE_ICONS.length]}
                   </div>
                   <h3 className="text-sm font-semibold text-gray-900">{feature.title}</h3>
                   <p className="mt-1.5 text-sm leading-relaxed text-gray-600">{feature.description}</p>
+                  <div className="absolute right-3 top-3">
+                    <CopyButton
+                      text={`${feature.title}\n${feature.description}`}
+                      copiedKey={copiedKey}
+                      id={`feature-${i}`}
+                      onCopy={handleCopy}
+                    />
+                  </div>
                 </div>
               ))}
             </div>
@@ -437,7 +538,7 @@ export default function LandingPagePreview({ data, productName, templateId, isPa
             </h2>
             <div className="mt-8 divide-y divide-gray-200 rounded-xl border border-gray-200 bg-white shadow-sm">
               {data.faq.map((item, i) => (
-                <div key={i}>
+                <div key={i} className="group relative">
                   <button
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
                     className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
@@ -461,6 +562,14 @@ export default function LandingPagePreview({ data, productName, templateId, isPa
                       <p className="text-sm leading-relaxed text-gray-600">{item.answer}</p>
                     </div>
                   )}
+                  <div className="absolute right-10 top-3">
+                    <CopyButton
+                      text={`${item.question}\n${item.answer}`}
+                      copiedKey={copiedKey}
+                      id={`faq-${i}`}
+                      onCopy={handleCopy}
+                    />
+                  </div>
                 </div>
               ))}
             </div>

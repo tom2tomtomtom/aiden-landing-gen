@@ -41,6 +41,19 @@ function GeneratePageInner() {
   const [isFormFilled, setIsFormFilled] = useState(false)
   const [lastFormData, setLastFormData] = useState<GenerateFormData | null>(null)
   const [planInfo, setPlanInfo] = useState<PlanInfo | null>(null)
+  const [showWelcomeBanner, setShowWelcomeBanner] = useState(false)
+
+  useEffect(() => {
+    const hasVisited = localStorage.getItem('aiden_has_visited')
+    if (!hasVisited) {
+      setShowWelcomeBanner(true)
+      localStorage.setItem('aiden_has_visited', 'true')
+    }
+  }, [])
+
+  function dismissWelcomeBanner() {
+    setShowWelcomeBanner(false)
+  }
 
   useEffect(() => {
     async function checkAuth() {
@@ -136,6 +149,31 @@ function GeneratePageInner() {
           </Link>
         </div>
       </header>
+
+      {/* Welcome banner for first-time users */}
+      {showWelcomeBanner && (
+        <div className="border-b border-indigo-200 bg-indigo-50 px-4 py-3 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl flex items-center justify-between gap-4">
+            <div className="flex items-center gap-2">
+              <svg className="h-4 w-4 flex-shrink-0 text-indigo-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v4a1 1 0 102 0V7zm-1 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+              </svg>
+              <p className="text-sm font-medium text-indigo-800">
+                Welcome! Paste your creative brief and AIDEN will interrogate it for gaps, tensions, and strategic insights.
+              </p>
+            </div>
+            <button
+              onClick={dismissWelcomeBanner}
+              aria-label="Dismiss welcome banner"
+              className="flex-shrink-0 rounded p-1 text-indigo-400 hover:text-indigo-600 transition-colors"
+            >
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Usage warning banner */}
       {planInfo?.plan === 'free' && planInfo.used >= 2 && (

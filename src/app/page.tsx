@@ -315,6 +315,8 @@ export default function MarketingPage() {
             <Link href="/pricing" className="hover:text-gray-600 transition-colors">Pricing</Link>
             <Link href="/login" className="hover:text-gray-600 transition-colors">Log in</Link>
             <Link href="/generate" className="hover:text-gray-600 transition-colors">Generate</Link>
+            <Link href="/terms" className="hover:text-gray-600 transition-colors">Terms</Link>
+            <Link href="/privacy" className="hover:text-gray-600 transition-colors">Privacy</Link>
           </div>
           <span>Built with Claude AI by Anthropic</span>
         </div>

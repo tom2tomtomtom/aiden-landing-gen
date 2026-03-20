@@ -32,6 +32,7 @@ function GeneratePageInner() {
   const { showToast } = useToast()
   const [status, setStatus] = useState<Status>('idle')
   const [generatedData, setGeneratedData] = useState<GeneratedContent | null>(null)
+  const [generationId, setGenerationId] = useState<string | null>(null)
   const [apiError, setApiError] = useState<string | null>(null)
   const [productName, setProductName] = useState('')
   const [activeTemplateId, setActiveTemplateId] = useState<TemplateId>(DEFAULT_TEMPLATE_ID)
@@ -81,8 +82,9 @@ function GeneratePageInner() {
         throw new Error(err.error || 'Generation failed')
       }
 
-      const data: GeneratedContent = await response.json()
-      setGeneratedData(data)
+      const { generationId: newGenerationId, ...data } = await response.json()
+      setGeneratedData(data as GeneratedContent)
+      setGenerationId(newGenerationId ?? null)
       setStatus('done')
       showToast('Landing page generated!')
     } catch (err) {

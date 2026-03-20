@@ -145,14 +145,18 @@ Generate 3-5 features and 3-4 FAQ items. Match the ${tone} tone throughout.`
     await incrementUsage(adminSupabase, user.id, plan)
 
     // Save generation to database
-    await adminSupabase.from('generations').insert({
-      user_id: user.id,
-      input_data: body,
-      output_copy: parsed,
-      template_id: template ?? null,
-    })
+    const { data: savedGeneration } = await adminSupabase
+      .from('generations')
+      .insert({
+        user_id: user.id,
+        input_data: body,
+        output_copy: parsed,
+        template_id: template ?? null,
+      })
+      .select('id')
+      .single()
 
-    return NextResponse.json(parsed)
+    return NextResponse.json({ ...parsed, generationId: savedGeneration?.id ?? null })
   } catch (error) {
     if (error instanceof Anthropic.APIError) {
       if (error.status === 408 || error.message.toLowerCase().includes('timeout')) {

@@ -96,6 +96,19 @@ function generateHtml(
     )
     .join('')
 
+  const howItWorksHtml = data.howItWorks && data.howItWorks.length > 0
+    ? data.howItWorks
+        .map(
+          (step, i) => `
+        <div class="hiw-step">
+          <div class="hiw-number" style="background:${css.featureIconBg}">${String(i + 1).padStart(2, '0')}</div>
+          <h3 class="hiw-title">${escapeHtml(step.title)}</h3>
+          <p class="hiw-desc">${escapeHtml(step.description)}</p>
+        </div>`,
+        )
+        .join('')
+    : null
+
   const faqHtml = data.faq
     .map(
       (item, i) => `
@@ -220,6 +233,34 @@ function generateHtml(
     .feature-title { font-size: 0.875rem; font-weight: 600; color: #111827; }
     .feature-desc { margin-top: 6px; font-size: 0.875rem; color: #4b5563; line-height: 1.6; }
 
+    /* How It Works */
+    .how-it-works {
+      background: #f9fafb;
+      padding: 80px 24px;
+    }
+    .hiw-inner { max-width: 960px; margin: 0 auto; }
+    .hiw-grid {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 32px;
+    }
+    .hiw-step { text-align: center; }
+    .hiw-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: #111827;
+      margin: 0 auto 16px;
+    }
+    .hiw-title { font-size: 0.875rem; font-weight: 600; color: #111827; }
+    .hiw-desc { margin-top: 6px; font-size: 0.875rem; color: #4b5563; line-height: 1.6; }
+
     /* FAQ */
     .faq {
       background: #f9fafb;
@@ -307,6 +348,16 @@ function generateHtml(
       </div>
     </div>
   </section>
+
+  ${howItWorksHtml ? `<!-- How It Works -->
+  <section class="how-it-works">
+    <div class="hiw-inner">
+      <h2 class="section-heading">How it works</h2>
+      <div class="hiw-grid">
+        ${howItWorksHtml}
+      </div>
+    </div>
+  </section>` : ''}
 
   <!-- FAQ -->
   <section class="faq">
@@ -555,6 +606,36 @@ export default function LandingPagePreview({ data, productName, templateId, isPa
             </div>
           </div>
         </section>
+
+        {/* How It Works */}
+        {data.howItWorks && data.howItWorks.length > 0 && (
+          <section className="bg-gray-50 px-6 py-14 sm:px-12 sm:py-20">
+            <div className="mx-auto max-w-4xl">
+              <h2 className="text-center text-2xl font-bold text-gray-900 sm:text-3xl">
+                How it works
+              </h2>
+              <div className="mt-10 grid gap-8 sm:grid-cols-3">
+                {data.howItWorks.map((step, i) => (
+                  <div key={i} className="group relative flex flex-col items-center text-center">
+                    <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-full text-sm font-bold text-gray-900 ${theme.featureIconBg}`}>
+                      {String(i + 1).padStart(2, '0')}
+                    </div>
+                    <h3 className="text-sm font-semibold text-gray-900">{step.title}</h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-gray-600">{step.description}</p>
+                    <div className="absolute right-0 top-0">
+                      <CopyButton
+                        text={`${step.title}\n${step.description}`}
+                        copiedKey={copiedKey}
+                        id={`how-it-works-${i}`}
+                        onCopy={handleCopy}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* FAQ */}
         <section className="bg-gray-50 px-6 py-14 sm:px-12 sm:py-20">

@@ -1,9 +1,56 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import FAQAccordion from '@/components/FAQAccordion'
 import TryDemoSection from '@/components/TryDemoSection'
 import EmailCapture from '@/components/EmailCapture'
 import ExampleOutputs from '@/components/ExampleOutputs'
 import type { StatsResponse } from '@/app/api/stats/route'
+
+export const metadata: Metadata = {
+  title: 'AIDEN Brief Intelligence | AI-Powered Brief Analysis',
+  description: 'Paste your brief. AIDEN interrogates it with 340+ creative phantoms. Get gaps identified and a sharper brief back in seconds. Start free.',
+  alternates: {
+    canonical: 'https://aiden.services',
+  },
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'AIDEN Brief Intelligence',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  description: 'AI-powered brief analysis tool that interrogates creative briefs with 340+ creative phantoms to identify gaps and produce sharper briefs.',
+  url: 'https://aiden.services',
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'Free',
+      price: '0',
+      priceCurrency: 'GBP',
+      description: '3 brief analyses per month',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Single',
+      price: '49',
+      priceCurrency: 'GBP',
+      description: '1 deep brief analysis with full strategic output',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Pro',
+      price: '99',
+      priceCurrency: 'GBP',
+      description: 'Unlimited brief analyses for agencies and teams',
+    },
+  ],
+  publisher: {
+    '@type': 'Organization',
+    name: 'AIDEN',
+    url: 'https://aiden.services',
+  },
+}
 
 async function getStats(): Promise<StatsResponse> {
   try {
@@ -76,6 +123,10 @@ export default async function MarketingPage() {
 
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Nav */}
       <nav className="border-b border-gray-100 bg-white/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14">

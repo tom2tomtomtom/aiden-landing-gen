@@ -1,7 +1,13 @@
+import type { Metadata } from 'next'
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { getPlanLimits } from '@/lib/usage'
 import { redirect } from 'next/navigation'
+
+export const metadata: Metadata = {
+  title: 'Dashboard',
+  description: 'View your brief analysis history and manage your AIDEN account.',
+}
 
 interface GenerationRecord {
   id: string

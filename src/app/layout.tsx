@@ -16,30 +16,30 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'AIDEN Landing Page Generator',
+    default: 'AIDEN Brief Intelligence | AI-Powered Brief Analysis',
     template: '%s | AIDEN',
   },
-  description: 'AI-powered landing page copy generator with live preview. Create high-converting landing pages in seconds.',
+  description: 'Paste your brief. AIDEN interrogates it with 340+ creative phantoms. Get gaps identified and a sharper brief back in seconds.',
   metadataBase: new URL(siteUrl),
   openGraph: {
     type: 'website',
     url: siteUrl,
     siteName: 'AIDEN',
-    title: 'AIDEN Landing Page Generator',
-    description: 'AI-powered landing page copy generator with live preview. Create high-converting landing pages in seconds.',
+    title: 'AIDEN Brief Intelligence | AI-Powered Brief Analysis',
+    description: 'Paste your brief. AIDEN interrogates it with 340+ creative phantoms. Get gaps identified and a sharper brief back in seconds.',
     images: [
       {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'AIDEN Landing Page Generator',
+        alt: 'AIDEN Brief Intelligence',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AIDEN Landing Page Generator',
-    description: 'AI-powered landing page copy generator with live preview. Create high-converting landing pages in seconds.',
+    title: 'AIDEN Brief Intelligence | AI-Powered Brief Analysis',
+    description: 'Paste your brief. AIDEN interrogates it with 340+ creative phantoms. Get gaps identified and a sharper brief back in seconds.',
     images: ['/opengraph-image'],
   },
 }

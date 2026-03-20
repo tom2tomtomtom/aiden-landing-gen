@@ -87,7 +87,7 @@ function GeneratePageInner() {
         <div className="mx-auto max-w-7xl flex items-center justify-between">
           <div>
             <Link href="/" className="text-xl font-bold tracking-tight text-gray-900 hover:text-indigo-600 transition-colors">
-              AIDEN
+              AIDEN Brief Intelligence
             </Link>
             <p className="mt-0.5 text-sm text-gray-500">
               AI-powered brief intelligence.

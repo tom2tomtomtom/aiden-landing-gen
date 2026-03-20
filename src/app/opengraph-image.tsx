@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'AIDEN Landing Page Generator'
+export const alt = 'AIDEN Brief Intelligence'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -38,7 +38,7 @@ export default function Image() {
               lineHeight: 1.1,
             }}
           >
-            AI Landing Page Generator
+            Brief Intelligence
           </div>
           <div
             style={{
@@ -49,7 +49,7 @@ export default function Image() {
               maxWidth: '900px',
             }}
           >
-            Describe your product. Get a conversion-ready landing page in 30 seconds.
+            Paste your brief. AIDEN interrogates it with 340+ creative phantoms. Get gaps identified and a sharper brief back in seconds.
           </div>
           <div
             style={{

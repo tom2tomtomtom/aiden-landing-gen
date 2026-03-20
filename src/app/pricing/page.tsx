@@ -6,16 +6,15 @@ import Link from 'next/link'
 const tiers = [
   {
     name: 'Free',
-    price: '$0',
+    price: '£0',
     period: null,
-    description: "Try AIDEN and see what's possible.",
+    description: 'Try Brief Intelligence and see what your brief is missing.',
     features: [
-      '3 generations per month',
-      'All templates',
-      'Live preview',
-      'AIDEN attribution on exports',
+      '3 brief analyses per month',
+      'Basic gap analysis',
+      'AIDEN branding on output',
     ],
-    cta: 'Start Free',
+    cta: 'Interrogate your brief',
     ctaType: 'link' as const,
     href: '/generate',
     plan: null,
@@ -23,17 +22,16 @@ const tiers = [
   },
   {
     name: 'Single',
-    price: '$19',
+    price: '£49',
     period: 'one-time',
-    description: 'Perfect for one landing page, done right.',
+    description: 'One deep analysis, no compromises.',
     features: [
-      '1 landing page generation',
-      'All templates',
-      'Live preview',
-      'No AIDEN attribution',
-      'HTML export',
+      '1 deep brief analysis',
+      'Full strategic output',
+      'PDF export',
+      'No AIDEN branding',
     ],
-    cta: 'Buy Single Page',
+    cta: 'Interrogate your brief',
     ctaType: 'checkout' as const,
     href: null,
     plan: 'single' as const,
@@ -41,18 +39,17 @@ const tiers = [
   },
   {
     name: 'Pro',
-    price: '$39',
+    price: '£99',
     period: 'per month',
-    description: 'For teams and founders shipping fast.',
+    description: 'For agencies and teams who live inside briefs.',
     features: [
-      'Unlimited generations',
-      'All templates',
-      'Live preview',
-      'No AIDEN attribution',
-      'HTML export',
-      'Custom branding',
+      'Unlimited brief analyses',
+      'Priority processing',
+      'Team sharing',
+      'API access',
+      'No AIDEN branding',
     ],
-    cta: 'Start Pro',
+    cta: 'Interrogate your brief',
     ctaType: 'checkout' as const,
     href: null,
     plan: 'pro' as const,
@@ -95,9 +92,9 @@ export default function PricingPage() {
         <Link href="/" className="text-sm text-indigo-600 hover:text-indigo-800 font-medium mb-6 inline-block">
           ← Back to home
         </Link>
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Simple, honest pricing</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Brief Intelligence pricing</h1>
         <p className="text-lg text-gray-600 max-w-xl mx-auto">
-          Start free. Pay only when you need more. No hidden fees.
+          Start free. Interrogate your brief with the rigour it deserves.
         </p>
       </div>
 

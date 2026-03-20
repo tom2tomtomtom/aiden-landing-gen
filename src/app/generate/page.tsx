@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import LandingPageForm from '@/components/LandingPageForm'
 import LandingPagePreview, { GeneratedContent } from '@/components/LandingPagePreview'
+import CopyScore from '@/components/CopyScore'
 import ErrorBoundary from '@/components/ErrorBoundary'
 import { ToastProvider, useToast } from '@/components/Toast'
 import { TemplateId, DEFAULT_TEMPLATE_ID } from '@/lib/templates'
@@ -157,6 +158,7 @@ function GeneratePageInner() {
                   )}
                 </div>
                 <LandingPagePreview data={generatedData} productName={productName} templateId={activeTemplateId} isPaidUser={isPaidUser} onToast={showToast} />
+                <CopyScore data={generatedData} />
               </div>
             )}
             {(status === 'idle' || status === 'error') && !generatedData && (

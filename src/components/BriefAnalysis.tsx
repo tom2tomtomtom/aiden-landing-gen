@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 import Link from 'next/link'
 
 export interface BriefAnalysisData {
@@ -62,10 +62,39 @@ function getScoreColor(score: number): { text: string; stroke: string; bg: strin
 }
 
 function ScoreCircle({ score }: { score: number }) {
-  const { text, stroke, bg, label } = getScoreColor(score)
   const radius = 52
   const circumference = 2 * Math.PI * radius
-  const dashOffset = circumference - (score / 100) * circumference
+
+  const [displayScore, setDisplayScore] = useState(0)
+  const [displayOffset, setDisplayOffset] = useState(circumference)
+  const rafRef = useRef<number | null>(null)
+
+  useEffect(() => {
+    const duration = 1500
+    const start = performance.now()
+
+    function animate(now: number) {
+      const elapsed = now - start
+      const progress = Math.min(elapsed / duration, 1)
+      // ease-out cubic
+      const eased = 1 - Math.pow(1 - progress, 3)
+
+      const current = Math.round(eased * score)
+      setDisplayScore(current)
+      setDisplayOffset(circumference - (eased * score / 100) * circumference)
+
+      if (progress < 1) {
+        rafRef.current = requestAnimationFrame(animate)
+      }
+    }
+
+    rafRef.current = requestAnimationFrame(animate)
+    return () => {
+      if (rafRef.current !== null) cancelAnimationFrame(rafRef.current)
+    }
+  }, [score, circumference])
+
+  const { text, stroke, bg, label } = getScoreColor(score)
 
   return (
     <div className={`flex flex-col items-center justify-center rounded-2xl ${bg} border border-gray-200 p-8`}>
@@ -74,12 +103,11 @@ function ScoreCircle({ score }: { score: number }) {
           <circle cx="70" cy="70" r={radius} fill="none" stroke="#e5e7eb" strokeWidth="10" />
           <circle
             cx="70" cy="70" r={radius} fill="none" stroke={stroke} strokeWidth="10"
-            strokeLinecap="round" strokeDasharray={circumference} strokeDashoffset={dashOffset}
-            className="transition-all duration-700"
+            strokeLinecap="round" strokeDasharray={circumference} strokeDashoffset={displayOffset}
           />
         </svg>
         <div className="absolute flex flex-col items-center">
-          <span className={`text-4xl font-bold ${text}`}>{score}</span>
+          <span className={`text-4xl font-bold ${text}`}>{displayScore}</span>
           <span className="text-xs text-gray-500 font-medium">/100</span>
         </div>
       </div>

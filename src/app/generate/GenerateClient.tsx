@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import LandingPageForm from '@/components/LandingPageForm'
 import BriefAnalysis, { BriefAnalysisData } from '@/components/BriefAnalysis'
@@ -45,6 +45,20 @@ function GeneratePageInner() {
   const [showWelcomeBanner, setShowWelcomeBanner] = useState(false)
   const [isFirstAnalysis, setIsFirstAnalysis] = useState(false)
   const [showShortcuts, setShowShortcuts] = useState(false)
+  const [showEmailModal, setShowEmailModal] = useState(false)
+  const emailModalTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  useEffect(() => {
+    if (isFirstAnalysis) {
+      const dismissed = localStorage.getItem('aiden_email_dismissed')
+      if (!dismissed) {
+        emailModalTimerRef.current = setTimeout(() => setShowEmailModal(true), 3000)
+      }
+    }
+    return () => {
+      if (emailModalTimerRef.current) clearTimeout(emailModalTimerRef.current)
+    }
+  }, [isFirstAnalysis])
 
   useEffect(() => {
     const hasVisited = localStorage.getItem('aiden_has_visited')
@@ -376,6 +390,12 @@ function GeneratePageInner() {
           </button>
         </div>
       )}
+      {showEmailModal && (
+        <EmailCaptureModal onDismiss={() => {
+          setShowEmailModal(false)
+          localStorage.setItem('aiden_email_dismissed', 'true')
+        }} />
+      )}
     </main>
     </ErrorBoundary>
   )
@@ -507,6 +527,83 @@ function AuthPrompt() {
           Log in
         </Link>
       </p>
+    </div>
+  )
+}
+
+function EmailCaptureModal({ onDismiss }: { onDismiss: () => void }) {
+  const [email, setEmail] = useState('')
+  const [submitting, setSubmitting] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    setSubmitting(true)
+    setError(null)
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        throw new Error(data.error || 'Subscription failed')
+      }
+      setSubmitted(true)
+      setTimeout(onDismiss, 2000)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Something went wrong')
+    } finally {
+      setSubmitting(false)
+    }
+  }
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4">
+      <div className="relative w-full max-w-md border-2 border-red-hot bg-black-deep p-8">
+        <button
+          onClick={onDismiss}
+          aria-label="Dismiss"
+          className="absolute right-4 top-4 text-white-dim hover:text-white transition-colors"
+        >
+          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        {submitted ? (
+          <div className="text-center py-4">
+            <p className="text-lg font-semibold text-white">You&apos;re in.</p>
+            <p className="mt-1 text-sm text-white-muted">Check your inbox for your full report.</p>
+          </div>
+        ) : (
+          <>
+            <h2 className="text-xl font-bold text-white">Get your full report</h2>
+            <p className="mt-2 text-sm text-white-muted">
+              Enter your email to receive a PDF of this analysis and future insights.
+            </p>
+            <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                placeholder="you@agency.com"
+                className="w-full border border-border-subtle bg-black-card px-4 py-3 text-sm text-white placeholder-white-dim focus:border-red-hot focus:outline-none"
+              />
+              {error && <p className="text-xs text-red-hot">{error}</p>}
+              <button
+                type="submit"
+                disabled={submitting}
+                className="w-full bg-red-hot px-4 py-3 text-sm font-semibold text-white hover:bg-red-dim transition-colors disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                {submitting ? 'Sending…' : 'Send my report'}
+              </button>
+            </form>
+          </>
+        )}
+      </div>
     </div>
   )
 }

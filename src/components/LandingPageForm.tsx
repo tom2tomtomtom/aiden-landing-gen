@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { GenerateFormData } from '@/app/generate/GenerateClient'
 
 const EXAMPLE_BRIEFS = [
@@ -151,6 +151,25 @@ export default function LandingPageForm({ onGenerate, isLoading, error, onFormCh
     onFormChange?.(val.trim().length >= 100)
   }
 
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+      e.preventDefault()
+      if (!isLoading && validate()) {
+        onGenerate({
+          briefText: formData.briefText,
+          brandName: formData.brandName || undefined,
+          industry: formData.industry || undefined,
+          briefType: formData.briefType || undefined,
+        })
+      }
+    }
+  }, [isLoading, formData, onGenerate])
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [handleKeyDown])
+
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     if (!validate()) return
@@ -292,6 +311,9 @@ export default function LandingPageForm({ onGenerate, isLoading, error, onFormCh
           'Interrogate this brief'
         )}
       </button>
+      <p className="text-center text-xs text-gray-400">
+        Press <kbd className="rounded border border-gray-300 bg-gray-100 px-1 py-0.5 font-mono text-xs">⌘ Enter</kbd> to submit
+      </p>
     </form>
   )
 }

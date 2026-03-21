@@ -223,7 +223,108 @@ const SEVERITY_LABEL: Record<GapSeverity, string> = {
   info: 'Consider adding',
 }
 
-function GapAnalysisSection({ gaps }: { gaps: string[] }) {
+const GAP_SUGGESTIONS: Array<{ keywords: string[]; suggestion: string }> = [
+  {
+    keywords: ['objective', 'goal', 'aim', 'purpose'],
+    suggestion: 'Add a clear objective using the format: "We want to [action] among [audience] in order to [business outcome]." E.g. "We want to drive trial among lapsed users in order to re-engage 10% of churned customers."',
+  },
+  {
+    keywords: ['target audience', 'audience', 'demographic', 'persona'],
+    suggestion: 'Define your audience with specifics: age range, mindset, life stage, and key behaviours. E.g. "Urban professionals 28–40, time-poor but health-conscious, who snack mindlessly and feel mild guilt about it."',
+  },
+  {
+    keywords: ['deliverable', 'asset', 'format', 'output'],
+    suggestion: 'List the exact deliverables with formats and quantities. E.g. "1× hero video (30s), 3× static social posts (1:1 and 9:16), 1× OOH 48-sheet."',
+  },
+  {
+    keywords: ['budget'],
+    suggestion: 'Include a production budget range to help scope creative ambition. E.g. "Production budget: £80k–£120k" or at minimum "TBC — ballpark high/medium/low."',
+  },
+  {
+    keywords: ['timeline', 'deadline', 'launch', 'date'],
+    suggestion: 'Specify key milestones: brief date, creative review, final approval, and live date. E.g. "Creative review: 10 Apr / Final approval: 24 Apr / Live: 1 May."',
+  },
+  {
+    keywords: ['kpi', 'metric', 'success', 'measure', 'result'],
+    suggestion: 'Define how success will be measured with specific, trackable KPIs. E.g. "Primary KPI: 15% uplift in brand awareness (YouGov). Secondary: CTR >2% on paid social."',
+  },
+  {
+    keywords: ['tone', 'voice', 'personality', 'character'],
+    suggestion: 'Describe tone with 3 adjectives and one "tone is X, not Y" contrast. E.g. "Warm, direct, optimistic — inspirational but never preachy."',
+  },
+  {
+    keywords: ['brand', 'brand context', 'brand background'],
+    suggestion: 'Add brand context: positioning, recent campaigns, what to avoid, and mandatory brand elements. E.g. "Brand is moving from functional to emotional — avoid category clichés and competitor comparisons."',
+  },
+]
+
+function generateGapSuggestion(gap: string, strategicAnalysis: Record<string, unknown>): string {
+  const lower = gap.toLowerCase()
+
+  // Try to find relevant strategic context first
+  const relevantContext = Object.entries(strategicAnalysis).find(([key, value]) => {
+    if (typeof value !== 'string' || !value) return false
+    const keyLower = key.toLowerCase()
+    return (
+      lower.split(' ').some(word => word.length > 3 && keyLower.includes(word)) ||
+      lower.split(' ').some(word => word.length > 3 && (value as string).toLowerCase().includes(word))
+    )
+  })
+
+  const contextHint = relevantContext
+    ? ` Based on your brief, consider: "${String(relevantContext[1]).slice(0, 120)}${String(relevantContext[1]).length > 120 ? '…' : ''}"`
+    : ''
+
+  // Match against known gap patterns
+  for (const { keywords, suggestion } of GAP_SUGGESTIONS) {
+    if (keywords.some(kw => lower.includes(kw))) {
+      return contextHint ? `${suggestion}${contextHint}` : suggestion
+    }
+  }
+
+  // Generic fallback
+  return `Add specific, measurable details to address this gap. Use concrete numbers, named formats, or explicit criteria wherever possible.${contextHint}`
+}
+
+function GapCard({ gap, strategicAnalysis }: { gap: string; strategicAnalysis: Record<string, unknown> }) {
+  const [open, setOpen] = useState(false)
+  const severity = getGapSeverity(gap)
+  const suggestion = generateGapSuggestion(gap, strategicAnalysis)
+
+  return (
+    <div className="rounded-xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+      <div className="flex items-start gap-3 p-4">
+        <GapIcon severity={severity} />
+        <div className="flex-1 min-w-0">
+          <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">{SEVERITY_LABEL[severity]}</p>
+          <p className="mt-0.5 text-sm text-gray-800">{gap}</p>
+        </div>
+        <button
+          onClick={() => setOpen(o => !o)}
+          aria-expanded={open}
+          aria-label={open ? 'Hide suggestion' : 'Show suggestion'}
+          className="ml-2 flex-shrink-0 flex items-center gap-1 rounded-md px-2 py-1 text-xs font-medium text-indigo-600 hover:bg-indigo-50 transition-colors"
+        >
+          <svg
+            className={`h-3.5 w-3.5 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+            fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+          {open ? 'Hide' : 'Suggest'}
+        </button>
+      </div>
+      {open && (
+        <div className="border-t border-indigo-100 bg-indigo-50 px-4 py-3">
+          <p className="text-xs font-semibold uppercase tracking-wide text-indigo-400 mb-1">Suggested rewrite</p>
+          <p className="text-sm text-indigo-900 leading-relaxed">{suggestion}</p>
+        </div>
+      )}
+    </div>
+  )
+}
+
+function GapAnalysisSection({ gaps, strategicAnalysis }: { gaps: string[]; strategicAnalysis: Record<string, unknown> }) {
   if (gaps.length === 0) {
     return (
       <section>
@@ -248,18 +349,9 @@ function GapAnalysisSection({ gaps }: { gaps: string[] }) {
         <CopyButton text={gaps.map(g => `${SEVERITY_LABEL[getGapSeverity(g)]}: ${g}`).join('\n')} />
       </div>
       <div className="space-y-3">
-        {gaps.map((gap) => {
-          const severity = getGapSeverity(gap)
-          return (
-            <div key={gap} className="flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
-              <GapIcon severity={severity} />
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">{SEVERITY_LABEL[severity]}</p>
-                <p className="mt-0.5 text-sm text-gray-800">{gap}</p>
-              </div>
-            </div>
-          )
-        })}
+        {gaps.map((gap) => (
+          <GapCard key={gap} gap={gap} strategicAnalysis={strategicAnalysis} />
+        ))}
       </div>
     </section>
   )
@@ -597,7 +689,7 @@ export default function BriefAnalysis({ data, previewUrl, isPro, isPaidUser }: B
         </div>
       </div>
       <ExtractedBriefCard extractedBrief={extractedBrief} />
-      <GapAnalysisSection gaps={gaps} />
+      <GapAnalysisSection gaps={gaps} strategicAnalysis={strategicAnalysis} />
       <StrategicTensionsSection strategicAnalysis={strategicAnalysis} />
       {!isPro && <PhantomCDLockedSection />}
       <RewrittenBriefSection strategicAnalysis={strategicAnalysis} extractedBrief={extractedBrief} isPro={isPro} />

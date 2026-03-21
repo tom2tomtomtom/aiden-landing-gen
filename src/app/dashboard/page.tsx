@@ -22,6 +22,7 @@ interface GenerationRecord {
   output_copy: {
     headline?: string
     subheadline?: string
+    briefScore?: number
     score?: number
     gaps?: string[]
   }
@@ -183,8 +184,8 @@ export default async function DashboardPage() {
                   gen.input_data?.productDescription ??
                   gen.input_data?.productName ??
                   'Untitled brief'
-                ).slice(0, 100)
-                const score = gen.output_copy?.score ?? null
+                ).slice(0, 80)
+                const score = gen.output_copy?.briefScore ?? gen.output_copy?.score ?? null
                 const gapsCount = gen.output_copy?.gaps?.length ?? null
 
                 return (
@@ -192,7 +193,7 @@ export default async function DashboardPage() {
                     <div className="min-w-0 flex-1">
                       <p className="text-sm font-medium text-gray-900 line-clamp-2">
                         {briefSnippet}
-                        {(gen.input_data?.briefText ?? gen.input_data?.productDescription ?? '').length > 100 ? '…' : ''}
+                        {(gen.input_data?.briefText ?? gen.input_data?.productDescription ?? '').length > 80 ? '…' : ''}
                       </p>
                       <div className="mt-1.5 flex items-center gap-3 text-xs text-gray-500">
                         {score !== null && (
@@ -216,10 +217,10 @@ export default async function DashboardPage() {
                       </div>
                     </div>
                     <a
-                      href="/generate"
+                      href={`/preview/${gen.id}`}
                       className="shrink-0 rounded-lg border border-indigo-200 px-3 py-1.5 text-xs font-medium text-indigo-600 hover:bg-indigo-50 transition"
                     >
-                      Analyse again
+                      View
                     </a>
                   </li>
                 )

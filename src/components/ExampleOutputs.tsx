@@ -103,7 +103,7 @@ export default function ExampleOutputs() {
           {examples.map((example) => (
             <div
               key={example.id}
-              className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden flex flex-col"
+              className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden flex flex-col transition-all duration-200 hover:shadow-md hover:border-indigo-200 hover:-translate-y-0.5"
             >
               {/* Card header */}
               <div className="border-b border-gray-100 bg-gray-50/60 px-6 py-4 flex items-center justify-between gap-4">

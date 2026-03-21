@@ -216,7 +216,7 @@ export default async function MarketingPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {steps.map((step) => (
-              <div key={step.number} className="flex flex-col">
+              <div key={step.number} className="flex flex-col rounded-2xl border border-transparent p-6 transition-all duration-200 hover:border-indigo-100 hover:bg-indigo-50/40 hover:shadow-sm">
                 <span className="text-5xl font-black text-indigo-100 leading-none mb-4">{step.number}</span>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{step.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
@@ -331,7 +331,7 @@ export default async function MarketingPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {gapTypes.map((gap) => (
-              <div key={gap.title} className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+              <div key={gap.title} className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-200 hover:shadow-md hover:border-indigo-200 hover:-translate-y-0.5">
                 <div className="text-2xl mb-3">{gap.icon}</div>
                 <h3 className="text-base font-semibold text-gray-900 mb-2">{gap.title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{gap.description}</p>

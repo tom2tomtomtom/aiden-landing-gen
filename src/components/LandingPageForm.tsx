@@ -98,6 +98,80 @@ const INDUSTRIES = [
   'Other',
 ]
 
+const INDUSTRY_PLACEHOLDERS: Record<string, string> = {
+  FMCG: `Product Name:
+Category:
+Target Audience:
+Campaign Objective:
+Key Message:
+Tone of Voice:
+Channels:
+Mandatories:
+Budget:`,
+  Tech: `Product / Service:
+Category (B2B / B2C / SaaS):
+Target Audience:
+Campaign Objective:
+Key Message:
+Tone of Voice:
+Channels:
+Proof Points:
+Budget:`,
+  Finance: `Product / Service:
+Sector (Retail Banking / Wealth / Insurance):
+Target Audience:
+Campaign Objective:
+Key Message:
+Tone of Voice:
+Channels:
+Regulatory Mandatories:
+Budget:`,
+  Healthcare: `Product / Service / Condition:
+Audience (Patients / HCPs / Carers):
+Campaign Objective:
+Key Message:
+Tone of Voice:
+Channels:
+Medical / Regulatory Constraints:
+Budget:`,
+  Retail: `Brand:
+Category / Season:
+Target Audience:
+Campaign Objective:
+Key Message:
+Tone of Voice:
+Channels:
+Promotions / Offers:
+Budget:`,
+  Automotive: `Vehicle / Model:
+Target Audience:
+Campaign Objective:
+Key Message:
+Tone of Voice:
+Channels:
+Technical Claims / Mandatories:
+Budget:`,
+  Entertainment: `Title / Project:
+Genre / Format:
+Target Audience:
+Campaign Objective:
+Key Message:
+Tone of Voice:
+Channels:
+Release Window:
+Budget:`,
+  Other: `Project / Brand:
+Category:
+Target Audience:
+Campaign Objective:
+Key Message:
+Tone of Voice:
+Channels:
+Budget:`,
+}
+
+const DEFAULT_PLACEHOLDER = 'Paste your full brief here…'
+
 const BRIEF_TYPES = [
   'Campaign',
   'Brand',
@@ -414,7 +488,7 @@ export default function LandingPageForm({ onGenerate, isLoading, error, onFormCh
           value={formData.briefText}
           onChange={(e) => handleBriefChange(e.target.value)}
           maxLength={10000}
-          placeholder="Paste your full brief here…"
+          placeholder={formData.industry ? (INDUSTRY_PLACEHOLDERS[formData.industry] ?? DEFAULT_PLACEHOLDER) : DEFAULT_PLACEHOLDER}
           aria-describedby={errors.briefText ? 'briefText-error' : undefined}
           aria-invalid={!!errors.briefText}
           className={`mt-1 block w-full rounded-lg border px-3 py-2 text-sm text-white shadow-sm outline-none transition focus:ring-2 focus:ring-red-hot ${

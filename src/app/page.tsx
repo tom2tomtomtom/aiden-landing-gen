@@ -341,6 +341,70 @@ export default async function MarketingPage() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="bg-gray-50 px-4 py-24 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
+          <div className="text-center mb-14">
+            <span className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700 mb-4">
+              Early days
+            </span>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              What people are saying
+            </h2>
+            <p className="mt-4 text-base text-gray-500 max-w-lg mx-auto">
+              We just launched — real quotes from real users are on their way. In the meantime, here&apos;s the format you can expect.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                quote: 'This spot is reserved for someone who used AIDEN to sharpen a brief and got better creative back. That person exists — we just need to find them and ask nicely.',
+                name: 'Coming soon',
+                role: 'Senior Strategist, Agency',
+                initials: '?',
+              },
+              {
+                quote: 'Real feedback from a real user who ran their brief through AIDEN and saw the difference. We launched recently — check back soon.',
+                name: 'Coming soon',
+                role: 'Brand Manager, In-house',
+                initials: '?',
+              },
+              {
+                quote: 'A genuine quote from someone who saved hours on brief prep is on its way. We\'re collecting them now. Be the first — interrogate your brief today.',
+                name: 'Coming soon',
+                role: 'Creative Director, Studio',
+                initials: '?',
+              },
+            ].map((t, i) => (
+              <div
+                key={i}
+                className="flex flex-col rounded-2xl border border-dashed border-gray-300 bg-white p-7 shadow-sm"
+              >
+                <div className="text-indigo-200 text-3xl font-serif leading-none mb-4">&ldquo;</div>
+                <p className="text-sm text-gray-400 leading-relaxed flex-1 italic">{t.quote}</p>
+                <div className="mt-6 flex items-center gap-3">
+                  <div className="h-9 w-9 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center text-sm font-semibold text-gray-400">
+                    {t.initials}
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-gray-400">{t.name}</p>
+                    <p className="text-xs text-gray-300">{t.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-10 text-center text-xs text-gray-400">
+            Used AIDEN? We&apos;d love to hear from you —{' '}
+            <a href="mailto:hello@aiden.services" className="text-indigo-500 hover:text-indigo-700 underline underline-offset-2">
+              share your experience
+            </a>
+          </p>
+        </div>
+      </section>
+
       {/* Try it now demo */}
       <TryDemoSection />
 

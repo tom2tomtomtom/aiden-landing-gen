@@ -24,9 +24,7 @@ export async function POST(request: NextRequest) {
     if (name.endsWith('.txt') || name.endsWith('.md')) {
       text = buffer.toString('utf-8')
     } else if (name.endsWith('.pdf')) {
-      // pdf-parse types don't export default correctly
-      const pdfMod = await (import('pdf-parse') as Promise<{ default?: (buf: Buffer) => Promise<{ text: string }> }>)
-      const pdfParse = pdfMod.default!
+      const pdfParse = require('pdf-parse') as (buf: Buffer) => Promise<{ text: string }>
       const result = await pdfParse(buffer)
       text = result.text
     } else if (name.endsWith('.docx') || name.endsWith('.doc')) {

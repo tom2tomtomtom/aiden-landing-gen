@@ -8,6 +8,7 @@ export interface BriefAnalysisData {
   strategicAnalysis: Record<string, unknown>
   gaps: string[]
   score: number
+  briefText?: string
 }
 
 interface BriefAnalysisProps {
@@ -695,6 +696,27 @@ function buildFullMarkdown(data: BriefAnalysisData): string {
   return sections.join('\n\n---\n\n')
 }
 
+function BriefMetadataBar({ data }: { data: BriefAnalysisData }) {
+  const briefText = data.briefText ?? Object.values(data.extractedBrief)
+    .filter(v => v !== null && v !== undefined && v !== '')
+    .map(v => Array.isArray(v) ? v.join(' ') : typeof v === 'object' ? JSON.stringify(v) : String(v))
+    .join(' ')
+
+  const wordCount = briefText.trim() ? briefText.trim().split(/\s+/).length : 0
+  const readTime = Math.ceil(wordCount / 200)
+  const gapCount = data.gaps.length
+
+  return (
+    <div className="mt-3 flex items-center justify-center gap-5 text-xs text-gray-500">
+      <span><span className="font-medium text-gray-700">{wordCount}</span> words</span>
+      <span className="text-gray-300">·</span>
+      <span><span className="font-medium text-gray-700">{readTime} min</span> read</span>
+      <span className="text-gray-300">·</span>
+      <span><span className="font-medium text-gray-700">{gapCount}</span> gap{gapCount !== 1 ? 's' : ''} found</span>
+    </div>
+  )
+}
+
 function CopyAllButton({ data }: { data: BriefAnalysisData }) {
   const [copied, setCopied] = useState(false)
 
@@ -862,6 +884,7 @@ export default function BriefAnalysis({ data, previewUrl, isPro, isPaidUser, isF
       <div className="flex items-end justify-between gap-4">
         <div className="flex-1">
           <ScoreCircle score={score} showCelebration={isFirstAnalysis} />
+          <BriefMetadataBar data={data} />
         </div>
         <div className="flex flex-col items-end gap-2 pb-2">
           <CopyAllButton data={data} />

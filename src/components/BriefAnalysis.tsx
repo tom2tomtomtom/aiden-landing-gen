@@ -35,7 +35,7 @@ function CopyButton({ text }: { text: string }) {
   return (
     <button
       onClick={handleCopy}
-      className="relative ml-2 inline-flex items-center gap-1 rounded-md px-2 py-1 text-xs font-medium text-gray-400 hover:bg-gray-100 hover:text-gray-600 transition-colors"
+      className="relative ml-2 inline-flex items-center gap-1 rounded-md px-2 py-1 text-xs font-medium text-white-dim hover:bg-white-faint hover:text-white-muted transition-colors"
       aria-label="Copy to clipboard"
     >
       {copied ? (
@@ -58,11 +58,11 @@ function CopyButton({ text }: { text: string }) {
 }
 
 function getScoreColor(score: number): { text: string; stroke: string; bg: string; label: string; interpretation: string } {
-  if (score >= 86) return { text: 'text-emerald-600', stroke: '#059669', bg: 'bg-emerald-50', label: 'Strong brief', interpretation: 'Excellent' }
-  if (score >= 71) return { text: 'text-green-600', stroke: '#16a34a', bg: 'bg-green-50', label: 'Strong brief', interpretation: 'Good' }
-  if (score >= 51) return { text: 'text-amber-600', stroke: '#d97706', bg: 'bg-amber-50', label: 'Needs work', interpretation: 'Average' }
-  if (score >= 31) return { text: 'text-orange-600', stroke: '#ea580c', bg: 'bg-orange-50', label: 'Needs work', interpretation: 'Below Average' }
-  return { text: 'text-red-600', stroke: '#dc2626', bg: 'bg-red-50', label: 'Incomplete brief', interpretation: 'Needs Work' }
+  if (score >= 86) return { text: 'text-green-500', stroke: '#ff2e2e', bg: 'bg-black-card', label: 'Strong brief', interpretation: 'Excellent' }
+  if (score >= 71) return { text: 'text-green-500', stroke: '#ff2e2e', bg: 'bg-black-card', label: 'Strong brief', interpretation: 'Good' }
+  if (score >= 51) return { text: 'text-yellow-electric', stroke: '#ff2e2e', bg: 'bg-black-card', label: 'Needs work', interpretation: 'Average' }
+  if (score >= 31) return { text: 'text-orange-accent', stroke: '#ff2e2e', bg: 'bg-black-card', label: 'Needs work', interpretation: 'Below Average' }
+  return { text: 'text-red-hot', stroke: '#ff2e2e', bg: 'bg-black-card', label: 'Incomplete brief', interpretation: 'Needs Work' }
 }
 
 const CONFETTI_DOTS = [
@@ -112,10 +112,10 @@ function ScoreCircle({ score, showCelebration }: { score: number; showCelebratio
   const { text, stroke, bg, label, interpretation } = getScoreColor(score)
 
   return (
-    <div className={`flex flex-col items-center justify-center rounded-2xl ${bg} border border-gray-200 p-8`}>
+    <div className={`flex flex-col items-center justify-center rounded-2xl ${bg} border border-border-subtle p-8`}>
       <div className="relative inline-flex items-center justify-center">
         <svg width="140" height="140" className="-rotate-90">
-          <circle cx="70" cy="70" r={radius} fill="none" stroke="#e5e7eb" strokeWidth="10" />
+          <circle cx="70" cy="70" r={radius} fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="10" />
           <circle
             cx="70" cy="70" r={radius} fill="none" stroke={stroke} strokeWidth="10"
             strokeLinecap="round" strokeDasharray={circumference} strokeDashoffset={displayOffset}
@@ -123,7 +123,7 @@ function ScoreCircle({ score, showCelebration }: { score: number; showCelebratio
         </svg>
         <div className="absolute flex flex-col items-center">
           <span className={`text-4xl font-bold ${text}`}>{displayScore}</span>
-          <span className="text-xs text-gray-500 font-medium">/100</span>
+          <span className="text-xs text-white-dim font-medium">/100</span>
           <span className={`text-xs font-medium ${text}`}>{interpretation}</span>
         </div>
         {showCelebration && (
@@ -154,7 +154,7 @@ function ScoreCircle({ score, showCelebration }: { score: number; showCelebratio
         )}
       </div>
       <p className={`mt-3 text-base font-semibold ${text}`}>{label}</p>
-      <p className="mt-1 text-sm text-gray-500">Brief quality score</p>
+      <p className="mt-1 text-sm text-white-muted">Brief quality score</p>
     </div>
   )
 }
@@ -198,7 +198,7 @@ function ExtractedBriefCard({ extractedBrief }: { extractedBrief: Record<string,
   return (
     <section>
       <div className="mb-4 flex items-center">
-        <h2 className="text-lg font-semibold text-gray-900">Extracted Brief</h2>
+        <h2 className="text-lg font-semibold uppercase tracking-wider text-white">Extracted Brief</h2>
         <CopyButton text={copyText} />
       </div>
       <div className="grid gap-3 sm:grid-cols-2">
@@ -211,9 +211,9 @@ function ExtractedBriefCard({ extractedBrief }: { extractedBrief: Record<string,
             : String(value)
 
           return (
-            <div key={key} className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
-              <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">{label}</p>
-              <p className="mt-1 text-sm text-gray-800 leading-relaxed">{displayValue}</p>
+            <div key={key} className="border border-border-subtle bg-black-card p-4">
+              <p className="text-xs font-semibold uppercase tracking-wide text-white-dim">{label}</p>
+              <p className="mt-1 text-sm text-white leading-relaxed">{displayValue}</p>
             </div>
           )
         })}
@@ -234,8 +234,8 @@ function getGapSeverity(gap: string): GapSeverity {
 function GapIcon({ severity }: { severity: GapSeverity }) {
   if (severity === 'critical') {
     return (
-      <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-red-100">
-        <svg className="h-3.5 w-3.5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+      <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center bg-black-card border border-border-strong">
+        <svg className="h-3.5 w-3.5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
           <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
         </svg>
       </span>
@@ -243,16 +243,16 @@ function GapIcon({ severity }: { severity: GapSeverity }) {
   }
   if (severity === 'warning') {
     return (
-      <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-amber-100">
-        <svg className="h-3.5 w-3.5 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+      <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center bg-black-card border border-border-subtle">
+        <svg className="h-3.5 w-3.5 text-yellow-electric" fill="currentColor" viewBox="0 0 20 20">
           <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
         </svg>
       </span>
     )
   }
   return (
-    <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-blue-100">
-      <svg className="h-3.5 w-3.5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+    <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center bg-black-card border border-border-subtle">
+      <svg className="h-3.5 w-3.5 text-orange-accent" fill="currentColor" viewBox="0 0 20 20">
         <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
       </svg>
     </span>
@@ -267,8 +267,8 @@ const SEVERITY_LABEL: Record<GapSeverity, string> = {
 
 const SEVERITY_BORDER: Record<GapSeverity, string> = {
   critical: 'border-l-4 border-l-red-500',
-  warning: 'border-l-4 border-l-amber-500',
-  info: 'border-l-4 border-l-blue-400',
+  warning: 'border-l-4 border-l-yellow-electric',
+  info: 'border-l-4 border-l-orange-accent',
 }
 
 const GAP_SUGGESTIONS: Array<{ keywords: string[]; suggestion: string }> = [
@@ -340,18 +340,18 @@ function GapCard({ gap, strategicAnalysis }: { gap: string; strategicAnalysis: R
   const suggestion = generateGapSuggestion(gap, strategicAnalysis)
 
   return (
-    <div className={`rounded-xl border border-gray-200 bg-white shadow-sm overflow-hidden ${SEVERITY_BORDER[severity]}`}>
+    <div className={`border border-border-subtle bg-black-card overflow-hidden ${SEVERITY_BORDER[severity]}`}>
       <div className="flex items-start gap-3 p-4">
         <GapIcon severity={severity} />
         <div className="flex-1 min-w-0">
-          <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">{SEVERITY_LABEL[severity]}</p>
-          <p className="mt-0.5 text-sm text-gray-800">{gap}</p>
+          <p className="text-xs font-semibold uppercase tracking-wide text-white-dim">{SEVERITY_LABEL[severity]}</p>
+          <p className="mt-0.5 text-sm text-white">{gap}</p>
         </div>
         <button
           onClick={() => setOpen(o => !o)}
           aria-expanded={open}
           aria-label={open ? 'Hide suggestion' : 'Show suggestion'}
-          className="ml-2 flex-shrink-0 flex items-center gap-1 rounded-md px-2 py-1 text-xs font-medium text-indigo-600 hover:bg-indigo-50 transition-colors"
+          className="ml-2 flex-shrink-0 flex items-center gap-1 px-2 py-1 text-xs font-medium text-orange-accent hover:bg-white-faint transition-colors"
         >
           <svg
             className={`h-3.5 w-3.5 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
@@ -363,9 +363,9 @@ function GapCard({ gap, strategicAnalysis }: { gap: string; strategicAnalysis: R
         </button>
       </div>
       {open && (
-        <div className="border-t border-indigo-100 bg-indigo-50 px-4 py-3">
-          <p className="text-xs font-semibold uppercase tracking-wide text-indigo-400 mb-1">Suggested rewrite</p>
-          <p className="text-sm text-indigo-900 leading-relaxed">{suggestion}</p>
+        <div className="border-t border-border-strong bg-black-card px-4 py-3">
+          <p className="text-xs font-semibold uppercase tracking-wide text-orange-accent mb-1">Suggested rewrite</p>
+          <p className="text-sm text-white leading-relaxed">{suggestion}</p>
         </div>
       )}
     </div>
@@ -377,14 +377,14 @@ function GapAnalysisSection({ gaps, strategicAnalysis }: { gaps: string[]; strat
     return (
       <section>
         <div className="mb-4 flex items-center">
-          <h2 className="text-lg font-semibold text-gray-900">Gap Analysis</h2>
+          <h2 className="text-lg font-semibold uppercase tracking-wider text-white">Gap Analysis</h2>
           <CopyButton text="No gaps found. Your brief covers all key areas." />
         </div>
-        <div className="flex items-center gap-3 rounded-xl border border-green-200 bg-green-50 p-4">
-          <svg className="h-5 w-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+        <div className="flex items-center gap-3 border border-border-subtle bg-black-card p-4">
+          <svg className="h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
           </svg>
-          <p className="text-sm font-medium text-green-800">No gaps found. Your brief covers all key areas.</p>
+          <p className="text-sm font-medium text-green-500">No gaps found. Your brief covers all key areas.</p>
         </div>
       </section>
     )
@@ -393,7 +393,7 @@ function GapAnalysisSection({ gaps, strategicAnalysis }: { gaps: string[]; strat
   return (
     <section>
       <div className="mb-4 flex items-center">
-        <h2 className="text-lg font-semibold text-gray-900">Gap Analysis</h2>
+        <h2 className="text-lg font-semibold uppercase tracking-wider text-white">Gap Analysis</h2>
         <CopyButton text={gaps.map(g => `${SEVERITY_LABEL[getGapSeverity(g)]}: ${g}`).join('\n')} />
       </div>
       <div className="space-y-3">
@@ -436,16 +436,16 @@ function StrategicTensionsSection({ strategicAnalysis }: { strategicAnalysis: Re
     return (
       <section>
         <div className="mb-4 flex items-center">
-          <h2 className="text-lg font-semibold text-gray-900">Strategic Analysis</h2>
+          <h2 className="text-lg font-semibold uppercase tracking-wider text-white">Strategic Analysis</h2>
           <CopyButton text={insightsCopyText} />
         </div>
         <div className="grid gap-3 sm:grid-cols-2">
           {insights.map(([key, value]) => {
             const label = key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
             return (
-              <div key={key} className="rounded-xl border border-indigo-100 bg-indigo-50 p-4">
-                <p className="text-xs font-semibold uppercase tracking-wide text-indigo-400">{label}</p>
-                <p className="mt-1 text-sm text-indigo-900 leading-relaxed">{String(value)}</p>
+              <div key={key} className="border border-border-strong bg-black-card p-4">
+                <p className="text-xs font-semibold uppercase tracking-wide text-orange-accent">{label}</p>
+                <p className="mt-1 text-sm text-white leading-relaxed">{String(value)}</p>
               </div>
             )
           })}
@@ -468,15 +468,15 @@ function StrategicTensionsSection({ strategicAnalysis }: { strategicAnalysis: Re
   return (
     <section>
       <div className="mb-4 flex items-center">
-        <h2 className="text-lg font-semibold text-gray-900">Strategic Tensions</h2>
+        <h2 className="text-lg font-semibold uppercase tracking-wider text-white">Strategic Tensions</h2>
         <CopyButton text={tensionsCopyText} />
       </div>
       <div className="grid gap-3 sm:grid-cols-2">
         {tensions.map((tension, i) => {
           if (typeof tension === 'string') {
             return (
-              <div key={i} className="rounded-xl border border-indigo-100 bg-indigo-50 p-4">
-                <p className="text-sm text-indigo-900 leading-relaxed">{tension}</p>
+              <div key={i} className="border border-border-strong bg-black-card p-4">
+                <p className="text-sm text-white leading-relaxed">{tension}</p>
               </div>
             )
           }
@@ -485,10 +485,10 @@ function StrategicTensionsSection({ strategicAnalysis }: { strategicAnalysis: Re
             const title = String(t.title ?? t.name ?? t.tension ?? `Tension ${i + 1}`)
             const description = String(t.description ?? t.insight ?? t.explanation ?? t.detail ?? '')
             return (
-              <div key={i} className="rounded-xl border border-indigo-100 bg-indigo-50 p-4">
-                <p className="text-xs font-semibold uppercase tracking-wide text-indigo-400">Tension</p>
-                <p className="mt-1 text-sm font-semibold text-indigo-900">{title}</p>
-                {description && <p className="mt-1 text-sm text-indigo-700 leading-relaxed">{description}</p>}
+              <div key={i} className="border border-border-strong bg-black-card p-4">
+                <p className="text-xs font-semibold uppercase tracking-wide text-orange-accent">Tension</p>
+                <p className="mt-1 text-sm font-semibold text-white">{title}</p>
+                {description && <p className="mt-1 text-sm text-white-muted leading-relaxed">{description}</p>}
               </div>
             )
           }
@@ -503,33 +503,33 @@ function PhantomCDLockedSection() {
   return (
     <section>
       <div className="mb-4 flex items-center">
-        <h2 className="text-lg font-semibold text-gray-900">Phantom Creative Director</h2>
-        <span className="ml-2 inline-flex items-center rounded-full bg-indigo-100 px-2 py-0.5 text-xs font-semibold text-indigo-700">Pro</span>
+        <h2 className="text-lg font-semibold uppercase tracking-wider text-white">Phantom Creative Director</h2>
+        <span className="ml-2 inline-flex items-center border border-border-strong px-2 py-0.5 text-xs font-semibold text-orange-accent">Pro</span>
       </div>
-      <div className="relative overflow-hidden rounded-xl border border-indigo-100 bg-indigo-50">
+      <div className="relative overflow-hidden border border-border-strong bg-black-card">
         {/* Blurred preview */}
         <div className="select-none p-5 blur-sm pointer-events-none" aria-hidden="true">
           <div className="grid gap-3 sm:grid-cols-2">
             {['Provocateur', 'Strategist', 'Contrarian', 'Empath'].map((role) => (
-              <div key={role} className="rounded-xl border border-indigo-100 bg-white p-4">
-                <p className="text-xs font-semibold uppercase tracking-wide text-indigo-400">{role}</p>
-                <p className="mt-1 text-sm text-indigo-900">This brief lacks a clear emotional hook. Push harder on the tension between aspiration and reality — that&apos;s where the work lives.</p>
+              <div key={role} className="border border-border-subtle bg-black-card p-4">
+                <p className="text-xs font-semibold uppercase tracking-wide text-orange-accent">{role}</p>
+                <p className="mt-1 text-sm text-white">This brief lacks a clear emotional hook. Push harder on the tension between aspiration and reality — that&apos;s where the work lives.</p>
               </div>
             ))}
           </div>
         </div>
         {/* Lock overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-white/70 backdrop-blur-sm px-6 text-center">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100">
-            <svg className="h-6 w-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/70 backdrop-blur-sm px-6 text-center">
+          <div className="flex h-12 w-12 items-center justify-center border border-border-strong bg-black-card">
+            <svg className="h-6 w-6 text-orange-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
             </svg>
           </div>
-          <h3 className="mt-3 text-base font-semibold text-gray-900">Unlock Phantom Creative Director</h3>
-          <p className="mt-1 text-sm text-gray-600 max-w-xs">See how expert creative perspectives would attack this brief.</p>
+          <h3 className="mt-3 text-base font-semibold uppercase tracking-wider text-white">Unlock Phantom Creative Director</h3>
+          <p className="mt-1 text-sm text-white-muted max-w-xs">See how expert creative perspectives would attack this brief.</p>
           <Link
             href="/pricing"
-            className="mt-4 inline-flex items-center gap-1.5 rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-indigo-700 transition-colors"
+            className="mt-4 inline-flex items-center gap-1.5 bg-red-hot px-5 py-2.5 text-sm font-semibold text-white hover:bg-red-dim transition-colors"
           >
             Upgrade to Pro
           </Link>
@@ -575,23 +575,23 @@ function RewrittenBriefSection({ strategicAnalysis, extractedBrief, isPro }: { s
   return (
     <section>
       <div className="mb-4 flex items-center">
-        <h2 className="text-lg font-semibold text-gray-900">Sharpened Brief</h2>
+        <h2 className="text-lg font-semibold uppercase tracking-wider text-white">Sharpened Brief</h2>
         <CopyButton text={copyText} />
       </div>
-      <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+      <div className="border border-border-subtle bg-black-card p-5">
         <div className="space-y-3">
           {lines.map((line, i) => {
             const boldMatch = line.match(/^\*\*(.+?):\*\*\s*(.+)$/)
             if (boldMatch) {
               return (
                 <div key={i} className="flex gap-2">
-                  <span className="min-w-[140px] text-xs font-semibold uppercase tracking-wide text-gray-400 pt-0.5">{boldMatch[1]}</span>
-                  <span className="text-sm text-gray-800 leading-relaxed">{boldMatch[2]}</span>
+                  <span className="min-w-[140px] text-xs font-semibold uppercase tracking-wide text-white-dim pt-0.5">{boldMatch[1]}</span>
+                  <span className="text-sm text-white leading-relaxed">{boldMatch[2]}</span>
                 </div>
               )
             }
             return (
-              <p key={i} className="text-sm text-gray-800 leading-relaxed">{line}</p>
+              <p key={i} className="text-sm text-white leading-relaxed">{line}</p>
             )
           })}
         </div>
@@ -713,12 +713,12 @@ function BriefMetadataBar({ data }: { data: BriefAnalysisData }) {
   const gapCount = data.gaps.length
 
   return (
-    <div className="mt-3 flex items-center justify-center gap-5 text-xs text-gray-500">
-      <span><span className="font-medium text-gray-700">{wordCount}</span> words</span>
-      <span className="text-gray-300">·</span>
-      <span><span className="font-medium text-gray-700">{readTime} min</span> read</span>
-      <span className="text-gray-300">·</span>
-      <span><span className="font-medium text-gray-700">{gapCount}</span> gap{gapCount !== 1 ? 's' : ''} found</span>
+    <div className="mt-3 flex items-center justify-center gap-5 text-xs text-white-muted">
+      <span><span className="font-medium text-white">{wordCount}</span> words</span>
+      <span className="text-white-dim">·</span>
+      <span><span className="font-medium text-white">{readTime} min</span> read</span>
+      <span className="text-white-dim">·</span>
+      <span><span className="font-medium text-white">{gapCount}</span> gap{gapCount !== 1 ? 's' : ''} found</span>
     </div>
   )
 }
@@ -739,14 +739,14 @@ function CopyAllButton({ data }: { data: BriefAnalysisData }) {
   return (
     <button
       onClick={handleCopy}
-      className="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
+      className="inline-flex items-center gap-1.5 border border-border-subtle bg-black-card px-3 py-1.5 text-xs font-semibold text-white-muted hover:bg-white-faint transition-colors"
     >
       {copied ? (
         <>
           <svg className="h-3.5 w-3.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
-          <span className="text-green-600">Copied!</span>
+          <span className="text-green-500">Copied!</span>
         </>
       ) : (
         <>
@@ -781,7 +781,7 @@ function DownloadPDFButton({ data, isPaidUser }: { data: BriefAnalysisData; isPa
       <Link
         href="/pricing"
         title="Upgrade to export PDF"
-        className="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-gray-50 px-3 py-1.5 text-xs font-semibold text-gray-400 cursor-not-allowed select-none"
+        className="inline-flex items-center gap-1.5 border border-border-subtle bg-black-card px-3 py-1.5 text-xs font-semibold text-white-dim cursor-not-allowed select-none"
         tabIndex={-1}
         aria-disabled="true"
       >
@@ -789,7 +789,7 @@ function DownloadPDFButton({ data, isPaidUser }: { data: BriefAnalysisData; isPa
           <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
         </svg>
         Download PDF
-        <span className="ml-0.5 rounded bg-gray-200 px-1 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-gray-500">Pro</span>
+        <span className="ml-0.5 bg-white-faint px-1 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-white-dim">Pro</span>
       </Link>
     )
   }
@@ -797,7 +797,7 @@ function DownloadPDFButton({ data, isPaidUser }: { data: BriefAnalysisData; isPa
   return (
     <button
       onClick={handleClick}
-      className="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-1.5 text-xs font-semibold text-gray-700 hover:bg-gray-50 transition-colors"
+      className="inline-flex items-center gap-1.5 border border-border-subtle bg-black-card px-3 py-1.5 text-xs font-semibold text-white-muted hover:bg-white-faint transition-colors"
     >
       <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -823,14 +823,14 @@ function ShareResultButton({ url }: { url: string }) {
   return (
     <button
       onClick={handleCopy}
-      className="inline-flex items-center gap-1.5 rounded-lg border border-indigo-200 bg-indigo-50 px-3 py-1.5 text-xs font-semibold text-indigo-700 hover:bg-indigo-100 transition-colors"
+      className="inline-flex items-center gap-1.5 border border-border-strong bg-black-card px-3 py-1.5 text-xs font-semibold text-orange-accent hover:bg-white-faint transition-colors"
     >
       {copied ? (
         <>
           <svg className="h-3.5 w-3.5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
-          <span className="text-green-600">Link copied!</span>
+          <span className="text-green-500">Link copied!</span>
         </>
       ) : (
         <>
@@ -846,19 +846,19 @@ function ShareResultButton({ url }: { url: string }) {
 
 function UpgradeCtaCard() {
   return (
-    <div className="rounded-2xl border border-indigo-100 bg-gradient-to-br from-indigo-50 to-white p-6">
+    <div className="border border-border-strong bg-black-card p-6">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex-1">
-          <p className="text-xs font-semibold uppercase tracking-wide text-indigo-500 mb-1">Unlock more with Pro</p>
-          <h3 className="text-base font-bold text-gray-900 mb-3">Get the full picture</h3>
+          <p className="text-xs font-semibold uppercase tracking-wide text-orange-accent mb-1">Unlock more with Pro</p>
+          <h3 className="text-base font-bold uppercase tracking-wider text-white mb-3">Get the full picture</h3>
           <ul className="space-y-1.5">
             {[
               { icon: 'M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4', label: 'PDF export of your analysis' },
               { icon: 'M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15', label: 'Unlimited analyses every month' },
               { icon: 'M13 10V3L4 14h7v7l9-11h-7z', label: 'Priority processing' },
             ].map(({ icon, label }) => (
-              <li key={label} className="flex items-center gap-2 text-sm text-gray-700">
-                <svg className="h-4 w-4 shrink-0 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <li key={label} className="flex items-center gap-2 text-sm text-white-muted">
+                <svg className="h-4 w-4 shrink-0 text-orange-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d={icon} />
                 </svg>
                 {label}
@@ -869,7 +869,7 @@ function UpgradeCtaCard() {
         <div className="shrink-0">
           <Link
             href="/pricing"
-            className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 transition-colors"
+            className="inline-flex items-center gap-2 bg-red-hot px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-dim transition-colors"
           >
             See pricing
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

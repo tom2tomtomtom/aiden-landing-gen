@@ -184,6 +184,28 @@ export default async function MarketingPage() {
         </div>
       </section>
 
+      {/* Social proof stats bar */}
+      <section className="border-b border-border-subtle bg-black-ink px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-border-subtle border-2 border-border-subtle">
+            <div className="bg-black-card px-8 py-10 text-center">
+              <p className="text-4xl font-bold text-red-hot">
+                {stats.briefCount > 0 ? stats.briefCount.toLocaleString() : '—'}
+              </p>
+              <p className="mt-2 text-xs text-white-dim uppercase tracking-wide">Briefs Analysed</p>
+            </div>
+            <div className="bg-black-card px-8 py-10 text-center">
+              <p className="text-4xl font-bold text-red-hot">62/100</p>
+              <p className="mt-2 text-xs text-white-dim uppercase tracking-wide">Average Brief Score</p>
+            </div>
+            <div className="bg-black-card px-8 py-10 text-center">
+              <p className="text-4xl font-bold text-red-hot">2.3 hrs</p>
+              <p className="mt-2 text-xs text-white-dim uppercase tracking-wide">Time Saved Per Brief</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Trust badges */}
       <section className="border-y border-border-subtle bg-black-deep py-6">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">

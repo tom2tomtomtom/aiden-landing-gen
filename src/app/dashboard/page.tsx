@@ -168,6 +168,51 @@ export default async function DashboardPage() {
             </a>
           </div>
 
+          {generations && generations.length >= 2 && (() => {
+            const scoredGens = (generations as GenerationRecord[])
+              .slice()
+              .reverse()
+              .slice(-10)
+              .map(g => g.output_copy?.briefScore ?? g.output_copy?.score ?? null)
+              .filter((s): s is number => s !== null)
+            if (scoredGens.length < 2) return null
+            const W = 200
+            const H = 40
+            const PAD = 4
+            const min = Math.min(...scoredGens)
+            const max = Math.max(...scoredGens)
+            const range = max - min || 1
+            const points = scoredGens
+              .map((s, i) => {
+                const x = PAD + (i / (scoredGens.length - 1)) * (W - PAD * 2)
+                const y = PAD + (1 - (s - min) / range) * (H - PAD * 2)
+                return `${x},${y}`
+              })
+              .join(' ')
+            return (
+              <div className="mt-6 rounded-xl border border-border-subtle bg-black-ink px-5 py-4">
+                <p className="text-xs font-medium text-white-dim uppercase tracking-wide mb-3">
+                  Score trend
+                </p>
+                <svg
+                  width={W}
+                  height={H}
+                  viewBox={`0 0 ${W} ${H}`}
+                  aria-label="Score trend sparkline"
+                >
+                  <polyline
+                    points={points}
+                    fill="none"
+                    stroke="#ff2e2e"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+            )
+          })()}
+
           {!generations || generations.length === 0 ? (
             <p className="mt-4 text-sm text-white-muted">
               No analyses yet.{' '}

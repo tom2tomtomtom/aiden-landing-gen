@@ -131,6 +131,46 @@ const initialFormData: FormFields = {
   briefType: '',
 }
 
+function getFileTypeIcon(fileName: string) {
+  const ext = fileName.split('.').pop()?.toLowerCase()
+  if (ext === 'pdf') {
+    return (
+      <svg className="h-8 w-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M6 4a2 2 0 0 1 2-2h12l6 6v20a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4Z" fill="#fee2e2" stroke="#ef4444" strokeWidth="1.5"/>
+        <path d="M20 2v6h6" stroke="#ef4444" strokeWidth="1.5" strokeLinejoin="round"/>
+        <text x="8" y="23" fontFamily="sans-serif" fontSize="7" fontWeight="700" fill="#ef4444">PDF</text>
+      </svg>
+    )
+  }
+  if (ext === 'docx' || ext === 'doc') {
+    return (
+      <svg className="h-8 w-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M6 4a2 2 0 0 1 2-2h12l6 6v20a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4Z" fill="#dbeafe" stroke="#3b82f6" strokeWidth="1.5"/>
+        <path d="M20 2v6h6" stroke="#3b82f6" strokeWidth="1.5" strokeLinejoin="round"/>
+        <text x="5" y="23" fontFamily="sans-serif" fontSize="6.5" fontWeight="700" fill="#3b82f6">DOC</text>
+      </svg>
+    )
+  }
+  // txt / md
+  return (
+    <svg className="h-8 w-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M6 4a2 2 0 0 1 2-2h12l6 6v20a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4Z" fill="#f0fdf4" stroke="#22c55e" strokeWidth="1.5"/>
+      <path d="M20 2v6h6" stroke="#22c55e" strokeWidth="1.5" strokeLinejoin="round"/>
+      <text x="7" y="23" fontFamily="sans-serif" fontSize="6.5" fontWeight="700" fill="#22c55e">TXT</text>
+    </svg>
+  )
+}
+
+const DocumentIcon = () => (
+  <svg className="h-8 w-8 text-gray-400" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M6 4a2 2 0 0 1 2-2h12l6 6v20a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4Z" fill="#f3f4f6" stroke="currentColor" strokeWidth="1.5"/>
+    <path d="M20 2v6h6" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+    <line x1="10" y1="16" x2="22" y2="16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+    <line x1="10" y1="20" x2="22" y2="20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+    <line x1="10" y1="24" x2="17" y2="24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+  </svg>
+)
+
 const ACCEPTED_TYPES = '.pdf,.docx,.doc,.txt,.md'
 const ACCEPTED_MIME = [
   'application/pdf',
@@ -300,6 +340,9 @@ export default function LandingPageForm({ onGenerate, isLoading, error, onFormCh
             </div>
           ) : uploadState === 'done' ? (
             <div className="py-1">
+              <div className="flex items-center justify-center mb-2">
+                {uploadFileName && getFileTypeIcon(uploadFileName)}
+              </div>
               <p className="text-sm text-green-700">
                 <span className="font-medium">{uploadFileName}</span> loaded
               </p>
@@ -323,6 +366,9 @@ export default function LandingPageForm({ onGenerate, isLoading, error, onFormCh
             </div>
           ) : (
             <div className="py-1">
+              <div className="flex items-center justify-center mb-2">
+                <DocumentIcon />
+              </div>
               <p className="text-sm text-gray-600">
                 <span className="font-medium text-indigo-600">Upload a file</span> or drag and drop
               </p>

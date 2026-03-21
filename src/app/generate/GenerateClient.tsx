@@ -179,6 +179,50 @@ function GeneratePageInner() {
         </div>
       </header>
 
+      {/* Loading progress bar */}
+      {status === 'loading' && (
+        <>
+          <style>{`
+            @keyframes nprogress-indeterminate {
+              0% { left: -35%; right: 100%; }
+              60% { left: 100%; right: -90%; }
+              100% { left: 100%; right: -90%; }
+            }
+            @keyframes nprogress-short {
+              0% { left: -200%; right: 100%; }
+              60% { left: 107%; right: -8%; }
+              100% { left: 107%; right: -8%; }
+            }
+            .nprogress-bar::after {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 0; left: 0; bottom: 0; right: 0;
+              animation: nprogress-indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+              background: #4338ca;
+              border-radius: 2px;
+            }
+            .nprogress-bar::before {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 0; left: 0; bottom: 0; right: 0;
+              animation: nprogress-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+              animation-delay: 1.15s;
+              background: #4338ca;
+              border-radius: 2px;
+            }
+          `}</style>
+          <div
+            className="nprogress-bar"
+            role="progressbar"
+            aria-label="Loading"
+            aria-valuenow={undefined}
+            style={{ position: 'relative', height: 3, overflow: 'hidden', background: '#e0e7ff' }}
+          />
+        </>
+      )}
+
       {/* Welcome banner for first-time users */}
       {showWelcomeBanner && (
         <div className="border-b border-indigo-200 bg-indigo-50 px-4 py-3 sm:px-6 lg:px-8">

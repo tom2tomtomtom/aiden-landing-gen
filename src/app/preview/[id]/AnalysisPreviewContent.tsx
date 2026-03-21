@@ -52,7 +52,7 @@ function ShareButton({ url }: { url: string }) {
   return (
     <button
       onClick={handleCopy}
-      className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+      className="inline-flex items-center gap-2 rounded-xl bg-red-hot px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-hot/90 transition-colors focus:outline-none focus:ring-2 focus:ring-red-hot focus:ring-offset-2 focus:ring-offset-black-ink"
     >
       {copied ? (
         <>
@@ -81,16 +81,16 @@ export default function AnalysisPreviewContent({ data, previewUrl }: AnalysisPre
   const dashOffset = circumference - (score / 100) * circumference
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-black-ink">
       {/* Header */}
-      <header className="border-b border-gray-200 bg-white px-4 py-4 sm:px-6 lg:px-8">
+      <header className="border-b border-border-subtle bg-black-card px-4 py-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl flex items-center justify-between">
-          <Link href="/" className="text-lg font-bold tracking-tight text-gray-900 hover:text-indigo-600 transition-colors">
+          <Link href="/" className="text-lg font-bold tracking-tight text-white hover:text-orange-accent transition-colors">
             AIDEN Brief Intelligence
           </Link>
           <Link
             href="/generate"
-            className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
+            className="text-sm font-medium text-orange-accent hover:text-orange-accent/80 transition-colors"
           >
             Try it free
           </Link>
@@ -100,7 +100,7 @@ export default function AnalysisPreviewContent({ data, previewUrl }: AnalysisPre
       <main className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
         {/* Score Hero */}
         <div className={`rounded-2xl ${bg} ${border} border p-10 text-center`}>
-          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-gray-500">Brief Quality Score</p>
+          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-white-muted">Brief Quality Score</p>
 
           <div className="relative inline-flex items-center justify-center">
             <svg width="172" height="172" className="-rotate-90">
@@ -112,14 +112,14 @@ export default function AnalysisPreviewContent({ data, previewUrl }: AnalysisPre
             </svg>
             <div className="absolute flex flex-col items-center">
               <span className={`text-6xl font-bold ${text}`}>{score}</span>
-              <span className="text-sm text-gray-400 font-medium">/100</span>
+              <span className="text-sm text-white-muted font-medium">/100</span>
             </div>
           </div>
 
           <p className={`mt-4 text-2xl font-bold ${text}`}>{label}</p>
 
           {gaps.length > 0 && (
-            <p className="mt-2 text-sm text-gray-600">
+            <p className="mt-2 text-sm text-white-muted">
               {gaps.length} gap{gaps.length !== 1 ? 's' : ''} identified
             </p>
           )}
@@ -132,7 +132,7 @@ export default function AnalysisPreviewContent({ data, previewUrl }: AnalysisPre
         {/* Gap Summary */}
         {gaps.length > 0 && (
           <section className="mt-8">
-            <h2 className="mb-4 text-lg font-semibold text-gray-900">Gaps Found</h2>
+            <h2 className="mb-4 text-lg font-semibold text-white">Gaps Found</h2>
             <div className="space-y-3">
               {gaps.map((gap) => {
                 const severity = getGapSeverity(gap)
@@ -164,29 +164,29 @@ export default function AnalysisPreviewContent({ data, previewUrl }: AnalysisPre
         )}
 
         {/* CTA */}
-        <div className="mt-10 rounded-2xl border border-indigo-100 bg-indigo-50 px-8 py-8 text-center">
-          <p className="text-lg font-semibold text-indigo-900">Want to interrogate YOUR brief?</p>
-          <p className="mt-2 text-sm text-indigo-700">
+        <div className="mt-10 rounded-2xl border border-border-subtle bg-black-card px-8 py-8 text-center">
+          <p className="text-lg font-semibold text-white">Want to interrogate YOUR brief?</p>
+          <p className="mt-2 text-sm text-white-muted">
             Get an instant quality score, gap analysis, and strategic tensions — free.
           </p>
           <Link
             href="/generate"
-            className="mt-5 inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-7 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 transition-colors"
+            className="mt-5 inline-flex items-center gap-2 rounded-xl bg-red-hot px-7 py-3 text-sm font-semibold text-white shadow-sm hover:bg-red-hot/90 transition-colors"
           >
             Interrogate my brief
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </Link>
-          <p className="mt-3 text-xs text-indigo-500">3 free analyses per month · No credit card required</p>
+          <p className="mt-3 text-xs text-white-muted">3 free analyses per month · No credit card required</p>
         </div>
       </main>
 
       {/* Powered by badge */}
-      <div className="border-t border-gray-200 bg-white py-4 text-center">
-        <Link href="/" className="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-600 transition-colors">
+      <div className="border-t border-border-subtle bg-black-card py-4 text-center">
+        <Link href="/" className="inline-flex items-center gap-1.5 text-xs text-white-muted hover:text-white transition-colors">
           <span>Powered by</span>
-          <span className="font-semibold tracking-tight text-gray-500">AIDEN</span>
+          <span className="font-semibold tracking-tight text-white">AIDEN</span>
         </Link>
       </div>
     </div>

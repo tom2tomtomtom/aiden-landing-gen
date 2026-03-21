@@ -39,25 +39,25 @@ export default function PreviewContent({ data, productName, template }: PreviewC
       </section>
 
       {/* Features */}
-      <section className="bg-white px-6 py-14 sm:px-12 sm:py-20">
+      <section className="bg-black-ink px-6 py-14 sm:px-12 sm:py-20">
         <div className="mx-auto max-w-4xl">
-          <h2 className="text-center text-2xl font-bold text-gray-900 sm:text-3xl">
+          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">
             {theme.featuresHeading}
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-sm text-gray-500 sm:text-base">
+          <p className="mx-auto mt-3 max-w-xl text-center text-sm text-white-muted sm:text-base">
             {theme.featuresSubtext}
           </p>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {data.features.map((feature, i) => (
               <div
                 key={i}
-                className={`rounded-xl border border-gray-100 bg-gray-50 p-6 ${theme.featureHover}`}
+                className={`rounded-xl border border-border-subtle bg-black-card p-6 ${theme.featureHover}`}
               >
                 <div className={`mb-3 flex h-10 w-10 items-center justify-center rounded-lg text-lg ${theme.featureIconBg}`}>
                   {FEATURE_ICONS[i % FEATURE_ICONS.length]}
                 </div>
-                <h3 className="text-sm font-semibold text-gray-900">{feature.title}</h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-gray-600">{feature.description}</p>
+                <h3 className="text-sm font-semibold text-white">{feature.title}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-white-muted">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -65,12 +65,12 @@ export default function PreviewContent({ data, productName, template }: PreviewC
       </section>
 
       {/* FAQ */}
-      <section className="bg-gray-50 px-6 py-14 sm:px-12 sm:py-20">
+      <section className="bg-black-card px-6 py-14 sm:px-12 sm:py-20">
         <div className="mx-auto max-w-2xl">
-          <h2 className="text-center text-2xl font-bold text-gray-900 sm:text-3xl">
+          <h2 className="text-center text-2xl font-bold text-white sm:text-3xl">
             Frequently asked questions
           </h2>
-          <div className="mt-8 divide-y divide-gray-200 rounded-xl border border-gray-200 bg-white shadow-sm">
+          <div className="mt-8 divide-y divide-border-subtle rounded-xl border border-border-subtle bg-black-ink shadow-sm">
             {data.faq.map((item, i) => (
               <div key={i}>
                 <button
@@ -78,9 +78,9 @@ export default function PreviewContent({ data, productName, template }: PreviewC
                   className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
                   aria-expanded={openFaq === i}
                 >
-                  <span className="text-sm font-medium text-gray-900">{item.question}</span>
+                  <span className="text-sm font-medium text-white">{item.question}</span>
                   <svg
-                    className={`h-4 w-4 flex-shrink-0 text-gray-400 transition-transform duration-200 ${
+                    className={`h-4 w-4 flex-shrink-0 text-white-muted transition-transform duration-200 ${
                       openFaq === i ? 'rotate-180' : ''
                     }`}
                     fill="none"
@@ -93,7 +93,7 @@ export default function PreviewContent({ data, productName, template }: PreviewC
                 </button>
                 {openFaq === i && (
                   <div className="px-5 pb-4">
-                    <p className="text-sm leading-relaxed text-gray-600">{item.answer}</p>
+                    <p className="text-sm leading-relaxed text-white-muted">{item.answer}</p>
                   </div>
                 )}
               </div>
@@ -106,12 +106,12 @@ export default function PreviewContent({ data, productName, template }: PreviewC
       <footer className={`${theme.footerBg} px-6 py-10 sm:px-12`}>
         <div className="mx-auto max-w-4xl text-center">
           <p className="text-base font-semibold text-white">{productName}</p>
-          <p className="mt-1 text-xs text-gray-400">
+          <p className="mt-1 text-xs text-white-muted">
             © {new Date().getFullYear()} {productName}. All rights reserved.
           </p>
           <div className="mt-4 flex justify-center gap-6">
             {['Privacy', 'Terms', 'Contact'].map((link) => (
-              <span key={link} className="cursor-pointer text-xs text-gray-500 transition hover:text-gray-300">
+              <span key={link} className="cursor-pointer text-xs text-white-muted transition hover:text-white">
                 {link}
               </span>
             ))}
@@ -120,13 +120,13 @@ export default function PreviewContent({ data, productName, template }: PreviewC
       </footer>
 
       {/* Attribution */}
-      <div className="bg-gray-100 py-3 text-center text-xs text-gray-500">
+      <div className="bg-black-card py-3 text-center text-xs text-white-muted">
         Made with{' '}
         <a
           href="https://aiden.services"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-medium text-indigo-600"
+          className="font-medium text-orange-accent"
         >
           AIDEN
         </a>

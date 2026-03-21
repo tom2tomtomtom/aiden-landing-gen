@@ -254,10 +254,19 @@ export default function LandingPageForm({ onGenerate, isLoading, error, onFormCh
 
         {/* File upload dropzone */}
         <div
+          role="button"
+          tabIndex={0}
+          aria-label="Upload brief file — drag and drop or press Enter to browse"
           onDragOver={(e) => { e.preventDefault(); setIsDragOver(true) }}
           onDragLeave={() => setIsDragOver(false)}
           onDrop={handleFileDrop}
           onClick={() => fileInputRef.current?.click()}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault()
+              fileInputRef.current?.click()
+            }
+          }}
           className={`mt-2 cursor-pointer border-2 border-dashed p-4 text-center transition ${
             isDragOver
               ? 'border-indigo-400 bg-indigo-50'
@@ -273,8 +282,15 @@ export default function LandingPageForm({ onGenerate, isLoading, error, onFormCh
             type="file"
             accept={ACCEPTED_TYPES}
             onChange={handleFileSelect}
-            className="hidden"
+            className="sr-only"
+            aria-label="Choose a brief file to upload"
+            tabIndex={-1}
           />
+          <div aria-live="polite" aria-atomic="true" className="sr-only">
+            {uploadState === 'parsing' && `Parsing ${uploadFileName}, please wait.`}
+            {uploadState === 'done' && `${uploadFileName} loaded successfully.${uploadError ? ` Note: ${uploadError}` : ''}`}
+            {uploadState === 'error' && `Upload failed. ${uploadError ?? ''}`}
+          </div>
           {uploadState === 'parsing' ? (
             <div className="py-2 space-y-2">
               <p className="text-sm text-indigo-600">Parsing {uploadFileName}...</p>
@@ -348,13 +364,15 @@ export default function LandingPageForm({ onGenerate, isLoading, error, onFormCh
           onChange={(e) => handleBriefChange(e.target.value)}
           maxLength={10000}
           placeholder="Paste your full brief here…"
+          aria-describedby={errors.briefText ? 'briefText-error' : undefined}
+          aria-invalid={!!errors.briefText}
           className={`mt-1 block w-full rounded-lg border px-3 py-2 text-sm shadow-sm outline-none transition focus:ring-2 focus:ring-indigo-500 ${
             errors.briefText ? 'border-red-400 bg-red-50' : 'border-gray-300 bg-white'
           }`}
         />
         <div className="mt-1 flex justify-between">
           {errors.briefText ? (
-            <p className="text-xs text-red-500">{errors.briefText}</p>
+            <p id="briefText-error" role="alert" className="text-xs text-red-500">{errors.briefText}</p>
           ) : (
             <span />
           )}

@@ -613,32 +613,52 @@ function BriefLines({ lines }: { lines: string[] }) {
 function RewrittenBriefSection({ strategicAnalysis, extractedBrief, isPro, briefText }: { strategicAnalysis: Record<string, unknown>; extractedBrief: Record<string, unknown>; isPro?: boolean; briefText?: string }) {
   const [showComparison, setShowComparison] = useState(false)
 
-  const rewriteFields = ['rewritten_brief', 'sharpened_brief', 'improved_brief', 'refined_brief', 'brief_rewrite', 'recommended_brief']
+  // Look for a proper rewritten brief from Brain V2
+  const rewriteFields = ['aiden_brief_version', 'rewritten_brief', 'sharpened_brief', 'improved_brief', 'refined_brief', 'brief_rewrite', 'recommended_brief']
   let rewrittenBrief: string | null = null
 
-  for (const field of rewriteFields) {
-    if (typeof strategicAnalysis[field] === 'string' && (strategicAnalysis[field] as string).length > 0) {
-      rewrittenBrief = strategicAnalysis[field] as string
-      break
+  // Check both strategicAnalysis and extractedBrief for rewrite fields
+  for (const source of [strategicAnalysis, extractedBrief]) {
+    for (const field of rewriteFields) {
+      if (typeof source[field] === 'string' && (source[field] as string).length > 0) {
+        rewrittenBrief = source[field] as string
+        break
+      }
     }
+    if (rewrittenBrief) break
   }
 
-  if (!rewrittenBrief) {
-    const parts: string[] = []
-    const objective = extractedBrief.objective
-    const audience = extractedBrief.target_audience
-    const deliverables = extractedBrief.deliverables
-    const tone = extractedBrief.tone
-    const kpis = extractedBrief.kpis
+  // Also check for aiden_analysis as supplementary context
+  const aidenAnalysis = (extractedBrief.aiden_analysis ?? strategicAnalysis.aiden_analysis) as string | undefined
 
-    if (objective) parts.push(`**Objective:** ${objective}`)
+  if (!rewrittenBrief) {
+    // Fallback: build from extracted fields
+    const parts: string[] = []
+    const objectives = extractedBrief.objectives ?? extractedBrief.objective
+    const audience = extractedBrief.target_audience ?? extractedBrief.audience
+    const deliverables = extractedBrief.deliverables ?? extractedBrief.requirements
+    const tone = extractedBrief.tone ?? extractedBrief.tone_of_voice
+    const kpis = extractedBrief.kpis ?? extractedBrief.success_metrics
+    const budget = extractedBrief.budget
+    const timeline = extractedBrief.timeline ?? extractedBrief.timing
+    const brand = extractedBrief.brand ?? extractedBrief.campaign_name ?? extractedBrief.brand_name
+
+    if (brand) parts.push(`**Brand:** ${brand}`)
+    if (objectives) parts.push(`**Objectives:** ${Array.isArray(objectives) ? objectives.join('; ') : objectives}`)
     if (audience) parts.push(`**Target Audience:** ${Array.isArray(audience) ? audience.join(', ') : audience}`)
     if (deliverables) parts.push(`**Deliverables:** ${Array.isArray(deliverables) ? deliverables.join(', ') : deliverables}`)
     if (tone) parts.push(`**Tone:** ${tone}`)
+    if (budget) parts.push(`**Budget:** ${budget}`)
+    if (timeline) parts.push(`**Timeline:** ${timeline}`)
     if (kpis) parts.push(`**Success Metrics:** ${Array.isArray(kpis) ? kpis.join(', ') : kpis}`)
 
     if (parts.length === 0) return null
     rewrittenBrief = parts.join('\n')
+  }
+
+  // Prepend aiden_analysis if we have it and rewrittenBrief is from fallback fields
+  if (aidenAnalysis && !rewriteFields.some(f => typeof extractedBrief[f] === 'string' || typeof strategicAnalysis[f] === 'string')) {
+    rewrittenBrief = aidenAnalysis + '\n\n' + rewrittenBrief
   }
 
   const sharpenedLines = rewrittenBrief.split('\n').filter(Boolean)
@@ -765,23 +785,26 @@ function buildFullMarkdown(data: BriefAnalysisData): string {
     }
   }
 
-  // Rewritten Brief
-  const rewriteFields = ['rewritten_brief', 'sharpened_brief', 'improved_brief', 'refined_brief', 'brief_rewrite', 'recommended_brief']
+  // Rewritten Brief - check both sources, including aiden_brief_version
+  const rewriteFields2 = ['aiden_brief_version', 'rewritten_brief', 'sharpened_brief', 'improved_brief', 'refined_brief', 'brief_rewrite', 'recommended_brief']
   let rewrittenBrief: string | null = null
-  for (const field of rewriteFields) {
-    if (typeof strategicAnalysis[field] === 'string' && (strategicAnalysis[field] as string).length > 0) {
-      rewrittenBrief = strategicAnalysis[field] as string
-      break
+  for (const source of [strategicAnalysis, extractedBrief]) {
+    for (const field of rewriteFields2) {
+      if (typeof source[field] === 'string' && (source[field] as string).length > 0) {
+        rewrittenBrief = source[field] as string
+        break
+      }
     }
+    if (rewrittenBrief) break
   }
   if (!rewrittenBrief) {
     const parts: string[] = []
-    const objective = extractedBrief.objective
-    const audience = extractedBrief.target_audience
-    const deliverables = extractedBrief.deliverables
-    const tone = extractedBrief.tone
-    const kpis = extractedBrief.kpis
-    if (objective) parts.push(`**Objective:** ${objective}`)
+    const objectives = extractedBrief.objectives ?? extractedBrief.objective
+    const audience = extractedBrief.target_audience ?? extractedBrief.audience
+    const deliverables = extractedBrief.deliverables ?? extractedBrief.requirements
+    const tone = extractedBrief.tone ?? extractedBrief.tone_of_voice
+    const kpis = extractedBrief.kpis ?? extractedBrief.success_metrics
+    if (objectives) parts.push(`**Objectives:** ${Array.isArray(objectives) ? objectives.join('; ') : objectives}`)
     if (audience) parts.push(`**Target Audience:** ${Array.isArray(audience) ? audience.join(', ') : audience}`)
     if (deliverables) parts.push(`**Deliverables:** ${Array.isArray(deliverables) ? deliverables.join(', ') : deliverables}`)
     if (tone) parts.push(`**Tone:** ${tone}`)

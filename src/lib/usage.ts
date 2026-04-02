@@ -21,10 +21,22 @@ function currentMonth(): string {
   return `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, '0')}`
 }
 
+// Domains that get Pro access automatically
+const PRO_DOMAINS = ['redbaez.com']
+
 export async function getUserPlan(
   supabase: SupabaseClient,
   userId: string
 ): Promise<Plan> {
+  // Check email domain for automatic Pro access
+  const { data: user } = await supabase.auth.admin.getUserById(userId)
+  if (user?.user?.email) {
+    const domain = user.user.email.split('@')[1]?.toLowerCase()
+    if (domain && PRO_DOMAINS.includes(domain)) {
+      return 'pro'
+    }
+  }
+
   const { data } = await supabase
     .from('subscriptions')
     .select('plan')

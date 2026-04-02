@@ -67,7 +67,7 @@ export default function TermsPage() {
               <p className="mb-3">AIDEN offers the following plans:</p>
               <ul className="list-disc pl-5 space-y-2">
                 <li><strong className="text-white">Free:</strong> 3 generations per month at no cost. No credit card required.</li>
-                <li><strong className="text-white">Single ($49 one-time):</strong> A single generation with no attribution footer. This is a one-time charge &mdash; you will not be billed again.</li>
+                <li><strong className="text-white">Single ($30 one-time):</strong> A single generation with no attribution footer. This is a one-time charge &mdash; you will not be billed again.</li>
                 <li><strong className="text-white">Pro ($99/month):</strong> Unlimited generations billed monthly. You can cancel at any time; cancellation takes effect at the end of the current billing period.</li>
               </ul>
               <p className="mt-3">

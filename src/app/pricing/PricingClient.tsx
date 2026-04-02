@@ -10,7 +10,7 @@ const tiers = [
     period: null,
     description: 'See what your brief is missing.',
     features: [
-      '1 brief analysis per month',
+      '3 brief analyses per month',
       'Full gap analysis',
       'AIDEN branding on output',
     ],
@@ -22,16 +22,16 @@ const tiers = [
   },
   {
     name: 'Starter',
-    price: '$49',
+    price: '$30',
     period: 'one-time',
-    description: '10 analyses. Use them whenever you need them.',
+    description: '50 analyses. Use them whenever you need them.',
     features: [
-      '10 brief analyses',
+      '50 brief analyses',
       'Full strategic output',
       'No AIDEN branding',
       'Never expires',
     ],
-    cta: 'Buy 10 analyses',
+    cta: 'Buy 50 analyses',
     ctaType: 'checkout' as const,
     href: null,
     plan: 'single' as const,
@@ -55,7 +55,7 @@ const tiers = [
   },
   {
     name: 'Agency',
-    price: '$499',
+    price: '$309',
     period: 'per month',
     description: 'For teams of strategists. Up to 10 seats.',
     features: [
@@ -224,7 +224,7 @@ export default function PricingPage() {
             </thead>
             <tbody>
               {[
-                { feature: 'Analyses', free: '1 / month', single: '10 (one-time)', pro: 'Unlimited', agency: 'Unlimited' },
+                { feature: 'Analyses', free: '3 / month', single: '50 (one-time)', pro: 'Unlimited', agency: 'Unlimited' },
                 { feature: 'Team members', free: '1', single: '1', pro: '1', agency: '10' },
                 { feature: 'Share results', free: false, single: true, pro: true, agency: true },
                 { feature: 'Priority processing', free: false, single: false, pro: true, agency: true },

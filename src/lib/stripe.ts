@@ -30,7 +30,7 @@ export const stripe = {
 export const PLANS = {
   single: {
     name: 'Starter',
-    price: 4900, // $49.00 in cents — 10 analyses pack
+    price: 3000, // $30.00 in cents — 50 analyses pack
     priceId: process.env.STRIPE_PRICE_ID_SINGLE!,
     mode: 'payment' as const,
     analysisLimit: 10,

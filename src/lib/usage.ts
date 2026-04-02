@@ -10,8 +10,8 @@ export interface PlanLimits {
 }
 
 const PLAN_LIMITS: Record<Plan, { limit: number | null; resetType: PlanLimits['resetType'] }> = {
-  free: { limit: 1, resetType: 'monthly' },
-  single: { limit: 10, resetType: 'lifetime' },
+  free: { limit: 3, resetType: 'monthly' },
+  single: { limit: 50, resetType: 'lifetime' },
   pro: { limit: null, resetType: 'none' },
   agency: { limit: null, resetType: 'none' },
 }

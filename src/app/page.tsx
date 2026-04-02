@@ -29,7 +29,7 @@ const jsonLd = {
       name: 'Free',
       price: '0',
       priceCurrency: 'USD',
-      description: '1 brief analysis per month',
+      description: '3 brief analyses per month',
     },
     {
       '@type': 'Offer',
@@ -180,7 +180,7 @@ export default async function MarketingPage() {
               See pricing
             </Link>
           </div>
-          <p className="mt-4 text-sm text-white-dim">No credit card required · 1 free analysis per month</p>
+          <p className="mt-4 text-sm text-white-dim">No credit card required · 3 free analyses per month</p>
         </div>
       </section>
 
@@ -396,7 +396,7 @@ export default async function MarketingPage() {
                 name: 'Free',
                 price: '$0',
                 period: '',
-                description: '1 analysis per month',
+                description: '3 analyses per month',
                 features: [
                   'Full gap analysis report',
                   'Brief rewrite included',
@@ -408,15 +408,15 @@ export default async function MarketingPage() {
               },
               {
                 name: 'Starter',
-                price: '$49',
+                price: '$30',
                 period: 'one-time',
-                description: '10 analyses, never expires',
+                description: '50 analyses, never expires',
                 features: [
                   'Full strategic output',
                   'No AIDEN branding',
                   'Use them whenever',
                 ],
-                cta: 'Buy 10 analyses',
+                cta: 'Buy 50 analyses',
                 href: '/pricing',
                 highlight: true,
               },
@@ -523,7 +523,7 @@ export default async function MarketingPage() {
               Sign in
             </Link>
           </div>
-          <p className="mt-4 text-sm text-white-dim">No credit card required · 1 free analysis per month</p>
+          <p className="mt-4 text-sm text-white-dim">No credit card required · 3 free analyses per month</p>
         </div>
       </section>
 

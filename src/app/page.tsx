@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'AIDEN Brief Intelligence | AI-Powered Brief Analysis',
   description: 'Paste your brief. AIDEN interrogates it with AI-powered creative analysis. Get gaps identified and a sharper brief back in seconds. Start free.',
   alternates: {
-    canonical: 'https://aiden.services',
+    canonical: 'https://brief-sharpener.aiden.services',
   },
 }
 
@@ -22,7 +22,7 @@ const jsonLd = {
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'Web',
   description: 'AI-powered brief analysis tool that interrogates creative briefs across 8 essential creative criteria to identify gaps and produce sharper briefs.',
-  url: 'https://aiden.services',
+  url: 'https://brief-sharpener.aiden.services',
   offers: [
     {
       '@type': 'Offer',
@@ -49,7 +49,7 @@ const jsonLd = {
   publisher: {
     '@type': 'Organization',
     name: 'AIDEN',
-    url: 'https://aiden.services',
+    url: 'https://brief-sharpener.aiden.services',
   },
 }
 

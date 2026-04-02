@@ -123,7 +123,7 @@ export default function PreviewContent({ data, productName, template }: PreviewC
       <div className="bg-black-card py-3 text-center text-xs text-white-muted">
         Made with{' '}
         <a
-          href="https://aiden.services"
+          href="https://brief-sharpener.aiden.services"
           target="_blank"
           rel="noopener noreferrer"
           className="font-medium text-orange-accent"

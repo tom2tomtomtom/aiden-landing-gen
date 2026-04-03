@@ -29,12 +29,16 @@ export async function getUserPlan(
   userId: string
 ): Promise<Plan> {
   // Check email domain for automatic Pro access
-  const { data: user } = await supabase.auth.admin.getUserById(userId)
-  if (user?.user?.email) {
-    const domain = user.user.email.split('@')[1]?.toLowerCase()
-    if (domain && PRO_DOMAINS.includes(domain)) {
-      return 'pro'
+  try {
+    const { data: user } = await supabase.auth.admin.getUserById(userId)
+    if (user?.user?.email) {
+      const domain = user.user.email.split('@')[1]?.toLowerCase()
+      if (domain && PRO_DOMAINS.includes(domain)) {
+        return 'pro'
+      }
     }
+  } catch (err) {
+    console.error('getUserPlan: admin.getUserById failed, falling through to subscriptions check:', err)
   }
 
   const { data } = await supabase

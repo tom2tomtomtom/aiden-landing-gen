@@ -17,6 +17,7 @@ export interface BriefAnalysisData {
   gaps: string[]
   score: number
   briefText?: string
+  rewrittenBrief?: string | null
   phantomAnalysis?: PhantomPerspective[] | null
 }
 
@@ -662,22 +663,26 @@ function BriefLines({ lines }: { lines: string[] }) {
   )
 }
 
-function RewrittenBriefSection({ strategicAnalysis, extractedBrief, isPro, briefText }: { strategicAnalysis: Record<string, unknown>; extractedBrief: Record<string, unknown>; isPro?: boolean; briefText?: string }) {
+function RewrittenBriefSection({ strategicAnalysis, extractedBrief, isPro, briefText, rewrittenBriefFromAPI }: { strategicAnalysis: Record<string, unknown>; extractedBrief: Record<string, unknown>; isPro?: boolean; briefText?: string; rewrittenBriefFromAPI?: string | null }) {
   const [showComparison, setShowComparison] = useState(false)
 
-  // Look for a proper rewritten brief from Brain V2
-  const rewriteFields = ['aiden_brief_version', 'rewritten_brief', 'sharpened_brief', 'improved_brief', 'refined_brief', 'brief_rewrite', 'recommended_brief']
-  let rewrittenBrief: string | null = null
+  // Prefer the dedicated rewrite from the chat API if available
+  let rewrittenBrief: string | null = rewrittenBriefFromAPI ?? null
 
-  // Check both strategicAnalysis and extractedBrief for rewrite fields
-  for (const source of [strategicAnalysis, extractedBrief]) {
-    for (const field of rewriteFields) {
-      if (typeof source[field] === 'string' && (source[field] as string).length > 0) {
-        rewrittenBrief = source[field] as string
-        break
+  // Fallback: look for a rewritten brief embedded in Brain V2 response fields
+  if (!rewrittenBrief) {
+    const rewriteFields = ['aiden_brief_version', 'rewritten_brief', 'sharpened_brief', 'improved_brief', 'refined_brief', 'brief_rewrite', 'recommended_brief']
+
+    // Check both strategicAnalysis and extractedBrief for rewrite fields
+    for (const source of [strategicAnalysis, extractedBrief]) {
+      for (const field of rewriteFields) {
+        if (typeof source[field] === 'string' && (source[field] as string).length > 0) {
+          rewrittenBrief = source[field] as string
+          break
+        }
       }
+      if (rewrittenBrief) break
     }
-    if (rewrittenBrief) break
   }
 
   // Also check for aiden_analysis as supplementary context
@@ -708,8 +713,9 @@ function RewrittenBriefSection({ strategicAnalysis, extractedBrief, isPro, brief
     rewrittenBrief = parts.join('\n')
   }
 
-  // Prepend aiden_analysis if we have it and rewrittenBrief is from fallback fields
-  if (aidenAnalysis && !rewriteFields.some(f => typeof extractedBrief[f] === 'string' || typeof strategicAnalysis[f] === 'string')) {
+  // Prepend aiden_analysis if we have it and rewrittenBrief is from fallback fields (not from API rewrite)
+  const REWRITE_FIELD_NAMES = ['aiden_brief_version', 'rewritten_brief', 'sharpened_brief', 'improved_brief', 'refined_brief', 'brief_rewrite', 'recommended_brief']
+  if (!rewrittenBriefFromAPI && aidenAnalysis && !REWRITE_FIELD_NAMES.some(f => typeof extractedBrief[f] === 'string' || typeof strategicAnalysis[f] === 'string')) {
     rewrittenBrief = aidenAnalysis + '\n\n' + rewrittenBrief
   }
 
@@ -1076,9 +1082,9 @@ export default function BriefAnalysis({ data, previewUrl, isPro, isPaidUser, isF
       <div style={{ animation: 'aidenFadeInUp 0.5s ease-out 300ms both' }}>
         <StrategicTensionsSection strategicAnalysis={strategicAnalysis} />
       </div>
-      {!isPro && <PhantomLockedSection />}
+      {isPro === false && <PhantomLockedSection />}
       <div style={{ animation: 'aidenFadeInUp 0.5s ease-out 450ms both' }}>
-        <RewrittenBriefSection strategicAnalysis={strategicAnalysis} extractedBrief={extractedBrief} isPro={isPro} briefText={data.briefText} />
+        <RewrittenBriefSection strategicAnalysis={strategicAnalysis} extractedBrief={extractedBrief} isPro={isPro} briefText={data.briefText} rewrittenBriefFromAPI={data.rewrittenBrief} />
       </div>
       {!isPaidUser && <UpgradeCtaCard />}
     </div>

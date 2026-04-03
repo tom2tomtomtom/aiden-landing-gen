@@ -57,7 +57,8 @@ async function pollJob<T>(jobId: string, maxWait = 120000): Promise<T> {
         const resultResp = await fetch(`${AIDEN_API_BASE}/api/v1/jobs/${jobId}/result`, {
           headers: { 'X-API-Key': AIDEN_API_KEY },
         })
-        return resultResp.json() as Promise<T>
+        const result = await resultResp.json()
+        return (result.data ?? result) as T
       }
 
       if (data.status === 'failed') {
@@ -212,6 +213,34 @@ export async function POST(request: NextRequest) {
     })
     const strategicAnalysis = await pollJob<Record<string, unknown>>(strategyJob.job_id)
 
+    // Step 4: Generate rewritten brief via Brain chat (Opus, phantom system)
+    const rewritePrompt = `You are rewriting a creative brief. Here is the original brief, the gaps we found, and the strategic analysis.
+
+ORIGINAL BRIEF:
+${briefText}
+
+GAPS IDENTIFIED:
+${gaps.join('\n')}
+
+STRATEGIC ANALYSIS:
+${JSON.stringify(strategicAnalysis, null, 2)}
+
+Rewrite this brief completely. Fill every gap. Strengthen every thin section. Add the missing elements (${gaps.map(g => g.split(' (')[0]).join(', ')}). Make the audience specific with psychographics. Make the objective measurable. Add a clear tension or insight. Make deliverables specific with formats and platforms.
+
+Preserve the author's intent and the brand's context. Write it as a polished, ready-to-brief document that a creative team can work from immediately.
+
+Output ONLY the rewritten brief. No commentary, no preamble, no "here is the rewritten brief" intro.`
+
+    let rewrittenBrief: string | null = null
+    try {
+      const chatResult = await callAidenAPI<{ success: boolean; data: { response: string } }>('/chat', {
+        message: rewritePrompt,
+      })
+      rewrittenBrief = chatResult.data?.response ?? chatResult.data?.toString() ?? null
+    } catch (err) {
+      console.error('Brief rewrite failed (non-blocking):', err)
+    }
+
     // Track usage and save for authenticated users
     let generationId: string | null = null
     if (user) {
@@ -235,6 +264,7 @@ export async function POST(request: NextRequest) {
       strategicAnalysis,
       gaps,
       score,
+      rewrittenBrief,
       generationId,
     })
   } catch (error) {

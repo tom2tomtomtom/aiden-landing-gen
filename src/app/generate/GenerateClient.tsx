@@ -98,30 +98,12 @@ function GeneratePageInner() {
       setIsAuthenticated(!!user)
 
       if (user) {
-        const { data: sub } = await supabase
-          .from('subscriptions')
-          .select('plan')
-          .eq('user_id', user.id)
-          .single()
-
-        const plan = (sub?.plan as Plan) ?? 'free'
-
-        if (plan === 'pro' || plan === 'agency') {
-          setPlanInfo({ plan, used: 0 })
+        const planRes = await fetch('/api/user-plan')
+        if (planRes.ok) {
+          const planData = await planRes.json()
+          setPlanInfo({ plan: planData.plan as Plan, used: planData.used ?? 0 })
         } else {
-          const now = new Date()
-          const month = plan === 'single'
-            ? 'total'
-            : `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, '0')}`
-
-          const { data: usageData } = await supabase
-            .from('usage_tracking')
-            .select('count')
-            .eq('user_id', user.id)
-            .eq('month', month)
-            .single()
-
-          setPlanInfo({ plan, used: usageData?.count ?? 0 })
+          setPlanInfo({ plan: 'free', used: 0 })
         }
       }
     }

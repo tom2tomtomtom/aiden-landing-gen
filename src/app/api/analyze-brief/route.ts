@@ -205,7 +205,7 @@ IMPORTANT: Use the section headers exactly as shown above (## STRATEGIC ANALYSIS
       context: {
         briefData: extractedBrief,
       },
-    }, 55000) // 55s timeout to fit within Vercel's 60s limit
+    }, 300000) // 5 min timeout - Railway has no function time limit
 
     const brainResponse = chatResult.data?.content ?? ''
 

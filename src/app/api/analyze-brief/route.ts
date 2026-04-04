@@ -213,10 +213,11 @@ IMPORTANT: Use the section headers exactly as shown above (## STRATEGIC ANALYSIS
     let strategicAnalysis: Record<string, unknown> = {}
     let rewrittenBrief: string | null = null
 
-    const sections = brainResponse.split(/##\s*AIDEN'S VERSION OF THE BRIEF/i)
+    // Brain may use # or ## for headers, and AIDEN'S or AIDENS
+    const sections = brainResponse.split(/#{1,2}\s*AIDEN.S VERSION OF THE BRIEF/i)
     if (sections.length === 2) {
       const analysisSection = sections[0]
-        .replace(/##\s*STRATEGIC ANALYSIS & RECOMMENDATIONS/i, '')
+        .replace(/#{1,2}\s*STRATEGIC ANALYSIS & RECOMMENDATIONS/i, '')
         .trim()
       const briefSection = sections[1].trim()
 

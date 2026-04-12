@@ -21,7 +21,7 @@ const jsonLd = {
   name: 'AIDEN Brief Intelligence',
   applicationCategory: 'BusinessApplication',
   operatingSystem: 'Web',
-  description: 'AI-powered brief analysis tool that interrogates creative briefs across 8 essential creative criteria to identify gaps and produce sharper briefs.',
+  description: 'AI-powered brief analysis tool that interrogates creative briefs across 7 strategic frameworks to identify gaps and produce sharper briefs.',
   url: 'https://brief-sharpener.aiden.services',
   offers: [
     {
@@ -121,7 +121,7 @@ export default async function MarketingPage() {
   const stats = await getStats()
 
   return (
-    <main className="min-h-screen bg-black-ink">
+    <main id="main-content" className="min-h-screen bg-black-ink">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

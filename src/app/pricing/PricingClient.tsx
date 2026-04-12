@@ -11,9 +11,9 @@ const tiers = [
     period: null,
     description: 'See what your brief is missing.',
     features: [
-      '3 brief analyses per month',
+      '1 free test without signing up',
+      '3 analyses per month with account',
       'Full gap analysis',
-      'AIDEN branding on output',
     ],
     cta: 'Interrogate your brief',
     ctaType: 'link' as const,
@@ -61,7 +61,7 @@ const tiers = [
     description: 'For teams of strategists. Up to 10 seats.',
     features: [
       'Unlimited brief analyses',
-      'Up to 10 team members',
+      'Up to 10 team members (coming soon)',
       'Priority processing',
       'No AIDEN branding',
       'Dedicated support',
@@ -132,7 +132,7 @@ export default function PricingPage() {
   }
 
   return (
-    <main className="min-h-screen bg-black-ink py-16 px-4">
+    <main id="main-content" className="min-h-screen bg-black-ink py-16 px-4">
       {/* Header */}
       <div className="text-center mb-14">
         <Link href="/" className="text-sm text-orange-accent hover:text-red-hot font-medium mb-6 inline-block uppercase tracking-wide transition-colors">

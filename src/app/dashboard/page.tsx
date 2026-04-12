@@ -79,7 +79,7 @@ export default async function DashboardPage() {
   }
 
   return (
-    <main className="min-h-screen bg-black-ink">
+    <main id="main-content" className="min-h-screen bg-black-ink">
       <header className="border-b border-border-subtle bg-black-ink px-4 py-4 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <div className="flex items-center gap-4">

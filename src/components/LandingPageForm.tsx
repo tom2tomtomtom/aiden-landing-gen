@@ -301,7 +301,7 @@ export default function LandingPageForm({ onGenerate, isLoading, error, onFormCh
   const fileInputRef = useRef<HTMLInputElement>(null)
   const completenessChecks = evaluateBriefCompleteness(formData.briefText)
   const passedCompleteness = completenessChecks.filter((check) => check.passed).length
-  const canSubmit = formData.briefText.trim().length >= 100
+  const canSubmit = formData.briefText.trim().length >= 50
 
   useEffect(() => {
     try {
@@ -320,8 +320,8 @@ export default function LandingPageForm({ onGenerate, isLoading, error, onFormCh
     const newErrors: FormErrors = {}
     if (!formData.briefText.trim()) {
       newErrors.briefText = 'Brief text is required.'
-    } else if (formData.briefText.trim().length < 100) {
-      newErrors.briefText = 'Brief must be at least 100 characters.'
+    } else if (formData.briefText.trim().length < 50) {
+      newErrors.briefText = 'Brief must be at least 50 characters.'
     }
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
@@ -329,7 +329,7 @@ export default function LandingPageForm({ onGenerate, isLoading, error, onFormCh
 
   function handleBriefChange(val: string) {
     setFormData((p) => ({ ...p, briefText: val }))
-    onFormChange?.(val.trim().length >= 100)
+    onFormChange?.(val.trim().length >= 50)
   }
 
   function persistTemplates(next: SavedTemplate[]) {
@@ -368,7 +368,7 @@ export default function LandingPageForm({ onGenerate, isLoading, error, onFormCh
       industry: template.industry,
       briefType: template.briefType,
     })
-    onFormChange?.(template.briefText.trim().length >= 100)
+    onFormChange?.(template.briefText.trim().length >= 50)
   }
 
   async function handleFileUpload(file: File) {
@@ -635,7 +635,7 @@ export default function LandingPageForm({ onGenerate, isLoading, error, onFormCh
           rows={10}
           value={formData.briefText}
           onChange={(e) => handleBriefChange(e.target.value)}
-          maxLength={50000}
+          maxLength={100000}
           placeholder={formData.industry ? (INDUSTRY_PLACEHOLDERS[formData.industry] ?? DEFAULT_PLACEHOLDER) : DEFAULT_PLACEHOLDER}
           aria-describedby={errors.briefText ? 'briefText-error' : undefined}
           aria-invalid={!!errors.briefText}
@@ -655,18 +655,18 @@ export default function LandingPageForm({ onGenerate, isLoading, error, onFormCh
               const underMin = wordCount < 20
               return (
                 <span className={underMin ? 'text-red-hot' : 'text-white-dim'}>
-                  {wordCount} words (min 20)
+                  {wordCount} words (min 20 soft · 50 chars min)
                 </span>
               )
             })()}
             {(() => {
               const charCount = formData.briefText.length
-              const pct = charCount / 50000
+              const pct = charCount / 100000
               const radius = 8
               const circumference = 2 * Math.PI * radius
               const dashOffset = circumference * (1 - pct)
-              const ringColor = charCount >= 47500 ? '#ef4444' : charCount >= 40000 ? '#f59e0b' : '#6366f1'
-              const textColor = charCount >= 47500 ? 'text-red-hot' : charCount >= 40000 ? 'text-amber-500' : 'text-white-dim'
+              const ringColor = charCount >= 95000 ? '#ef4444' : charCount >= 80000 ? '#f59e0b' : '#6366f1'
+              const textColor = charCount >= 95000 ? 'text-red-hot' : charCount >= 80000 ? 'text-amber-500' : 'text-white-dim'
               return (
                 <span className={`flex items-center gap-1 ${textColor}`}>
                   <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
@@ -682,7 +682,7 @@ export default function LandingPageForm({ onGenerate, isLoading, error, onFormCh
                       transform="rotate(-90 10 10)"
                     />
                   </svg>
-                  {charCount}/50000
+                  {charCount}/100000
                 </span>
               )
             })()}
@@ -702,7 +702,7 @@ export default function LandingPageForm({ onGenerate, isLoading, error, onFormCh
               </p>
             ))}
           </div>
-          {passedCompleteness < RECOMMENDED_COMPLETENESS_COUNT && formData.briefText.trim().length >= 100 && (
+          {passedCompleteness < RECOMMENDED_COMPLETENESS_COUNT && formData.briefText.trim().length >= 50 && (
             <p className="mt-2 text-xs text-yellow-electric">
               Recommended: include at least 3 of these signals for a sharper analysis, but you can still run the brief as-is.
             </p>

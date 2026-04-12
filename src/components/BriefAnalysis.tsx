@@ -561,8 +561,8 @@ function GapAnalysisSection({ gaps, strategicAnalysis }: { gaps: string[]; strat
         <CopyButton text={gaps.map(g => `${SEVERITY_LABEL[getGapSeverity(g)]}: ${g}`).join('\n')} />
       </div>
       <div className="space-y-3">
-        {gaps.map((gap) => (
-          <GapCard key={gap} gap={gap} strategicAnalysis={strategicAnalysis} />
+        {gaps.map((gap, index) => (
+          <GapCard key={`gap-${index}`} gap={gap} strategicAnalysis={strategicAnalysis} />
         ))}
       </div>
     </section>
@@ -1637,7 +1637,6 @@ export default function BriefAnalysis({ data, previewUrl, isPro, isPaidUser, isF
           <ClassicBenchmarkSection benchmarks={data.classicBenchmarks} />
         </div>
       )}
-      {isPro === false && <PhantomLockedSection />}
       <div style={{ animation: 'aidenFadeInUp 0.5s ease-out 470ms both' }}>
         <RewrittenBriefSection strategicAnalysis={strategicAnalysis} extractedBrief={extractedBrief} isPro={isPro} briefText={data.briefText} rewrittenBriefFromAPI={data.rewrittenBrief} />
       </div>

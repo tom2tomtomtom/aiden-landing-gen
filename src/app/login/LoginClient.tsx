@@ -67,7 +67,7 @@ function LoginForm() {
 
   if (status === 'sent') {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-black-ink px-4">
+      <main id="main-content" className="flex min-h-screen items-center justify-center bg-black-ink px-4">
         <div className="w-full max-w-sm rounded-2xl border border-border-subtle bg-black-card p-8 shadow-sm text-center">
           <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
             <svg className="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -90,7 +90,7 @@ function LoginForm() {
   }
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-black-ink px-4">
+    <main id="main-content" className="flex min-h-screen items-center justify-center bg-black-ink px-4">
       <div className="w-full max-w-sm rounded-2xl border border-border-subtle bg-black-card p-8 shadow-sm">
         <div className="mb-6 text-center">
           <h1 className="text-2xl font-bold tracking-tight text-white">
@@ -160,7 +160,7 @@ function LoginForm() {
 export default function LoginPage() {
   return (
     <Suspense fallback={
-      <main className="flex min-h-screen items-center justify-center bg-black-ink">
+      <main id="main-content" className="flex min-h-screen items-center justify-center bg-black-ink">
         <div className="h-8 w-8 animate-spin rounded-full border-4 border-red-hot border-t-transparent" />
       </main>
     }>

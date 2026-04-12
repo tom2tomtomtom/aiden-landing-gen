@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useLayoutEffect, useCallback } from 'react'
 import Link from 'next/link'
 import LandingPageForm from '@/components/LandingPageForm'
 import BriefAnalysis, { BriefAnalysisData } from '@/components/BriefAnalysis'
@@ -95,6 +95,7 @@ function GeneratePageInner() {
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key !== 'Escape') return
+      if (showEmailModal) return
       if (status !== 'done' || !analysisData) return
       if (window.innerWidth < 1024) {
         setMobileResultsCollapsed(true)
@@ -107,7 +108,7 @@ function GeneratePageInner() {
     }
     document.addEventListener('keydown', handleKeyDown)
     return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [status, analysisData])
+  }, [status, analysisData, showEmailModal])
 
   useEffect(() => {
     async function checkAuth() {
@@ -200,7 +201,7 @@ function GeneratePageInner() {
 
   return (
     <ErrorBoundary>
-    <main className="min-h-screen bg-black-ink">
+    <main id="main-content" className="min-h-screen bg-black-ink">
       {/* Header */}
       <header className="border-b border-border-subtle bg-black-deep px-4 py-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
@@ -558,11 +559,79 @@ function LoadingState() {
   )
 }
 
+function getFocusableElements(root: HTMLElement): HTMLElement[] {
+  const selector =
+    'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+  return Array.from(root.querySelectorAll<HTMLElement>(selector)).filter(
+    (el) => el.offsetParent !== null || el.getClientRects().length > 0
+  )
+}
+
 function EmailCaptureModal({ onDismiss }: { onDismiss: () => void }) {
   const [email, setEmail] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const dialogRef = useRef<HTMLDivElement>(null)
+  const emailInputRef = useRef<HTMLInputElement>(null)
+  const previouslyFocusedRef = useRef<HTMLElement | null>(null)
+
+  const handleDismiss = useCallback(() => {
+    onDismiss()
+  }, [onDismiss])
+
+  useLayoutEffect(() => {
+    previouslyFocusedRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null
+    return () => {
+      previouslyFocusedRef.current?.focus?.()
+    }
+  }, [])
+
+  useLayoutEffect(() => {
+    if (submitted) return
+    const id = requestAnimationFrame(() => {
+      emailInputRef.current?.focus()
+    })
+    return () => cancelAnimationFrame(id)
+  }, [submitted])
+
+  useEffect(() => {
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key !== 'Escape') return
+      e.preventDefault()
+      e.stopPropagation()
+      handleDismiss()
+    }
+    document.addEventListener('keydown', onKeyDown, true)
+    return () => document.removeEventListener('keydown', onKeyDown, true)
+  }, [handleDismiss])
+
+  useEffect(() => {
+    const el = dialogRef.current
+    if (!el) return
+    const trapElement: HTMLElement = el
+
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key !== 'Tab' || submitted) return
+      const nodes = getFocusableElements(trapElement)
+      if (nodes.length === 0) return
+      const first = nodes[0]!
+      const last = nodes[nodes.length - 1]!
+      const active = document.activeElement
+      if (e.shiftKey) {
+        if (active === first || (active instanceof Node && !trapElement.contains(active))) {
+          e.preventDefault()
+          last.focus()
+        }
+      } else if (active === last) {
+        e.preventDefault()
+        first.focus()
+      }
+    }
+
+    trapElement.addEventListener('keydown', onKeyDown)
+    return () => trapElement.removeEventListener('keydown', onKeyDown)
+  }, [submitted])
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -588,14 +657,21 @@ function EmailCaptureModal({ onDismiss }: { onDismiss: () => void }) {
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4">
+    <div
+      ref={dialogRef}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Sign up for updates"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4"
+    >
       <div className="relative w-full max-w-md border-2 border-red-hot bg-black-deep p-8">
         <button
-          onClick={onDismiss}
-          aria-label="Dismiss"
+          type="button"
+          onClick={handleDismiss}
+          aria-label="Close dialog"
           className="absolute right-4 top-4 text-white-dim hover:text-white transition-colors"
         >
-          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
@@ -612,6 +688,7 @@ function EmailCaptureModal({ onDismiss }: { onDismiss: () => void }) {
             </p>
             <form onSubmit={handleSubmit} className="mt-6 space-y-4">
               <input
+                ref={emailInputRef}
                 type="email"
                 required
                 value={email}

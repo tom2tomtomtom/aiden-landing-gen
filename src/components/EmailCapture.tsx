@@ -30,7 +30,7 @@ export default function EmailCapture() {
           Get the Brief Interrogation Checklist
         </h2>
         <p className="mt-2 text-sm text-white-muted">
-          The 8-point checklist our AI uses to score your brief. Yours free.
+          The 7 strategic frameworks our AI uses to score your brief. Yours free.
         </p>
         {status === 'done' ? (
           <p className="mt-6 text-sm font-medium text-green-600">

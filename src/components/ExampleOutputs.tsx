@@ -156,7 +156,7 @@ export default function ExampleOutputs() {
         </div>
 
         <p className="mt-8 text-center text-sm text-gray-400">
-          AIDEN checks every brief for 8 essential elements that predict creative success.
+          AIDEN checks every brief against 7 strategic frameworks that predict creative success.
         </p>
       </div>
     </section>

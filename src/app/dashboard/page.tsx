@@ -11,6 +11,14 @@ export const metadata: Metadata = {
   description: 'View your brief analysis history and manage your AIDEN account.',
 }
 
+function scoreFromOutputCopy(outputCopy: unknown): number | null {
+  if (!outputCopy || typeof outputCopy !== 'object') return null
+  const o = outputCopy as Record<string, unknown>
+  if (typeof o.score === 'number') return o.score
+  if (typeof o.briefScore === 'number') return o.briefScore
+  return null
+}
+
 interface GenerationRecord {
   id: string
   input_data: {
@@ -22,14 +30,7 @@ interface GenerationRecord {
     targetAudience?: string
     tone?: string
   }
-  output_copy: {
-    headline?: string
-    subheadline?: string
-    briefScore?: number
-    score?: number
-    gaps?: string[]
-    scoreBreakdown?: { total: number; dimensions: unknown[] }
-  }
+  output_copy: unknown
   template_id: string | null
   created_at: string
 }
@@ -65,7 +66,7 @@ export default async function DashboardPage() {
   const avgScore = totalAnalyses > 0
     ? Math.round(
         (generations as GenerationRecord[])
-          .map(g => g.output_copy?.briefScore ?? g.output_copy?.score ?? null)
+          .map(g => scoreFromOutputCopy(g.output_copy))
           .filter((s): s is number => s !== null)
           .reduce((sum, s, _, arr) => sum + s / arr.length, 0)
       )
@@ -197,7 +198,7 @@ export default async function DashboardPage() {
               .slice()
               .reverse()
               .slice(-10)
-              .map(g => g.output_copy?.briefScore ?? g.output_copy?.score ?? null)
+              .map(g => scoreFromOutputCopy(g.output_copy))
               .filter((s): s is number => s !== null)
             if (scoredGens.length < 2) return null
             const W = 200
@@ -229,7 +230,10 @@ export default async function DashboardPage() {
               <Link href="/generate" className="text-orange-accent hover:underline">Analyse your first brief</Link>.
             </p>
           ) : (
-            <DashboardSearch generations={JSON.parse(JSON.stringify(generations))} />
+            <DashboardSearch
+              generations={JSON.parse(JSON.stringify(generations))}
+              isPaidPlan={planLimits.plan !== 'free'}
+            />
           )}
         </div>
       </div>

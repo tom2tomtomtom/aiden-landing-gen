@@ -3,77 +3,32 @@
 import { useState, useCallback, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
+import type {
+  BriefAnalysisData,
+  ClassicBriefRef,
+  ClassicStandardScore,
+  DimensionScore,
+  MarketInsightData,
+  PhantomPerspective,
+  ScoreBreakdown,
+} from '@/types/brief'
+import { generateAnalysisPDF } from '@/lib/generate-pdf'
 
-export interface PhantomPerspective {
-  role: string
-  shorthand: string
-  verdict: number
-  critique: string
-  suggestion: string
-}
-
-export interface DimensionScore {
-  dimension: string
-  score: number
-  maxScore: number
-  status: 'missing' | 'thin' | 'adequate' | 'strong'
-  evidence: string
-}
-
-export interface ScoreBreakdown {
-  total: number
-  dimensions: DimensionScore[]
-  structureScore: number
-  completenessScore: number
-}
-
-export interface ClassicStandardScore {
-  standard: string
-  master: string
-  score: number
-  maxScore: number
-  verdict: string
-  advice: string
-}
-
-export interface ClassicBriefRef {
-  id: string
-  campaign: string
-  brand: string
-  year: string
-  agency: string
-  singleMindedProposition: string
-  humanTruth: string
-  whyItWorked: string
-  briefStrength: string
-  industry: string
-}
-
-export interface MarketInsightData {
-  category: 'audience' | 'competitive' | 'channel' | 'benchmark' | 'trend'
-  insight: string
-  source: string
-  relevance: 'high' | 'medium'
-}
-
-export interface BriefAnalysisData {
-  extractedBrief: Record<string, unknown>
-  strategicAnalysis: Record<string, unknown>
-  gaps: string[]
-  score: number
-  scoreBreakdown?: ScoreBreakdown
-  briefText?: string
-  rewrittenBrief?: string | null
-  phantomAnalysis?: PhantomPerspective[] | null
-  clarifyingQuestions?: string[]
-  classicScores?: ClassicStandardScore[]
-  classicBenchmarks?: ClassicBriefRef[]
-  marketInsights?: MarketInsightData[]
-}
+export type {
+  BriefAnalysisData,
+  ClassicBriefRef,
+  ClassicStandardScore,
+  DimensionScore,
+  MarketInsightData,
+  PhantomPerspective,
+  ScoreBreakdown,
+} from '@/types/brief'
 
 interface BriefAnalysisProps {
   data: BriefAnalysisData
   previewUrl?: string
+  /** Original brief text (for PDF); falls back to `data.briefText` when omitted. */
+  briefText?: string
   isPro?: boolean
   isPaidUser?: boolean
   isFirstAnalysis?: boolean
@@ -1389,35 +1344,25 @@ function CopyAllButton({ data }: { data: BriefAnalysisData }) {
   )
 }
 
-function DownloadPDFButton({ data, isPaidUser }: { data: BriefAnalysisData; isPaidUser?: boolean }) {
+function ExportPdfButton({ data, briefText, isPaidUser }: { data: BriefAnalysisData; briefText?: string; isPaidUser?: boolean }) {
   const handleClick = useCallback(() => {
-    const form = document.createElement('form')
-    form.method = 'POST'
-    form.action = '/api/export-pdf'
-    form.target = '_blank'
-    const input = document.createElement('input')
-    input.type = 'hidden'
-    input.name = 'data'
-    input.value = JSON.stringify(data)
-    form.appendChild(input)
-    document.body.appendChild(form)
-    form.submit()
-    document.body.removeChild(form)
-  }, [data])
+    const text = (briefText ?? data.briefText ?? '').trim()
+    generateAnalysisPDF(data, text)
+  }, [data, briefText])
 
   if (!isPaidUser) {
     return (
       <Link
         href="/pricing"
-        title="Upgrade to export as printable report"
-        className="inline-flex items-center gap-1.5 border border-border-subtle bg-black-card px-3 py-1.5 text-xs font-semibold text-white-dim cursor-not-allowed select-none"
+        title="Upgrade to export analysis as PDF"
+        className="inline-flex items-center gap-2 border border-border-subtle bg-black-card px-3 py-1.5 text-xs font-semibold text-white-dim cursor-not-allowed select-none"
         tabIndex={-1}
         aria-disabled="true"
       >
-        <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+        <svg className="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
         </svg>
-        Print report
+        Export PDF
         <span className="ml-0.5 bg-white-faint px-1 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-white-dim">Pro</span>
       </Link>
     )
@@ -1425,14 +1370,15 @@ function DownloadPDFButton({ data, isPaidUser }: { data: BriefAnalysisData; isPa
 
   return (
     <button
+      type="button"
       onClick={handleClick}
-      title="Opens a print-ready report — use your browser's Save as PDF to download"
-      className="inline-flex items-center gap-1.5 border border-border-subtle bg-black-card px-3 py-1.5 text-xs font-semibold text-white-muted hover:bg-white-faint transition-colors"
+      title="Download analysis as PDF"
+      className="inline-flex items-center gap-2 bg-black-card border border-border-subtle text-white px-4 py-2 rounded hover:bg-black-deep transition-colors text-sm font-medium"
     >
-      <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+      <svg className="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
       </svg>
-      Print report
+      Export PDF
     </button>
   )
 }
@@ -1578,13 +1524,16 @@ function UpgradeCtaCard() {
   )
 }
 
-export default function BriefAnalysis({ data, previewUrl, isPro, isPaidUser, isFirstAnalysis, previousScore }: BriefAnalysisProps) {
+export default function BriefAnalysis({ data, previewUrl, briefText, isPro, isPaidUser, isFirstAnalysis, previousScore }: BriefAnalysisProps) {
   const { score, extractedBrief, strategicAnalysis, gaps } = data
 
   return (
     <div className="space-y-8">
       <div className="flex items-end justify-between gap-4">
         <div className="flex-1">
+          <div className="mb-3 flex justify-center lg:justify-start">
+            <ExportPdfButton data={data} briefText={briefText} isPaidUser={isPaidUser} />
+          </div>
           <ScoreCircle score={score} showCelebration={isFirstAnalysis} />
           {previousScore != null && previousScore !== score && (
             <div className="mt-2 flex justify-center">
@@ -1598,7 +1547,6 @@ export default function BriefAnalysis({ data, previewUrl, isPro, isPaidUser, isF
         </div>
         <div className="flex flex-col items-end gap-2 pb-2">
           <CopyAllButton data={data} />
-          <DownloadPDFButton data={data} isPaidUser={isPaidUser} />
           {previewUrl && <ShareResultButton url={previewUrl} />}
         </div>
       </div>

@@ -393,6 +393,7 @@ function GeneratePageInner() {
                 </div>
                 <BriefAnalysis
                   data={analysisData}
+                  briefText={lastFormData?.briefText}
                   previewUrl={generationId ? `${typeof window !== 'undefined' ? window.location.origin : ''}/preview/${generationId}` : undefined}
                   isPro={planInfo?.plan === 'pro' || planInfo?.plan === 'agency'}
                   isPaidUser={planInfo?.plan !== 'free' && planInfo?.plan !== undefined}

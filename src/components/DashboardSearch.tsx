@@ -1,7 +1,9 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useCallback } from 'react'
 import Link from 'next/link'
+import type { BriefAnalysis } from '@/types/brief'
+import { generateAnalysisPDF } from '@/lib/generate-pdf'
 
 interface GenerationRecord {
   id: string
@@ -11,15 +13,101 @@ interface GenerationRecord {
     briefText?: string
     brandName?: string
   }
-  output_copy: {
-    briefScore?: number
-    score?: number
-    gaps?: string[]
-  }
+  /** Brief analysis payload or legacy landing-page shape. */
+  output_copy: unknown
   created_at: string
 }
 
-export default function DashboardSearch({ generations }: { generations: GenerationRecord[] }) {
+function isStoredBriefAnalysis(o: unknown): o is BriefAnalysis {
+  if (!o || typeof o !== 'object') return false
+  const r = o as Record<string, unknown>
+  return typeof r.score === 'number' && Array.isArray(r.gaps)
+}
+
+function DashboardHistoryRow({
+  gen,
+  brandName,
+  briefSnippet,
+  score,
+  gapsCount,
+  analysis,
+  isPaidPlan,
+}: {
+  gen: GenerationRecord
+  brandName?: string
+  briefSnippet: string
+  score: number | null
+  gapsCount: number | null
+  analysis: BriefAnalysis | null
+  isPaidPlan: boolean
+}) {
+  const briefSource = gen.input_data?.briefText ?? ''
+  const onPdf = useCallback(() => {
+    if (!analysis) return
+    generateAnalysisPDF(analysis, briefSource)
+  }, [analysis, briefSource])
+
+  return (
+    <li className="flex items-start justify-between gap-4 py-4">
+      <div className="min-w-0 flex-1">
+        {brandName && (
+          <p className="text-xs font-semibold uppercase tracking-wide text-orange-accent mb-0.5">{brandName}</p>
+        )}
+        <p className="text-sm font-medium text-white line-clamp-2">
+          {briefSnippet}
+          {briefSource.length > 100 ? '…' : ''}
+        </p>
+        <div className="mt-1.5 flex items-center gap-3 text-xs text-white-dim">
+          {score !== null && (
+            <span className="flex items-center gap-1">
+              <span className="font-medium text-orange-accent">Score:</span>
+              {score}
+            </span>
+          )}
+          {gapsCount !== null && (
+            <span className="flex items-center gap-1">
+              <span className="font-medium text-amber-500">Gaps:</span>
+              {gapsCount}
+            </span>
+          )}
+          <span>
+            {new Date(gen.created_at).toLocaleString('en-US', {
+              dateStyle: 'medium',
+              timeStyle: 'short',
+            })}
+          </span>
+        </div>
+      </div>
+      <div className="flex shrink-0 items-center gap-2">
+        {isPaidPlan && analysis && (
+          <button
+            type="button"
+            onClick={onPdf}
+            title="Download analysis as PDF"
+            className="border border-border-subtle bg-black-card px-2.5 py-1.5 text-[10px] font-semibold uppercase tracking-wide text-white-muted hover:bg-black-deep hover:text-white transition-colors"
+          >
+            PDF
+          </button>
+        )}
+        <Link
+          href={`/preview/${gen.id}`}
+          className="border border-border-subtle px-3 py-1.5 text-xs font-medium text-white-muted hover:text-white hover:border-white transition-colors"
+        >
+          View
+        </Link>
+      </div>
+    </li>
+  )
+}
+
+export default function DashboardSearch({
+  generations,
+  isPaidPlan = false,
+}: {
+  generations: GenerationRecord[]
+  /** Paid (non-free) plans can export stored analyses as PDF. */
+  isPaidPlan?: boolean
+}) {
   const [query, setQuery] = useState('')
   const [sortBy, setSortBy] = useState<'date' | 'score'>('date')
 
@@ -34,9 +122,9 @@ export default function DashboardSearch({ generations }: { generations: Generati
     }
     if (sortBy === 'score') {
       result = [...result].sort((a, b) => {
-        const sa = a.output_copy?.briefScore ?? a.output_copy?.score ?? 0
-        const sb = b.output_copy?.briefScore ?? b.output_copy?.score ?? 0
-        return sb - sa
+        const oc = (x: GenerationRecord) =>
+          isStoredBriefAnalysis(x.output_copy) ? x.output_copy.score : (x.output_copy as { briefScore?: number; score?: number } | null)?.briefScore ?? (x.output_copy as { score?: number } | null)?.score ?? 0
+        return oc(b) - oc(a)
       })
     }
     return result
@@ -79,47 +167,22 @@ export default function DashboardSearch({ generations }: { generations: Generati
               'Untitled brief'
             ).slice(0, 100)
             const brandName = gen.input_data?.brandName
-            const score = gen.output_copy?.briefScore ?? gen.output_copy?.score ?? null
-            const gapsCount = gen.output_copy?.gaps?.length ?? null
+            const analysis = isStoredBriefAnalysis(gen.output_copy) ? gen.output_copy : null
+            const legacy = gen.output_copy as { briefScore?: number; score?: number; gaps?: string[] } | null
+            const score = analysis?.score ?? legacy?.briefScore ?? legacy?.score ?? null
+            const gapsCount = analysis?.gaps?.length ?? legacy?.gaps?.length ?? null
 
             return (
-              <li key={gen.id} className="flex items-start justify-between gap-4 py-4">
-                <div className="min-w-0 flex-1">
-                  {brandName && (
-                    <p className="text-xs font-semibold uppercase tracking-wide text-orange-accent mb-0.5">{brandName}</p>
-                  )}
-                  <p className="text-sm font-medium text-white line-clamp-2">
-                    {briefSnippet}
-                    {(gen.input_data?.briefText ?? '').length > 100 ? '…' : ''}
-                  </p>
-                  <div className="mt-1.5 flex items-center gap-3 text-xs text-white-dim">
-                    {score !== null && (
-                      <span className="flex items-center gap-1">
-                        <span className="font-medium text-orange-accent">Score:</span>
-                        {score}
-                      </span>
-                    )}
-                    {gapsCount !== null && (
-                      <span className="flex items-center gap-1">
-                        <span className="font-medium text-amber-500">Gaps:</span>
-                        {gapsCount}
-                      </span>
-                    )}
-                    <span>
-                      {new Date(gen.created_at).toLocaleString('en-US', {
-                        dateStyle: 'medium',
-                        timeStyle: 'short',
-                      })}
-                    </span>
-                  </div>
-                </div>
-                <Link
-                  href={`/preview/${gen.id}`}
-                  className="shrink-0 border border-border-subtle px-3 py-1.5 text-xs font-medium text-white-muted hover:text-white hover:border-white transition-colors"
-                >
-                  View
-                </Link>
-              </li>
+              <DashboardHistoryRow
+                key={gen.id}
+                gen={gen}
+                brandName={brandName}
+                briefSnippet={briefSnippet}
+                score={score}
+                gapsCount={gapsCount}
+                analysis={analysis}
+                isPaidPlan={isPaidPlan}
+              />
             )
           })}
         </ul>

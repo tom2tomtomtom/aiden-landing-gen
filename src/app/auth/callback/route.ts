@@ -1,3 +1,5 @@
+import { sendWelcomeEmail } from '@/lib/email'
+import { createAdminClient } from '@/lib/supabase/admin'
 import { createClient } from '@/lib/supabase/server'
 import { NextResponse } from 'next/server'
 
@@ -14,6 +16,25 @@ export async function GET(request: Request) {
     const { error } = await supabase.auth.exchangeCodeForSession(code)
 
     if (!error) {
+      try {
+        const {
+          data: { user },
+        } = await supabase.auth.getUser()
+        if (user?.email) {
+          const adminSupabase = createAdminClient()
+          const { count } = await adminSupabase
+            .from('generations')
+            .select('*', { count: 'exact', head: true })
+            .eq('user_id', user.id)
+
+          if ((count ?? 0) === 0) {
+            void sendWelcomeEmail(user.email)
+          }
+        }
+      } catch {
+        // best-effort only — never affect auth redirect
+      }
+
       return NextResponse.redirect(new URL(safePath, url.origin))
     }
   }

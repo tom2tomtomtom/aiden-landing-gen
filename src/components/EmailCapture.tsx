@@ -34,7 +34,7 @@ export default function EmailCapture() {
         </p>
         {status === 'done' ? (
           <p className="mt-6 text-sm font-medium text-green-600">
-            Check your inbox. The checklist is on its way.
+            You&apos;re on the list! Check your inbox for the checklist.
           </p>
         ) : (
           <form onSubmit={handleSubmit} className="mt-6 flex gap-2 max-w-md mx-auto">

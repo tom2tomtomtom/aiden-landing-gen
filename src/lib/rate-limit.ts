@@ -2,7 +2,7 @@ import { createAdminClient } from '@/lib/supabase/admin'
 
 const WINDOW_SECONDS = 60
 const MAX_REQUESTS = 10
-const FREE_GUEST_MONTHLY_LIMIT = 1
+export const FREE_GUEST_MONTHLY_LIMIT = 1
 
 function currentMonthKey(): string {
   const now = new Date()

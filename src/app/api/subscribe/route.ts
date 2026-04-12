@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { sendChecklistEmail } from '@/lib/email'
 import { createAdminClient } from '@/lib/supabase/admin'
 
 export async function POST(request: NextRequest) {
@@ -23,6 +24,7 @@ export async function POST(request: NextRequest) {
     if (error) {
       throw error
     }
+    await sendChecklistEmail(email)
     return NextResponse.json({ ok: true })
   } catch (error) {
     console.error('Failed to save lead:', error)

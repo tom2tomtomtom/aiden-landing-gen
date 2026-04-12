@@ -15,14 +15,17 @@ export async function GET(request: NextRequest) {
   const monthStart = new Date(now.getFullYear(), now.getMonth(), 1).toISOString()
   const weekStart = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 7).toISOString()
 
-  const [todayRes, weekRes, monthRes, recentRes] = await Promise.all([
+  const [todayRes, weekRes, monthRes, recentRes, lifetimeCountRes] = await Promise.all([
     supabase.from('api_costs').select('total_cost_usd, user_tier').gte('created_at', todayStart),
     supabase.from('api_costs').select('total_cost_usd, user_tier').gte('created_at', weekStart),
     supabase.from('api_costs').select('total_cost_usd, user_tier').gte('created_at', monthStart),
     supabase.from('api_costs')
-      .select('*')
+      .select(
+        'user_tier, total_cost_usd, chat_cost_usd, brief_length, response_length, duration_ms, created_at, extract_input_tokens, extract_output_tokens, chat_input_tokens, chat_output_tokens'
+      )
       .order('created_at', { ascending: false })
-      .limit(50),
+      .limit(20),
+    supabase.from('api_costs').select('id', { count: 'exact', head: true }),
   ])
 
   function aggregate(rows: Array<{ total_cost_usd: number; user_tier: string }> | null) {
@@ -42,19 +45,30 @@ export async function GET(request: NextRequest) {
     today: aggregate(todayRes.data),
     week: aggregate(weekRes.data),
     month: aggregate(monthRes.data),
+    lifetimeAnalysisCount: lifetimeCountRes.count ?? 0,
     budgets: {
       dailyLimit: Number(process.env.DAILY_BUDGET_USD || '20'),
       monthlyLimit: Number(process.env.MONTHLY_BUDGET_USD || '300'),
       dailyFreeLimit: Number(process.env.DAILY_FREE_BUDGET_USD || '10'),
     },
-    recent: (recentRes.data ?? []).map(r => ({
-      userTier: r.user_tier,
-      totalCost: r.total_cost_usd,
-      chatCost: r.chat_cost_usd,
-      briefLength: r.brief_length,
-      responseLength: r.response_length,
-      durationMs: r.duration_ms,
-      createdAt: r.created_at,
-    })),
+    recent: (recentRes.data ?? []).map(r => {
+      const tokensIn =
+        (r.extract_input_tokens ?? 0) +
+        (r.chat_input_tokens ?? 0)
+      const tokensOut =
+        (r.extract_output_tokens ?? 0) +
+        (r.chat_output_tokens ?? 0)
+      return {
+        userTier: r.user_tier,
+        totalCost: r.total_cost_usd,
+        chatCost: r.chat_cost_usd,
+        briefLength: r.brief_length,
+        responseLength: r.response_length,
+        durationMs: r.duration_ms,
+        createdAt: r.created_at,
+        tokensIn,
+        tokensOut,
+      }
+    }),
   })
 }

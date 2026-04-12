@@ -52,11 +52,11 @@ export interface CostRecord {
   duration_ms: number
 }
 
-function estimateTokens(text: string): number {
+export function estimateTokens(text: string): number {
   return Math.ceil(text.length / CHARS_PER_TOKEN)
 }
 
-function calculateCost(inputTokens: number, outputTokens: number, model: ModelTier): number {
+export function calculateCost(inputTokens: number, outputTokens: number, model: ModelTier): number {
   const pricing = PRICING[model]
   return (inputTokens * pricing.input + outputTokens * pricing.output) / 1_000_000
 }

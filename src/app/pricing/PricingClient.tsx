@@ -87,48 +87,15 @@ export default function PricingPage() {
     })
   }, [])
 
-  async function handleBillingPortal() {
+  function handleBillingPortal() {
     setBillingPortalLoading(true)
-    try {
-      const res = await fetch('/api/billing-portal', { method: 'POST' })
-      const data = await res.json()
-      if (!res.ok) {
-        if (res.status === 404) {
-          setError('No active subscription found. Subscribe to a paid plan first.')
-          return
-        }
-        throw new Error(data.error || 'Failed to open billing portal')
-      }
-      window.location.href = data.url
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Something went wrong')
-    } finally {
-      setBillingPortalLoading(false)
-    }
+    window.location.href = 'https://www.aiden.services/pricing'
   }
 
-  async function handleCheckout(plan: 'single' | 'pro') {
+  function handleCheckout(plan: 'single' | 'pro') {
     setLoading(plan)
     setError(null)
-    try {
-      const res = await fetch('/api/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ plan }),
-      })
-      const data = await res.json()
-      if (!res.ok) {
-        if (res.status === 401) {
-          window.location.href = '/login'
-          return
-        }
-        throw new Error(data.error || 'Failed to start checkout')
-      }
-      window.location.href = data.url
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Something went wrong')
-      setLoading(null)
-    }
+    window.location.href = 'https://www.aiden.services/pricing'
   }
 
   return (

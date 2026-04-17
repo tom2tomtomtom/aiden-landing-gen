@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
-import { createAdminClient } from '@/lib/supabase/admin'
-import { getPlanLimits } from '@/lib/usage'
+import { getBalance } from '@/lib/gateway-tokens'
 
 export async function GET() {
   const supabase = createClient()
@@ -13,13 +12,19 @@ export async function GET() {
     return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
   }
 
-  const adminSupabase = createAdminClient()
-  const planLimits = await getPlanLimits(adminSupabase, user.id)
+  const balance = await getBalance(user.id)
+
+  if (!balance) {
+    return NextResponse.json(
+      { error: 'Failed to fetch token balance' },
+      { status: 502 }
+    )
+  }
 
   return NextResponse.json({
-    plan: planLimits.plan,
-    used: planLimits.used,
-    limit: planLimits.limit,
-    resetType: planLimits.resetType,
+    plan: balance.plan,
+    balance: balance.balance,
+    lifetimePurchased: balance.lifetime_purchased,
+    lifetimeUsed: balance.lifetime_used,
   })
 }

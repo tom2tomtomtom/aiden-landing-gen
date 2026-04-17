@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
-import { canGenerate, incrementUsage, getUserPlan } from '@/lib/usage'
+import { checkTokens, deductTokens } from '@/lib/gateway-tokens'
 import { checkGuestMonthlyLimit, checkRateLimit, incrementGuestMonthlyUsage, checkIpDailyLimit, incrementIpDailyUsage } from '@/lib/rate-limit'
 import { logger } from '@/lib/logger'
 import { getClassicPrinciplesPrompt, scoreAgainstClassics, findRelevantClassics } from '@/lib/classic-briefs'
@@ -208,21 +208,20 @@ export async function POST(request: NextRequest) {
 
   let guestIdentity: { id: string; isNew: boolean } | null = null
 
-  // Monthly usage limit check
+  // Token balance check (authed users only; guests use rate-limit tiers below)
   if (user) {
-    const { allowed, planLimits } = await canGenerate(adminSupabase, user.id)
+    const { allowed, required, balance } = await checkTokens(user.id, 'analyze')
 
     if (!allowed) {
       return NextResponse.json(
         {
-          error: 'Generation limit reached',
-          code: 'PLAN_LIMIT',
-          plan: planLimits.plan,
-          used: planLimits.used,
-          limit: planLimits.limit,
-          upgradeUrl: '/pricing',
+          error: 'Not enough tokens to run analysis',
+          code: 'INSUFFICIENT_TOKENS',
+          required,
+          balance,
+          upgradeUrl: 'https://www.aiden.services/pricing',
         },
-        { status: 429 }
+        { status: 402 }
       )
     }
   }
@@ -291,8 +290,9 @@ export async function POST(request: NextRequest) {
   }
 
   // Budget check — block if daily/monthly spend exceeded (free tier gets tighter cap)
+  // Authed users get 'pro' tier for AI budget caps; real plan tier tracked in Gateway.
   const userTier: UserTier = user
-    ? (await getUserPlan(adminSupabase, user.id) as UserTier)
+    ? 'pro'
     : (guestIdentifier ? 'guest' : 'free')
 
   const budget = await checkBudget(adminSupabase, userTier)
@@ -408,11 +408,10 @@ IMPORTANT: Use the section headers exactly as shown above (## STRATEGIC ANALYSIS
       strategicAnalysis.extractionAnalysis = extractedBrief.aiden_analysis
     }
 
-    // Track usage and save for authenticated users
+    // Deduct tokens and save for authenticated users
     let generationId: string | null = null
     if (user) {
-      const plan = await getUserPlan(adminSupabase, user.id)
-      await incrementUsage(adminSupabase, user.id, plan)
+      await deductTokens(user.id, 'analyze')
 
       const { data } = await adminSupabase
         .from('generations')

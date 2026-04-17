@@ -2,7 +2,7 @@ import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
-import { canGenerate, incrementUsage, getUserPlan } from '@/lib/usage'
+import { checkTokens, deductTokens } from '@/lib/gateway-tokens'
 import { getTemplate, TemplateId } from '@/lib/templates'
 import { checkRateLimit } from '@/lib/rate-limit'
 
@@ -69,20 +69,20 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
-  // Usage limit check
+  // Token balance check
   const adminSupabase = createAdminClient()
-  const { allowed, planLimits } = await canGenerate(adminSupabase, user.id)
+  const { allowed, required, balance } = await checkTokens(user.id, 'generate')
 
   if (!allowed) {
     return NextResponse.json(
       {
-        error: 'Generation limit reached',
-        plan: planLimits.plan,
-        used: planLimits.used,
-        limit: planLimits.limit,
-        upgradeUrl: '/pricing',
+        error: 'Not enough tokens to generate',
+        code: 'INSUFFICIENT_TOKENS',
+        required,
+        balance,
+        upgradeUrl: 'https://www.aiden.services/pricing',
       },
-      { status: 429 }
+      { status: 402 }
     )
   }
 
@@ -183,9 +183,8 @@ Return ONLY a raw JSON object with no markdown, no code fences, no commentary â€
       parsed.subheadline = recommended.subheadline
     }
 
-    // Track usage after successful generation
-    const plan = await getUserPlan(adminSupabase, user.id)
-    await incrementUsage(adminSupabase, user.id, plan)
+    // Deduct tokens after successful generation
+    await deductTokens(user.id, 'generate')
 
     // Save generation to database
     const { data: savedGeneration } = await adminSupabase

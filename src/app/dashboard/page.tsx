@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
-import { getPlanLimits } from '@/lib/usage'
+import { getBalance } from '@/lib/gateway-tokens'
 import { redirect } from 'next/navigation'
 import DashboardSearch from '@/components/DashboardSearch'
 
@@ -44,23 +44,24 @@ export default async function DashboardPage() {
   }
 
   const adminSupabase = createAdminClient()
-  const [{ data: generations }, planLimits] = await Promise.all([
+  const [{ data: generations }, balance] = await Promise.all([
     adminSupabase
       .from('generations')
       .select('id, input_data, output_copy, template_id, created_at')
       .eq('user_id', user.id)
       .order('created_at', { ascending: false })
       .limit(50),
-    getPlanLimits(adminSupabase, user.id),
+    getBalance(user.id),
   ])
 
-  const planLabel = planLimits.plan.charAt(0).toUpperCase() + planLimits.plan.slice(1)
-  const isLimitReached = planLimits.limit !== null && planLimits.used >= planLimits.limit
-  const isNearingLimit =
-    !isLimitReached &&
-    planLimits.plan === 'free' &&
-    planLimits.limit !== null &&
-    planLimits.used >= 2
+  const plan = balance?.plan ?? 'free'
+  const tokenBalance = balance?.balance ?? 0
+  const lifetimeUsed = balance?.lifetime_used ?? 0
+  const lifetimePurchased = balance?.lifetime_purchased ?? 0
+  const planLabel = plan.charAt(0).toUpperCase() + plan.slice(1)
+  const isOutOfTokens = tokenBalance <= 0
+  const isLowOnTokens = !isOutOfTokens && tokenBalance < 20
+  const progressMax = Math.max(lifetimePurchased, tokenBalance + lifetimeUsed, 1)
 
   const totalAnalyses = generations?.length ?? 0
   const avgScore = totalAnalyses > 0
@@ -110,13 +111,13 @@ export default async function DashboardPage() {
       </header>
 
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 space-y-8">
-        {isLimitReached && (
+        {isOutOfTokens && (
           <div className="border border-red-hot/30 bg-red-hot/10 px-6 py-4 flex items-center justify-between gap-4">
             <p className="text-sm font-medium text-white">
-              You have reached your free limit this month. Upgrade to keep analysing.
+              You are out of AIDEN tokens. Top up to keep analysing briefs.
             </p>
-            <Link href="/pricing" className="shrink-0 bg-red-hot px-4 py-2 text-sm font-medium text-white hover:opacity-90 transition-opacity">
-              Upgrade now
+            <Link href="https://www.aiden.services/pricing" className="shrink-0 bg-red-hot px-4 py-2 text-sm font-medium text-white hover:opacity-90 transition-opacity">
+              Buy tokens
             </Link>
           </div>
         )}
@@ -128,18 +129,14 @@ export default async function DashboardPage() {
             <p className="mt-1 text-2xl font-bold text-white">{planLabel}</p>
           </div>
           <div className="border border-border-subtle bg-black-card p-5">
-            <p className="text-xs font-medium text-white-dim uppercase tracking-wide">This month</p>
-            <p className="mt-1 text-2xl font-bold text-white">
-              {planLimits.limit === null ? `${planLimits.used}` : `${planLimits.used}/${planLimits.limit}`}
-            </p>
-            {planLimits.limit !== null && (
-              <div className="mt-2 h-1.5 w-full rounded-full bg-border-subtle">
-                <div
-                  className={`h-1.5 rounded-full transition-all ${isLimitReached ? 'bg-red-hot' : 'bg-orange-accent'}`}
-                  style={{ width: `${Math.min((planLimits.used / planLimits.limit) * 100, 100)}%` }}
-                />
-              </div>
-            )}
+            <p className="text-xs font-medium text-white-dim uppercase tracking-wide">Tokens</p>
+            <p className="mt-1 text-2xl font-bold text-white">{tokenBalance}</p>
+            <div className="mt-2 h-1.5 w-full rounded-full bg-border-subtle">
+              <div
+                className={`h-1.5 rounded-full transition-all ${isOutOfTokens ? 'bg-red-hot' : isLowOnTokens ? 'bg-orange-accent' : 'bg-green-500'}`}
+                style={{ width: `${Math.min((tokenBalance / progressMax) * 100, 100)}%` }}
+              />
+            </div>
           </div>
           <div className="border border-border-subtle bg-black-card p-5">
             <p className="text-xs font-medium text-white-dim uppercase tracking-wide">Total analyses</p>
@@ -151,13 +148,13 @@ export default async function DashboardPage() {
           </div>
         </div>
 
-        {isNearingLimit && (
+        {isLowOnTokens && (
           <div className="border border-yellow-electric/20 bg-black-card px-6 py-4 flex items-center justify-between gap-4">
             <p className="text-sm text-white-muted">
-              Running low on free analyses.
+              Running low on tokens ({tokenBalance} left). One brief analysis costs 20 tokens.
             </p>
-            <Link href="/pricing" className="text-sm font-medium text-orange-accent underline hover:opacity-80">
-              Upgrade for unlimited
+            <Link href="https://www.aiden.services/pricing" className="text-sm font-medium text-orange-accent underline hover:opacity-80">
+              Top up
             </Link>
           </div>
         )}
@@ -176,11 +173,9 @@ export default async function DashboardPage() {
                 <p className="text-xs text-white-dim">{planLabel} plan · Authenticated via magic link</p>
               </div>
             </div>
-            {planLimits.plan !== 'free' && (
-              <Link href="/pricing" className="border border-border-subtle px-3 py-1.5 text-xs font-medium text-white-muted hover:text-white hover:border-white transition-colors">
-                Manage billing
-              </Link>
-            )}
+            <Link href="https://www.aiden.services/pricing" className="border border-border-subtle px-3 py-1.5 text-xs font-medium text-white-muted hover:text-white hover:border-white transition-colors">
+              Buy tokens
+            </Link>
           </div>
         </div>
 
@@ -232,7 +227,7 @@ export default async function DashboardPage() {
           ) : (
             <DashboardSearch
               generations={JSON.parse(JSON.stringify(generations))}
-              isPaidPlan={planLimits.plan !== 'free'}
+              isPaidPlan={plan !== 'free'}
             />
           )}
         </div>

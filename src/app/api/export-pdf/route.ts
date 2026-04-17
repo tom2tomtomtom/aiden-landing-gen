@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
-import { createAdminClient } from '@/lib/supabase/admin'
-import { getUserPlan } from '@/lib/usage'
+import { getBalance } from '@/lib/gateway-tokens'
 
 const BRIEF_FIELD_LABELS: Record<string, string> = {
   campaign_name: 'Campaign',
@@ -270,9 +269,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Authentication required', code: 'AUTH_REQUIRED' }, { status: 401 })
   }
 
-  const adminSupabase = createAdminClient()
-  const plan = await getUserPlan(adminSupabase, user.id)
-  if (plan === 'free') {
+  const balance = await getBalance(user.id)
+  if (!balance || balance.plan === 'free') {
     return NextResponse.json({ error: 'PDF export requires a paid plan', code: 'PAID_PLAN_REQUIRED' }, { status: 403 })
   }
 

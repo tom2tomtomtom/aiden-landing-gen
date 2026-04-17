@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@/lib/supabase/server'
+import { getUser } from '@/lib/auth'
 import { getBalance } from '@/lib/gateway-tokens'
 
 const BRIEF_FIELD_LABELS: Record<string, string> = {
@@ -260,10 +260,7 @@ function buildScoreHtml(score: number): string {
 }
 
 export async function POST(req: NextRequest) {
-  const supabase = createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getUser()
 
   if (!user) {
     return NextResponse.json({ error: 'Authentication required', code: 'AUTH_REQUIRED' }, { status: 401 })

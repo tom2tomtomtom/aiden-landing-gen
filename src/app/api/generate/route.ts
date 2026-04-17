@@ -1,7 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
+import { getUser } from '@/lib/auth'
 import { checkTokens, deductTokens } from '@/lib/gateway-tokens'
 import { getTemplate, TemplateId } from '@/lib/templates'
 import { checkRateLimit } from '@/lib/rate-limit'
@@ -61,9 +61,8 @@ export async function POST(request: NextRequest) {
     )
   }
 
-  // Auth check
-  const supabase = createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  // Auth check (Gateway JWT, then Supabase fallback)
+  const user = await getUser()
 
   if (!user) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })

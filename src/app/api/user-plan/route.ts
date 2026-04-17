@@ -1,12 +1,9 @@
 import { NextResponse } from 'next/server'
-import { createClient } from '@/lib/supabase/server'
+import { getUser } from '@/lib/auth'
 import { getBalance } from '@/lib/gateway-tokens'
 
 export async function GET() {
-  const supabase = createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const user = await getUser()
 
   if (!user) {
     return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })

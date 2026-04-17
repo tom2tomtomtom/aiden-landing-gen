@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { createClient } from '@/lib/supabase/server'
+import { getUser } from '@/lib/auth'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { getBalance } from '@/lib/gateway-tokens'
 import { redirect } from 'next/navigation'
@@ -36,8 +36,7 @@ interface GenerationRecord {
 }
 
 export default async function DashboardPage() {
-  const supabase = createClient()
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = await getUser()
 
   if (!user) {
     redirect('/login')
@@ -75,9 +74,7 @@ export default async function DashboardPage() {
 
   async function signOut() {
     'use server'
-    const supabase = createClient()
-    await supabase.auth.signOut()
-    redirect('/login')
+    redirect('https://www.aiden.services/auth/logout')
   }
 
   return (

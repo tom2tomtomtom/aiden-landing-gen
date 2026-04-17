@@ -267,7 +267,10 @@ export async function POST(req: NextRequest) {
   }
 
   const balance = await getBalance(user.id)
-  if (!balance || balance.plan === 'free') {
+  // Gateway outage safeguard — a transient balance lookup failure (null) should
+  // not punish paying users. Only block when we can confirm the user is on a
+  // plan that does not include PDF export. Free plan is the only blocked tier.
+  if (balance && balance.plan === 'free') {
     return NextResponse.json({ error: 'PDF export requires a paid plan', code: 'PAID_PLAN_REQUIRED' }, { status: 403 })
   }
 

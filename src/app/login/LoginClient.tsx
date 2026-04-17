@@ -11,7 +11,9 @@ function LoginForm() {
   const [status, setStatus] = useState<Status>('idle')
   const [errorMessage, setErrorMessage] = useState('')
   const searchParams = useSearchParams()
-  const redirectTo = searchParams.get('redirect') || '/dashboard'
+  // Support both `?redirect=` (legacy) and `?next=` (Gateway convention).
+  const redirectTo =
+    searchParams.get('redirect') || searchParams.get('next') || '/dashboard'
 
   useEffect(() => {
     if (searchParams.get('error') === 'auth') {

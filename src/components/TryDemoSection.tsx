@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
 import { DEMO_BRIEF_TEXT } from '@/lib/demo-brief'
 
 interface DemoResult {
@@ -43,11 +42,18 @@ export default function TryDemoSection() {
   async function handleTryDemo() {
     setLoading(true)
     setError(null)
+
+    // 90s client timeout — matches server-side demo route guard. Demo normally
+    // finishes in 20–40s; this bails out if the Brain API is hung.
+    const controller = new AbortController()
+    const timeoutId = setTimeout(() => controller.abort(), 90_000)
+
     try {
       const res = await fetch('/api/analyze-brief-demo', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ briefText: DEMO_BRIEF_TEXT }),
+        signal: controller.signal,
       })
       if (!res.ok) {
         const data = await res.json().catch(() => ({}))
@@ -55,8 +61,15 @@ export default function TryDemoSection() {
       }
       setResult(await res.json())
     } catch (e) {
-      setError(e instanceof Error ? e.message : 'Something went wrong. Please try again.')
+      if (e instanceof DOMException && e.name === 'AbortError') {
+        setError('Demo is taking longer than expected. Please try again in a moment.')
+      } else if (e instanceof TypeError && /fetch|network/i.test(e.message)) {
+        setError('Connection dropped. Please check your network and try again.')
+      } else {
+        setError(e instanceof Error ? e.message : 'Something went wrong. Please try again.')
+      }
     } finally {
+      clearTimeout(timeoutId)
       setLoading(false)
     }
   }
@@ -286,12 +299,12 @@ export default function TryDemoSection() {
                   <p className="text-sm text-white-muted mb-5">
                     Tensions, opportunities, and a fully sharpened brief — sign up free to unlock it.
                   </p>
-                  <Link
-                    href="/generate"
+                  <a
+                    href="https://www.aiden.services/login?next=https%3A%2F%2Fbrief-sharpener.aiden.services%2Fdashboard"
                     className="inline-block rounded-xl bg-red-hot px-7 py-3.5 text-sm font-semibold text-white shadow-lg hover:bg-red-dim transition-colors"
                   >
                     Sign up free to see your full analysis
-                  </Link>
+                  </a>
                   <p className="mt-2.5 text-xs text-white-dim">Free · No credit card required · 3 analyses per month</p>
                 </div>
               </div>

@@ -3,19 +3,31 @@ import { DEMO_BRIEF_TEXT } from '@/lib/demo-brief'
 
 const BRAIN_API_BASE = process.env.AIDEN_BRAIN_API_URL ?? 'https://aiden-brain-v2-production.up.railway.app'
 
-async function callBrainAPI<T>(path: string, body: unknown): Promise<T> {
-  const response = await fetch(`${BRAIN_API_BASE}${path}`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
-  })
+async function callBrainAPI<T>(path: string, body: unknown, timeoutMs = 75_000): Promise<T> {
+  const controller = new AbortController()
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs)
+  try {
+    const response = await fetch(`${BRAIN_API_BASE}${path}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+      signal: controller.signal,
+    })
 
-  if (!response.ok) {
-    const errorText = await response.text().catch(() => 'Unknown error')
-    throw new Error(`Brain API ${path} failed (${response.status}): ${errorText}`)
+    if (!response.ok) {
+      const errorText = await response.text().catch(() => 'Unknown error')
+      throw new Error(`Brain API ${path} failed (${response.status}): ${errorText}`)
+    }
+
+    return response.json() as Promise<T>
+  } catch (err) {
+    if (err instanceof DOMException && err.name === 'AbortError') {
+      throw new Error(`Brain API ${path} timed out after ${timeoutMs}ms`)
+    }
+    throw err
+  } finally {
+    clearTimeout(timeoutId)
   }
-
-  return response.json() as Promise<T>
 }
 
 function hasValue(obj: Record<string, unknown>, ...fields: string[]): boolean {
@@ -88,8 +100,18 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ extractedBrief, strategicAnalysis, gaps, score })
   } catch (error) {
-    if (error instanceof Error && error.message.includes('Brain API')) {
-      return NextResponse.json({ error: error.message }, { status: 502 })
+    const message = error instanceof Error ? error.message : String(error)
+    if (message.includes('timed out')) {
+      return NextResponse.json(
+        { error: 'Demo is taking longer than usual. Please try again in a moment.' },
+        { status: 504 }
+      )
+    }
+    if (message.includes('Brain API')) {
+      return NextResponse.json(
+        { error: 'Demo temporarily unavailable. Please try again shortly.' },
+        { status: 502 }
+      )
     }
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }

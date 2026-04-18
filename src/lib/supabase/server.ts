@@ -23,6 +23,7 @@ export function createClient() {
           }
         },
       },
+      db: { schema: 'brief_sharpener' },
     }
   )
 }

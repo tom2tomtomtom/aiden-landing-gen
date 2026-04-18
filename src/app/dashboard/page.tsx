@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { getUser } from '@/lib/auth'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { getBalance } from '@/lib/gateway-tokens'
+import { AidenLogo } from '@/components/ui/aiden-logo'
 import { redirect } from 'next/navigation'
 import DashboardSearch from '@/components/DashboardSearch'
 
@@ -79,30 +80,42 @@ export default async function DashboardPage() {
 
   return (
     <main id="main-content" className="min-h-screen bg-black-ink">
-      <header className="border-b border-border-subtle bg-black-ink px-4 py-4 sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-7xl items-center justify-between">
-          <div className="flex items-center gap-4">
-            <Link href="/" className="text-xl font-bold tracking-tight text-red-hot uppercase hover:text-orange-accent transition-colors">
-              AIDEN
+      <header className="border-b-2 border-red-hot bg-black-deep sticky top-0 z-10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <Link href="/dashboard" className="text-xl tracking-tight flex items-center gap-1">
+              <AidenLogo size="md" />
+              <span className="aiden-app-name text-white-dim">.Brief&nbsp;Sharpener</span>
             </Link>
-            <span className="text-white-dim">·</span>
-            <h1 className="text-sm font-semibold text-white uppercase tracking-wide">Dashboard</h1>
-          </div>
-          <div className="flex items-center gap-3">
-            <Link href="/generate" className="bg-red-hot px-3 py-1.5 text-xs font-semibold text-white hover:bg-red-dim transition-colors">
-              New analysis
-            </Link>
-            <Link href="/pricing" className="text-xs font-medium text-white-muted hover:text-orange-accent transition-colors">
-              Pricing
-            </Link>
-            <form action={signOut}>
-              <button
-                type="submit"
-                className="border border-border-subtle px-3 py-1.5 text-xs text-white-muted hover:text-white hover:border-white transition-colors"
+            <div className="flex items-center gap-4">
+              <Link href="/generate" className="bg-red-hot px-3 py-1.5 text-xs font-semibold text-white hover:bg-red-hot/90 transition-colors">
+                New analysis
+              </Link>
+              <div className="hidden sm:flex items-center gap-1.5 text-sm">
+                <span className="text-white-full font-medium">{tokenBalance}</span>
+                <span className="text-white-dim text-xs">tokens</span>
+              </div>
+              <Link
+                href="https://www.aiden.services/pricing"
+                className="text-white-dim text-sm hover:text-red-hot transition-colors"
               >
-                Sign out
-              </button>
-            </form>
+                Pricing
+              </Link>
+              <Link
+                href="https://www.aiden.services/dashboard"
+                className="text-white-dim text-sm hover:text-red-hot transition-colors"
+              >
+                Back to Hub
+              </Link>
+              <form action={signOut}>
+                <button
+                  type="submit"
+                  className="text-white-dim text-sm hover:text-red-hot transition-colors"
+                >
+                  Sign out
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </header>

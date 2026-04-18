@@ -1,0 +1,52 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - link "BRAND DNA // ANALYZER" [ref=e6] [cursor=pointer]:
+          - /url: /dashboard
+          - heading "BRAND DNA // ANALYZER" [level=1] [ref=e7]
+        - generic [ref=e8]:
+          - generic [ref=e9]:
+            - generic [ref=e10]: starter
+            - generic [ref=e11]: 0/10 audits used
+          - link "Upgrade" [ref=e12] [cursor=pointer]:
+            - /url: /pricing
+            - img [ref=e13]
+            - text: Upgrade
+          - generic [ref=e15]: test@brandaudit.com
+          - button "Sign Out" [ref=e16] [cursor=pointer]:
+            - img [ref=e17]
+            - text: Sign Out
+    - main [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - img [ref=e23]
+          - generic [ref=e26]: Ad Library Scraping
+        - generic [ref=e27]:
+          - img [ref=e28]
+          - generic [ref=e30]: Color DNA Extraction
+        - generic [ref=e31]:
+          - img [ref=e32]
+          - generic [ref=e40]: AIDEN Strategic Analysis
+        - generic [ref=e41]:
+          - img [ref=e42]
+          - generic [ref=e44]: Ad Analytics Dashboard
+      - generic [ref=e46]:
+        - heading "Analyzing Brand DNA" [level=3] [ref=e91]
+        - generic [ref=e50]:
+          - generic [ref=e92]:
+            - generic [ref=e93]: Extracting color DNA for Nike
+            - generic [ref=e94]: 30%
+          - paragraph [ref=e97]: Analyzing logo and ad creative palettes
+        - generic [ref=e77]:
+          - img [ref=e98]
+          - generic [ref=e100]: Collecting intelligence...
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - heading "Past Reports" [level=3] [ref=e83]:
+            - img [ref=e84]
+            - text: Past Reports
+          - generic [ref=e87]: 0 reports
+        - paragraph [ref=e89]: No reports yet. Run your first audit above.
+  - region "Notifications alt+T"
+  - alert [ref=e90]

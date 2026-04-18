@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getUser } from '@/lib/auth'
 import { getBalance } from '@/lib/gateway-tokens'
+import { checkRateLimit } from '@/lib/rate-limit'
 
 const BRIEF_FIELD_LABELS: Record<string, string> = {
   campaign_name: 'Campaign',
@@ -264,6 +265,16 @@ export async function POST(req: NextRequest) {
 
   if (!user) {
     return NextResponse.json({ error: 'Authentication required', code: 'AUTH_REQUIRED' }, { status: 401 })
+  }
+
+  // PDF generation via HTML-render is CPU-heavy. Cap per-user so a compromised
+  // session can't be used to DoS the app.
+  const { allowed, retryAfter } = await checkRateLimit(`export-pdf:${user.id}`)
+  if (!allowed) {
+    return NextResponse.json(
+      { error: 'Too many export requests. Please wait a moment.', code: 'RATE_LIMIT' },
+      { status: 429, headers: { 'Retry-After': String(retryAfter ?? 60) } }
+    )
   }
 
   const balance = await getBalance(user.id)

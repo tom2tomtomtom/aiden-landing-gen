@@ -1,0 +1,2 @@
+[     202ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://brandaudit-production-f08f.up.railway.app/login:0
+[  104705ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://brandaudit-production-f08f.up.railway.app/api/audit:0

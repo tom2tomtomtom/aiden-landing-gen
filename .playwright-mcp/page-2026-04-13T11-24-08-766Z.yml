@@ -1,0 +1,109 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - button [ref=e7] [cursor=pointer]:
+            - img [ref=e8]
+          - heading "Brand DNA Report" [level=1] [ref=e10]
+          - generic [ref=e11]:
+            - img [ref=e12]
+            - generic [ref=e15]: 4m 52s
+        - generic [ref=e16]:
+          - generic [ref=e17]: 2 brands analyzed
+          - button "Share" [ref=e18] [cursor=pointer]:
+            - img [ref=e19]
+            - generic [ref=e25]: Share
+          - button "Export PDF" [ref=e26] [cursor=pointer]:
+            - img [ref=e27]
+            - generic [ref=e30]: Export PDF
+    - navigation [ref=e31]:
+      - generic [ref=e34]:
+        - button "Overview" [ref=e35] [cursor=pointer]
+        - button "Visual DNA" [ref=e36] [cursor=pointer]
+        - button "Ad Intelligence" [ref=e37] [cursor=pointer]
+        - button "Analytics" [ref=e38] [cursor=pointer]
+        - button "Brand Intel" [ref=e39] [cursor=pointer]
+        - button "Strategic Analysis" [active] [ref=e40] [cursor=pointer]
+        - button "Competitive Matrix" [ref=e41] [cursor=pointer]
+    - main [ref=e42]:
+      - generic [ref=e1407]:
+        - heading "Strategic Analysis" [level=2] [ref=e1408]
+        - generic [ref=e1409]:
+          - generic [ref=e1410]:
+            - img [ref=e1411]
+            - heading "Messaging Themes" [level=3] [ref=e1413]
+          - generic [ref=e1414]:
+            - generic [ref=e1415]:
+              - paragraph [ref=e1416]: Red Bull
+              - list [ref=e1417]:
+                - listitem [ref=e1418]:
+                  - generic [ref=e1419]: →
+                  - text: Wings/flight metaphors with seasonal product innovation
+                - listitem [ref=e1420]:
+                  - generic [ref=e1421]: →
+                  - text: Zero sugar health positioning while maintaining energy benefits
+            - generic [ref=e1422]:
+              - paragraph [ref=e1423]: Monster Energy
+              - list [ref=e1424]:
+                - listitem [ref=e1425]:
+                  - generic [ref=e1426]: →
+                  - text: Beast/power unleashing with aggressive masculinity
+                - listitem [ref=e1427]:
+                  - generic [ref=e1428]: →
+                  - text: Regional cultural integration (defender themes, mariachi elements)
+        - generic [ref=e1429]:
+          - generic [ref=e1430]:
+            - img [ref=e1431]
+            - heading "Tone & Voice" [level=3] [ref=e1434]
+          - generic [ref=e1435]:
+            - generic [ref=e1436]:
+              - paragraph [ref=e1437]: Red Bull
+              - paragraph [ref=e1438]: Concise aspirational tone (34 characters average) using playful energy metaphors ('Spring Edition skrzyyydeł') with health-conscious messaging ('ZERO CUKRU')
+            - generic [ref=e1439]:
+              - paragraph [ref=e1440]: Monster Energy
+              - paragraph [ref=e1441]: Aggressive confidence (46 characters average) with territorial language ('Soy el defensor', 'Unleash the Beast') and cultural masculinity themes
+        - generic [ref=e1442]:
+          - generic [ref=e1443]:
+            - img [ref=e1444]
+            - heading "White Space Opportunities" [level=3] [ref=e1448]
+          - list [ref=e1449]:
+            - listitem [ref=e1450]:
+              - generic [ref=e1451]: "01"
+              - generic [ref=e1452]: "Health-conscious energy positioning gap: neither brand effectively addresses growing wellness concerns despite Red Bull's zero sugar messaging"
+            - listitem [ref=e1453]:
+              - generic [ref=e1454]: "02"
+              - generic [ref=e1455]: "Sustainable packaging leadership: Monster's collection culture and Red Bull's recycling initiative suggest untapped environmental positioning potential"
+        - generic [ref=e1456]:
+          - generic [ref=e1457]:
+            - img [ref=e1458]
+            - heading "Recommended Actions" [level=3] [ref=e1460]
+          - generic [ref=e1461]:
+            - generic [ref=e1463]:
+              - generic [ref=e1464]: "01"
+              - generic [ref=e1465]:
+                - heading "Red Bull should expand carousel format usage beyond 13% to showcase Can-Back recycling initiative" [level=4] [ref=e1466]
+                - paragraph [ref=e1467]: Data shows Red Bull's format diversity advantage and positive sentiment foundation, plus organic mentions of recycling concerns
+                - generic [ref=e1468]:
+                  - generic [ref=e1469]: "Expected Impact:"
+                  - generic [ref=e1470]: Enhanced environmental positioning while maintaining creative flexibility advantage over Monster's video-only approach
+            - generic [ref=e1472]:
+              - generic [ref=e1473]: "02"
+              - generic [ref=e1474]:
+                - heading "Monster must develop health-conscious messaging framework to address dependency reputation risks" [level=4] [ref=e1475]
+                - paragraph [ref=e1476]: 35/100 sentiment score driven by health concerns and extreme consumption patterns versus Red Bull's 72/100 positive perception
+                - generic [ref=e1477]:
+                  - generic [ref=e1478]: "Expected Impact:"
+                  - generic [ref=e1479]: Improved brand perception and reduced reputation risk while maintaining core audience loyalty
+            - generic [ref=e1481]:
+              - generic [ref=e1482]: "03"
+              - generic [ref=e1483]:
+                - heading "Red Bull should leverage F1 partnership challenges as underdog narrative opportunity" [level=4] [ref=e1484]
+                - paragraph [ref=e1485]: Press coverage shows 'significant shortcomings' but brand maintains 72/100 positive sentiment, suggesting audience loyalty during adversity
+                - generic [ref=e1486]:
+                  - generic [ref=e1487]: "Expected Impact:"
+                  - generic [ref=e1488]: Transform weakness into authentic brand storytelling while maintaining premium positioning against Monster's aggressive approach
+    - contentinfo [ref=e189]:
+      - paragraph [ref=e191]: Brand DNA Analyzer // Powered by AIDEN & Redbaez
+  - region "Notifications alt+T"
+  - alert [ref=e192]

@@ -1,0 +1,76 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - link "BRAND DNA // ANALYZER" [ref=e6] [cursor=pointer]:
+          - /url: /dashboard
+          - heading "BRAND DNA // ANALYZER" [level=1] [ref=e7]
+        - generic [ref=e8]:
+          - generic [ref=e87]:
+            - generic [ref=e88]: pro
+            - generic [ref=e89]: Unlimited audits
+          - link "Upgrade" [ref=e9] [cursor=pointer]:
+            - /url: /pricing
+            - img [ref=e10]
+            - text: Upgrade
+          - generic [ref=e90]: tomh@redbaez.com
+          - button "Sign Out" [ref=e12] [cursor=pointer]:
+            - img [ref=e13]
+            - text: Sign Out
+    - main [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - img [ref=e19]
+          - generic [ref=e22]: Ad Library Scraping
+        - generic [ref=e23]:
+          - img [ref=e24]
+          - generic [ref=e26]: Color DNA Extraction
+        - generic [ref=e27]:
+          - img [ref=e28]
+          - generic [ref=e36]: AIDEN Strategic Analysis
+        - generic [ref=e37]:
+          - img [ref=e38]
+          - generic [ref=e40]: Ad Analytics Dashboard
+      - generic [ref=e42]:
+        - heading "New Audit" [level=3] [ref=e44]
+        - generic [ref=e45]:
+          - generic [ref=e47]:
+            - generic [ref=e48]:
+              - generic [ref=e49]:
+                - generic [ref=e50]: Brand Name
+                - textbox "e.g. Nike" [ref=e51]
+              - generic [ref=e52]:
+                - generic [ref=e53]: Website
+                - textbox "e.g. https://nike.com" [ref=e54]
+            - generic [ref=e55]:
+              - generic [ref=e56]: Facebook Page (optional)
+              - textbox "Search Facebook pages..." [ref=e58]
+          - generic [ref=e60]:
+            - generic [ref=e61]:
+              - generic [ref=e62]:
+                - generic [ref=e63]: Brand Name
+                - textbox "e.g. Nike" [ref=e64]
+              - generic [ref=e65]:
+                - generic [ref=e66]: Website
+                - textbox "e.g. https://nike.com" [ref=e67]
+            - generic [ref=e68]:
+              - generic [ref=e69]: Facebook Page (optional)
+              - textbox "Search Facebook pages..." [ref=e71]
+        - generic [ref=e72]:
+          - button "Add Brand" [ref=e73] [cursor=pointer]:
+            - img [ref=e74]
+            - text: Add Brand
+          - button "Analyze Brand DNA" [active] [ref=e75] [cursor=pointer]
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - heading "Past Reports" [level=3] [ref=e78]:
+            - img [ref=e79]
+            - text: Past Reports
+          - generic [ref=e82]: 0 reports
+        - paragraph [ref=e91]: No reports yet. Run your first audit above.
+  - region "Notifications alt+T":
+    - list:
+      - listitem [ref=e92]:
+        - img [ref=e94]
+        - generic [ref=e97]: Enter at least 2 brands with names and websites
+  - alert [ref=e86]

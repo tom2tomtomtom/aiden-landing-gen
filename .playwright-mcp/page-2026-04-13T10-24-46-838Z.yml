@@ -1,0 +1,59 @@
+- generic [ref=e1]:
+  - generic [ref=e109]:
+    - banner [ref=e110]:
+      - generic [ref=e112]:
+        - generic [ref=e113]:
+          - button [ref=e114] [cursor=pointer]:
+            - img [ref=e115]
+          - heading "Brand DNA Report" [level=1] [ref=e117]
+          - generic [ref=e118]:
+            - img [ref=e119]
+            - generic [ref=e122]: 5m 4s
+        - generic [ref=e123]:
+          - generic [ref=e124]: 2 brands analyzed
+          - button "Share" [ref=e125] [cursor=pointer]:
+            - img [ref=e126]
+            - text: Share
+          - button "Export PDF" [ref=e132] [cursor=pointer]:
+            - img [ref=e133]
+            - text: Export PDF
+    - navigation [ref=e136]:
+      - generic [ref=e138]:
+        - button "Overview" [ref=e139] [cursor=pointer]
+        - button "Visual DNA" [ref=e140] [cursor=pointer]
+        - button "Ad Intelligence" [active] [ref=e141] [cursor=pointer]
+        - button "Analytics" [ref=e142] [cursor=pointer]
+        - button "Brand Intel" [ref=e143] [cursor=pointer]
+        - button "Social Pulse" [ref=e144] [cursor=pointer]
+        - button "Strategic Analysis" [ref=e145] [cursor=pointer]
+        - button "Competitive Matrix" [ref=e146] [cursor=pointer]
+    - main [ref=e147]:
+      - generic [ref=e378]:
+        - generic [ref=e379]:
+          - heading "Ad Intelligence" [level=2] [ref=e380]
+          - generic [ref=e381]:
+            - generic [ref=e382]:
+              - button "all" [ref=e383] [cursor=pointer]
+              - button "image" [ref=e384] [cursor=pointer]
+              - button "video" [ref=e385] [cursor=pointer]
+              - button "carousel" [ref=e386] [cursor=pointer]
+            - generic [ref=e387]:
+              - img [ref=e388]
+              - combobox [ref=e390]:
+                - option "All Brands" [selected]
+                - option "Red Bull"
+                - option "Monster Energy"
+        - generic [ref=e391]:
+          - generic [ref=e392]:
+            - heading "Red Bull" [level=3] [ref=e393]
+            - generic [ref=e394]: 0 ads
+          - paragraph [ref=e395]: No all ads found for Red Bull
+        - generic [ref=e396]:
+          - generic [ref=e397]:
+            - heading "Monster Energy" [level=3] [ref=e398]
+            - generic [ref=e399]: 0 ads
+          - paragraph [ref=e400]: No all ads found for Monster Energy
+    - contentinfo [ref=e296]:
+      - paragraph [ref=e298]: Brand DNA Analyzer // Powered by AIDEN & Redbaez
+  - region "Notifications alt+T"
+  - alert [ref=e86]

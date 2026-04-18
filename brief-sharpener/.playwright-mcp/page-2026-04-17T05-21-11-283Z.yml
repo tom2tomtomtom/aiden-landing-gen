@@ -1,0 +1,26 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - heading "AIDEN .Hub" [level=1] [ref=e5]:
+        - img "AIDEN" [ref=e6]
+        - generic [ref=e7]: .Hub
+      - paragraph [ref=e8]: AI-Driven Enterprise Navigator
+    - generic [ref=e10]:
+      - generic [ref=e11]:
+        - heading "Sign In" [level=2] [ref=e12]
+        - paragraph [ref=e13]: Access your AIDEN tools
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e16]: Email
+          - textbox "Email" [ref=e17]:
+            - /placeholder: you@example.com
+        - generic [ref=e18]:
+          - generic [ref=e19]: Password
+          - textbox "Password" [ref=e20]:
+            - /placeholder: Enter your password
+      - button "Sign In" [ref=e21] [cursor=pointer]
+      - paragraph [ref=e22]:
+        - text: Don't have an account?
+        - link "Sign up" [ref=e23] [cursor=pointer]:
+          - /url: /register
+  - alert [ref=e24]

@@ -1,0 +1,65 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - link "BRAND DNA // ANALYZER" [ref=e6] [cursor=pointer]:
+          - /url: /dashboard
+          - heading "BRAND DNA // ANALYZER" [level=1] [ref=e7]
+        - button "Sign Out" [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+          - text: Sign Out
+    - main [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - img [ref=e16]
+          - generic [ref=e19]: Ad Library Scraping
+        - generic [ref=e20]:
+          - img [ref=e21]
+          - generic [ref=e23]: Color DNA Extraction
+        - generic [ref=e24]:
+          - img [ref=e25]
+          - generic [ref=e33]: AIDEN Strategic Analysis
+        - generic [ref=e34]:
+          - img [ref=e35]
+          - generic [ref=e37]: Ad Analytics Dashboard
+      - generic [ref=e39]:
+        - heading "New Audit" [level=3] [ref=e41]
+        - generic [ref=e42]:
+          - generic [ref=e44]:
+            - generic [ref=e45]:
+              - generic [ref=e46]:
+                - generic [ref=e47]: Brand Name
+                - textbox "e.g. Nike" [ref=e48]
+              - generic [ref=e49]:
+                - generic [ref=e50]: Website
+                - textbox "e.g. https://nike.com" [ref=e51]
+            - generic [ref=e52]:
+              - generic [ref=e53]: Facebook Page (optional)
+              - textbox "Search Facebook pages..." [ref=e55]
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - generic [ref=e59]:
+                - generic [ref=e60]: Brand Name
+                - textbox "e.g. Nike" [ref=e61]
+              - generic [ref=e62]:
+                - generic [ref=e63]: Website
+                - textbox "e.g. https://nike.com" [ref=e64]
+            - generic [ref=e65]:
+              - generic [ref=e66]: Facebook Page (optional)
+              - textbox "Search Facebook pages..." [ref=e68]
+        - generic [ref=e69]:
+          - button "Add Brand" [ref=e70] [cursor=pointer]:
+            - img [ref=e71]
+            - text: Add Brand
+          - generic [ref=e72]:
+            - generic [ref=e73]: ~170 tokens
+            - button "Analyze Brand DNA" [ref=e74] [cursor=pointer]
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - heading "Past Reports" [level=3] [ref=e77]:
+            - img [ref=e78]
+            - text: Past Reports
+          - generic [ref=e81]: 0 reports
+        - img [ref=e83]
+  - region "Notifications alt+T"
+  - alert [ref=e85]

@@ -1,0 +1,77 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e121]:
+    - banner [ref=e122]:
+      - generic [ref=e124]:
+        - heading "BRAND DNA // ANALYZER" [level=1] [ref=e125]
+        - generic [ref=e126]:
+          - link "Pricing" [ref=e127] [cursor=pointer]:
+            - /url: /pricing
+          - link "Sign in" [ref=e128] [cursor=pointer]:
+            - /url: /login
+          - link "Get started free" [ref=e129] [cursor=pointer]:
+            - /url: /register
+    - main [ref=e130]:
+      - generic [ref=e131]:
+        - heading "Competitive Brand Intelligence" [level=2] [ref=e132]:
+          - text: Competitive Brand
+          - text: Intelligence
+        - paragraph [ref=e133]: Scrape real ad data. Extract visual DNA. Get strategic analysis.
+        - paragraph [ref=e134]: AIDEN's phantom brain analyzes Facebook Ad Library data, extracts color DNA from logos and ad creatives, gathers PR and press intelligence, and delivers competitive strategy in seconds.
+        - generic [ref=e135]:
+          - link "Start Free" [ref=e136] [cursor=pointer]:
+            - /url: /register
+            - text: Start Free
+            - img [ref=e137]
+          - link "View Pricing" [ref=e139] [cursor=pointer]:
+            - /url: /pricing
+        - paragraph [ref=e140]: 2 free audits per month — no credit card required
+      - generic [ref=e141]:
+        - generic [ref=e142]:
+          - img [ref=e143]
+          - heading "Ad Library Scraping" [level=3] [ref=e146]
+          - paragraph [ref=e147]: 50+ ads per brand from Facebook Ad Library
+        - generic [ref=e148]:
+          - img [ref=e149]
+          - heading "Color DNA Extraction" [level=3] [ref=e151]
+          - paragraph [ref=e152]: Logo and ad creative palette analysis
+        - generic [ref=e153]:
+          - img [ref=e154]
+          - heading "AIDEN Strategic Analysis" [level=3] [ref=e162]
+          - paragraph [ref=e163]: Phantom brain competitive strategy
+        - generic [ref=e164]:
+          - img [ref=e165]
+          - heading "Ad Analytics" [level=3] [ref=e167]
+          - paragraph [ref=e168]: Platform, format & CTA breakdowns
+        - generic [ref=e169]:
+          - img [ref=e170]
+          - heading "Brand Intel" [level=3] [ref=e173]
+          - paragraph [ref=e174]: PR, press, activations & campaigns
+        - generic [ref=e175]:
+          - img [ref=e176]
+          - heading "Visual DNA" [level=3] [ref=e178]
+          - paragraph [ref=e179]: Side-by-side brand comparison
+        - generic [ref=e180]:
+          - img [ref=e181]
+          - heading "PDF Export" [level=3] [ref=e184]
+          - paragraph [ref=e185]: Shareable professional reports
+        - generic [ref=e186]:
+          - img [ref=e187]
+          - heading "Shareable Links" [level=3] [ref=e189]
+          - paragraph [ref=e190]: Send reports to stakeholders
+      - generic [ref=e191]:
+        - heading "Ready to decode your competitors?" [level=3] [ref=e192]
+        - paragraph [ref=e193]: Join the brands already using AIDEN for competitive intelligence.
+        - link "Create Free Account" [ref=e194] [cursor=pointer]:
+          - /url: /register
+          - text: Create Free Account
+          - img [ref=e195]
+    - contentinfo [ref=e197]:
+      - generic [ref=e199]:
+        - paragraph [ref=e200]: Brand DNA Analyzer // Powered by AIDEN & Redbaez
+        - generic [ref=e201]:
+          - link "Pricing" [ref=e202] [cursor=pointer]:
+            - /url: /pricing
+          - link "Sign In" [ref=e203] [cursor=pointer]:
+            - /url: /login
+  - region "Notifications alt+T"
+  - alert [ref=e85]

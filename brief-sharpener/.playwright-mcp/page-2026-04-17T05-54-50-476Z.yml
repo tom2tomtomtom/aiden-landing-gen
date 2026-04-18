@@ -1,0 +1,158 @@
+- generic:
+  - alert
+  - generic:
+    - banner:
+      - generic:
+        - generic:
+          - img
+        - generic: AIDEN Creative
+      - generic:
+        - button:
+          - generic:
+            - img
+            - generic:
+              - generic: "7"
+              - generic: img
+          - generic:
+            - img
+            - generic:
+              - generic: "1"
+              - generic: vid
+        - button:
+          - img
+          - generic: AI Assistant
+        - button:
+          - img
+    - navigation:
+      - generic:
+        - button:
+          - generic:
+            - img
+          - generic: Discover
+          - img
+        - img
+      - generic:
+        - button:
+          - generic:
+            - img
+          - generic: Brief
+          - img
+        - img
+      - generic:
+        - button:
+          - generic:
+            - img
+          - generic: Generate
+          - img
+        - img
+      - generic:
+        - button:
+          - generic: "4"
+          - generic: Refine
+          - img
+        - img
+      - generic:
+        - button:
+          - generic: "5"
+          - generic: Animate
+          - img
+        - img
+      - generic:
+        - button:
+          - generic: "6"
+          - generic: Export
+          - img
+    - progressbar
+    - generic:
+      - main:
+        - generic:
+          - generic:
+            - generic:
+              - heading [level=1]: Refine
+              - paragraph: Select favorites, edit copy, or regenerate visuals before animation.
+            - generic:
+              - button: Select All
+              - button: Deselect All
+              - button: Refresh previews
+          - generic:
+            - generic:
+              - button:
+                - button [ref=e149]:
+                  - img [ref=e102]
+              - button:
+                - generic:
+                  - generic: Instagram
+                  - generic: 1:1
+                - paragraph: Instagram — Visibly whiter teeth in 6 minutes a day — enamel-safe, vegan, no sensiti…
+            - generic:
+              - button:
+                - button [ref=e150]:
+                  - img [ref=e113]
+              - button:
+                - generic:
+                  - generic: Instagram
+                  - generic: 9:16
+                - paragraph: Instagram — Visibly whiter teeth in 6 minutes a day — enamel-safe, vegan, no sensiti…
+            - generic:
+              - button:
+                - button [ref=e151]:
+                  - img [ref=e124]
+              - button:
+                - generic:
+                  - generic: TikTok
+                  - generic: 1:1
+                - paragraph: Tiktok — Visibly whiter teeth in 6 minutes a day — enamel-safe, vegan, no sensiti…
+            - generic:
+              - button:
+                - button [ref=e152]:
+                  - img [ref=e135]
+              - button:
+                - generic:
+                  - generic: TikTok
+                  - generic: 9:16
+                - paragraph: Tiktok — Visibly whiter teeth in 6 minutes a day — enamel-safe, vegan, no sensiti…
+          - generic:
+            - generic:
+              - button:
+                - img
+                - text: Previous
+              - generic: 0 selected
+            - generic:
+              - button:
+                - img
+                - text: Skip to Export
+              - button:
+                - text: "Next: Animate"
+                - img
+  - dialog "Edit creative" [ref=e154]:
+    - generic [ref=e155]:
+      - heading "Edit creative" [level=2] [ref=e156]
+      - paragraph [ref=e157]: Use the Edit tab for AI adjustments, Copy for prompt and text fields, and History for versions and compare.
+    - generic [ref=e158]:
+      - tablist [ref=e159]:
+        - tab "Edit" [ref=e160]
+        - tab "Copy" [active] [selected] [ref=e161]
+        - tab "History" [ref=e162]
+      - tabpanel "Copy" [ref=e184]:
+        - generic [ref=e185]:
+          - text: Image prompt
+          - textbox "Image prompt" [ref=e186]: "Create a professional tiktok ad creative at 1024x1024 (square) aspect ratio. KEY MESSAGE: Visibly whiter teeth in 6 minutes a day — enamel-safe, vegan, no sensitivity. Try the v34 Colour Corrector risk-free for 30 days. BRAND VOICE: Clinical authority meets fun, TikTok-native transparency. Peer-reviewed but playful; approachable experts, not dental gatekeepers. TEXT LAYOUT RULES (CRITICAL — follow exactly): - ALL text MUST be fully contained within the image with at least 8% padding from every edge. - Define a TEXT SAFE ZONE: the inner 80% of the canvas. No text outside this zone. - Place the HEADLINE in the upper third of the safe zone using large, bold type. - Place BODY COPY (if any) in the middle third, smaller weight. - Place the CTA BUTTON in the lower third — make it look like a tappable button. - Text must NEVER overlap or obscure the product image. - Use high-contrast text colors against the background for readability. - Keep text concise: headline under 8 words, CTA under 4 words. Include a compelling headline and a clear call-to-action button in the image."
+        - generic [ref=e187]:
+          - text: Headline
+          - textbox "Headline" [ref=e188]: Tiktok — Visibly whiter teeth in 6 minutes a day — enamel-safe, vegan, no sensiti…
+        - generic [ref=e189]:
+          - text: Body copy
+          - textbox "Body copy" [ref=e190]: Visibly whiter teeth in 6 minutes a day — enamel-safe, vegan, no sensitivity. Try the v34 Colour Corrector risk-free for 30 days.
+        - generic [ref=e191]:
+          - text: CTA
+          - textbox "CTA" [ref=e192]: Learn more
+    - generic [ref=e176]:
+      - button "Regenerate" [ref=e177]:
+        - img
+        - text: Regenerate
+      - button "Save Changes" [ref=e178]:
+        - img
+        - text: Save Changes
+    - button "Close" [ref=e179]:
+      - img [ref=e180]
+      - generic [ref=e183]: Close

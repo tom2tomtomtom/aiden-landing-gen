@@ -1,0 +1,120 @@
+- generic:
+  - alert
+  - generic:
+    - banner:
+      - generic:
+        - generic:
+          - img
+        - generic: AIDEN Creative
+      - generic:
+        - button:
+          - generic:
+            - img
+            - generic:
+              - generic: "8"
+              - generic: img
+          - generic:
+            - img
+            - generic:
+              - generic: "1"
+              - generic: vid
+        - button:
+          - img
+          - generic: AI Assistant
+        - button:
+          - img
+    - navigation:
+      - generic:
+        - button:
+          - generic:
+            - img
+          - generic: Discover
+          - img
+        - img
+      - generic:
+        - button:
+          - generic:
+            - img
+          - generic: Brief
+          - img
+        - img
+      - generic:
+        - button:
+          - generic: "3"
+          - generic: Generate
+          - img
+        - img
+      - generic:
+        - button:
+          - generic: "4"
+          - generic: Refine
+          - img
+        - img
+      - generic:
+        - button:
+          - generic: "5"
+          - generic: Animate
+          - img
+        - img
+      - generic:
+        - button:
+          - generic: "6"
+          - generic: Export
+          - img
+    - progressbar
+    - generic:
+      - main:
+        - generic:
+          - generic:
+            - heading [level=1]: Generate
+            - paragraph: Run the pipeline on your brief and watch creatives appear as they finish.
+          - generic:
+            - generic:
+              - generic:
+                - img
+                - text: Brief summary
+              - generic: What we will use for this generation pass.
+            - generic:
+              - generic:
+                - paragraph: Platforms
+                - generic:
+                  - generic: Instagram
+                  - generic: Facebook
+                  - generic: TikTok
+              - generic:
+                - paragraph: Aspect ratios
+                - generic:
+                  - generic: 1:1
+                  - generic: 4:5
+                  - generic: 9:16
+              - generic:
+                - paragraph: Key message
+                - paragraph: Visibly whiter teeth in 6 minutes a day — enamel-safe, vegan, no sensitivity. Try the v34 Colour Corrector risk-free for 30 days.
+            - generic:
+              - generic:
+                - img
+                - paragraph: This will use 9 image credits.
+            - generic:
+              - generic:
+                - button:
+                  - img
+                  - text: Generate Ads
+          - generic:
+            - button:
+              - img
+              - text: Previous
+            - button [disabled]:
+              - text: "Next: Refine"
+              - img
+  - dialog "Generate 9 images?" [ref=e242]:
+    - generic [ref=e243]:
+      - heading "Generate 9 images?" [level=2] [ref=e244]
+      - paragraph [ref=e245]: This will use 9 image credits.
+    - generic [ref=e246]:
+      - button "Cancel" [active] [ref=e247]
+      - button "Generate" [ref=e248]:
+        - img
+        - text: Generate
+    - button "Close" [ref=e249]:
+      - img [ref=e250]
+      - generic [ref=e253]: Close

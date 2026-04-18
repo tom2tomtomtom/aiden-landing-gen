@@ -1,0 +1,1101 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - button [ref=e7] [cursor=pointer]:
+            - img [ref=e8]
+          - heading "Brand DNA Report" [level=1] [ref=e10]
+          - generic [ref=e11]:
+            - img [ref=e12]
+            - generic [ref=e15]: 4m 52s
+        - generic [ref=e16]:
+          - generic [ref=e17]: 2 brands analyzed
+          - button "Share" [ref=e18] [cursor=pointer]:
+            - img [ref=e19]
+            - generic [ref=e25]: Share
+          - button "Export PDF" [ref=e26] [cursor=pointer]:
+            - img [ref=e27]
+            - generic [ref=e30]: Export PDF
+    - navigation [ref=e31]:
+      - generic [ref=e34]:
+        - button "Overview" [ref=e35] [cursor=pointer]
+        - button "Visual DNA" [ref=e36] [cursor=pointer]
+        - button "Ad Intelligence" [active] [ref=e37] [cursor=pointer]
+        - button "Analytics" [ref=e38] [cursor=pointer]
+        - button "Brand Intel" [ref=e39] [cursor=pointer]
+        - button "Strategic Analysis" [ref=e40] [cursor=pointer]
+        - button "Competitive Matrix" [ref=e41] [cursor=pointer]
+    - main [ref=e42]:
+      - generic [ref=e199]:
+        - generic [ref=e200]:
+          - heading "Ad Intelligence" [level=2] [ref=e201]
+          - generic [ref=e202]:
+            - generic [ref=e203]:
+              - button "all" [ref=e204] [cursor=pointer]
+              - button "image" [ref=e205] [cursor=pointer]
+              - button "video" [ref=e206] [cursor=pointer]
+              - button "carousel" [ref=e207] [cursor=pointer]
+            - generic [ref=e208]:
+              - img [ref=e209]
+              - combobox [ref=e211]:
+                - option "All Brands" [selected]
+                - option "Red Bull"
+                - option "Monster Energy"
+        - generic [ref=e212]:
+          - generic [ref=e213]:
+            - heading "Red Bull" [level=3] [ref=e214]
+            - generic [ref=e215]: 30 ads
+          - generic [ref=e216]:
+            - generic [ref=e217]:
+              - generic [ref=e218]:
+                - img "Carousel image 1" [ref=e219]
+                - generic [ref=e220]:
+                  - button [disabled] [ref=e221] [cursor=pointer]:
+                    - img [ref=e222]
+                  - generic [ref=e224]: 1/3
+                  - button [ref=e225] [cursor=pointer]:
+                    - img [ref=e226]
+              - generic [ref=e228]:
+                - paragraph [ref=e229]: Gives You Wiiings
+                - paragraph [ref=e230]: Set For Coachella?
+                - generic [ref=e231]:
+                  - generic [ref=e232]: facebook
+                  - generic [ref=e233]: instagram
+                  - generic [ref=e234]: Learn more
+                  - generic [ref=e235]: DCO
+                - generic [ref=e236]:
+                  - generic [ref=e237]:
+                    - generic [ref=e238]: Red Bull
+                    - generic [ref=e239]:
+                      - img [ref=e240]
+                      - text: Mar 23, 26
+                  - link "View" [ref=e242] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=35140394452225741
+                    - img [ref=e243]
+                    - text: View
+            - generic [ref=e247]:
+              - img "Red Bull ad" [ref=e249]
+              - generic [ref=e250]:
+                - paragraph [ref=e251]: "DoorDash: Food, Grocery and Retail - Fast Same Day Delivery"
+                - paragraph [ref=e252]: No ad text available
+                - generic [ref=e253]:
+                  - generic [ref=e254]: facebook
+                  - generic [ref=e255]: instagram
+                  - generic [ref=e256]: Learn more
+                  - generic [ref=e257]: IMAGE
+                - generic [ref=e258]:
+                  - generic [ref=e259]:
+                    - generic [ref=e260]: Red Bull
+                    - generic [ref=e261]:
+                      - img [ref=e262]
+                      - text: Apr 9, 26
+                  - link "View" [ref=e264] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=1683727435948634
+                    - img [ref=e265]
+                    - text: View
+            - generic [ref=e269]:
+              - link "Watch Video" [ref=e271] [cursor=pointer]:
+                - /url: https://video-lga3-3.xx.fbcdn.net/o1/v/t2/f2/m366/AQPZ8aVKBts4utFlkTR9IjefYdkrE6SCwO3yK4uuBJF9MkMWuGyzn9ER3v3yfqlYVlZM6jxP6-FUAo7FYIWF3-ho5-GFXQjT-azozYC0dQJ0Yg.mp4?_nc_cat=106&_nc_sid=5e9851&_nc_ht=video-lga3-3.xx.fbcdn.net&_nc_ohc=Udmq_QoR09cQ7kNvwHitsZf&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE1NTc0Mzc3NTUzNTIzMjcsImFzc2V0X2FnZV9kYXlzIjoyNiwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjYsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=c354cfa7146e3b37&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC8xNjQyMEI4QTMwMUIwNEQ1OUY2NUQ2QzcxOTdCRjI5MF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzMzNEJGODM5NkFEMDExRjc0OUQ5MjRCNTBGM0YyMEJBX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaOlNfC557EBRUCKAJDMywXQBgAAAAAAAAYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=SDcmRzg7NeypxRcJxPR-bw&_nc_ss=7a389&_nc_zt=28&oh=00_Af1NZ3faKCkspRfbAArOijhg6qidPx2ef64hPR-_0JkSIg&oe=69E2B396
+                - img [ref=e272]
+                - generic [ref=e275]: Watch Video
+              - generic [ref=e276]:
+                - paragraph [ref=e277]: Gives You Wiiings
+                - paragraph [ref=e278]: Set For Coachella?
+                - generic [ref=e279]:
+                  - generic [ref=e280]: facebook
+                  - generic [ref=e281]: instagram
+                  - generic [ref=e282]: Learn more
+                  - generic [ref=e283]: DCO
+                - generic [ref=e284]:
+                  - generic [ref=e285]:
+                    - generic [ref=e286]: Red Bull
+                    - generic [ref=e287]:
+                      - img [ref=e288]
+                      - text: Mar 23, 26
+                  - link "View" [ref=e290] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=978308291533748
+                    - img [ref=e291]
+                    - text: View
+            - generic [ref=e295]:
+              - link "Watch Video" [ref=e297] [cursor=pointer]:
+                - /url: https://video-lga3-2.xx.fbcdn.net/o1/v/t2/f2/m366/AQNoQE2O8Kx7yOjh60zFw-J5a9eqM7yBry6J7gxuOjq-x8q6EQbY94E4VB4clsiu6en28k6LApMlHQo5umzBxyPTdz3vrxfJrBThpbTR6Q1wNg.mp4?_nc_cat=107&_nc_sid=5e9851&_nc_ht=video-lga3-2.xx.fbcdn.net&_nc_ohc=1DVEd7zm83AQ7kNvwEbw7WE&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjEyOTIzMzgyMTk2MTIyOTAsImFzc2V0X2FnZV9kYXlzIjozMCwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjgsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=be453f2c5642a696&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC84RjQ4OTUxQTk3MDk5RThCNzVGNDQ4REQ2NzNCMThBOV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0JENDQwMTZFQUM4QUJGMTY4NDdFMjlDQ0RCMDlGQjhCX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaE4pOI_tfLBBUCKAJDMywXQCFcKPXCj1wYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=SDcmRzg7NeypxRcJxPR-bw&_nc_ss=7a389&_nc_zt=28&oh=00_Af1v6m7bs3YeN9INV4n4zCrT5O0B9UqaMKX3ZFH5TQBFAg&oe=69E2B011
+                - img [ref=e298]
+                - generic [ref=e301]: Watch Video
+              - generic [ref=e302]:
+                - paragraph [ref=e303]: Red Bull doda Ci skrzyyydeł.
+                - paragraph [ref=e304]: Bohater z zawodu? 🦸🏻‍♂️🔥
+                - generic [ref=e305]:
+                  - generic [ref=e306]: facebook
+                  - generic [ref=e307]: Learn more
+                  - generic [ref=e308]: DCO
+                - generic [ref=e309]:
+                  - generic [ref=e310]:
+                    - generic [ref=e311]: Red Bull
+                    - generic [ref=e312]:
+                      - img [ref=e313]
+                      - text: Mar 15, 26
+                  - link "View" [ref=e315] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=1764883305237101
+                    - img [ref=e316]
+                    - text: View
+            - generic [ref=e320]:
+              - link "Watch Video" [ref=e322] [cursor=pointer]:
+                - /url: https://video-lga3-2.xx.fbcdn.net/o1/v/t2/f2/m366/AQPBpTLduwR98ZRqPgqz8cvxP85vx6BZMhdoZVH_V7_mhkZcGL13s88oW6XktiUw2fBFam9EzNqkSMme9QZ5g0_8d115GmAH0KFacy5Hnucfpw.mp4?_nc_cat=100&_nc_sid=5e9851&_nc_ht=video-lga3-2.xx.fbcdn.net&_nc_ohc=GoeJjD_34jkQ7kNvwFibZBc&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjEyNTcwMTI1NDI1NjQ4NDUsImFzc2V0X2FnZV9kYXlzIjozMCwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjgsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=1ca4899657559713&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC81MjRCN0RBQ0U4RDVBRDREMkUzQUNFQzVFNjgyQ0ZCNF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzZDNDZBRDA4NUE1QTYzQ0Y4MkEwOTQ3QzQwNkQzN0JCX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbap5-h4c-7BBUCKAJDMywXQCFcKPXCj1wYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=SDcmRzg7NeypxRcJxPR-bw&_nc_ss=7a389&_nc_zt=28&oh=00_Af2aPsympgbAATJYSi7yvqTxbAjp1bWIFeoKBI1IAdiO8Q&oe=69E2855C
+                - img [ref=e323]
+                - generic [ref=e326]: Watch Video
+              - generic [ref=e327]:
+                - paragraph [ref=e328]: Red Bull doda Ci skrzyyydeł.
+                - paragraph [ref=e329]: Bohater z zawodu? 🦸🏻‍♂️🔥
+                - generic [ref=e330]:
+                  - generic [ref=e331]: facebook
+                  - generic [ref=e332]: Learn more
+                  - generic [ref=e333]: VIDEO
+                - generic [ref=e334]:
+                  - generic [ref=e335]:
+                    - generic [ref=e336]: Red Bull
+                    - generic [ref=e337]:
+                      - img [ref=e338]
+                      - text: Apr 9, 26
+                  - link "View" [ref=e340] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=2146906706065276
+                    - img [ref=e341]
+                    - text: View
+            - generic [ref=e345]:
+              - link "Watch Video" [ref=e347] [cursor=pointer]:
+                - /url: https://video-lga3-1.xx.fbcdn.net/o1/v/t2/f2/m366/AQMGk_LvHZn04gUh054qSQKcrTQoiR1RRwNnwD8jSHEy1xeOhrUjcNmnTeZj2L4TFRv7Gog1-CUeul9STXMTQI7dADJuwBsOvu-bdC9BV_Vahw.mp4?_nc_cat=109&_nc_sid=5e9851&_nc_ht=video-lga3-1.xx.fbcdn.net&_nc_ohc=LhEmcznNpsEQ7kNvwHtU_c9&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE2MjM0MTA3MTUzNjI3OTQsImFzc2V0X2FnZV9kYXlzIjoyNCwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjYsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=153a5f8c830a0d46&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC8wOTRCNTgyMkQ2QjJBRTE4M0YxNzJGNzZBRDVDQTc4QV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzYwNEMyNTg2Mjk2MzAxOUQ0Qzg5OEU5Q0M5ODNENEFBX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbUl5yw-J7iBRUCKAJDMywXQBgAAAAAAAAYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=SDcmRzg7NeypxRcJxPR-bw&_nc_ss=7a389&_nc_zt=28&oh=00_Af0k6JAGGTSCoo1_FKtQ6iPW87DpNG01HK-_Ud6Dsani3A&oe=69E289BB
+                - img [ref=e348]
+                - generic [ref=e351]: Watch Video
+              - generic [ref=e352]:
+                - paragraph [ref=e353]: No ad text available
+                - generic [ref=e354]:
+                  - generic [ref=e355]: facebook
+                  - generic [ref=e356]: instagram
+                  - generic [ref=e357]: Learn more
+                  - generic [ref=e358]: VIDEO
+                - generic [ref=e359]:
+                  - generic [ref=e360]:
+                    - generic [ref=e361]: Red Bull
+                    - generic [ref=e362]:
+                      - img [ref=e363]
+                      - text: Mar 23, 26
+                  - link "View" [ref=e365] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=2138073456960530
+                    - img [ref=e366]
+                    - text: View
+            - generic [ref=e370]:
+              - link "Watch Video" [ref=e372] [cursor=pointer]:
+                - /url: https://video-lga3-3.xx.fbcdn.net/o1/v/t2/f2/m366/AQNI-ESJJIUWiBx9MPDM50zRJqjBQs2jvwSML6pKCyTAL7NLxAvWAzl1hGh44OcM5TP-FNGNBwHBY1MZtXnBcyR0yFSfkGDa9DtPiYSv7TtHiQ.mp4?_nc_cat=108&_nc_sid=5e9851&_nc_ht=video-lga3-3.xx.fbcdn.net&_nc_ohc=ZRvI6fSNrWsQ7kNvwELsB0o&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE2NDYyOTIxNDMwMzkxNTQsImFzc2V0X2FnZV9kYXlzIjozMCwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjgsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=82891262f6cad11&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9GMTRBN0IyNDU0Nzc0NzlGMEY4Qjc5MjMyRTU3NTNCM19tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0Q0NEYxNTBCOTg5NTY0RDMxM0Q4NEJFOEUyMkEwMEE3X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbkio-m6NLsBRUCKAJDMywXQCFcKPXCj1wYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=SDcmRzg7NeypxRcJxPR-bw&_nc_ss=7a389&_nc_zt=28&oh=00_Af1lhbBmA3rdN6-uImnaWnP0_bU9o0giFc7RIWVJt5D8rw&oe=69E28700
+                - img [ref=e373]
+                - generic [ref=e376]: Watch Video
+              - generic [ref=e377]:
+                - paragraph [ref=e378]: Red Bull doda Ci skrzyyydeł.
+                - paragraph [ref=e379]: Bohaterka z zawodu? 🦸🏼‍♀️🔥
+                - generic [ref=e380]:
+                  - generic [ref=e381]: facebook
+                  - generic [ref=e382]: Learn more
+                  - generic [ref=e383]: DCO
+                - generic [ref=e384]:
+                  - generic [ref=e385]:
+                    - generic [ref=e386]: Red Bull
+                    - generic [ref=e387]:
+                      - img [ref=e388]
+                      - text: Mar 15, 26
+                  - link "View" [ref=e390] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=761542400122637
+                    - img [ref=e391]
+                    - text: View
+            - generic [ref=e395]:
+              - link "Watch Video" [ref=e397] [cursor=pointer]:
+                - /url: https://video-lga3-2.xx.fbcdn.net/o1/v/t2/f2/m366/AQOy9McUrjVZpUM4GOTHbB5_xB4jSIjFBDVoK1wZc5Z4tfMqfqwD3s5Lvva1cPHnQMegBv4TG35S0K8d9rspyt6xNWziuzL04Rt_S3JShkOY5A.mp4?_nc_cat=105&_nc_sid=5e9851&_nc_ht=video-lga3-2.xx.fbcdn.net&_nc_ohc=c3dNJL9-a1oQ7kNvwERlBeA&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjkxMzQ3MjE5NDM4NjE4MywiYXNzZXRfYWdlX2RheXMiOjY3LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6NiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=4224e7b3cf6efd2b&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC8yQTQ1MDVBNDU5RDBBNUE1Mjk3OEM5QzQ1N0MwNDNBOV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzVGNEYzNEFFQUJDQzA3QUQ1RjgyNDE2NURFMjUwMzhBX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaO5MSairOfAxUCKAJDMywXQBgAAAAAAAAYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=SDcmRzg7NeypxRcJxPR-bw&_nc_ss=7a389&_nc_zt=28&oh=00_Af3bLyZsHToFwxmpJK3kXwcRpSUIrphsx6IhDKuYHR7mVg&oe=69E28F0F
+                - img [ref=e398]
+                - generic [ref=e401]: Watch Video
+              - generic [ref=e402]:
+                - paragraph [ref=e403]: Red Bull Gives You Wiiings.
+                - paragraph [ref=e404]: Red Bull Gives You Wiiings.
+                - generic [ref=e405]:
+                  - generic [ref=e406]: facebook
+                  - generic [ref=e407]: instagram
+                  - generic [ref=e408]: Learn more
+                  - generic [ref=e409]: VIDEO
+                - generic [ref=e410]:
+                  - generic [ref=e411]:
+                    - generic [ref=e412]: Red Bull
+                    - generic [ref=e413]:
+                      - img [ref=e414]
+                      - text: Mar 30, 26
+                  - link "View" [ref=e416] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=1637464074349408
+                    - img [ref=e417]
+                    - text: View
+            - generic [ref=e421]:
+              - generic [ref=e422]:
+                - img "Carousel image 1" [ref=e423]
+                - generic [ref=e424]:
+                  - button [disabled] [ref=e425] [cursor=pointer]:
+                    - img [ref=e426]
+                  - generic [ref=e428]: 1/3
+                  - button [ref=e429] [cursor=pointer]:
+                    - img [ref=e430]
+              - generic [ref=e432]:
+                - paragraph [ref=e433]: No ad text available
+                - generic [ref=e434]:
+                  - generic [ref=e435]: facebook
+                  - generic [ref=e436]: instagram
+                  - generic [ref=e437]: threads
+                  - generic [ref=e438]: Learn more
+                  - generic [ref=e439]: DCO
+                - generic [ref=e440]:
+                  - generic [ref=e441]:
+                    - generic [ref=e442]: Red Bull
+                    - generic [ref=e443]:
+                      - img [ref=e444]
+                      - text: Mar 16, 26
+                  - link "View" [ref=e446] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=1951762925700982
+                    - img [ref=e447]
+                    - text: View
+            - generic [ref=e451]:
+              - generic [ref=e452]:
+                - img "Carousel image 1" [ref=e453]
+                - generic [ref=e454]:
+                  - button [disabled] [ref=e455] [cursor=pointer]:
+                    - img [ref=e456]
+                  - generic [ref=e458]: 1/2
+                  - button [ref=e459] [cursor=pointer]:
+                    - img [ref=e460]
+              - generic [ref=e462]:
+                - paragraph [ref=e463]: No ad text available
+                - generic [ref=e464]:
+                  - generic [ref=e465]: facebook
+                  - generic [ref=e466]: instagram
+                  - generic [ref=e467]: Learn more
+                  - generic [ref=e468]: DCO
+                - generic [ref=e469]:
+                  - generic [ref=e470]:
+                    - generic [ref=e471]: Red Bull
+                    - generic [ref=e472]:
+                      - img [ref=e473]
+                      - text: Mar 23, 26
+                  - link "View" [ref=e475] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=913784401271094
+                    - img [ref=e476]
+                    - text: View
+            - generic [ref=e480]:
+              - link "Watch Video" [ref=e482] [cursor=pointer]:
+                - /url: https://video-lga3-1.xx.fbcdn.net/o1/v/t2/f2/m366/AQP2S3InrGac2hSloqj4G4_yYimgCrVVDe7T5ABiIGCpB0QeD2mVDtRuv3lOEJ56JtBYzNC31YYU8v0b0P5n9xXXJ72QJ4usxk6zIwfQVMbGqg.mp4?_nc_cat=103&_nc_sid=5e9851&_nc_ht=video-lga3-1.xx.fbcdn.net&_nc_ohc=CzV6sfLAYngQ7kNvwFWKNhb&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE0NjkyOTY3Mjc5MDE3NDksImFzc2V0X2FnZV9kYXlzIjoyNSwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjYsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=7935c6bd0f9835f1&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9DOTQwNjZBNDNBRjgzNkM1RUM0ODBCQkUxNDNDRjk4Q19tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0NCNDZFQkU4MDFCRTg2N0YxRjdGMEU3NTBBOUM1RDlCX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbqmMrYqZScBRUCKAJDMywXQBgAAAAAAAAYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=SDcmRzg7NeypxRcJxPR-bw&_nc_ss=7a389&_nc_zt=28&oh=00_Af1FRVN7LC7pB68Ea8iocQ1hlNTMKyj2PUp0fWy09wQ4kw&oe=69E29E69
+                - img [ref=e483]
+                - generic [ref=e486]: Watch Video
+              - generic [ref=e487]:
+                - paragraph [ref=e488]: ريد بُل زيرو الجديد وِصِل طعم جديد، ١٠٠٪ چوااانح.
+                - generic [ref=e489]:
+                  - generic [ref=e490]: facebook
+                  - generic [ref=e491]: Learn more
+                  - generic [ref=e492]: VIDEO
+                - generic [ref=e493]:
+                  - generic [ref=e494]:
+                    - generic [ref=e495]: Red Bull
+                    - generic [ref=e496]:
+                      - img [ref=e497]
+                      - text: Apr 11, 26
+                  - link "View" [ref=e499] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=970929015397496
+                    - img [ref=e500]
+                    - text: View
+            - generic [ref=e504]:
+              - link "Watch Video" [ref=e506] [cursor=pointer]:
+                - /url: https://video-lga3-1.xx.fbcdn.net/o1/v/t2/f2/m366/AQP2S3InrGac2hSloqj4G4_yYimgCrVVDe7T5ABiIGCpB0QeD2mVDtRuv3lOEJ56JtBYzNC31YYU8v0b0P5n9xXXJ72QJ4usxk6zIwfQVMbGqg.mp4?_nc_cat=103&_nc_sid=5e9851&_nc_ht=video-lga3-1.xx.fbcdn.net&_nc_ohc=CzV6sfLAYngQ7kNvwFWKNhb&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE0NjkyOTY3Mjc5MDE3NDksImFzc2V0X2FnZV9kYXlzIjoyNSwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjYsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=7935c6bd0f9835f1&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9DOTQwNjZBNDNBRjgzNkM1RUM0ODBCQkUxNDNDRjk4Q19tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0NCNDZFQkU4MDFCRTg2N0YxRjdGMEU3NTBBOUM1RDlCX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbqmMrYqZScBRUCKAJDMywXQBgAAAAAAAAYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=SDcmRzg7NeypxRcJxPR-bw&_nc_ss=7a389&_nc_zt=28&oh=00_Af1FRVN7LC7pB68Ea8iocQ1hlNTMKyj2PUp0fWy09wQ4kw&oe=69E29E69
+                - img [ref=e507]
+                - generic [ref=e510]: Watch Video
+              - generic [ref=e511]:
+                - paragraph [ref=e512]: ريد بُل زيرو الجديد وِصِل طعم جديد، ١٠٠٪ چوااانح.
+                - generic [ref=e513]:
+                  - generic [ref=e514]: facebook
+                  - generic [ref=e515]: Learn more
+                  - generic [ref=e516]: VIDEO
+                - generic [ref=e517]:
+                  - generic [ref=e518]:
+                    - generic [ref=e519]: Red Bull
+                    - generic [ref=e520]:
+                      - img [ref=e521]
+                      - text: Apr 11, 26
+                  - link "View" [ref=e523] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=1333906005371039
+                    - img [ref=e524]
+                    - text: View
+            - generic [ref=e528]:
+              - link "Watch Video" [ref=e530] [cursor=pointer]:
+                - /url: https://video-lga3-1.xx.fbcdn.net/o1/v/t2/f2/m366/AQP2S3InrGac2hSloqj4G4_yYimgCrVVDe7T5ABiIGCpB0QeD2mVDtRuv3lOEJ56JtBYzNC31YYU8v0b0P5n9xXXJ72QJ4usxk6zIwfQVMbGqg.mp4?_nc_cat=103&_nc_sid=5e9851&_nc_ht=video-lga3-1.xx.fbcdn.net&_nc_ohc=CzV6sfLAYngQ7kNvwFWKNhb&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE0NjkyOTY3Mjc5MDE3NDksImFzc2V0X2FnZV9kYXlzIjoyNSwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjYsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=7935c6bd0f9835f1&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9DOTQwNjZBNDNBRjgzNkM1RUM0ODBCQkUxNDNDRjk4Q19tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0NCNDZFQkU4MDFCRTg2N0YxRjdGMEU3NTBBOUM1RDlCX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbqmMrYqZScBRUCKAJDMywXQBgAAAAAAAAYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=SDcmRzg7NeypxRcJxPR-bw&_nc_ss=7a389&_nc_zt=28&oh=00_Af1FRVN7LC7pB68Ea8iocQ1hlNTMKyj2PUp0fWy09wQ4kw&oe=69E29E69
+                - img [ref=e531]
+                - generic [ref=e534]: Watch Video
+              - generic [ref=e535]:
+                - paragraph [ref=e536]: ريد بُل زيرو الجديد وِصِل طعم جديد، ١٠٠٪ چوااانح.
+                - generic [ref=e537]:
+                  - generic [ref=e538]: facebook
+                  - generic [ref=e539]: Learn more
+                  - generic [ref=e540]: VIDEO
+                - generic [ref=e541]:
+                  - generic [ref=e542]:
+                    - generic [ref=e543]: Red Bull
+                    - generic [ref=e544]:
+                      - img [ref=e545]
+                      - text: Apr 12, 26
+                  - link "View" [ref=e547] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=794873763345169
+                    - img [ref=e548]
+                    - text: View
+            - generic [ref=e552]:
+              - link "Watch Video" [ref=e554] [cursor=pointer]:
+                - /url: https://video-lga3-1.xx.fbcdn.net/o1/v/t2/f2/m366/AQP9SsA0ksP_t4eNGD0pEqg0LKMR2FWulOjFWtRJ6WHHbP5Nz7c0pl-3hXxdnt5qaj5USo0RPMXmPyZkmDk_B1bPQnCsg25K2em3jYLxSMjAEw.mp4?_nc_cat=111&_nc_sid=5e9851&_nc_ht=video-lga3-1.xx.fbcdn.net&_nc_ohc=8ZAhXWvpBOEQ7kNvwEAkgpK&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjk1OTA5Nzk4MzExMjgxMiwiYXNzZXRfYWdlX2RheXMiOjI1LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6NiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=c01713bfa30bfb51&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9BNzQ1NUZFQjJBNEU0MURFRjE2QTg5NDUzNkMzNDY5MF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0NDNDJFQjc1N0VENjc1QTAzNUY0RUZERkE4RkM0RkIxX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbY2bTp7JK0AxUCKAJDMywXQBgAAAAAAAAYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=SDcmRzg7NeypxRcJxPR-bw&_nc_ss=7a389&_nc_zt=28&oh=00_Af0xFkqoELs1w92w6KSMiZ4xJBxt3hPGq7DHpZIfaOWccQ&oe=69E2BBC1
+                - img [ref=e555]
+                - generic [ref=e558]: Watch Video
+              - generic [ref=e559]:
+                - paragraph [ref=e560]: ريد بُل زيرو الجديد وِصِل طعم جديد، ١٠٠٪ چوااانح.
+                - generic [ref=e561]:
+                  - generic [ref=e562]: facebook
+                  - generic [ref=e563]: Learn more
+                  - generic [ref=e564]: DCO
+                - generic [ref=e565]:
+                  - generic [ref=e566]:
+                    - generic [ref=e567]: Red Bull
+                    - generic [ref=e568]:
+                      - img [ref=e569]
+                      - text: Mar 23, 26
+                  - link "View" [ref=e571] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=26756759903981332
+                    - img [ref=e572]
+                    - text: View
+            - generic [ref=e576]:
+              - link "Watch Video" [ref=e578] [cursor=pointer]:
+                - /url: https://video-lga3-1.xx.fbcdn.net/o1/v/t2/f2/m366/AQP9SsA0ksP_t4eNGD0pEqg0LKMR2FWulOjFWtRJ6WHHbP5Nz7c0pl-3hXxdnt5qaj5USo0RPMXmPyZkmDk_B1bPQnCsg25K2em3jYLxSMjAEw.mp4?_nc_cat=111&_nc_sid=5e9851&_nc_ht=video-lga3-1.xx.fbcdn.net&_nc_ohc=8ZAhXWvpBOEQ7kNvwEAkgpK&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjk1OTA5Nzk4MzExMjgxMiwiYXNzZXRfYWdlX2RheXMiOjI1LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6NiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=c01713bfa30bfb51&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9BNzQ1NUZFQjJBNEU0MURFRjE2QTg5NDUzNkMzNDY5MF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0NDNDJFQjc1N0VENjc1QTAzNUY0RUZERkE4RkM0RkIxX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbY2bTp7JK0AxUCKAJDMywXQBgAAAAAAAAYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=SDcmRzg7NeypxRcJxPR-bw&_nc_ss=7a389&_nc_zt=28&oh=00_Af0xFkqoELs1w92w6KSMiZ4xJBxt3hPGq7DHpZIfaOWccQ&oe=69E2BBC1
+                - img [ref=e579]
+                - generic [ref=e582]: Watch Video
+              - generic [ref=e583]:
+                - paragraph [ref=e584]: ريد بُل زيرو الجديد وِصِل طعم جديد، ١٠٠٪ چوااانح.
+                - generic [ref=e585]:
+                  - generic [ref=e586]: facebook
+                  - generic [ref=e587]: Learn more
+                  - generic [ref=e588]: DCO
+                - generic [ref=e589]:
+                  - generic [ref=e590]:
+                    - generic [ref=e591]: Red Bull
+                    - generic [ref=e592]:
+                      - img [ref=e593]
+                      - text: Mar 23, 26
+                  - link "View" [ref=e595] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=1336165301727631
+                    - img [ref=e596]
+                    - text: View
+            - generic [ref=e600]:
+              - link "Watch Video" [ref=e602] [cursor=pointer]:
+                - /url: https://video-lga3-1.xx.fbcdn.net/o1/v/t2/f2/m366/AQP9SsA0ksP_t4eNGD0pEqg0LKMR2FWulOjFWtRJ6WHHbP5Nz7c0pl-3hXxdnt5qaj5USo0RPMXmPyZkmDk_B1bPQnCsg25K2em3jYLxSMjAEw.mp4?_nc_cat=111&_nc_sid=5e9851&_nc_ht=video-lga3-1.xx.fbcdn.net&_nc_ohc=8ZAhXWvpBOEQ7kNvwEAkgpK&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjk1OTA5Nzk4MzExMjgxMiwiYXNzZXRfYWdlX2RheXMiOjI1LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6NiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=c01713bfa30bfb51&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9BNzQ1NUZFQjJBNEU0MURFRjE2QTg5NDUzNkMzNDY5MF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0NDNDJFQjc1N0VENjc1QTAzNUY0RUZERkE4RkM0RkIxX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbY2bTp7JK0AxUCKAJDMywXQBgAAAAAAAAYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=SDcmRzg7NeypxRcJxPR-bw&_nc_ss=7a389&_nc_zt=28&oh=00_Af0xFkqoELs1w92w6KSMiZ4xJBxt3hPGq7DHpZIfaOWccQ&oe=69E2BBC1
+                - img [ref=e603]
+                - generic [ref=e606]: Watch Video
+              - generic [ref=e607]:
+                - paragraph [ref=e608]: ريد بُل زيرو الجديد وِصِل طعم جديد، ١٠٠٪ چوااانح.
+                - generic [ref=e609]:
+                  - generic [ref=e610]: facebook
+                  - generic [ref=e611]: Learn more
+                  - generic [ref=e612]: DCO
+                - generic [ref=e613]:
+                  - generic [ref=e614]:
+                    - generic [ref=e615]: Red Bull
+                    - generic [ref=e616]:
+                      - img [ref=e617]
+                      - text: Mar 23, 26
+                  - link "View" [ref=e619] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=1048545848340171
+                    - img [ref=e620]
+                    - text: View
+            - generic [ref=e624]:
+              - link "Watch Video" [ref=e626] [cursor=pointer]:
+                - /url: https://video-lga3-3.xx.fbcdn.net/o1/v/t2/f2/m366/AQOCfmAhCuFG2VLR2i8891JACeL-04uCPP_f-E724VfVJWZXYX1vEdcYJZFTCVa5LHH6sIdV25w29eHBz06bmkmozX_223Hs-o2CgbW-pP_jfw.mp4?_nc_cat=106&_nc_sid=5e9851&_nc_ht=video-lga3-3.xx.fbcdn.net&_nc_ohc=sss0mlbwtXsQ7kNvwEvVJAu&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjIxMTAzNTc0NzMwNTA3MTMsImFzc2V0X2FnZV9kYXlzIjo2OCwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjgsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=3d35837e37db49a&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC8yNDQ0QUIwMTNFRERFQjM4MzI4NzUxNjQzQTBCMzVCOF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzZBNDZEQzdDODZBNDA4ODU3RDU5MUFBMTc4QzgwQThBX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaygb64_Na_BxUCKAJDMywXQCAAAAAAAAAYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=SDcmRzg7NeypxRcJxPR-bw&_nc_ss=7a389&_nc_zt=28&oh=00_Af2SXeJAJ31dKZ7FKAaNsN3j_H2YGpz4SKrALDgrbxQ7TQ&oe=69E29E3E
+                - img [ref=e627]
+                - generic [ref=e630]: Watch Video
+              - generic [ref=e631]:
+                - paragraph [ref=e632]: "Un Verano sin FOMO #redbull #TeDaAaalas"
+                - generic [ref=e633]:
+                  - generic [ref=e634]: facebook
+                  - generic [ref=e635]: instagram
+                  - generic [ref=e636]: messenger
+                  - generic [ref=e637]: VIDEO
+                - generic [ref=e638]:
+                  - generic [ref=e639]:
+                    - generic [ref=e640]: Red Bull
+                    - generic [ref=e641]:
+                      - img [ref=e642]
+                      - text: Mar 15, 26
+                  - link "View" [ref=e644] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=785545840941459
+                    - img [ref=e645]
+                    - text: View
+            - generic [ref=e649]:
+              - link "Watch Video" [ref=e651] [cursor=pointer]:
+                - /url: https://video-lga3-1.xx.fbcdn.net/o1/v/t2/f2/m366/AQO5DY6faVgAXivFod---fjFjYunm1_SiaZQDMkyaz9wO0wz_mx6aeDuazY7evGERIkpgAg2Q-8pmgl9D6bRRyPsFEEqLcFC4oEa61g5CglrBA.mp4?_nc_cat=110&_nc_sid=5e9851&_nc_ht=video-lga3-1.xx.fbcdn.net&_nc_ohc=5wtNdxqJ-QgQ7kNvwGz55Ck&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE5OTE0NjE5MzgzOTQxODQsImFzc2V0X2FnZV9kYXlzIjozOCwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjYsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=1b93d4e4d9f50783&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9GNDRGQjJENDNFMDgwQUZDODY1RkY3MDAwNDM4RDA4NF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzZDNDhFQzFCODk1RUU4NEVDMDcwRTc2MTg3ODE1RjlDX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaQ0d_Wq86JBxUCKAJDMywXQBgAAAAAAAAYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=SDcmRzg7NeypxRcJxPR-bw&_nc_ss=7a389&_nc_zt=28&oh=00_Af3b-E_xy6cHxb09g2UPbTBykcIoF945pGEn0q7TYowAkg&oe=69E29ED6
+                - img [ref=e652]
+                - generic [ref=e655]: Watch Video
+              - generic [ref=e656]:
+                - paragraph [ref=e657]: Red Bull Gives You Wiiings.
+                - paragraph [ref=e658]: Red Bull Gives You Wiiings.
+                - generic [ref=e659]:
+                  - generic [ref=e660]: facebook
+                  - generic [ref=e661]: instagram
+                  - generic [ref=e662]: Learn more
+                  - generic [ref=e663]: VIDEO
+                - generic [ref=e664]:
+                  - generic [ref=e665]:
+                    - generic [ref=e666]: Red Bull
+                    - generic [ref=e667]:
+                      - img [ref=e668]
+                      - text: Mar 30, 26
+                  - link "View" [ref=e670] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=1686715102348013
+                    - img [ref=e671]
+                    - text: View
+            - generic [ref=e675]:
+              - link "Watch Video" [ref=e677] [cursor=pointer]:
+                - /url: https://video-lga3-3.xx.fbcdn.net/o1/v/t2/f2/m366/AQOCfmAhCuFG2VLR2i8891JACeL-04uCPP_f-E724VfVJWZXYX1vEdcYJZFTCVa5LHH6sIdV25w29eHBz06bmkmozX_223Hs-o2CgbW-pP_jfw.mp4?_nc_cat=106&_nc_sid=5e9851&_nc_ht=video-lga3-3.xx.fbcdn.net&_nc_ohc=sss0mlbwtXsQ7kNvwEvVJAu&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjIxMTAzNTc0NzMwNTA3MTMsImFzc2V0X2FnZV9kYXlzIjo2OCwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjgsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=3d35837e37db49a&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC8yNDQ0QUIwMTNFRERFQjM4MzI4NzUxNjQzQTBCMzVCOF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzZBNDZEQzdDODZBNDA4ODU3RDU5MUFBMTc4QzgwQThBX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaygb64_Na_BxUCKAJDMywXQCAAAAAAAAAYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=SDcmRzg7NeypxRcJxPR-bw&_nc_ss=7a389&_nc_zt=28&oh=00_Af2SXeJAJ31dKZ7FKAaNsN3j_H2YGpz4SKrALDgrbxQ7TQ&oe=69E29E3E
+                - img [ref=e678]
+                - generic [ref=e681]: Watch Video
+              - generic [ref=e682]:
+                - paragraph [ref=e683]: "Un Verano sin FOMO #redbull #TeDaAaalas"
+                - generic [ref=e684]:
+                  - generic [ref=e685]: facebook
+                  - generic [ref=e686]: instagram
+                  - generic [ref=e687]: messenger
+                  - generic [ref=e688]: VIDEO
+                - generic [ref=e689]:
+                  - generic [ref=e690]:
+                    - generic [ref=e691]: Red Bull
+                    - generic [ref=e692]:
+                      - img [ref=e693]
+                      - text: Mar 15, 26
+                  - link "View" [ref=e695] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=948828194286872
+                    - img [ref=e696]
+                    - text: View
+            - generic [ref=e700]:
+              - link "Watch Video" [ref=e702] [cursor=pointer]:
+                - /url: https://video-lga3-2.xx.fbcdn.net/o1/v/t2/f2/m366/AQOy9McUrjVZpUM4GOTHbB5_xB4jSIjFBDVoK1wZc5Z4tfMqfqwD3s5Lvva1cPHnQMegBv4TG35S0K8d9rspyt6xNWziuzL04Rt_S3JShkOY5A.mp4?_nc_cat=105&_nc_sid=5e9851&_nc_ht=video-lga3-2.xx.fbcdn.net&_nc_ohc=c3dNJL9-a1oQ7kNvwERlBeA&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjkxMzQ3MjE5NDM4NjE4MywiYXNzZXRfYWdlX2RheXMiOjY3LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6NiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=4224e7b3cf6efd2b&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC8yQTQ1MDVBNDU5RDBBNUE1Mjk3OEM5QzQ1N0MwNDNBOV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzVGNEYzNEFFQUJDQzA3QUQ1RjgyNDE2NURFMjUwMzhBX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaO5MSairOfAxUCKAJDMywXQBgAAAAAAAAYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=SDcmRzg7NeypxRcJxPR-bw&_nc_ss=7a389&_nc_zt=28&oh=00_Af3bLyZsHToFwxmpJK3kXwcRpSUIrphsx6IhDKuYHR7mVg&oe=69E28F0F
+                - img [ref=e703]
+                - generic [ref=e706]: Watch Video
+              - generic [ref=e707]:
+                - paragraph [ref=e708]: Red Bull Gives You Wiiings.
+                - paragraph [ref=e709]: Red Bull Gives You Wiiings.
+                - generic [ref=e710]:
+                  - generic [ref=e711]: facebook
+                  - generic [ref=e712]: instagram
+                  - generic [ref=e713]: Learn more
+                  - generic [ref=e714]: VIDEO
+                - generic [ref=e715]:
+                  - generic [ref=e716]:
+                    - generic [ref=e717]: Red Bull
+                    - generic [ref=e718]:
+                      - img [ref=e719]
+                      - text: Mar 30, 26
+                  - link "View" [ref=e721] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=805765208756094
+                    - img [ref=e722]
+                    - text: View
+            - generic [ref=e726]:
+              - link "Watch Video" [ref=e728] [cursor=pointer]:
+                - /url: https://video-lga3-3.xx.fbcdn.net/o1/v/t2/f2/m366/AQNI-ESJJIUWiBx9MPDM50zRJqjBQs2jvwSML6pKCyTAL7NLxAvWAzl1hGh44OcM5TP-FNGNBwHBY1MZtXnBcyR0yFSfkGDa9DtPiYSv7TtHiQ.mp4?_nc_cat=108&_nc_sid=5e9851&_nc_ht=video-lga3-3.xx.fbcdn.net&_nc_ohc=ZRvI6fSNrWsQ7kNvwELsB0o&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE2NDYyOTIxNDMwMzkxNTQsImFzc2V0X2FnZV9kYXlzIjozMCwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjgsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=82891262f6cad11&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9GMTRBN0IyNDU0Nzc0NzlGMEY4Qjc5MjMyRTU3NTNCM19tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0Q0NEYxNTBCOTg5NTY0RDMxM0Q4NEJFOEUyMkEwMEE3X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbkio-m6NLsBRUCKAJDMywXQCFcKPXCj1wYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=SDcmRzg7NeypxRcJxPR-bw&_nc_ss=7a389&_nc_zt=28&oh=00_Af1lhbBmA3rdN6-uImnaWnP0_bU9o0giFc7RIWVJt5D8rw&oe=69E28700
+                - img [ref=e729]
+                - generic [ref=e732]: Watch Video
+              - generic [ref=e733]:
+                - paragraph [ref=e734]: Red Bull doda Ci skrzyyydeł.
+                - paragraph [ref=e735]: Bohaterka z zawodu? 🦸🏻‍♂️🔥
+                - generic [ref=e736]:
+                  - generic [ref=e737]: facebook
+                  - generic [ref=e738]: Learn more
+                  - generic [ref=e739]: DCO
+                - generic [ref=e740]:
+                  - generic [ref=e741]:
+                    - generic [ref=e742]: Red Bull
+                    - generic [ref=e743]:
+                      - img [ref=e744]
+                      - text: Mar 15, 26
+                  - link "View" [ref=e746] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=2535773053507354
+                    - img [ref=e747]
+                    - text: View
+            - generic [ref=e751]:
+              - link "Watch Video" [ref=e753] [cursor=pointer]:
+                - /url: https://video-lga3-3.xx.fbcdn.net/o1/v/t2/f2/m366/AQPONifll1kyVmB87nhSJOJzK30re9Xx9SCJXlKE-xgD6HR3lQc3tMp2gCi8wJt5Imi2pLwkTcBlVFpR9WRWEw7uAkH-ZOLwDRXdVr8ZMv5zKw.mp4?_nc_cat=104&_nc_sid=5e9851&_nc_ht=video-lga3-3.xx.fbcdn.net&_nc_ohc=Xtgou9CIJOsQ7kNvwGFnqyD&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjEyNjA5NDM3ODI2NzYyMTcsImFzc2V0X2FnZV9kYXlzIjozMSwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjYsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=644c3c6b3c504697&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC80MzQxM0ZGNUFBNDk5OUFBNUI2RjAwM0ZDMDY1MkJCNl9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzE1NDQ3OEU1Q0MwQ0I1NDE2MjVDMTc1NUNCNTZDQThCX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbym_yjy7S9BBUCKAJDMywXQBgAAAAAAAAYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=SDcmRzg7NeypxRcJxPR-bw&_nc_ss=7a389&_nc_zt=28&oh=00_Af0Ya45rlt6z5vdjUoftO8hBTBcxijMMCs6sJgA18GIYtA&oe=69E2991C
+                - img [ref=e754]
+                - generic [ref=e757]: Watch Video
+              - generic [ref=e758]:
+                - paragraph [ref=e759]: No ad text available
+                - generic [ref=e760]:
+                  - generic [ref=e761]: facebook
+                  - generic [ref=e762]: instagram
+                  - generic [ref=e763]: Learn more
+                  - generic [ref=e764]: DCO
+                - generic [ref=e765]:
+                  - generic [ref=e766]:
+                    - generic [ref=e767]: Red Bull
+                    - generic [ref=e768]:
+                      - img [ref=e769]
+                      - text: Mar 23, 26
+                  - link "View" [ref=e771] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=4549472991954313
+                    - img [ref=e772]
+                    - text: View
+            - generic [ref=e776]:
+              - img "Red Bull ad" [ref=e778]
+              - generic [ref=e779]:
+                - paragraph [ref=e780]: Red Bull
+                - paragraph [ref=e781]: Ready For The Redbirds?
+                - generic [ref=e782]:
+                  - generic [ref=e783]: facebook
+                  - generic [ref=e784]: instagram
+                  - generic [ref=e785]: threads
+                  - generic [ref=e786]: Learn more
+                  - generic [ref=e787]: IMAGE
+                - generic [ref=e788]:
+                  - generic [ref=e789]:
+                    - generic [ref=e790]: Red Bull
+                    - generic [ref=e791]:
+                      - img [ref=e792]
+                      - text: Apr 12, 26
+                  - link "View" [ref=e794] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=1265957329077356
+                    - img [ref=e795]
+                    - text: View
+            - generic [ref=e799]:
+              - link "Watch Video" [ref=e801] [cursor=pointer]:
+                - /url: https://video-lga3-1.xx.fbcdn.net/o1/v/t2/f2/m366/AQP9SsA0ksP_t4eNGD0pEqg0LKMR2FWulOjFWtRJ6WHHbP5Nz7c0pl-3hXxdnt5qaj5USo0RPMXmPyZkmDk_B1bPQnCsg25K2em3jYLxSMjAEw.mp4?_nc_cat=111&_nc_sid=5e9851&_nc_ht=video-lga3-1.xx.fbcdn.net&_nc_ohc=8ZAhXWvpBOEQ7kNvwEAkgpK&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjk1OTA5Nzk4MzExMjgxMiwiYXNzZXRfYWdlX2RheXMiOjI1LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6NiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=c01713bfa30bfb51&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9BNzQ1NUZFQjJBNEU0MURFRjE2QTg5NDUzNkMzNDY5MF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0NDNDJFQjc1N0VENjc1QTAzNUY0RUZERkE4RkM0RkIxX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbY2bTp7JK0AxUCKAJDMywXQBgAAAAAAAAYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=SDcmRzg7NeypxRcJxPR-bw&_nc_ss=7a389&_nc_zt=28&oh=00_Af0xFkqoELs1w92w6KSMiZ4xJBxt3hPGq7DHpZIfaOWccQ&oe=69E2BBC1
+                - img [ref=e802]
+                - generic [ref=e805]: Watch Video
+              - generic [ref=e806]:
+                - paragraph [ref=e807]: ريد بُل زيرو الجديد وِصِل طعم جديد، ١٠٠٪ چوااانح.
+                - generic [ref=e808]:
+                  - generic [ref=e809]: facebook
+                  - generic [ref=e810]: Learn more
+                  - generic [ref=e811]: DCO
+                - generic [ref=e812]:
+                  - generic [ref=e813]:
+                    - generic [ref=e814]: Red Bull
+                    - generic [ref=e815]:
+                      - img [ref=e816]
+                      - text: Mar 23, 26
+                  - link "View" [ref=e818] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=2440843896360503
+                    - img [ref=e819]
+                    - text: View
+        - generic [ref=e823]:
+          - generic [ref=e824]:
+            - heading "Monster Energy" [level=3] [ref=e825]
+            - generic [ref=e826]: 27 ads
+          - generic [ref=e827]:
+            - generic [ref=e828]:
+              - link "Watch Video" [ref=e830] [cursor=pointer]:
+                - /url: https://video-lga3-3.xx.fbcdn.net/o1/v/t2/f2/m366/AQNU_jGX_wAEd87ZaV1Tcjk7Rym2SyCiUr4x_Ui14jf0kRZktSoadq3SHoDYWuKS_3t3oxRi5vyw1G091Xg-0DmYr_5caEb_8gMoL442laIITw.mp4?_nc_cat=102&_nc_sid=5e9851&_nc_ht=video-lga3-3.xx.fbcdn.net&_nc_ohc=zr2qJPw3UlwQ7kNvwH91mxt&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjEyNTgzNTA0NzU3MjEyMDEsImFzc2V0X2FnZV9kYXlzIjoyMiwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjE1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=cfb8b80320398edb&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC81MzQ1NzdCMTk2QjYyMzFFOUU4OEI3RTlEQjg1MTM4MF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzNENDRFRTVEQjgxNERBQjYxQkJFODMxMDg5RkEyNEIyX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbi593R0Z28BBUCKAJDMywXQC9U_fO2RaIYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af2auzC53NjS5kZpo740oY0eEqQOlMLBTwKXkeL6Yliy_g&oe=69E2AAAA
+                - img [ref=e831]
+                - generic [ref=e834]: Watch Video
+              - generic [ref=e835]:
+                - paragraph [ref=e836]: "Listo 😎 #MonsterEnergyAR #FPS"
+                - generic [ref=e837]:
+                  - generic [ref=e838]: instagram
+                  - generic [ref=e839]: Learn more
+                  - generic [ref=e840]: DCO
+                - generic [ref=e841]:
+                  - generic [ref=e842]:
+                    - generic [ref=e843]: Monster Energy
+                    - generic [ref=e844]:
+                      - img [ref=e845]
+                      - text: Apr 1, 26
+                  - link "View" [ref=e847] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=2234480220694444
+                    - img [ref=e848]
+                    - text: View
+            - generic [ref=e852]:
+              - link "Watch Video" [ref=e854] [cursor=pointer]:
+                - /url: https://video-lga3-1.xx.fbcdn.net/o1/v/t2/f2/m366/AQMUbvpA2CCfaphLsctZRNPhIqXb9MSB3PIE2UlY64K2rgZfBTnQaxu97xmyO03upKiGQxlQQ8EHpxPktWGjnk8Ic0cni2QYgBlK0hwsMy2u-Q.mp4?_nc_cat=103&_nc_sid=5e9851&_nc_ht=video-lga3-1.xx.fbcdn.net&_nc_ohc=dnxiFjz-XgQQ7kNvwEZcsr0&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjEzMTI3NzI2NzEwMzI5NDYsImFzc2V0X2FnZV9kYXlzIjoyMiwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjE1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=646815ff540210b7&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9CNzQxMTBEOEIxMkYxRDBGOUFFOTBCQjFGOEQ3MzZBNl9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50Lzg4NDkzRDMxMjBGRUJFRkQ5MUQyOUZBMUZDRENBQjk2X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbkudLLtv3UBBUCKAJDMywXQC9U_fO2RaIYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af15t-LaNz5qKYihFsoQKN7DUxaZYPxyvKIstXPheGMdKA&oe=69E28C31
+                - img [ref=e855]
+                - generic [ref=e858]: Watch Video
+              - generic [ref=e859]:
+                - paragraph [ref=e860]: "Listo 😎 #MonsterEnergyAR #FPS"
+                - generic [ref=e861]:
+                  - generic [ref=e862]: instagram
+                  - generic [ref=e863]: Learn more
+                  - generic [ref=e864]: VIDEO
+                - generic [ref=e865]:
+                  - generic [ref=e866]:
+                    - generic [ref=e867]: Monster Energy
+                    - generic [ref=e868]:
+                      - img [ref=e869]
+                      - text: Apr 10, 26
+                  - link "View" [ref=e871] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=798265040013754
+                    - img [ref=e872]
+                    - text: View
+            - generic [ref=e876]:
+              - link "Watch Video" [ref=e878] [cursor=pointer]:
+                - /url: https://video-lga3-2.xx.fbcdn.net/o1/v/t2/f2/m366/AQNL9YNSb-VdXNybb2hQFiM_t_UcXPPYHH4gSTKqCGiT0ZVw1ktwrPaPeBDeIwjwFbiE_uUmhXQlaEAaHD7E9WqaDc_oiXxYDlzysTTIkGPdBw.mp4?_nc_cat=100&_nc_sid=5e9851&_nc_ht=video-lga3-2.xx.fbcdn.net&_nc_ohc=ZP68hKPaJXMQ7kNvwEUWUAy&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE0NTAxNTEyMTk5NDUxNjEsImFzc2V0X2FnZV9kYXlzIjoxMiwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjE1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=9dd6808f85a7b173&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC8xOTRGQzUxNzFERDZCNURCN0JEOERDNjAzMUVBQjM5NV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzIyNEZCMDFBQUU2NDNGQjlEOTUzQTZFM0M4NTdGRjkyX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaS-67F9LmTBRUCKAJDMywXQC4HrhR64UgYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af1fcJlZuQZm6uVZSUppqxu5OP9JLXQitSm3Jo1PArqYeA&oe=69E2A3C4
+                - img [ref=e879]
+                - generic [ref=e882]: Watch Video
+              - generic [ref=e883]:
+                - paragraph [ref=e884]: "#UnleashTheBeast"
+                - generic [ref=e885]:
+                  - generic [ref=e886]: instagram
+                  - generic [ref=e887]: Learn more
+                  - generic [ref=e888]: VIDEO
+                - generic [ref=e889]:
+                  - generic [ref=e890]:
+                    - generic [ref=e891]: Monster Energy
+                    - generic [ref=e892]:
+                      - img [ref=e893]
+                      - text: Apr 1, 26
+                  - link "View" [ref=e895] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=955787806986605
+                    - img [ref=e896]
+                    - text: View
+            - generic [ref=e900]:
+              - link "Watch Video" [ref=e902] [cursor=pointer]:
+                - /url: https://video-lga3-3.xx.fbcdn.net/o1/v/t2/f2/m366/AQMvKVO4_xx7_Pr7I6yAo_D0EqDE3fhud5fDeZQ3-wYGmBQ2wjj7qSsBIYfgvWi3OzC2tUNcaGcQplnMKWT2e0PJaFBzoewAhwLGzApcWzAtug.mp4?_nc_cat=102&_nc_sid=5e9851&_nc_ht=video-lga3-3.xx.fbcdn.net&_nc_ohc=87BBetQ_43AQ7kNvwH5Cuxx&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjEzNDgzMTc2MTA0Mzk5ODgsImFzc2V0X2FnZV9kYXlzIjoxMiwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjE1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=6f48ac717797d4ff&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC84RDQ5N0REQUUyODgyMDI0NTY2Njg2NzFENTMzRDRBMV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50Lzc5NEYyQURFQTdFNkIyRUU3OTYzRjAwODE3RUQyQTkxX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbo1LeDtZLlBBUCKAJDMywXQC4HrhR64UgYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af2cWBXDWCHkKB-u0G11dXB8_rBrUmo_Vv73k04axsDB_A&oe=69E29796
+                - img [ref=e903]
+                - generic [ref=e906]: Watch Video
+              - generic [ref=e907]:
+                - paragraph [ref=e908]: "Knocked Out in slo-mo. #UnleashTheBeast #MonsterEnergyTH"
+                - generic [ref=e909]:
+                  - generic [ref=e910]: facebook
+                  - generic [ref=e911]: instagram
+                  - generic [ref=e912]: Learn more
+                  - generic [ref=e913]: DCO
+                - generic [ref=e914]:
+                  - generic [ref=e915]:
+                    - generic [ref=e916]: Monster Energy
+                    - generic [ref=e917]:
+                      - img [ref=e918]
+                      - text: Apr 1, 26
+                  - link "View" [ref=e920] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=1402885908254515
+                    - img [ref=e921]
+                    - text: View
+            - generic [ref=e925]:
+              - link "Watch Video" [ref=e927] [cursor=pointer]:
+                - /url: https://video-lga3-3.xx.fbcdn.net/o1/v/t2/f2/m366/AQMu7DGvbIAgnN53V35p7Snql0ihYqxuSxp4vmiZ23qBExedFeM14GH9s-MIuLsvWflDEfQtHg1Q7Nwgitki80GXbnGPDZ4dv55jVXRwJLLgAA.mp4?_nc_cat=108&_nc_sid=5e9851&_nc_ht=video-lga3-3.xx.fbcdn.net&_nc_ohc=mNb8wAbiej0Q7kNvwF-1m76&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjEyNzg1MTMzNzAyNzI0MjgsImFzc2V0X2FnZV9kYXlzIjoxMSwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjEzLCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=cc5456697a8e69e9&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC81MjRFNjI0MEU2OTg4MTAzQkQ2NTcxOUY5Nzk1N0U4RF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0JFNDAzMzE2QTAwNzVFQjIzMzlFMDBFRDEyNDg3MzlGX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbYyrT0orPFBBUCKAJDMywXQCpbpeNT988YGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af0E7I0tQBXZn9Pp_lzWNAPcK2cTrCIlOhXFF3kj33qNcg&oe=69E2A7C4
+                - img [ref=e928]
+                - generic [ref=e931]: Watch Video
+              - generic [ref=e932]:
+                - paragraph [ref=e933]: "#UnleashTheBeast #MonsterEnergy"
+                - generic [ref=e934]:
+                  - generic [ref=e935]: instagram
+                  - generic [ref=e936]: Learn more
+                  - generic [ref=e937]: VIDEO
+                - generic [ref=e938]:
+                  - generic [ref=e939]:
+                    - generic [ref=e940]: Monster Energy
+                    - generic [ref=e941]:
+                      - img [ref=e942]
+                      - text: Apr 2, 26
+                  - link "View" [ref=e944] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=4105296659768328
+                    - img [ref=e945]
+                    - text: View
+            - generic [ref=e949]:
+              - link "Watch Video" [ref=e951] [cursor=pointer]:
+                - /url: https://video-lga3-3.xx.fbcdn.net/o1/v/t2/f2/m366/AQOCpbi4djdWsHC3nbK4vmZuroxePWj-ABUe3x9IbzFFdwcJv-tQHBUkfHLwFaDba5ZgWLQ_px0JfiUmDVV0P9D00V4mgQUJHVoMMheTQda_Ug.mp4?_nc_cat=102&_nc_sid=5e9851&_nc_ht=video-lga3-3.xx.fbcdn.net&_nc_ohc=T7gEZcrfw_8Q7kNvwEmC0v-&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE2MjYwMTI1NzU1MTE5MDIsImFzc2V0X2FnZV9kYXlzIjo2MCwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjE1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=1a3583db48f6b049&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC8zRTQyQzU5REVFOTg0RUU1RTZGMkYxQ0Y0OTlDN0JBQ19tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0UxNDBFOEQyMUVBOTA2RDE4NzFFQjlGNTg0QUE3NDlCX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACa81bXfsbbjBRUCKAJDMywXQC4HrhR64UgYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af0fps_yu0gMDbScb9_laJynJvtKZ383793kAyB7zk6FVg&oe=69E2875E
+                - img [ref=e952]
+                - generic [ref=e955]: Watch Video
+              - generic [ref=e956]:
+                - paragraph [ref=e957]: "속도, 힘, 그리고 미친 텐션 #UnleashTheBeast #MonsterEnergyKR"
+                - generic [ref=e958]:
+                  - generic [ref=e959]: instagram
+                  - generic [ref=e960]: Shop now
+                  - generic [ref=e961]: DCO
+                - generic [ref=e962]:
+                  - generic [ref=e963]:
+                    - generic [ref=e964]: Monster Energy
+                    - generic [ref=e965]:
+                      - img [ref=e966]
+                      - text: Mar 4, 26
+                  - link "View" [ref=e968] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=1422755462331251
+                    - img [ref=e969]
+                    - text: View
+            - generic [ref=e973]:
+              - link "Watch Video" [ref=e975] [cursor=pointer]:
+                - /url: https://video-lga3-1.xx.fbcdn.net/o1/v/t2/f2/m366/AQOd5sSYL9TfsYl6sE8Ovpr2NWOlea_H6pJbMIIIX3jn5krjabysO0ZXH8aX3D5HV4zI0y2DXxsLNsuXDgMTUEvBdulsnfwlaXpLKSdXXJwtAA.mp4?_nc_cat=109&_nc_sid=5e9851&_nc_ht=video-lga3-1.xx.fbcdn.net&_nc_ohc=At4SJXYKw2EQ7kNvwHv0NxT&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjk1OTU5NTMwMzMwOTM1MCwiYXNzZXRfYWdlX2RheXMiOjI2LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MTcsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=ba08c22e97de1a67&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9DNDQzMUQxRjMwREY0MDM5RDg4MzlDNTY2MzlENDlBOF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzA3NDQwRDVDOThFODJGQzI2MTJFNkRENDYxNzAxOEI3X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbMwPSS5q-0AxUCKAJDMywXQDGPGp--dskYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af3FaKXhjYzW5X7Nwshbm4uaNRj586tiLXQX4yNniIKZfw&oe=69E2A8DB
+                - img [ref=e976]
+                - generic [ref=e979]: Watch Video
+              - generic [ref=e980]:
+                - paragraph [ref=e981]: "落地要狠，骑得更狠。#UnleashTheBeast #MonsterEnergyTW"
+                - generic [ref=e982]:
+                  - generic [ref=e983]: instagram
+                  - generic [ref=e984]: Learn more
+                  - generic [ref=e985]: DCO
+                - generic [ref=e986]:
+                  - generic [ref=e987]:
+                    - generic [ref=e988]: Monster Energy
+                    - generic [ref=e989]:
+                      - img [ref=e990]
+                      - text: Apr 1, 26
+                  - link "View" [ref=e992] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=958054390512698
+                    - img [ref=e993]
+                    - text: View
+            - generic [ref=e997]:
+              - link "Watch Video" [ref=e999] [cursor=pointer]:
+                - /url: https://video-lga3-3.xx.fbcdn.net/o1/v/t2/f2/m366/AQMTNgcV1HMz4VSl7mP6r8cbY-ZrVuhjonflGAHR9eXVbHm3_pkWfX1KW5UIToIvIpUtIOQhXCMozxPz8GnqRtO6jGkXArWr4lMrlm97ZUtZeA.mp4?_nc_cat=106&_nc_sid=5e9851&_nc_ht=video-lga3-3.xx.fbcdn.net&_nc_ohc=JpBx6vjeaPcQ7kNvwHPQuqo&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjIxNzQyNjcwODMzMzU3OTEsImFzc2V0X2FnZV9kYXlzIjoyMiwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjE1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=e13d16be7d9e4c17&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9BRTQzMTNBNzQxNDRBRTU4ODJFODFCNzdBMjJDNDY4RV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzQxNEEzMTUwQjFFMDc2MjZCQkQ5M0M1NzIyNjA4ODhEX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbeobGSgN_cBxUCKAJDMywXQC9U_fO2RaIYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af3XQ4559l-lkR8IcHcx28NOPoPRftvKf9MEdTbBPrGing&oe=69E28CEE
+                - img [ref=e1000]
+                - generic [ref=e1003]: Watch Video
+              - generic [ref=e1004]:
+                - paragraph [ref=e1005]: "Listo 😎 #MonsterEnergyCL #FPS"
+                - generic [ref=e1006]:
+                  - generic [ref=e1007]: instagram
+                  - generic [ref=e1008]: Learn more
+                  - generic [ref=e1009]: DCO
+                - generic [ref=e1010]:
+                  - generic [ref=e1011]:
+                    - generic [ref=e1012]: Monster Energy
+                    - generic [ref=e1013]:
+                      - img [ref=e1014]
+                      - text: Apr 1, 26
+                  - link "View" [ref=e1016] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=1482679413385702
+                    - img [ref=e1017]
+                    - text: View
+            - generic [ref=e1021]:
+              - link "Watch Video" [ref=e1023] [cursor=pointer]:
+                - /url: https://video-lga3-2.xx.fbcdn.net/o1/v/t2/f2/m366/AQMEEFhz7OPVnYDw_N8dmqdQejhl6WGB1br2-Roc8jqln0LRvlj7FzuS_9zQtii3GclrZBM3gxEsC9jKUUa6yZ6nRzkgIcpo86Z-P1Phh4NgBg.mp4?_nc_cat=107&_nc_sid=5e9851&_nc_ht=video-lga3-2.xx.fbcdn.net&_nc_ohc=d-6ZKypCyTcQ7kNvwHK447-&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjIwODY5NzI4OTU0MTc2NDcsImFzc2V0X2FnZV9kYXlzIjoxMSwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjE2LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=85b7569c82c7c872&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC83NjQzODgyRTk4MDJDODE3QTM5RTAyQjNDMzA1OTJBQV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzQ1NDEwQUQxQjBFMzcxREJENkE0RjBENkE0MUQwMzhCX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbe1LLh54W1BxUCKAJDMywXQDAkGJN0vGoYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af1ZFZOmG46x9_Z3D8cAOKceMOSQskeoTW_IQC8pHlNq0A&oe=69E2A7E1
+                - img [ref=e1024]
+                - generic [ref=e1027]: Watch Video
+              - generic [ref=e1028]:
+                - paragraph [ref=e1029]: "#UnleashTheBeast #MonsterEnergy"
+                - generic [ref=e1030]:
+                  - generic [ref=e1031]: instagram
+                  - generic [ref=e1032]: Learn more
+                  - generic [ref=e1033]: VIDEO
+                - generic [ref=e1034]:
+                  - generic [ref=e1035]:
+                    - generic [ref=e1036]: Monster Energy
+                    - generic [ref=e1037]:
+                      - img [ref=e1038]
+                      - text: Apr 2, 26
+                  - link "View" [ref=e1040] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=1456221685945975
+                    - img [ref=e1041]
+                    - text: View
+            - generic [ref=e1045]:
+              - link "Watch Video" [ref=e1047] [cursor=pointer]:
+                - /url: https://video-lga3-1.xx.fbcdn.net/o1/v/t2/f2/m366/AQMMZjzr0w_pp-PkZGDvPhl0Cc_t1cirBysHLdq17cVagCHU_1DksOECGFI1rrwMEJEmDv5EQ71Hr7Vv0g9L81aHqDAcML3Ora0BnwbVxk2OmQ.mp4?_nc_cat=103&_nc_sid=5e9851&_nc_ht=video-lga3-1.xx.fbcdn.net&_nc_ohc=LEC-l0viglAQ7kNvwFTxli0&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjkzOTE2MDkyOTAxMzk3NywiYXNzZXRfYWdlX2RheXMiOjEyLCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MTUsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=812daf2801eed6f&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC85ODQ0OEM0OTlBMjIzQzVFRDhCN0EyRDY2RTNGNEU4Nl9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzRGNEY5NzAwMjAyRkZEQTFDMEE1Mzc3MUJBNUEyQ0E4X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACayw_yYroqrAxUCKAJDMywXQC4HrhR64UgYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af3dfC_48nrMiUasT7Xirm8aDWxzPPERD6ni8C6rE1bq6A&oe=69E2B351
+                - img [ref=e1048]
+                - generic [ref=e1051]: Watch Video
+              - generic [ref=e1052]:
+                - paragraph [ref=e1053]: "TKO. #UnleashTheBeast #MonsterEnergyTH"
+                - generic [ref=e1054]:
+                  - generic [ref=e1055]: facebook
+                  - generic [ref=e1056]: instagram
+                  - generic [ref=e1057]: Learn more
+                  - generic [ref=e1058]: DCO
+                - generic [ref=e1059]:
+                  - generic [ref=e1060]:
+                    - generic [ref=e1061]: Monster Energy
+                    - generic [ref=e1062]:
+                      - img [ref=e1063]
+                      - text: Apr 1, 26
+                  - link "View" [ref=e1065] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=748449071611671
+                    - img [ref=e1066]
+                    - text: View
+            - generic [ref=e1070]:
+              - link "Watch Video" [ref=e1072] [cursor=pointer]:
+                - /url: https://video-lga3-2.xx.fbcdn.net/o1/v/t2/f2/m366/AQPFh0j0rVs0RUxi25G2hejkfbKz5ylFjC70x0UQRp_hTCdcYgjuF5sqHi81MahgC6dvgKUNjdKmgYjQZw4yBM7ge57ZVBohgdoZ2wJP9VRq9w.mp4?_nc_cat=100&_nc_sid=5e9851&_nc_ht=video-lga3-2.xx.fbcdn.net&_nc_ohc=m2FR_z2JQsgQ7kNvwFdRXOI&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjc4NzQxNDk3NzEwMDk2NCwiYXNzZXRfYWdlX2RheXMiOjYwLCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MTUsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=a4e09b5a4e6680f5&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9FRjQ3M0JFNkZBNUYzNDVDNjEwN0VEMUUyRjIwQUFCRV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0I1NDVDOTU2MjNBODI4RjE1QkJDNEQ4NTc0ODNGNUJEX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbI8oHgyonmAhUCKAJDMywXQC4HrhR64UgYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af0l3eE21j4rgd9HKDcaQr2qaEEaogtDOcGb-HKMNKlAVg&oe=69E28ED4
+                - img [ref=e1073]
+                - generic [ref=e1076]: Watch Video
+              - generic [ref=e1077]:
+                - paragraph [ref=e1078]: "몬스터처럼 돌진한다 #UnleashTheBeast #MonsterEnergyKR"
+                - generic [ref=e1079]:
+                  - generic [ref=e1080]: instagram
+                  - generic [ref=e1081]: Learn more
+                  - generic [ref=e1082]: DCO
+                - generic [ref=e1083]:
+                  - generic [ref=e1084]:
+                    - generic [ref=e1085]: Monster Energy
+                    - generic [ref=e1086]:
+                      - img [ref=e1087]
+                      - text: Mar 4, 26
+                  - link "View" [ref=e1089] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=1535269598603324
+                    - img [ref=e1090]
+                    - text: View
+            - generic [ref=e1094]:
+              - link "Watch Video" [ref=e1096] [cursor=pointer]:
+                - /url: https://video-lga3-1.xx.fbcdn.net/o1/v/t2/f2/m366/AQOGwgx-njSsfcjXzLrWmw-0nyYy_fqfKDl0xLXNhjNPjBjcZdXmI_-1nJmH-L6Ufai0WtG6y1PI6lsKdhOHx97kbPbLyK5MPhGdgl_yWpoizg.mp4?_nc_cat=110&_nc_sid=5e9851&_nc_ht=video-lga3-1.xx.fbcdn.net&_nc_ohc=48Om2c8hCeQQ7kNvwFIs4w9&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE0NzgyNjIzMDczNjYzMzIsImFzc2V0X2FnZV9kYXlzIjoyMiwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjE0LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=1b86d1dca9dea18b&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9DQTRFOTQ2NDFCRjA2MTcwNzU2RTJFRDg0MjhBMUFCMF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0Q2NDIzMTM1NTJCMzcyNDA3NUQ1OEI2NDREODhDQzg3X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACb4lrm7mJ6gBRUCKAJDMywXQCyZmZmZmZoYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af0vK5kYFI2Y2xEq1JHB1ajj_HXzTiLytKdWneImT90sJA&oe=69E29256
+                - img [ref=e1097]
+                - generic [ref=e1100]: Watch Video
+              - generic [ref=e1101]:
+                - paragraph [ref=e1102]: "No apto para los que se achican ⚡ #MonsterEnergyAR #FPS"
+                - generic [ref=e1103]:
+                  - generic [ref=e1104]: instagram
+                  - generic [ref=e1105]: Learn more
+                  - generic [ref=e1106]: DCO
+                - generic [ref=e1107]:
+                  - generic [ref=e1108]:
+                    - generic [ref=e1109]: Monster Energy
+                    - generic [ref=e1110]:
+                      - img [ref=e1111]
+                      - text: Apr 1, 26
+                  - link "View" [ref=e1113] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=863065926784146
+                    - img [ref=e1114]
+                    - text: View
+            - generic [ref=e1118]:
+              - link "Watch Video" [ref=e1120] [cursor=pointer]:
+                - /url: https://video-lga3-1.xx.fbcdn.net/o1/v/t2/f2/m366/AQPiSgMeAPSZ9t_7AZTpl0DKQDVyQY-u-w0_cU5SvJoBtDiGN1hSuwNj5TPDKBSRhJVHpad_iK1H_YGEHE4HCP2jdRk3ARm1zf-XFIW0wl4HvQ.mp4?_nc_cat=109&_nc_sid=5e9851&_nc_ht=video-lga3-1.xx.fbcdn.net&_nc_ohc=vvB-1UXDXEUQ7kNvwHUJbfu&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjEyNDA3ODI0NzQ5MzEwNDMsImFzc2V0X2FnZV9kYXlzIjoyMiwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjE4LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=e14d1d794136b4cb&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC8yMjQzNzk1NjY3NThBMTY1NUZCMkFERkJGQUIzM0VCNF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzZBNDEwQ0FBRjJGQTgyMEZDMDZDOTFBNkY5QjgwQkExX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbGrcvqhZ-0BBUCKAJDMywXQDJu2RaHKwIYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af0t1XnoAiycQvQX8zvYKzcED5Li7nXsAMD4n7z0lcQsdA&oe=69E2B5BF
+                - img [ref=e1121]
+                - generic [ref=e1124]: Watch Video
+              - generic [ref=e1125]:
+                - paragraph [ref=e1126]: "Salud, loco! #MonsterEnergyAR #FPS"
+                - generic [ref=e1127]:
+                  - generic [ref=e1128]: instagram
+                  - generic [ref=e1129]: Learn more
+                  - generic [ref=e1130]: DCO
+                - generic [ref=e1131]:
+                  - generic [ref=e1132]:
+                    - generic [ref=e1133]: Monster Energy
+                    - generic [ref=e1134]:
+                      - img [ref=e1135]
+                      - text: Apr 1, 26
+                  - link "View" [ref=e1137] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=921504287464231
+                    - img [ref=e1138]
+                    - text: View
+            - generic [ref=e1142]:
+              - link "Watch Video" [ref=e1144] [cursor=pointer]:
+                - /url: https://video-lga3-1.xx.fbcdn.net/o1/v/t2/f2/m366/AQMVtRz0R2iSyEI-dYIrJQms5yb87jAJKLfMPALtl36sSs4jiTa31laSGvm9IAcymUdJBx5TXga3F7SDPqu24oraDYID5vNIxV-2SKU9iePaUA.mp4?_nc_cat=111&_nc_sid=5e9851&_nc_ht=video-lga3-1.xx.fbcdn.net&_nc_ohc=feiw5PnYCuEQ7kNvwGhZDm1&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE2ODE5ODg0NTk5MDQ0MDgsImFzc2V0X2FnZV9kYXlzIjoxMiwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjE1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=dce19f89ef4b2b73&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC8xQzRFQkM2MDNFNURDQjFBQTgzQkJEQzg3NTM4NzlBOV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzNENEU0NDczOUZENDk5RTExNjUzREJCNTEzQzRBQkJCX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaw9tnKzvD8BRUCKAJDMywXQC4HrhR64UgYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af1Hwydo_yQjtXpN6sPx_ur117p6MT3bULXn_RBHF38jxQ&oe=69E2AFA5
+                - img [ref=e1145]
+                - generic [ref=e1148]: Watch Video
+              - generic [ref=e1149]:
+                - paragraph [ref=e1150]: "#UnleashTheBeast"
+                - generic [ref=e1151]:
+                  - generic [ref=e1152]: instagram
+                  - generic [ref=e1153]: Learn more
+                  - generic [ref=e1154]: VIDEO
+                - generic [ref=e1155]:
+                  - generic [ref=e1156]:
+                    - generic [ref=e1157]: Monster Energy
+                    - generic [ref=e1158]:
+                      - img [ref=e1159]
+                      - text: Apr 1, 26
+                  - link "View" [ref=e1161] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=927969786519899
+                    - img [ref=e1162]
+                    - text: View
+            - generic [ref=e1166]:
+              - link "Watch Video" [ref=e1168] [cursor=pointer]:
+                - /url: https://video-lga3-3.xx.fbcdn.net/o1/v/t2/f2/m366/AQOCpbi4djdWsHC3nbK4vmZuroxePWj-ABUe3x9IbzFFdwcJv-tQHBUkfHLwFaDba5ZgWLQ_px0JfiUmDVV0P9D00V4mgQUJHVoMMheTQda_Ug.mp4?_nc_cat=102&_nc_sid=5e9851&_nc_ht=video-lga3-3.xx.fbcdn.net&_nc_ohc=T7gEZcrfw_8Q7kNvwEmC0v-&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE2MjYwMTI1NzU1MTE5MDIsImFzc2V0X2FnZV9kYXlzIjo2MCwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjE1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=1a3583db48f6b049&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC8zRTQyQzU5REVFOTg0RUU1RTZGMkYxQ0Y0OTlDN0JBQ19tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0UxNDBFOEQyMUVBOTA2RDE4NzFFQjlGNTg0QUE3NDlCX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACa81bXfsbbjBRUCKAJDMywXQC4HrhR64UgYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af0fps_yu0gMDbScb9_laJynJvtKZ383793kAyB7zk6FVg&oe=69E2875E
+                - img [ref=e1169]
+                - generic [ref=e1172]: Watch Video
+              - generic [ref=e1173]:
+                - paragraph [ref=e1174]: "속도, 힘, 그리고 미친 텐션 #UnleashTheBeast #MonsterEnergyKR"
+                - generic [ref=e1175]:
+                  - generic [ref=e1176]: instagram
+                  - generic [ref=e1177]: Shop now
+                  - generic [ref=e1178]: VIDEO
+                - generic [ref=e1179]:
+                  - generic [ref=e1180]:
+                    - generic [ref=e1181]: Monster Energy
+                    - generic [ref=e1182]:
+                      - img [ref=e1183]
+                      - text: Apr 13, 26
+                  - link "View" [ref=e1185] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=1912251076075859
+                    - img [ref=e1186]
+                    - text: View
+            - generic [ref=e1190]:
+              - link "Watch Video" [ref=e1192] [cursor=pointer]:
+                - /url: https://video-lga3-3.xx.fbcdn.net/o1/v/t2/f2/m366/AQOujYxeoocbetq9-SzvubWGoo1F2m0jnpYNmHcmlm-An4QBkAUszgEMdVXgzGLgxxU4sNgv3ACS-ASRZIGdtpUq6AaKy2D6h6x3aE4u2F2DRA.mp4?_nc_cat=106&_nc_sid=5e9851&_nc_ht=video-lga3-3.xx.fbcdn.net&_nc_ohc=vKeI4zxAjckQ7kNvwFwvuYC&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjg4NjgxMDU5MDY0NjM1NiwiYXNzZXRfYWdlX2RheXMiOjYwLCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MTUsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=1eebe8ff95011f73&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9ERDQxREM2NjAzNDFENjcyNTlBQzgxMjg3NTg3NUE5NF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0E3NENCRDQ3MDVCMUM1MDI1RjAwNjA2MDQ4RTlEODlBX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaowejjlaOTAxUCKAJDMywXQC4HrhR64UgYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af1UIzj6OwTaCDpWlgCZqmP9B4qvLL7miaV9h5mwWFicfA&oe=69E29A4A
+                - img [ref=e1193]
+                - generic [ref=e1196]: Watch Video
+              - generic [ref=e1197]:
+                - paragraph [ref=e1198]: "아드레날린 만땅. 싸울 준비 끝#UnleashTheBeast #MonsterEnergyKR"
+                - generic [ref=e1199]:
+                  - generic [ref=e1200]: instagram
+                  - generic [ref=e1201]: Shop now
+                  - generic [ref=e1202]: DCO
+                - generic [ref=e1203]:
+                  - generic [ref=e1204]:
+                    - generic [ref=e1205]: Monster Energy
+                    - generic [ref=e1206]:
+                      - img [ref=e1207]
+                      - text: Mar 4, 26
+                  - link "View" [ref=e1209] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=1453181006365453
+                    - img [ref=e1210]
+                    - text: View
+            - generic [ref=e1214]:
+              - link "Watch Video" [ref=e1216] [cursor=pointer]:
+                - /url: https://video-lga3-3.xx.fbcdn.net/o1/v/t2/f2/m366/AQMxL-G8xdyApdF4X7rxts6s4gLL9PzPIanaOsKK4qP8s3azSV7bZzjkvxMKeEUFro9r6qyPGNJ24BTA3bcQhfuWcAsSrPQo4sGt4P-XU4x5cw.mp4?_nc_cat=102&_nc_sid=5e9851&_nc_ht=video-lga3-3.xx.fbcdn.net&_nc_ohc=qgs09ZFM0mQQ7kNvwH-ll4H&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE5NjA2ODMwODQ4MTc1MDksImFzc2V0X2FnZV9kYXlzIjoyMiwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjI2LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=af7304b653376575&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC8yRDQ5RTIyMkRBMEM5MENCM0FBQzNFMkJERDMxNzRBQV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0Q5NEM5ODZFNjkzNzNGMzY2N0VDREYxNzE0Nzc1NzkwX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbKkc2s4877BhUCKAJDMywXQDoiDEm6XjUYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af1JvXlAuHL2SC5DkuMiS7l4IqHK0tOr6Ce1dl-vkxAzsg&oe=69E2AEFE
+                - img [ref=e1217]
+                - generic [ref=e1220]: Watch Video
+              - generic [ref=e1221]:
+                - paragraph [ref=e1222]: "NUEVA! Monster Energy Ultra Peachy Keen Zero 🍑 Sabor durazno #MonsterEnergyAR"
+                - generic [ref=e1223]:
+                  - generic [ref=e1224]: instagram
+                  - generic [ref=e1225]: Learn more
+                  - generic [ref=e1226]: DCO
+                - generic [ref=e1227]:
+                  - generic [ref=e1228]:
+                    - generic [ref=e1229]: Monster Energy
+                    - generic [ref=e1230]:
+                      - img [ref=e1231]
+                      - text: Apr 7, 26
+                  - link "View" [ref=e1233] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=2065726743975890
+                    - img [ref=e1234]
+                    - text: View
+            - generic [ref=e1238]:
+              - link "Watch Video" [ref=e1240] [cursor=pointer]:
+                - /url: https://video-lga3-2.xx.fbcdn.net/o1/v/t2/f2/m366/AQPDjgIGgPSxMi7UkDF9mwC7M3vqeVW6M_FBVGhyK9HvocvB2AHB1eaZMKgYhBnibRVF-YNU2aY6oEuThfgyyo14hnuGAay7OWJr8DCtM8YsYw.mp4?_nc_cat=101&_nc_sid=5e9851&_nc_ht=video-lga3-2.xx.fbcdn.net&_nc_ohc=7O6aD5XCsBAQ7kNvwF7K3aP&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjEyMjU3MTI1NzYzMDIxMzksImFzc2V0X2FnZV9kYXlzIjozLCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MTksInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=45c3d50a6adc04e4&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC81MjQ4RjhCNzI0ODMzQUNBN0RFQ0E5ODA5QkEwMDZBMV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0Y1NDY0MUIyQjI0OTg0QTQ0RDI0RTYzQTIxN0Y4RTg4X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACb2sKir7rGtBBUCKAJDMywXQDPVP3ztkWgYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af2TgLFHK_KftXQRscWurhT1PYjp5In_vk4cEXBlRQMuiQ&oe=69E28AB3
+                - img [ref=e1241]
+                - generic [ref=e1244]: Watch Video
+              - generic [ref=e1245]:
+                - paragraph [ref=e1246]: "Quando você fica solo e ainda tem inimigos... #MonsterEnergyBR #UnleashTheBeast"
+                - generic [ref=e1247]:
+                  - generic [ref=e1248]: instagram
+                  - generic [ref=e1249]: Learn more
+                  - generic [ref=e1250]: VIDEO
+                - generic [ref=e1251]:
+                  - generic [ref=e1252]:
+                    - generic [ref=e1253]: Monster Energy
+                    - generic [ref=e1254]:
+                      - img [ref=e1255]
+                      - text: Apr 13, 26
+                  - link "View" [ref=e1257] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=1347386057167652
+                    - img [ref=e1258]
+                    - text: View
+            - generic [ref=e1262]:
+              - link "Watch Video" [ref=e1264] [cursor=pointer]:
+                - /url: https://video-lga3-3.xx.fbcdn.net/o1/v/t2/f2/m366/AQOUVi7EzdV1TTFeBNxdCiBLaNc8bxDl0Bbg8p74sHgZwyUIG7SOC57Kye7ZG0UuDdJodhdfV4vOfUtZ4YvizQ5Wc9DQa6y11ApXNlHbvCzlnQ.mp4?_nc_cat=104&_nc_sid=5e9851&_nc_ht=video-lga3-3.xx.fbcdn.net&_nc_ohc=3pA9QJ1OOjoQ7kNvwGCYgPs&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE5ODA4MTIzMDYxOTQ3MjYsImFzc2V0X2FnZV9kYXlzIjoxMiwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjE1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=846bfd12661734e9&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9FRDQwRUNFRTY0RjJCQUQxQzAzNUI4N0E5RTM4NDVBMV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzIyNDI0MTZDNDc4RjhDNUNBNzEyRUMwQTVFMkMwNEExX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbMhIXeueKEBxUCKAJDMywXQC4HrhR64UgYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af3k3Y4eNavR0dyBbZIlZhs4OJVyeXY8yHtv4B0kZwuHFg&oe=69E2B998
+                - img [ref=e1265]
+                - generic [ref=e1268]: Watch Video
+              - generic [ref=e1269]:
+                - paragraph [ref=e1270]: "#UnleashTheBeast"
+                - generic [ref=e1271]:
+                  - generic [ref=e1272]: instagram
+                  - generic [ref=e1273]: Learn more
+                  - generic [ref=e1274]: VIDEO
+                - generic [ref=e1275]:
+                  - generic [ref=e1276]:
+                    - generic [ref=e1277]: Monster Energy
+                    - generic [ref=e1278]:
+                      - img [ref=e1279]
+                      - text: Apr 1, 26
+                  - link "View" [ref=e1281] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=1254795663490965
+                    - img [ref=e1282]
+                    - text: View
+            - generic [ref=e1286]:
+              - link "Watch Video" [ref=e1288] [cursor=pointer]:
+                - /url: https://video-lga3-2.xx.fbcdn.net/o1/v/t2/f2/m366/AQO8CTOtUGTXRBwRBw9oDGdjDQXQYRxZpR9NmI6KBFDv6sqGfvd_qpJbZjMZ8vovXgbOpytnzUxA2aIGFqDNMuf65JtFO8xkx8Wfj-MHH5dhwg.mp4?_nc_cat=107&_nc_sid=5e9851&_nc_ht=video-lga3-2.xx.fbcdn.net&_nc_ohc=OC4RUlUb0vMQ7kNvwEBds6q&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjg5MTk3MzQxMzY2MjYyNSwiYXNzZXRfYWdlX2RheXMiOjIyLCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MTUsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=e97051c73145f547&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC80QjRCREEwQjNGNTc4MTVDM0JGOEM1QTJENUEwNzA5M19tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0QyNDEyQ0FGODExOEY0RENBOUJGRUFDRTMwNUMzMzg1X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbCvsPn18-VAxUCKAJDMywXQC4HrhR64UgYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af27On2zhjvMRlsih2NfBiTUsF2uD-_uJ45erzq7z_XWzQ&oe=69E29C49
+                - img [ref=e1289]
+                - generic [ref=e1292]: Watch Video
+              - generic [ref=e1293]:
+                - paragraph [ref=e1294]: "Ven que te muestro el estilo 98 #MonsterEnergyAR #FPS"
+                - generic [ref=e1295]:
+                  - generic [ref=e1296]: instagram
+                  - generic [ref=e1297]: Learn more
+                  - generic [ref=e1298]: DCO
+                - generic [ref=e1299]:
+                  - generic [ref=e1300]:
+                    - generic [ref=e1301]: Monster Energy
+                    - generic [ref=e1302]:
+                      - img [ref=e1303]
+                      - text: Apr 1, 26
+                  - link "View" [ref=e1305] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=2072964069914326
+                    - img [ref=e1306]
+                    - text: View
+            - generic [ref=e1310]:
+              - link "Watch Video" [ref=e1312] [cursor=pointer]:
+                - /url: https://video-lga3-2.xx.fbcdn.net/o1/v/t2/f2/m366/AQNvjZe1tEj0pAm5u_LoEibPM4qixSIP70bckQfLWjbuyKFkAQQO8A1bG56gyig1AbTtEtP60mH1pBdr4hnyIHhDV8mHhvQVg0vPjTFKN0wqPg.mp4?_nc_cat=107&_nc_sid=5e9851&_nc_ht=video-lga3-2.xx.fbcdn.net&_nc_ohc=saq0mpbKHi0Q7kNvwGR57Q1&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjExNzY5MzI0MTEwMzk1ODYsImFzc2V0X2FnZV9kYXlzIjoyMiwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjE1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=7e506c9dcf8d660a&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC8zMzQ1MUVEOTA5MkY0NTY2RDQzRjYzOTM2MEMwMkQ4RF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzhENDkyQUU3QzQxMUU2NkUyRkExRjE4N0UxQjA2M0FEX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbE_cbkvZqXBBUCKAJDMywXQC4AAAAAAAAYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af2mKOLKJAYSx5g4vh8DCXgkITgEs5mHsg5_trJyA9nyhw&oe=69E28999
+                - img [ref=e1313]
+                - generic [ref=e1316]: Watch Video
+              - generic [ref=e1317]:
+                - paragraph [ref=e1318]: "No apto para los que se achican ⚡ #MonsterEnergyAR #FPS"
+                - generic [ref=e1319]:
+                  - generic [ref=e1320]: instagram
+                  - generic [ref=e1321]: Learn more
+                  - generic [ref=e1322]: VIDEO
+                - generic [ref=e1323]:
+                  - generic [ref=e1324]:
+                    - generic [ref=e1325]: Monster Energy
+                    - generic [ref=e1326]:
+                      - img [ref=e1327]
+                      - text: Apr 10, 26
+                  - link "View" [ref=e1329] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=982540381619990
+                    - img [ref=e1330]
+                    - text: View
+            - generic [ref=e1334]:
+              - link "Watch Video" [ref=e1336] [cursor=pointer]:
+                - /url: https://video-lga3-3.xx.fbcdn.net/o1/v/t2/f2/m366/AQNqZshHSgSGdy0nADqNvfGCdoyFCl5bNVxRIwabgcXyuMyYe-ZJzZE9Jy7dMgQvpzHrdmJbOwsKPB5TwDA8uuuGxZOMQeQmbcIaqdJQaMlioQ.mp4?_nc_cat=104&_nc_sid=5e9851&_nc_ht=video-lga3-3.xx.fbcdn.net&_nc_ohc=OrqGFWWPYEkQ7kNvwGSPkLv&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjkzNzQ2NzU2MTk5OTYwMywiYXNzZXRfYWdlX2RheXMiOjI1LCJ2aV91c2VjYXNlX2lkIjoxMDc5OSwiZHVyYXRpb25fcyI6MTUsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=aeee3343b8628ea6&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC84MTRGNDE2M0UxN0I5RDEwNTYzQjkyMkU0MzIyMTlCRV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzRBNDk1NzhCQzUzMzJENzE4NzMxQzFEQzM2Q0IyQUI0X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbm86vQ5aeqAxUCKAJDMywXQC4HrhR64UgYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af3tP5-JqWAFVykxqWbmDWfhq1B3BKYZN50JFP6WqWU1qw&oe=69E28BD4
+                - img [ref=e1337]
+                - generic [ref=e1340]: Watch Video
+              - generic [ref=e1341]:
+                - paragraph [ref=e1342]: "Trained to conquer. #UnleashTheBeast #MonsterEnergyTH"
+                - generic [ref=e1343]:
+                  - generic [ref=e1344]: facebook
+                  - generic [ref=e1345]: instagram
+                  - generic [ref=e1346]: Learn more
+                  - generic [ref=e1347]: DCO
+                - generic [ref=e1348]:
+                  - generic [ref=e1349]:
+                    - generic [ref=e1350]: Monster Energy
+                    - generic [ref=e1351]:
+                      - img [ref=e1352]
+                      - text: Apr 1, 26
+                  - link "View" [ref=e1354] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=950758557449011
+                    - img [ref=e1355]
+                    - text: View
+            - generic [ref=e1359]:
+              - link "Watch Video" [ref=e1361] [cursor=pointer]:
+                - /url: https://video-lga3-2.xx.fbcdn.net/o1/v/t2/f2/m366/AQMgdo87W6EMxSNpxMXkB5gGGQwd6yZUNxFFPjKn_yVVUM3GXz3AiBiSZFB37GZYXkdbUeK3jvxKCeWNWUIhlsw-xeQfsgOTLQR7jNAQmXk06w.mp4?_nc_cat=100&_nc_sid=5e9851&_nc_ht=video-lga3-2.xx.fbcdn.net&_nc_ohc=Zz5qwKAY798Q7kNvwHtF2ji&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjQ0NTM3OTM2NTgyMjEyOTQsImFzc2V0X2FnZV9kYXlzIjoyMiwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjE4LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=d5acb968d449ab0c&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC85NTQ1NEE4NUFFMjA0RjQ1REJFQkY0NzJFQTQxMEU5NV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0NCNDU1MTQ5MTZCNkM2MTE5RDg3RDcyODgzODk1MjgyX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACbcy7XO9KzpDxUCKAJDMywXQDJu2RaHKwIYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af0mHbk0BCnfm_r90OybmqSSbSvA6WokAe_9Vo-A-T9zXQ&oe=69E297B4
+                - img [ref=e1362]
+                - generic [ref=e1365]: Watch Video
+              - generic [ref=e1366]:
+                - paragraph [ref=e1367]: "Salud, loco! #MonsterEnergyCL #FPS"
+                - generic [ref=e1368]:
+                  - generic [ref=e1369]: instagram
+                  - generic [ref=e1370]: Learn more
+                  - generic [ref=e1371]: DCO
+                - generic [ref=e1372]:
+                  - generic [ref=e1373]:
+                    - generic [ref=e1374]: Monster Energy
+                    - generic [ref=e1375]:
+                      - img [ref=e1376]
+                      - text: Apr 1, 26
+                  - link "View" [ref=e1378] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=1913781909261023
+                    - img [ref=e1379]
+                    - text: View
+            - generic [ref=e1383]:
+              - link "Watch Video" [ref=e1385] [cursor=pointer]:
+                - /url: https://video-lga3-2.xx.fbcdn.net/o1/v/t2/f2/m366/AQOfjgKAhEISSUvkwqoKhEdjaQAEI34xSxYSzIBqzcPCqeWa1V3zmiCoPZt6JS4IYaAEK_GFpJSMzrlUZA12oYAHYZERUgm_sCyd2WCFXWI8-g.mp4?_nc_cat=105&_nc_sid=5e9851&_nc_ht=video-lga3-2.xx.fbcdn.net&_nc_ohc=n-53yisYHxYQ7kNvwH6vZ8n&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjE0MTYxMTg1NDY2MzU0MDEsImFzc2V0X2FnZV9kYXlzIjo2MCwidmlfdXNlY2FzZV9pZCI6MTA3OTksImR1cmF0aW9uX3MiOjE1LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=8c339ff3fff5ba6f&_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9FNjRGQjQyRjdFNjQ4N0JGNDE0NTEyMTNGOTVEQ0JBQl9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0E0NEU4QjQ3RDYxQzE2ODJDQzFBNTZCNEY0MUZGMUFEX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwKIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRUAACaS6vSu-fyDBRUCKAJDMywXQC4HrhR64UgYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&_nc_gid=VtrbdZMsA7zjet_XYhpnWg&_nc_ss=7a389&_nc_zt=28&oh=00_Af1TaDQP-TEiNAGsrwBEcLN_QBvqHtCLsQyFbk8T9J5BTg&oe=69E28DFF
+                - img [ref=e1386]
+                - generic [ref=e1389]: Watch Video
+              - generic [ref=e1390]:
+                - paragraph [ref=e1391]: "KO는 선택이 아니라 본능이다 #UnleashTheBeast #MonsterEnergyKR"
+                - generic [ref=e1392]:
+                  - generic [ref=e1393]: instagram
+                  - generic [ref=e1394]: Learn more
+                  - generic [ref=e1395]: DCO
+                - generic [ref=e1396]:
+                  - generic [ref=e1397]:
+                    - generic [ref=e1398]: Monster Energy
+                    - generic [ref=e1399]:
+                      - img [ref=e1400]
+                      - text: Mar 4, 26
+                  - link "View" [ref=e1402] [cursor=pointer]:
+                    - /url: https://www.facebook.com/ads/library?id=2072920109934807
+                    - img [ref=e1403]
+                    - text: View
+    - contentinfo [ref=e189]:
+      - paragraph [ref=e191]: Brand DNA Analyzer // Powered by AIDEN & Redbaez
+  - region "Notifications alt+T"
+  - alert [ref=e192]

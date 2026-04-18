@@ -1,0 +1,106 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e2]
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e7]
+        - generic [ref=e9]: AIDEN Creative
+      - generic [ref=e10]:
+        - button "7 image credits, 1 video credits. Buy credits." [ref=e11]:
+          - generic [ref=e12]:
+            - img [ref=e13]
+            - generic [ref=e17]:
+              - generic [ref=e18]: "7"
+              - generic [ref=e19]: img
+          - generic [ref=e20]:
+            - img [ref=e21]
+            - generic [ref=e23]:
+              - generic [ref=e24]: "1"
+              - generic [ref=e25]: vid
+          - generic: Buy Credits
+        - button "Open AI Assistant" [ref=e26]:
+          - img
+          - generic [ref=e27]: AI Assistant
+        - button "Sign out" [ref=e28]:
+          - img
+    - navigation "Wizard steps" [ref=e29]:
+      - generic [ref=e30]:
+        - button "Discover" [ref=e31]:
+          - img [ref=e33]
+          - generic [ref=e35]: Discover
+          - img [ref=e36]
+        - img [ref=e39]
+      - generic [ref=e41]:
+        - button "Brief" [ref=e42]:
+          - img [ref=e44]
+          - generic [ref=e46]: Brief
+          - img [ref=e47]
+        - img [ref=e50]
+      - generic [ref=e52]:
+        - button "Generate" [ref=e53]:
+          - img [ref=e55]
+          - generic [ref=e57]: Generate
+          - img [ref=e58]
+        - img [ref=e60]
+      - generic [ref=e62]:
+        - button "Refine" [ref=e202]:
+          - img [ref=e203]
+          - generic [ref=e65]: Refine
+          - img [ref=e66]
+        - img [ref=e67]
+      - generic [ref=e69]:
+        - button "5 Animate" [ref=e70]:
+          - generic [ref=e71]: "5"
+          - generic [ref=e72]: Animate
+          - img [ref=e73]
+        - img [ref=e75]
+      - button "6 Export" [ref=e78]:
+        - generic [ref=e79]: "6"
+        - generic [ref=e80]: Export
+        - img [ref=e81]
+    - progressbar "Step 5 of 6" [ref=e205]
+    - main [ref=e87]:
+      - generic [ref=e206]:
+        - generic [ref=e207]:
+          - heading "Animate" [level=2] [ref=e208]
+          - paragraph [ref=e209]: Turn selected stills into short videos with Sora 2 or Veo 3.1.
+        - alert [ref=e240]:
+          - img [ref=e241]
+          - generic [ref=e243]: Object not found
+        - generic [ref=e211]:
+          - generic [ref=e213]:
+            - generic [ref=e214]:
+              - generic [ref=e215]: Instagram — Visibly whiter teeth in 6 minutes a day — enamel-safe, vegan, no sensiti…
+              - generic [ref=e216]:
+                - generic [ref=e217]: instagram
+                - generic [ref=e218]: 1:1
+            - generic [ref=e219]:
+              - generic [ref=e220]: Animate this?
+              - switch "Animate this?" [checked] [ref=e221] [cursor=pointer]
+          - generic [ref=e222]:
+            - generic [ref=e223]:
+              - generic [ref=e224]:
+                - text: Provider
+                - combobox [ref=e225]:
+                  - generic: Sora 2
+                  - img [ref=e226]
+              - generic [ref=e228]:
+                - text: Duration
+                - combobox [ref=e229]:
+                  - generic: 5s
+                  - img [ref=e230]
+            - generic [ref=e232]:
+              - text: Motion prompt
+              - textbox [ref=e233]: Subtle camera push-in, soft parallax on foreground elements, gentle motion on headline and product, preserve brand colors and composition.
+        - generic [ref=e234]:
+          - button "Generate Videos" [ref=e235]:
+            - img
+            - text: Generate Videos
+          - button "Skip Animation" [ref=e236]:
+            - img
+            - text: Skip Animation
+        - generic [ref=e237]:
+          - button "Previous" [ref=e238]:
+            - img
+            - text: Previous
+          - 'button "Next: Export" [ref=e239]'

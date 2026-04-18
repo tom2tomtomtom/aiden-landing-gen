@@ -1,0 +1,118 @@
+- generic [ref=e1]:
+  - generic [ref=e19]:
+    - banner [ref=e20]:
+      - generic [ref=e22]:
+        - link "BRAND DNA // ANALYZER" [ref=e23] [cursor=pointer]:
+          - /url: /dashboard
+          - heading "BRAND DNA // ANALYZER" [level=1] [ref=e24]
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - button "1500" [active] [ref=e27] [cursor=pointer]:
+              - img [ref=e28]
+              - generic [ref=e33]: "1500"
+              - img [ref=e34]
+            - generic [ref=e123]:
+              - generic [ref=e124]:
+                - generic [ref=e125]:
+                  - generic [ref=e126]: Token Balance
+                  - generic [ref=e127]: "1500"
+                - paragraph [ref=e128]: +1500 tokens/month (pro plan)
+              - generic [ref=e129]:
+                - paragraph [ref=e130]: Audit Cost
+                - generic [ref=e131]:
+                  - generic [ref=e132]:
+                    - generic [ref=e133]: 2 brands
+                    - generic [ref=e134]: 170 tokens
+                  - generic [ref=e135]:
+                    - generic [ref=e136]: 3 brands
+                    - generic [ref=e137]: 230 tokens
+                  - generic [ref=e138]:
+                    - generic [ref=e139]: Per extra brand
+                    - generic [ref=e140]: "+60"
+              - generic [ref=e141]:
+                - paragraph [ref=e142]: Top Up Tokens
+                - generic [ref=e143]:
+                  - button "200 tokens $29" [ref=e144] [cursor=pointer]:
+                    - generic [ref=e145]:
+                      - img [ref=e146]
+                      - generic [ref=e148]: 200 tokens
+                    - generic [ref=e149]: $29
+                  - button "500 tokens $59" [ref=e150] [cursor=pointer]:
+                    - generic [ref=e151]:
+                      - img [ref=e152]
+                      - generic [ref=e154]: 500 tokens
+                    - generic [ref=e155]: $59
+                  - button "1,500 tokens $149" [ref=e156] [cursor=pointer]:
+                    - generic [ref=e157]:
+                      - img [ref=e158]
+                      - generic [ref=e160]: 1,500 tokens
+                    - generic [ref=e161]: $149
+          - generic [ref=e36]: tomh@redbaez.com
+          - button "Sign Out" [ref=e37] [cursor=pointer]:
+            - img [ref=e38]
+            - text: Sign Out
+    - main [ref=e41]:
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - img [ref=e44]
+          - generic [ref=e47]: Ad Library Scraping
+        - generic [ref=e48]:
+          - img [ref=e49]
+          - generic [ref=e51]: Color DNA Extraction
+        - generic [ref=e52]:
+          - img [ref=e53]
+          - generic [ref=e61]: AIDEN Strategic Analysis
+        - generic [ref=e62]:
+          - img [ref=e63]
+          - generic [ref=e65]: Ad Analytics Dashboard
+      - generic [ref=e67]:
+        - heading "New Audit" [level=3] [ref=e69]
+        - generic [ref=e70]:
+          - generic [ref=e72]:
+            - generic [ref=e73]:
+              - generic [ref=e74]:
+                - generic [ref=e75]: Brand Name
+                - textbox "e.g. Nike" [ref=e76]
+              - generic [ref=e77]:
+                - generic [ref=e78]: Website
+                - textbox "e.g. https://nike.com" [ref=e79]
+            - generic [ref=e80]:
+              - generic [ref=e81]: Facebook Page (optional)
+              - textbox "Search Facebook pages..." [ref=e83]
+          - generic [ref=e85]:
+            - generic [ref=e86]:
+              - generic [ref=e87]:
+                - generic [ref=e88]: Brand Name
+                - textbox "e.g. Nike" [ref=e89]
+              - generic [ref=e90]:
+                - generic [ref=e91]: Website
+                - textbox "e.g. https://nike.com" [ref=e92]
+            - generic [ref=e93]:
+              - generic [ref=e94]: Facebook Page (optional)
+              - textbox "Search Facebook pages..." [ref=e96]
+        - generic [ref=e97]:
+          - button "Add Brand" [ref=e98] [cursor=pointer]:
+            - img [ref=e99]
+            - text: Add Brand
+          - generic [ref=e100]:
+            - generic [ref=e101]: ~170 tokens
+            - button "Analyze Brand DNA" [ref=e102] [cursor=pointer]
+      - generic [ref=e103]:
+        - generic [ref=e104]:
+          - heading "Past Reports" [level=3] [ref=e105]:
+            - img [ref=e106]
+            - text: Past Reports
+          - generic [ref=e109]: 1 report
+        - link "Red Bull vs Monster Energy 13 Apr 2026 305s 2 brands" [ref=e111] [cursor=pointer]:
+          - /url: /report/ac39930a-0bd3-428d-b967-2466f17cc476
+          - generic [ref=e112]:
+            - paragraph [ref=e113]: Red Bull vs Monster Energy
+            - generic [ref=e114]:
+              - generic [ref=e115]:
+                - img [ref=e116]
+                - text: 13 Apr 2026
+              - generic [ref=e119]: 305s
+              - generic [ref=e120]: 2 brands
+          - img [ref=e121]
+  - region "Notifications alt+T"
+  - alert [ref=e18]

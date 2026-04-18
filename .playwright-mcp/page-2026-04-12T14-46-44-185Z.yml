@@ -1,0 +1,98 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - banner [ref=e6]:
+      - generic [ref=e8]:
+        - generic "Back to Redbaez":
+          - generic:
+            - generic:
+              - generic: Back
+              - generic:
+                - generic:
+                  - generic:
+                    - img
+                  - heading "Redbaez" [level=1]
+        - generic [ref=e23]: Test Mode
+    - generic [ref=e26]:
+      - heading "Brand DNA Analyzer - Starter" [level=2] [ref=e27]:
+        - generic [ref=e29]: Brand DNA Analyzer - Starter
+      - generic [ref=e31]:
+        - generic [ref=e34]: $49.00
+        - generic [ref=e42]: 10 brand DNA audits. One-time purchase, never expires.
+  - generic [ref=e43]:
+    - main [ref=e44]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - iframe [ref=e54]:
+            - button "Pay with Link" [ref=f4e8] [cursor=pointer]:
+              - generic [ref=f4e9]:
+                - generic [ref=f4e10]:
+                  - text: Pay with
+                  - img [ref=f4e11]
+                - generic [ref=f4e14]:
+                  - img [ref=f4e15]
+                  - generic [ref=f4e22]: "0000"
+          - generic [ref=e55]:
+            - separator [ref=e56]
+            - paragraph [ref=e57]: Or
+        - generic [ref=e59]: Pay with card
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - generic [ref=e71]:
+            - generic [ref=e72]: Email
+            - generic [ref=e75]: test@brandaudit.com
+          - heading "Payment method" [level=2] [ref=e77]
+        - generic [ref=e78]:
+          - list [ref=e79]:
+            - listitem [ref=e84]:
+              - generic [ref=e85]:
+                - generic [ref=e99]: Card
+                - generic [ref=e105]:
+                  - generic [ref=e107]:
+                    - generic [ref=e109]: Card information
+                    - group [ref=e110]:
+                      - generic [ref=e111]:
+                        - generic [ref=e113]:
+                          - textbox "Card number" [disabled] [ref=e116]:
+                            - /placeholder: 1234 1234 1234 1234
+                            - text: 4242 4242 4242 4242
+                          - generic:
+                            - img "Visa"
+                        - textbox "Expiration" [disabled] [ref=e121]:
+                          - /placeholder: MM / YY
+                          - text: 12 / 30
+                        - generic [ref=e123]:
+                          - textbox "CVC" [disabled] [ref=e126]: "123"
+                          - generic:
+                            - generic:
+                              - img "Credit or debit card CVC"
+                  - group [ref=e237]:
+                    - generic [ref=e133]:
+                      - generic [ref=e135]:
+                        - generic [ref=e137]: Cardholder name
+                        - textbox [disabled] [ref=e238]:
+                          - /placeholder: Full name on card
+                          - text: Test User
+                      - generic [ref=e146]:
+                        - generic [ref=e148]: Country or region
+                        - combobox [disabled] [ref=e239]
+          - generic [ref=e168]:
+            - checkbox "Save my information for faster checkout" [disabled] [ref=e170]
+            - generic [ref=e171]:
+              - generic [ref=e174] [cursor=pointer]: Save my information for faster checkout
+              - generic [ref=e176]: Pay securely at Redbaez and everywhere Link is accepted.
+        - generic [ref=e191]:
+          - button "Processing" [disabled] [ref=e240]:
+            - generic [ref=e197]: Processing
+            - img [ref=e202]
+            - img [ref=e207]
+          - generic [ref=e216]: Notwithstanding the logo displayed above, when paying with a co-branded eftpos debit card, your payment may be processed through either card network.
+    - contentinfo [ref=e224]:
+      - link "Powered by Stripe" [ref=e226] [cursor=pointer]:
+        - /url: https://stripe.com
+        - generic [ref=e227]:
+          - text: Powered by
+          - img "Stripe" [ref=e241]
+      - link "Terms" [ref=e232] [cursor=pointer]:
+        - /url: https://stripe.com/legal/end-users
+      - link "Privacy" [ref=e233] [cursor=pointer]:
+        - /url: https://stripe.com/privacy

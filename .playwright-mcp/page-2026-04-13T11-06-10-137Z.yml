@@ -1,0 +1,59 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - link "BRAND DNA // ANALYZER" [ref=e6] [cursor=pointer]:
+          - /url: /dashboard
+          - heading "BRAND DNA // ANALYZER" [level=1] [ref=e7]
+        - generic [ref=e8]:
+          - button "1500" [ref=e87] [cursor=pointer]:
+            - img [ref=e88]
+            - generic [ref=e93]: "1500"
+            - img [ref=e94]
+          - generic [ref=e96]: tomh@redbaez.com
+          - button "Sign Out" [ref=e9] [cursor=pointer]:
+            - img [ref=e10]
+            - text: Sign Out
+    - main [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - img [ref=e16]
+          - generic [ref=e19]: Ad Library Scraping
+        - generic [ref=e20]:
+          - img [ref=e21]
+          - generic [ref=e23]: Color DNA Extraction
+        - generic [ref=e24]:
+          - img [ref=e25]
+          - generic [ref=e33]: AIDEN Strategic Analysis
+        - generic [ref=e34]:
+          - img [ref=e35]
+          - generic [ref=e37]: Ad Analytics Dashboard
+      - generic [ref=e39]:
+        - heading "Analyzing Brand DNA" [level=3] [ref=e109]
+        - generic [ref=e42]:
+          - generic [ref=e110]:
+            - generic [ref=e111]: Scraping Facebook ads for Red Bull
+            - generic [ref=e112]: 15%
+          - paragraph [ref=e115]: Querying Facebook Ad Library
+        - generic [ref=e69]:
+          - img [ref=e116]
+          - generic [ref=e118]: Collecting intelligence...
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - heading "Past Reports" [level=3] [ref=e77]:
+            - img [ref=e78]
+            - text: Past Reports
+          - generic [ref=e81]: 1 report
+        - link "Red Bull vs Monster Energy 13 Apr 2026 305s 2 brands" [ref=e97] [cursor=pointer]:
+          - /url: /report/ac39930a-0bd3-428d-b967-2466f17cc476
+          - generic [ref=e98]:
+            - paragraph [ref=e99]: Red Bull vs Monster Energy
+            - generic [ref=e100]:
+              - generic [ref=e101]:
+                - img [ref=e102]
+                - text: 13 Apr 2026
+              - generic [ref=e105]: 305s
+              - generic [ref=e106]: 2 brands
+          - img [ref=e107]
+  - region "Notifications alt+T"
+  - alert [ref=e85]

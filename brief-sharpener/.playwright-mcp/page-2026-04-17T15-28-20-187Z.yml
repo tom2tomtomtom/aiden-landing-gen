@@ -1,0 +1,185 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - main [ref=e3]:
+    - navigation [ref=e4]:
+      - generic [ref=e5]:
+        - link "AIDEN" [ref=e6] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e7]:
+          - link "Pricing" [ref=e8] [cursor=pointer]:
+            - /url: /pricing
+          - link "Log in" [ref=e9] [cursor=pointer]:
+            - /url: /login
+          - link "Try free" [ref=e10] [cursor=pointer]:
+            - /url: /generate
+    - generic [ref=e12]:
+      - paragraph [ref=e13]: The Complete Guide
+      - heading "How to Write a Better Creative Brief" [level=1] [ref=e14]
+      - paragraph [ref=e15]: A vague brief produces vague creative. The best briefs are not documents — they are decisions. This guide covers everything you need to write briefs that actually inspire great work.
+      - generic [ref=e16]:
+        - generic [ref=e17]: 15 min read
+        - generic [ref=e18]: ·
+        - generic [ref=e19]: Updated March 2026
+    - article [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - heading "1. What Makes a Great Brief" [level=2] [ref=e23]
+          - generic [ref=e24]:
+            - paragraph [ref=e25]: A great brief is not a long one. It is a sharp one. The purpose of a creative brief is not to document everything you know — it is to isolate the single most important thing a piece of work needs to do, and give the creative team everything they need to do it well.
+            - paragraph [ref=e26]:
+              - text: "Great briefs share three qualities:"
+              - strong [ref=e27]: clarity
+              - text: (everyone reading it arrives at the same understanding),
+              - strong [ref=e28]: constraint
+              - text: (it closes off wrong directions so creative energy flows in the right ones), and
+              - strong [ref=e29]: tension
+              - text: (it presents a problem worth solving, not just a task to execute).
+            - paragraph [ref=e30]: Think of the brief as a contract between strategy and creativity. Strategy commits to defining the problem clearly. Creativity commits to solving it. When the contract is fuzzy, both sides lose.
+            - heading "The brief vs. the briefing" [level=3] [ref=e31]
+            - paragraph [ref=e32]: The brief is a document. The briefing is a conversation. Both matter. Many teams write a strong brief but skip the briefing — the live session where creative teams can ask questions, push back, and internalise the challenge. Always do both.
+            - heading "Who writes the brief?" [level=3] [ref=e33]
+            - paragraph [ref=e34]: The brief is typically written by a strategist or account lead, in collaboration with the client. The client often has strong opinions about what they want to say; the strategist's job is to translate that into what the audience needs to hear. These are often very different things.
+          - generic [ref=e35]:
+            - generic [ref=e36]:
+              - paragraph [ref=e37]: Not sure if your brief is ready?
+              - paragraph [ref=e38]: AIDEN checks your brief against 8 essential creative criteria in seconds.
+            - link "Check your brief with AIDEN →" [ref=e39] [cursor=pointer]:
+              - /url: /generate
+        - generic [ref=e40]:
+          - heading "2. The 8 Essential Elements Every Brief Needs" [level=2] [ref=e41]
+          - paragraph [ref=e42]: Strip back any great brief and you will find these eight elements. Some briefs call them different things, but the underlying information is always the same. Miss any one of them and you create ambiguity that costs time, money, and goodwill.
+          - generic [ref=e43]:
+            - heading "1. Objective" [level=3] [ref=e44]
+            - paragraph [ref=e45]: What does this work need to achieve? Be specific about the business outcome, not just the deliverable. “We want a TV spot” is a deliverable. “We want to shift 18–34 brand consideration by 8 points over the next quarter” is an objective.
+            - paragraph [ref=e46]: "Tip: A brief can have only one primary objective. If you have three, you actually have three briefs."
+          - generic [ref=e47]:
+            - heading "2. Audience" [level=3] [ref=e48]
+            - paragraph [ref=e49]: Who is this for? Go beyond demographics. The most useful audience descriptions capture mindset, motivation, and tension. “Women 25–45” tells a creative nothing. “New mothers who feel judged for going back to work but also guilt-ridden for wanting to” gives them something to work with.
+            - paragraph [ref=e50]: "Tip: Describe the audience at the moment they will encounter the work — what are they thinking, feeling, or doing right then?"
+          - generic [ref=e51]:
+            - heading "3. Deliverables" [level=3] [ref=e52]
+            - paragraph [ref=e53]: "What are you actually making? List every asset with its specs: format, dimensions, duration, language versions, quantities. Vague deliverables lead to scope creep and missed expectations on both sides."
+            - paragraph [ref=e54]: "Tip: Separate “must have” from “nice to have” deliverables so the team knows where to focus if time runs short."
+          - generic [ref=e55]:
+            - heading "4. Tone" [level=3] [ref=e56]
+            - paragraph [ref=e57]: "How should this work feel? Tone is not just about language — it encompasses visual register, emotional temperature, and brand personality. Define it by choosing three adjectives, then sharpen each one: not just “warm” but “the warmth of a trusted older sibling, not a greeting card.”"
+            - paragraph [ref=e58]: "Tip: “Tone reference” examples (brands, films, publications you admire) communicate faster than any adjective list."
+          - generic [ref=e59]:
+            - heading "5. Budget" [level=3] [ref=e60]
+            - paragraph [ref=e61]: What is the production budget? Creatives need to know what world they are playing in. A great idea that costs five times the budget is not a great idea for this brief — it is a waste of everyone's time. Sharing the budget does not weaken your negotiating position; it gives the team the constraint they need to be resourceful.
+            - paragraph [ref=e62]: "Tip: If budget is genuinely confidential, provide a range or a proxy: “this should feel like a £200k shoot, not a £20k one.”"
+          - generic [ref=e63]:
+            - heading "6. Timeline" [level=3] [ref=e64]
+            - paragraph [ref=e65]: "When does the work go live, and what are the key milestones between now and then? Include: brief sign-off date, concept presentation, client feedback rounds, legal approval, production start, and final delivery. A timeline without these waypoints is just a deadline."
+            - paragraph [ref=e66]: "Tip: Work backwards from the live date. If the timeline is impossible, say so now — not three weeks in."
+          - generic [ref=e67]:
+            - heading "7. KPIs" [level=3] [ref=e68]
+            - paragraph [ref=e69]: How will you know if the work succeeded? Define the metrics upfront. These might be brand tracking scores, click-through rates, share of voice, sales uplift, or qualitative research. Whatever they are, agree them before the work starts — not after, when everyone is post-rationalising.
+            - paragraph [ref=e70]: "Tip: KPIs reveal what the client really cares about. If they cannot name their KPIs, the brief is not ready."
+          - generic [ref=e71]:
+            - heading "8. Brand Context" [level=3] [ref=e72]
+            - paragraph [ref=e73]: "What does the creative team need to know about the brand to do this job? This includes: brand positioning, visual identity guidelines, tone of voice principles, key mandatories (logo usage, legal disclaimers), and — critically — what the brand has done before so the team can build on or deliberately depart from it."
+            - paragraph [ref=e74]: "Tip: Include “mandatories” (things that must appear) and “no-go zones” (things that are off-limits). Both save time."
+          - generic [ref=e75]:
+            - generic [ref=e76]:
+              - paragraph [ref=e77]: Not sure if your brief is ready?
+              - paragraph [ref=e78]: AIDEN checks your brief against 8 essential creative criteria in seconds.
+            - link "Check your brief with AIDEN →" [ref=e79] [cursor=pointer]:
+              - /url: /generate
+        - generic [ref=e80]:
+          - heading "3. Common Brief Mistakes (and How to Fix Them)" [level=2] [ref=e81]
+          - paragraph [ref=e82]: Most brief problems are predictable. Here are the most common mistakes — and what good looks like instead.
+          - generic [ref=e83]:
+            - 'heading "Mistake 1: The kitchen-sink brief" [level=3] [ref=e84]'
+            - paragraph [ref=e85]: Trying to say everything at once. The brief becomes a strategy document, a project plan, and a brand bible all in one. Creatives cannot find the signal in the noise.
+            - generic [ref=e86]:
+              - generic [ref=e87]:
+                - paragraph [ref=e88]: Bad
+                - paragraph [ref=e89]: “We want to drive brand awareness, increase consideration, grow social following, support our retail partners, and also communicate our new product range launch while staying true to our 10-year heritage.”
+              - generic [ref=e90]:
+                - paragraph [ref=e91]: Good
+                - paragraph [ref=e92]: “Make 25–35 year olds in London consider us for their first home insurance. That's the job. Everything else is secondary.”
+          - generic [ref=e93]:
+            - 'heading "Mistake 2: Describing the execution, not the problem" [level=3] [ref=e94]'
+            - paragraph [ref=e95]: Telling creatives what to make instead of what to solve. This removes creative thinking from the process entirely, and usually produces mediocre work.
+            - generic [ref=e96]:
+              - generic [ref=e97]:
+                - paragraph [ref=e98]: Bad
+                - paragraph [ref=e99]: “We want a 30-second TV ad showing a family enjoying our product at home, with upbeat background music and a clear product shot at the end.”
+              - generic [ref=e100]:
+                - paragraph [ref=e101]: Good
+                - paragraph [ref=e102]: “Families underestimate how much this product would change their evenings. Solve that. Medium is flexible — TV, digital, experiential — whatever gets there best.”
+          - generic [ref=e103]:
+            - 'heading "Mistake 3: Audience by demographics only" [level=3] [ref=e104]'
+            - paragraph [ref=e105]: Defining the audience by age and gender tells the creative team almost nothing about how to connect with them.
+            - generic [ref=e106]:
+              - generic [ref=e107]:
+                - paragraph [ref=e108]: Bad
+                - paragraph [ref=e109]: "“Target audience: Men and women aged 30–50, ABC1, homeowners.”"
+              - generic [ref=e110]:
+                - paragraph [ref=e111]: Good
+                - paragraph [ref=e112]: “People who care deeply about their home but feel guilty spending money on it for themselves. They'd justify it easily as a gift — but not for themselves.”
+          - generic [ref=e113]:
+            - 'heading "Mistake 4: No single-minded proposition" [level=3] [ref=e114]'
+            - paragraph [ref=e115]: The proposition — the one thing you want someone to think, feel, or believe after seeing the work — is missing or buried in a list of messages. Without it, creative teams cannot make decisions.
+            - generic [ref=e116]:
+              - generic [ref=e117]:
+                - paragraph [ref=e118]: Bad
+                - paragraph [ref=e119]: "“Key messages: quality, value, heritage, innovation, sustainability, and great customer service.”"
+              - generic [ref=e120]:
+                - paragraph [ref=e121]: Good
+                - paragraph [ref=e122]: "“Proposition: The only energy drink that doesn't make you feel like you sold out.”"
+          - generic [ref=e123]:
+            - 'heading "Mistake 5: Mandatories buried or missing" [level=3] [ref=e124]'
+            - paragraph [ref=e125]: Logo placement rules, legal disclaimers, product shots, and brand lockups that must appear are often omitted from the brief, then surface at review — causing expensive revisions.
+            - generic [ref=e126]:
+              - generic [ref=e127]:
+                - paragraph [ref=e128]: Bad
+                - paragraph [ref=e129]: “Please follow brand guidelines.” (No guidelines attached. No detail provided.)
+              - generic [ref=e130]:
+                - paragraph [ref=e131]: Good
+                - paragraph [ref=e132]: "“Mandatories: brand logo bottom-right, legal line below it, product must appear in last 5 seconds, no competitor references, no health claims without legal sign-off. Brand guide attached.”"
+          - generic [ref=e133]:
+            - generic [ref=e134]:
+              - paragraph [ref=e135]: Not sure if your brief is ready?
+              - paragraph [ref=e136]: AIDEN checks your brief against 8 essential creative criteria in seconds.
+            - link "Check your brief with AIDEN →" [ref=e137] [cursor=pointer]:
+              - /url: /generate
+        - generic [ref=e138]:
+          - heading "Ready to sharpen your brief?" [level=2] [ref=e139]
+          - paragraph [ref=e140]: AIDEN analyses your brief against 8 essential creative criteria — gaps in strategy, missing audience insight, weak propositions, and more — and sends back a smarter version in seconds.
+          - link "Check your brief with AIDEN — it's free" [ref=e141] [cursor=pointer]:
+            - /url: /generate
+          - paragraph [ref=e142]: No account needed to start.
+    - generic [ref=e144]:
+      - link "AIDEN" [ref=e145] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e146]:
+        - link "Pricing" [ref=e147] [cursor=pointer]:
+          - /url: /pricing
+        - link "Terms" [ref=e148] [cursor=pointer]:
+          - /url: /terms
+        - link "Privacy" [ref=e149] [cursor=pointer]:
+          - /url: /privacy
+      - generic [ref=e150]: Built with Claude AI by Anthropic
+  - contentinfo [ref=e151]:
+    - generic [ref=e152]:
+      - generic [ref=e153]:
+        - generic [ref=e154]: AIDEN
+        - navigation [ref=e155]:
+          - link "Pricing" [ref=e156] [cursor=pointer]:
+            - /url: /pricing
+          - link "Guide" [ref=e157] [cursor=pointer]:
+            - /url: /guide
+          - link "Login" [ref=e158] [cursor=pointer]:
+            - /url: /login
+          - link "Try Free" [ref=e159] [cursor=pointer]:
+            - /url: /generate
+        - generic [ref=e160]:
+          - link "Terms" [ref=e161] [cursor=pointer]:
+            - /url: /terms
+          - link "Privacy" [ref=e162] [cursor=pointer]:
+            - /url: /privacy
+      - paragraph [ref=e163]: © 2026 AIDEN Brief Intelligence. All rights reserved.
+  - alert [ref=e164]

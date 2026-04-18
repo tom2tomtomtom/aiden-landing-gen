@@ -1,0 +1,31 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - main [ref=e3]:
+    - generic [ref=e4]:
+      - text: AIDEN
+      - paragraph [ref=e5]: "404"
+      - paragraph [ref=e6]: Page not found.
+      - paragraph [ref=e7]: The page you're looking for doesn't exist or has been moved.
+      - link "Back to home" [ref=e8] [cursor=pointer]:
+        - /url: /
+  - contentinfo [ref=e9]:
+    - generic [ref=e10]:
+      - generic [ref=e11]:
+        - generic [ref=e12]: AIDEN
+        - navigation [ref=e13]:
+          - link "Pricing" [ref=e14] [cursor=pointer]:
+            - /url: /pricing
+          - link "Guide" [ref=e15] [cursor=pointer]:
+            - /url: /guide
+          - link "Login" [ref=e16] [cursor=pointer]:
+            - /url: /login
+          - link "Try Free" [ref=e17] [cursor=pointer]:
+            - /url: /generate
+        - generic [ref=e18]:
+          - link "Terms" [ref=e19] [cursor=pointer]:
+            - /url: /terms
+          - link "Privacy" [ref=e20] [cursor=pointer]:
+            - /url: /privacy
+      - paragraph [ref=e21]: © 2026 AIDEN Brief Intelligence. All rights reserved.
+  - alert [ref=e22]

@@ -1,0 +1,127 @@
+- generic [ref=e1]:
+  - generic [ref=e109]:
+    - banner [ref=e110]:
+      - generic [ref=e112]:
+        - generic [ref=e113]:
+          - button [ref=e114] [cursor=pointer]:
+            - img [ref=e115]
+          - heading "Brand DNA Report" [level=1] [ref=e117]
+          - generic [ref=e118]:
+            - img [ref=e119]
+            - generic [ref=e122]: 5m 4s
+        - generic [ref=e123]:
+          - generic [ref=e124]: 2 brands analyzed
+          - button "Share" [ref=e125] [cursor=pointer]:
+            - img [ref=e126]
+            - text: Share
+          - button "Export PDF" [ref=e132] [cursor=pointer]:
+            - img [ref=e133]
+            - text: Export PDF
+    - navigation [ref=e136]:
+      - generic [ref=e138]:
+        - button "Overview" [ref=e139] [cursor=pointer]
+        - button "Visual DNA" [ref=e140] [cursor=pointer]
+        - button "Ad Intelligence" [ref=e141] [cursor=pointer]
+        - button "Analytics" [active] [ref=e142] [cursor=pointer]
+        - button "Brand Intel" [ref=e143] [cursor=pointer]
+        - button "Social Pulse" [ref=e144] [cursor=pointer]
+        - button "Strategic Analysis" [ref=e145] [cursor=pointer]
+        - button "Competitive Matrix" [ref=e146] [cursor=pointer]
+    - main [ref=e147]:
+      - generic [ref=e401]:
+        - generic [ref=e402]:
+          - heading "Ad Analytics" [level=2] [ref=e403]
+          - generic [ref=e404]:
+            - img [ref=e405]
+            - combobox [ref=e407]:
+              - option "All Brands" [selected]
+              - option "Red Bull"
+              - option "Monster Energy"
+        - generic [ref=e408]:
+          - generic [ref=e409]:
+            - heading "Red Bull" [level=3] [ref=e410]
+            - generic [ref=e411]: 0 active ads
+          - generic [ref=e412]:
+            - generic [ref=e413]:
+              - generic [ref=e414]:
+                - img [ref=e415]
+                - heading "Platform Distribution" [level=4] [ref=e418]
+              - paragraph [ref=e420]: No platform data
+            - generic [ref=e421]:
+              - generic [ref=e422]:
+                - img [ref=e423]
+                - heading "CTA Distribution" [level=4] [ref=e425]
+              - paragraph [ref=e427]: No CTA data detected
+            - generic [ref=e428]:
+              - generic [ref=e429]:
+                - img [ref=e430]
+                - heading "Ad Format Mix" [level=4] [ref=e433]
+              - generic [ref=e435]:
+                - generic [ref=e436]:
+                  - paragraph [ref=e437]: 0%
+                  - paragraph [ref=e438]: Image
+                - generic [ref=e439]:
+                  - paragraph [ref=e440]: 0%
+                  - paragraph [ref=e441]: Video
+                - generic [ref=e442]:
+                  - paragraph [ref=e443]: 0%
+                  - paragraph [ref=e444]: Carousel
+            - generic [ref=e445]:
+              - generic [ref=e446]:
+                - img [ref=e447]
+                - heading "Copy & Timing" [level=4] [ref=e449]
+              - generic [ref=e451]:
+                - generic [ref=e452]:
+                  - paragraph [ref=e453]: Avg Copy Length
+                  - paragraph [ref=e454]: "0"
+                  - paragraph [ref=e455]: characters
+                - generic [ref=e456]:
+                  - paragraph [ref=e457]: Active Since
+                  - paragraph [ref=e458]: N/A
+                  - paragraph
+        - generic [ref=e459]:
+          - generic [ref=e460]:
+            - heading "Monster Energy" [level=3] [ref=e461]
+            - generic [ref=e462]: 0 active ads
+          - generic [ref=e463]:
+            - generic [ref=e464]:
+              - generic [ref=e465]:
+                - img [ref=e466]
+                - heading "Platform Distribution" [level=4] [ref=e469]
+              - paragraph [ref=e471]: No platform data
+            - generic [ref=e472]:
+              - generic [ref=e473]:
+                - img [ref=e474]
+                - heading "CTA Distribution" [level=4] [ref=e476]
+              - paragraph [ref=e478]: No CTA data detected
+            - generic [ref=e479]:
+              - generic [ref=e480]:
+                - img [ref=e481]
+                - heading "Ad Format Mix" [level=4] [ref=e484]
+              - generic [ref=e486]:
+                - generic [ref=e487]:
+                  - paragraph [ref=e488]: 0%
+                  - paragraph [ref=e489]: Image
+                - generic [ref=e490]:
+                  - paragraph [ref=e491]: 0%
+                  - paragraph [ref=e492]: Video
+                - generic [ref=e493]:
+                  - paragraph [ref=e494]: 0%
+                  - paragraph [ref=e495]: Carousel
+            - generic [ref=e496]:
+              - generic [ref=e497]:
+                - img [ref=e498]
+                - heading "Copy & Timing" [level=4] [ref=e500]
+              - generic [ref=e502]:
+                - generic [ref=e503]:
+                  - paragraph [ref=e504]: Avg Copy Length
+                  - paragraph [ref=e505]: "0"
+                  - paragraph [ref=e506]: characters
+                - generic [ref=e507]:
+                  - paragraph [ref=e508]: Active Since
+                  - paragraph [ref=e509]: N/A
+                  - paragraph
+    - contentinfo [ref=e296]:
+      - paragraph [ref=e298]: Brand DNA Analyzer // Powered by AIDEN & Redbaez
+  - region "Notifications alt+T"
+  - alert [ref=e86]

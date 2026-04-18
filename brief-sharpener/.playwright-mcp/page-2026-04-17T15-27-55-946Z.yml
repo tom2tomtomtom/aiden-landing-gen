@@ -1,0 +1,182 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - main [ref=e3]:
+    - generic [ref=e4]:
+      - link "← Back to home" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - heading "Brief Intelligence Pricing" [level=1] [ref=e6]
+      - paragraph [ref=e7]: Start free. Interrogate your brief with the rigour it deserves.
+    - generic [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - heading "Free" [level=2] [ref=e11]
+          - generic [ref=e13]: $0
+          - paragraph [ref=e14]: See what your brief is missing.
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - img [ref=e17]
+            - generic [ref=e19]: 1 free test without signing up
+          - listitem [ref=e20]:
+            - img [ref=e21]
+            - generic [ref=e23]: 3 analyses per month with account
+          - listitem [ref=e24]:
+            - img [ref=e25]
+            - generic [ref=e27]: Full gap analysis
+        - link "Interrogate your brief" [ref=e28] [cursor=pointer]:
+          - /url: /generate
+      - generic [ref=e29]:
+        - generic [ref=e30]: Most Popular
+        - generic [ref=e31]:
+          - heading "Starter" [level=2] [ref=e32]
+          - generic [ref=e33]:
+            - generic [ref=e34]: $30
+            - generic [ref=e35]: / one-time
+          - paragraph [ref=e36]: 50 analyses. Use them whenever you need them.
+        - list [ref=e37]:
+          - listitem [ref=e38]:
+            - img [ref=e39]
+            - generic [ref=e41]: 50 brief analyses
+          - listitem [ref=e42]:
+            - img [ref=e43]
+            - generic [ref=e45]: Full strategic output
+          - listitem [ref=e46]:
+            - img [ref=e47]
+            - generic [ref=e49]: No AIDEN branding
+          - listitem [ref=e50]:
+            - img [ref=e51]
+            - generic [ref=e53]: Never expires
+        - button "Buy 50 analyses" [ref=e54] [cursor=pointer]
+      - generic [ref=e55]:
+        - generic [ref=e56]:
+          - heading "Pro" [level=2] [ref=e57]
+          - generic [ref=e58]:
+            - generic [ref=e59]: $99
+            - generic [ref=e60]: / per month
+          - paragraph [ref=e61]: For agencies and teams who live inside briefs.
+        - list [ref=e62]:
+          - listitem [ref=e63]:
+            - img [ref=e64]
+            - generic [ref=e66]: Unlimited brief analyses
+          - listitem [ref=e67]:
+            - img [ref=e68]
+            - generic [ref=e70]: Priority processing
+          - listitem [ref=e71]:
+            - img [ref=e72]
+            - generic [ref=e74]: No AIDEN branding
+        - button "Go Pro" [ref=e75] [cursor=pointer]
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - heading "Agency" [level=2] [ref=e78]
+          - generic [ref=e79]:
+            - generic [ref=e80]: $309
+            - generic [ref=e81]: / per month
+          - paragraph [ref=e82]: For teams of strategists. Up to 10 seats.
+        - list [ref=e83]:
+          - listitem [ref=e84]:
+            - img [ref=e85]
+            - generic [ref=e87]: Unlimited brief analyses
+          - listitem [ref=e88]:
+            - img [ref=e89]
+            - generic [ref=e91]: Up to 10 team members (coming soon)
+          - listitem [ref=e92]:
+            - img [ref=e93]
+            - generic [ref=e95]: Priority processing
+          - listitem [ref=e96]:
+            - img [ref=e97]
+            - generic [ref=e99]: No AIDEN branding
+          - listitem [ref=e100]:
+            - img [ref=e101]
+            - generic [ref=e103]: Dedicated support
+        - link "Contact us" [ref=e104] [cursor=pointer]:
+          - /url: mailto:hello@aiden.services?subject=Agency%20plan%20inquiry
+    - generic [ref=e105]:
+      - heading "Compare Plans" [level=2] [ref=e106]
+      - table [ref=e108]:
+        - rowgroup [ref=e109]:
+          - row "Feature Free Starter Pro Agency" [ref=e110]:
+            - columnheader "Feature" [ref=e111]
+            - columnheader "Free" [ref=e112]
+            - columnheader "Starter" [ref=e113]
+            - columnheader "Pro" [ref=e114]
+            - columnheader "Agency" [ref=e115]
+        - rowgroup [ref=e116]:
+          - row "Analyses 3 / month 50 (one-time) Unlimited Unlimited" [ref=e117]:
+            - cell "Analyses" [ref=e118]
+            - cell "3 / month" [ref=e119]
+            - cell "50 (one-time)" [ref=e120]
+            - cell "Unlimited" [ref=e121]
+            - cell "Unlimited" [ref=e122]
+          - row "Team members 1 1 1 10" [ref=e123]:
+            - cell "Team members" [ref=e124]
+            - cell "1" [ref=e125]
+            - cell "1" [ref=e126]
+            - cell "1" [ref=e127]
+            - cell "10" [ref=e128]
+          - row "Share results" [ref=e129]:
+            - cell "Share results" [ref=e130]
+            - cell [ref=e131]:
+              - img [ref=e132]
+            - cell [ref=e134]:
+              - img [ref=e135]
+            - cell [ref=e137]:
+              - img [ref=e138]
+            - cell [ref=e140]:
+              - img [ref=e141]
+          - row "Priority processing" [ref=e143]:
+            - cell "Priority processing" [ref=e144]
+            - cell [ref=e145]:
+              - img [ref=e146]
+            - cell [ref=e148]:
+              - img [ref=e149]
+            - cell [ref=e151]:
+              - img [ref=e152]
+            - cell [ref=e154]:
+              - img [ref=e155]
+          - row "Custom branding" [ref=e157]:
+            - cell "Custom branding" [ref=e158]
+            - cell [ref=e159]:
+              - img [ref=e160]
+            - cell [ref=e162]:
+              - img [ref=e163]
+            - cell [ref=e165]:
+              - img [ref=e166]
+            - cell [ref=e168]:
+              - img [ref=e169]
+          - row "Dedicated support" [ref=e171]:
+            - cell "Dedicated support" [ref=e172]
+            - cell [ref=e173]:
+              - img [ref=e174]
+            - cell [ref=e176]:
+              - img [ref=e177]
+            - cell [ref=e179]:
+              - img [ref=e180]
+            - cell [ref=e182]:
+              - img [ref=e183]
+          - row "Support Community Email Priority Dedicated" [ref=e185]:
+            - cell "Support" [ref=e186]
+            - cell "Community" [ref=e187]
+            - cell "Email" [ref=e188]
+            - cell "Priority" [ref=e189]
+            - cell "Dedicated" [ref=e190]
+    - paragraph [ref=e191]: Payments processed securely by Stripe. Cancel anytime.
+  - contentinfo [ref=e192]:
+    - generic [ref=e193]:
+      - generic [ref=e194]:
+        - generic [ref=e195]: AIDEN
+        - navigation [ref=e196]:
+          - link "Pricing" [ref=e197] [cursor=pointer]:
+            - /url: /pricing
+          - link "Guide" [ref=e198] [cursor=pointer]:
+            - /url: /guide
+          - link "Login" [ref=e199] [cursor=pointer]:
+            - /url: /login
+          - link "Try Free" [ref=e200] [cursor=pointer]:
+            - /url: /generate
+        - generic [ref=e201]:
+          - link "Terms" [ref=e202] [cursor=pointer]:
+            - /url: /terms
+          - link "Privacy" [ref=e203] [cursor=pointer]:
+            - /url: /privacy
+      - paragraph [ref=e204]: © 2026 AIDEN Brief Intelligence. All rights reserved.
+  - alert [ref=e205]

@@ -1,0 +1,14 @@
+[    1063ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://www.aiden.services/login?next=https%3A%2F%2Fads.aiden.services%2F%3Fv%3D4%23brief:0
+[    1072ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://www.aiden.services/favicon.ico:0
+[   27187ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://ads.aiden.services/favicon.ico:0
+[  122620ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://ads.aiden.services/api/remove-bg:0
+[  167505ms] [ERROR] Failed to load resource: the server responded with a status of 400 () @ https://ads.aiden.services/api/remove-bg:0
+[  191927ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://ads.aiden.services/api/remove-bg:0
+[  232963ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://ads.aiden.services/api/remove-bg:0
+[  416483ms] [ERROR] Failed to load resource: the server responded with a status of 500 () @ https://ads.aiden.services/api/remove-bg:0
+[ 1827357ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://ads.aiden.services/api/credits:0
+[ 1857344ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://ads.aiden.services/api/credits:0
+[ 1880458ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://ads.aiden.services/api/generate/refine:0
+[ 1887343ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://ads.aiden.services/api/credits:0
+[ 1917338ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://ads.aiden.services/api/credits:0
+[ 1947341ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://ads.aiden.services/api/credits:0

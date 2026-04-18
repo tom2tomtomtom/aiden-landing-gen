@@ -1,0 +1,115 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - main [ref=e3]:
+    - generic [ref=e5]:
+      - navigation "Breadcrumb" [ref=e6]:
+        - list [ref=e7]:
+          - listitem [ref=e8]:
+            - link "Home" [ref=e9] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e10]: ›
+          - listitem [ref=e11]: Interrogate Brief
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - link "AIDEN Brief Intelligence" [ref=e14] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=e15]: AI-powered brief intelligence.
+        - link "Pricing" [ref=e17] [cursor=pointer]:
+          - /url: /pricing
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - img [ref=e21]
+        - paragraph [ref=e23]: Welcome! Paste your creative brief and AIDEN will interrogate it for gaps, tensions, and strategic insights.
+      - button "Dismiss welcome banner" [ref=e24] [cursor=pointer]:
+        - img [ref=e25]
+    - generic [ref=e28]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: Upload or paste your brief *
+          - button "Upload brief file — drag and drop or press Enter to browse" [ref=e34] [cursor=pointer]:
+            - button "Choose a brief file to upload" [ref=e35]
+            - generic [ref=e37]:
+              - img [ref=e39]
+              - paragraph [ref=e42]: Upload a file or drag and drop
+              - paragraph [ref=e43]: PDF, Word (.docx), or text files up to 10MB
+          - generic [ref=e46]: or
+          - generic [ref=e48]:
+            - paragraph [ref=e49]: "Try an example:"
+            - generic [ref=e50]:
+              - button "FMCG Launch" [ref=e51] [cursor=pointer]
+              - button "Tech SaaS" [ref=e52] [cursor=pointer]
+              - button "Charity Campaign" [ref=e53] [cursor=pointer]
+              - button "Retail Seasonal" [ref=e54] [cursor=pointer]
+          - generic [ref=e55]:
+            - paragraph [ref=e56]: "Save and re-use your own templates:"
+            - button "Save current as template" [ref=e57] [cursor=pointer]
+          - textbox "Upload or paste your brief *" [ref=e58]:
+            - /placeholder: Paste your full brief here…
+          - generic [ref=e60]:
+            - generic [ref=e61]: 0 words (min 20 soft · 50 chars min)
+            - generic [ref=e62]:
+              - img [ref=e63]
+              - text: 0/100000
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - paragraph [ref=e68]: Completeness guardrail
+              - generic [ref=e69]: 0/5 found
+            - generic [ref=e70]:
+              - paragraph [ref=e71]: • Clear objective
+              - paragraph [ref=e72]: • Target audience
+              - paragraph [ref=e73]: • Deliverables
+              - paragraph [ref=e74]: • Timeline
+              - paragraph [ref=e75]: • Success metric
+        - generic [ref=e76]:
+          - generic [ref=e77]: Brand / Company name (optional)
+          - textbox "Brand / Company name (optional)" [ref=e78]:
+            - /placeholder: e.g. Acme Corp
+        - generic [ref=e79]:
+          - generic [ref=e80]: Industry (optional)
+          - combobox "Industry (optional)" [ref=e81]:
+            - option "Select industry…" [selected]
+            - option "FMCG"
+            - option "Tech"
+            - option "Finance"
+            - option "Healthcare"
+            - option "Retail"
+            - option "Automotive"
+            - option "Entertainment"
+            - option "Other"
+        - generic [ref=e82]:
+          - generic [ref=e83]: Brief type (optional)
+          - combobox "Brief type (optional)" [ref=e84]:
+            - option "Select type…" [selected]
+            - option "Campaign"
+            - option "Brand"
+            - option "Digital"
+            - option "Social"
+            - option "Media"
+            - option "Other"
+        - button "Interrogate this brief" [disabled] [ref=e85]
+        - paragraph [ref=e86]: Press ⌘ Enter to submit
+      - generic [ref=e88]:
+        - img [ref=e90]
+        - paragraph [ref=e92]: Paste your brief for AIDEN interrogation
+        - paragraph [ref=e93]: Fill in the form and click Interrogate
+  - contentinfo [ref=e94]:
+    - generic [ref=e95]:
+      - generic [ref=e96]:
+        - generic [ref=e97]: AIDEN
+        - navigation [ref=e98]:
+          - link "Pricing" [ref=e99] [cursor=pointer]:
+            - /url: /pricing
+          - link "Guide" [ref=e100] [cursor=pointer]:
+            - /url: /guide
+          - link "Login" [ref=e101] [cursor=pointer]:
+            - /url: /login
+          - link "Try Free" [ref=e102] [cursor=pointer]:
+            - /url: /generate
+        - generic [ref=e103]:
+          - link "Terms" [ref=e104] [cursor=pointer]:
+            - /url: /terms
+          - link "Privacy" [ref=e105] [cursor=pointer]:
+            - /url: /privacy
+      - paragraph [ref=e106]: © 2026 AIDEN Brief Intelligence. All rights reserved.
+  - alert [ref=e107]

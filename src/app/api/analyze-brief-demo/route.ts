@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { DEMO_BRIEF_TEXT } from '@/lib/demo-brief'
+import { checkRateLimit } from '@/lib/rate-limit'
 
 const BRAIN_API_BASE = process.env.AIDEN_BRAIN_API_URL ?? 'https://aiden-brain-v2-production.up.railway.app'
 
@@ -66,6 +67,17 @@ function identifyGaps(extractedBrief: Record<string, unknown>): string[] {
 }
 
 export async function POST(request: NextRequest) {
+  // Per-IP rate limit — even though the demo brief text is hardcoded, we still
+  // hit Brain API (two Opus calls) on every invocation. Cap spam early.
+  const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown'
+  const { allowed, retryAfter } = await checkRateLimit(ip)
+  if (!allowed) {
+    return NextResponse.json(
+      { error: 'Too many demo requests. Please wait a moment.', code: 'RATE_LIMIT' },
+      { status: 429, headers: { 'Retry-After': String(retryAfter ?? 60) } }
+    )
+  }
+
   let body: { briefText?: string }
   try {
     body = await request.json()

@@ -1,0 +1,110 @@
+- generic [ref=e1]:
+  - generic [ref=e109]:
+    - banner [ref=e110]:
+      - generic [ref=e112]:
+        - generic [ref=e113]:
+          - button [ref=e114] [cursor=pointer]:
+            - img [ref=e115]
+          - heading "Brand DNA Report" [level=1] [ref=e117]
+          - generic [ref=e118]:
+            - img [ref=e119]
+            - generic [ref=e122]: 5m 4s
+        - generic [ref=e123]:
+          - generic [ref=e124]: 2 brands analyzed
+          - button "Share" [ref=e125] [cursor=pointer]:
+            - img [ref=e126]
+            - text: Share
+          - button "Export PDF" [ref=e132] [cursor=pointer]:
+            - img [ref=e133]
+            - text: Export PDF
+    - navigation [ref=e136]:
+      - generic [ref=e138]:
+        - button "Overview" [ref=e139] [cursor=pointer]
+        - button "Visual DNA" [ref=e140] [cursor=pointer]
+        - button "Ad Intelligence" [ref=e141] [cursor=pointer]
+        - button "Analytics" [ref=e142] [cursor=pointer]
+        - button "Brand Intel" [ref=e143] [cursor=pointer]
+        - button "Social Pulse" [ref=e144] [cursor=pointer]
+        - button "Strategic Analysis" [active] [ref=e145] [cursor=pointer]
+        - button "Competitive Matrix" [ref=e146] [cursor=pointer]
+    - main [ref=e147]:
+      - generic [ref=e1478]:
+        - heading "Strategic Analysis" [level=2] [ref=e1479]
+        - generic [ref=e1480]:
+          - generic [ref=e1481]:
+            - img [ref=e1482]
+            - heading "Messaging Themes" [level=3] [ref=e1484]
+          - generic [ref=e1485]:
+            - generic [ref=e1486]:
+              - paragraph [ref=e1487]: Red Bull
+              - list [ref=e1488]:
+                - listitem [ref=e1489]:
+                  - generic [ref=e1490]: →
+                  - text: "Lifestyle integration beyond energy ('redbull is life #foru #redbull')"
+                - listitem [ref=e1491]:
+                  - generic [ref=e1492]: →
+                  - text: Premium sports and extreme activity association ('Red Bull Hardline coming to North America')
+            - generic [ref=e1493]:
+              - paragraph [ref=e1494]: Monster Energy
+              - list [ref=e1495]:
+                - listitem [ref=e1496]:
+                  - generic [ref=e1497]: →
+                  - text: Collector enthusiasm and variety culture ('Monster Energy Mixed cases flash sale surprises')
+                - listitem [ref=e1498]:
+                  - generic [ref=e1499]: →
+                  - text: Extreme consumption normalization despite health risks ('3 liters of Monster energy')
+        - generic [ref=e1500]:
+          - generic [ref=e1501]:
+            - img [ref=e1502]
+            - heading "Tone & Voice" [level=3] [ref=e1505]
+          - generic [ref=e1506]:
+            - generic [ref=e1507]:
+              - paragraph [ref=e1508]: Red Bull
+              - paragraph [ref=e1509]: Aspirational and energetic voice focusing on achievement and lifestyle enhancement, with 'Always works 😁😁' effectiveness messaging that maintains positive energy associations
+            - generic [ref=e1510]:
+              - paragraph [ref=e1511]: Monster Energy
+              - paragraph [ref=e1512]: Edgy and intense voice that embraces extreme consumption culture but creates polarization, with collector community enthusiasm balanced against health concern discussions
+        - generic [ref=e1513]:
+          - generic [ref=e1514]:
+            - img [ref=e1515]
+            - heading "White Space Opportunities" [level=3] [ref=e1519]
+          - list [ref=e1520]:
+            - listitem [ref=e1521]:
+              - generic [ref=e1522]: "01"
+              - generic [ref=e1523]: Health-conscious energy category positioning to address widespread health concerns affecting both brands' reputation
+            - listitem [ref=e1524]:
+              - generic [ref=e1525]: "02"
+              - generic [ref=e1526]: Traditional digital advertising gap with both brands showing zero Facebook presence, creating opportunity for competitor entry through conventional channels
+        - generic [ref=e1527]:
+          - generic [ref=e1528]:
+            - img [ref=e1529]
+            - heading "Recommended Actions" [level=3] [ref=e1531]
+          - generic [ref=e1532]:
+            - generic [ref=e1534]:
+              - generic [ref=e1535]: "01"
+              - generic [ref=e1536]:
+                - heading "Red Bull should amplify health consciousness messaging while maintaining sports association" [level=4] [ref=e1537]
+                - paragraph [ref=e1538]: Despite positive sentiment, health concerns still emerge in public discussion and addressing this proactively could further separate from Monster's negative health perception
+                - generic [ref=e1539]:
+                  - generic [ref=e1540]: "Expected Impact:"
+                  - generic [ref=e1541]: Could increase sentiment score above 75/100 and capture health-conscious consumers currently avoiding category
+            - generic [ref=e1543]:
+              - generic [ref=e1544]: "02"
+              - generic [ref=e1545]:
+                - heading "Monster Energy needs immediate reputation management campaign focusing on responsible consumption" [level=4] [ref=e1546]
+                - paragraph [ref=e1547]: Negative -15/100 sentiment driven by '3 liters of Monster' extreme consumption patterns and 'dependence is pathetic' perceptions require direct addressing
+                - generic [ref=e1548]:
+                  - generic [ref=e1549]: "Expected Impact:"
+                  - generic [ref=e1550]: Could improve sentiment to neutral range and prevent further reputation deterioration affecting sales growth
+            - generic [ref=e1552]:
+              - generic [ref=e1553]: "03"
+              - generic [ref=e1554]:
+                - heading "Both brands should consider return to targeted Facebook advertising to fill competitive gap" [level=4] [ref=e1555]
+                - paragraph [ref=e1556]: Zero active Facebook ads from both leaders creates opening for increased market share capture through strategic digital advertising while competitors focus only on experiential
+                - generic [ref=e1557]:
+                  - generic [ref=e1558]: "Expected Impact:"
+                  - generic [ref=e1559]: Could capture 5-10% additional market share from consumers not reached through current experiential-only strategies
+    - contentinfo [ref=e296]:
+      - paragraph [ref=e298]: Brand DNA Analyzer // Powered by AIDEN & Redbaez
+  - region "Notifications alt+T"
+  - alert [ref=e86]

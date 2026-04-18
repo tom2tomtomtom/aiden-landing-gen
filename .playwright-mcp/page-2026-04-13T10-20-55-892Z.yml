@@ -1,0 +1,52 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - link "BRAND DNA // ANALYZER" [ref=e6] [cursor=pointer]:
+          - /url: /dashboard
+          - heading "BRAND DNA // ANALYZER" [level=1] [ref=e7]
+        - generic [ref=e8]:
+          - generic [ref=e87]:
+            - generic [ref=e88]: pro
+            - generic [ref=e89]: Unlimited audits
+          - link "Upgrade" [ref=e9] [cursor=pointer]:
+            - /url: /pricing
+            - img [ref=e10]
+            - text: Upgrade
+          - generic [ref=e90]: tomh@redbaez.com
+          - button "Sign Out" [ref=e12] [cursor=pointer]:
+            - img [ref=e13]
+            - text: Sign Out
+    - main [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - img [ref=e19]
+          - generic [ref=e22]: Ad Library Scraping
+        - generic [ref=e23]:
+          - img [ref=e24]
+          - generic [ref=e26]: Color DNA Extraction
+        - generic [ref=e27]:
+          - img [ref=e28]
+          - generic [ref=e36]: AIDEN Strategic Analysis
+        - generic [ref=e37]:
+          - img [ref=e38]
+          - generic [ref=e40]: Ad Analytics Dashboard
+      - generic [ref=e42]:
+        - heading "Analyzing Brand DNA" [level=3] [ref=e98]
+        - generic [ref=e45]:
+          - generic [ref=e99]:
+            - generic [ref=e100]: Researching Monster Energy PR, press & activations
+            - generic [ref=e101]: 78%
+          - paragraph [ref=e104]: Claude web search scanning public brand intelligence
+        - generic [ref=e105]:
+          - img [ref=e106]
+          - generic [ref=e108]: Generating strategic analysis...
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - heading "Past Reports" [level=3] [ref=e78]:
+            - img [ref=e79]
+            - text: Past Reports
+          - generic [ref=e82]: 0 reports
+        - paragraph [ref=e91]: No reports yet. Run your first audit above.
+  - region "Notifications alt+T"
+  - alert [ref=e86]

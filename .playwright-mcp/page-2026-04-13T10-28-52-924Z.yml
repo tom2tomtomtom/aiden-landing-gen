@@ -1,0 +1,135 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - button [ref=e7] [cursor=pointer]:
+            - img [ref=e8]
+          - heading "Brand DNA Report" [level=1] [ref=e10]
+          - generic [ref=e11]:
+            - img [ref=e12]
+            - generic [ref=e15]: 5m 4s
+        - generic [ref=e16]:
+          - generic [ref=e17]: 2 brands analyzed
+          - button "Copied!" [active] [ref=e193] [cursor=pointer]:
+            - img [ref=e19]
+            - text: Copied!
+          - button "Export PDF" [ref=e25] [cursor=pointer]:
+            - img [ref=e26]
+            - text: Export PDF
+    - navigation [ref=e29]:
+      - generic [ref=e31]:
+        - button "Overview" [ref=e32] [cursor=pointer]
+        - button "Visual DNA" [ref=e33] [cursor=pointer]
+        - button "Ad Intelligence" [ref=e34] [cursor=pointer]
+        - button "Analytics" [ref=e35] [cursor=pointer]
+        - button "Brand Intel" [ref=e36] [cursor=pointer]
+        - button "Social Pulse" [ref=e37] [cursor=pointer]
+        - button "Strategic Analysis" [ref=e38] [cursor=pointer]
+        - button "Competitive Matrix" [ref=e39] [cursor=pointer]
+    - main [ref=e40]:
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - heading "Executive Summary" [level=2] [ref=e44]
+          - paragraph [ref=e46]: Red Bull dominates the energy drink landscape with a 72/100 positive sentiment score driven by lifestyle brand integration and extreme sports associations, while Monster Energy struggles with mixed -15/100 sentiment due to health concerns despite strong collector culture. Both brands show zero active Facebook advertising, suggesting a shift to organic content and experiential marketing strategies.
+          - generic [ref=e47]:
+            - generic [ref=e48]:
+              - generic [ref=e49]:
+                - img [ref=e50]
+                - heading "Key Findings" [level=3] [ref=e53]
+              - list [ref=e54]:
+                - listitem [ref=e55]:
+                  - generic [ref=e56]: "01"
+                  - generic [ref=e57]: Red Bull maintains overwhelmingly positive public perception (72/100) with 'redbull is life' loyalty and successful sports integration, while Monster faces significant reputation challenges (-15/100) with health addiction concerns
+                - listitem [ref=e58]:
+                  - generic [ref=e59]: "02"
+                  - generic [ref=e60]: Both brands have abandoned traditional Facebook advertising (0 active ads each), focusing instead on experiential marketing through esports partnerships and extreme sports sponsorships
+                - listitem [ref=e61]:
+                  - generic [ref=e62]: "03"
+                  - generic [ref=e63]: "Red Bull's color strategy (#fccb04 gold, #d50b3e red) reinforces premium energy positioning, while Monster's green palette (#9dc42c, #2c8c14) aligns with edgy youth culture but attracts moral/religious criticism"
+                - listitem [ref=e64]:
+                  - generic [ref=e65]: "04"
+                  - generic [ref=e66]: Monster's collector culture ('EVERY ULTRA WHITE MONSTER ENERGY DRINK CAN I'VE COLLECTED') drives engagement but coexists with extreme consumption patterns ('3 liters of Monster energy') creating reputation risks
+                - listitem [ref=e67]:
+                  - generic [ref=e68]: "05"
+                  - generic [ref=e69]: Red Bull's innovation focuses on premium seasonal flavors (Cherry Sakura Spring Edition), while Monster targets demographic expansion with female-focused FLRT line amid market criticism
+            - generic [ref=e70]:
+              - generic [ref=e71]:
+                - img [ref=e72]
+                - heading "Strategic Implications" [level=3] [ref=e74]
+              - paragraph [ref=e75]: The energy drink category reveals a stark bifurcation between Red Bull's premium lifestyle positioning and Monster's volume-driven collector culture approach. Red Bull's positive sentiment advantage stems from successful sports integration and controlled consumption messaging, while Monster's negative sentiment reflects the category's health challenges. Both brands' absence from traditional Facebook advertising indicates mature category dynamics favoring experiential over direct response marketing, with future growth dependent on demographic expansion and health perception management.
+        - generic [ref=e76]:
+          - heading "Brands Analyzed" [level=2] [ref=e77]
+          - generic [ref=e78]:
+            - generic [ref=e79]:
+              - img "Red Bull logo" [ref=e81]
+              - heading "Red Bull" [level=3] [ref=e82]
+              - paragraph [ref=e83]: https://redbull.com
+              - generic [ref=e84]:
+                - generic [ref=e86]: "#fccb04"
+                - generic [ref=e88]: "#d50b3e"
+                - generic [ref=e90]: "#fce26a"
+                - generic [ref=e92]: "#977901"
+                - generic [ref=e94]: "#91072a"
+                - generic [ref=e96]: "#957b03"
+              - generic [ref=e97]:
+                - generic [ref=e98]:
+                  - img [ref=e99]
+                  - paragraph [ref=e102]: "0"
+                  - paragraph [ref=e103]: Ads
+                - generic [ref=e104]:
+                  - img [ref=e105]
+                  - paragraph [ref=e109]: "0"
+                  - paragraph [ref=e110]: Images
+                - generic [ref=e111]:
+                  - img [ref=e112]
+                  - paragraph [ref=e115]: 0%
+                  - paragraph [ref=e116]: Video
+                - generic [ref=e117]:
+                  - img [ref=e118]
+                  - paragraph [ref=e123]: 0%
+                  - paragraph [ref=e124]: Carousel
+                - generic [ref=e125]:
+                  - img [ref=e126]
+                  - paragraph [ref=e132]: "6"
+                  - paragraph [ref=e133]: Colors
+            - generic [ref=e134]:
+              - img "Monster Energy logo" [ref=e136]
+              - heading "Monster Energy" [level=3] [ref=e137]
+              - paragraph [ref=e138]: https://monsterenergy.com
+              - generic [ref=e139]:
+                - generic [ref=e141]: "#9dc42c"
+                - generic [ref=e143]: "#2c8c14"
+                - generic [ref=e145]: "#d1e692"
+                - generic [ref=e147]: "#647c1c"
+                - generic [ref=e149]: "#444424"
+                - generic [ref=e151]: "#647c1c"
+              - generic [ref=e152]:
+                - generic [ref=e153]:
+                  - img [ref=e154]
+                  - paragraph [ref=e157]: "0"
+                  - paragraph [ref=e158]: Ads
+                - generic [ref=e159]:
+                  - img [ref=e160]
+                  - paragraph [ref=e164]: "0"
+                  - paragraph [ref=e165]: Images
+                - generic [ref=e166]:
+                  - img [ref=e167]
+                  - paragraph [ref=e170]: 0%
+                  - paragraph [ref=e171]: Video
+                - generic [ref=e172]:
+                  - img [ref=e173]
+                  - paragraph [ref=e178]: 0%
+                  - paragraph [ref=e179]: Carousel
+                - generic [ref=e180]:
+                  - img [ref=e181]
+                  - paragraph [ref=e187]: "6"
+                  - paragraph [ref=e188]: Colors
+    - contentinfo [ref=e189]:
+      - paragraph [ref=e191]: Brand DNA Analyzer // Powered by AIDEN & Redbaez
+  - region "Notifications alt+T":
+    - list:
+      - listitem [ref=e194]:
+        - img [ref=e196]
+        - generic [ref=e199]: Share link copied
+  - alert [ref=e192]

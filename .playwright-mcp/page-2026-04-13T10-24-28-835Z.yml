@@ -1,0 +1,89 @@
+- generic [ref=e1]:
+  - generic [ref=e109]:
+    - banner [ref=e110]:
+      - generic [ref=e112]:
+        - generic [ref=e113]:
+          - button [ref=e114] [cursor=pointer]:
+            - img [ref=e115]
+          - heading "Brand DNA Report" [level=1] [ref=e117]
+          - generic [ref=e118]:
+            - img [ref=e119]
+            - generic [ref=e122]: 5m 4s
+        - generic [ref=e123]:
+          - generic [ref=e124]: 2 brands analyzed
+          - button "Share" [ref=e125] [cursor=pointer]:
+            - img [ref=e126]
+            - text: Share
+          - button "Export PDF" [ref=e132] [cursor=pointer]:
+            - img [ref=e133]
+            - text: Export PDF
+    - navigation [ref=e136]:
+      - generic [ref=e138]:
+        - button "Overview" [ref=e139] [cursor=pointer]
+        - button "Visual DNA" [active] [ref=e140] [cursor=pointer]
+        - button "Ad Intelligence" [ref=e141] [cursor=pointer]
+        - button "Analytics" [ref=e142] [cursor=pointer]
+        - button "Brand Intel" [ref=e143] [cursor=pointer]
+        - button "Social Pulse" [ref=e144] [cursor=pointer]
+        - button "Strategic Analysis" [ref=e145] [cursor=pointer]
+        - button "Competitive Matrix" [ref=e146] [cursor=pointer]
+    - main [ref=e147]:
+      - generic [ref=e299]:
+        - heading "Visual DNA Comparison" [level=2] [ref=e300]
+        - generic [ref=e301]:
+          - heading "Brand Color Palettes" [level=3] [ref=e302]
+          - generic [ref=e303]:
+            - generic [ref=e304]:
+              - paragraph [ref=e305]: Red Bull
+              - generic [ref=e307]:
+                - paragraph [ref=e308]: Brand Colors
+                - generic [ref=e309]:
+                  - generic [ref=e312]: "#fccb04"
+                  - generic [ref=e315]: "#d50b3e"
+                  - generic [ref=e318]: "#fce26a"
+                  - generic [ref=e321]: "#977901"
+                  - generic [ref=e324]: "#91072a"
+                  - generic [ref=e327]: "#957b03"
+              - paragraph [ref=e328]: Premium energy positioning with signature gold (#fccb04) and red (#d50b3e) creating luxury sports association and differentiating from category's darker palettes
+            - generic [ref=e329]:
+              - paragraph [ref=e330]: Monster Energy
+              - generic [ref=e332]:
+                - paragraph [ref=e333]: Brand Colors
+                - generic [ref=e334]:
+                  - generic [ref=e337]: "#9dc42c"
+                  - generic [ref=e340]: "#2c8c14"
+                  - generic [ref=e343]: "#d1e692"
+                  - generic [ref=e346]: "#647c1c"
+                  - generic [ref=e349]: "#444424"
+                  - generic [ref=e352]: "#647c1c"
+              - paragraph [ref=e353]: "Aggressive green-dominant strategy (#9dc42c, #2c8c14) establishing edgy youth culture connection but creating polarization including religious objections to 'satan' imagery associations"
+        - generic [ref=e354]:
+          - heading "Visual Differentiation" [level=3] [ref=e355]
+          - paragraph [ref=e356]: Red Bull's bright gold and red palette positions it as the premium lifestyle choice, contrasting sharply with Monster's aggressive lime green approach that targets edgier demographics. The color choices reflect fundamental brand personality differences - Red Bull's aspirational sports luxury versus Monster's rebellious youth culture, with Red Bull's warmer tones generating more positive sentiment than Monster's stark green branding.
+        - generic [ref=e357]:
+          - generic [ref=e358]:
+            - heading "Shared Patterns" [level=3] [ref=e359]
+            - list [ref=e360]:
+              - listitem [ref=e361]:
+                - generic [ref=e362]: —
+                - text: Both brands have completely eliminated Facebook advertising, indicating category-wide shift to organic content strategies
+              - listitem [ref=e363]:
+                - generic [ref=e364]: —
+                - text: Extensive sports and extreme activity sponsorships as primary marketing vehicles replacing traditional advertising
+          - generic [ref=e365]:
+            - heading "Unique Elements" [level=3] [ref=e366]
+            - generic [ref=e367]:
+              - generic [ref=e368]:
+                - paragraph [ref=e369]: Red Bull
+                - list [ref=e370]:
+                  - listitem [ref=e371]: • Campus Ambassador Program with 4,000+ Student Marketeers creating grassroots university presence
+                  - listitem [ref=e372]: • Seasonal premium flavor launches like Cherry Sakura Spring Edition targeting sophisticated taste preferences
+              - generic [ref=e373]:
+                - paragraph [ref=e374]: Monster Energy
+                - list [ref=e375]:
+                  - listitem [ref=e376]: • Collector culture ecosystem driving 'EVERY ULTRA WHITE MONSTER' can collecting behaviors and community engagement
+                  - listitem [ref=e377]: • Female-focused FLRT product line targeting demographic expansion despite receiving market criticism
+    - contentinfo [ref=e296]:
+      - paragraph [ref=e298]: Brand DNA Analyzer // Powered by AIDEN & Redbaez
+  - region "Notifications alt+T"
+  - alert [ref=e86]

@@ -1,0 +1,126 @@
+- generic [active] [ref=e1]:
+  - alert [ref=e2]
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e7]
+        - generic [ref=e9]: AIDEN Creative
+      - generic [ref=e10]:
+        - button "7 image credits, 1 video credits. Buy credits." [ref=e11]:
+          - generic [ref=e12]:
+            - img [ref=e13]
+            - generic [ref=e17]:
+              - generic [ref=e18]: "7"
+              - generic [ref=e19]: img
+          - generic [ref=e20]:
+            - img [ref=e21]
+            - generic [ref=e23]:
+              - generic [ref=e24]: "1"
+              - generic [ref=e25]: vid
+          - generic: Buy Credits
+        - button "Open AI Assistant" [ref=e26]:
+          - img
+          - generic [ref=e27]: AI Assistant
+        - button "Sign out" [ref=e28]:
+          - img
+    - navigation "Wizard steps" [ref=e29]:
+      - generic [ref=e30]:
+        - button "Discover" [ref=e31]:
+          - img [ref=e33]
+          - generic [ref=e35]: Discover
+          - img [ref=e36]
+        - img [ref=e39]
+      - generic [ref=e41]:
+        - button "Brief" [ref=e42]:
+          - img [ref=e44]
+          - generic [ref=e46]: Brief
+          - img [ref=e47]
+        - img [ref=e50]
+      - generic [ref=e52]:
+        - button "Generate" [ref=e53]:
+          - img [ref=e55]
+          - generic [ref=e57]: Generate
+          - img [ref=e58]
+        - img [ref=e60]
+      - generic [ref=e62]:
+        - button "4 Refine" [ref=e274]:
+          - generic [ref=e64]: "4"
+          - generic [ref=e65]: Refine
+          - img [ref=e66]
+        - img [ref=e67]
+      - generic [ref=e69]:
+        - button "5 Animate" [ref=e70]:
+          - generic [ref=e71]: "5"
+          - generic [ref=e72]: Animate
+          - img [ref=e73]
+        - img [ref=e75]
+      - button "6 Export" [ref=e78]:
+        - generic [ref=e79]: "6"
+        - generic [ref=e80]: Export
+        - img [ref=e81]
+    - progressbar "Step 4 of 6" [ref=e275]
+    - main [ref=e87]:
+      - generic [ref=e276]:
+        - generic [ref=e277]:
+          - generic [ref=e278]:
+            - heading "Refine" [level=1] [ref=e279]
+            - paragraph [ref=e280]: Select favorites, edit copy, or regenerate visuals before animation.
+          - generic [ref=e281]:
+            - button "Select All" [ref=e282]
+            - button "Deselect All" [ref=e283]
+            - button [disabled]:
+              - img
+        - generic [ref=e284]:
+          - generic [ref=e285]:
+            - button "Deselect asset" [ref=e286] [cursor=pointer]:
+              - img [ref=e288]
+              - button "Deselect asset" [pressed] [ref=e291]:
+                - img [ref=e292]
+            - button "Instagram 1:1 Instagram — Visibly whiter teeth in 6 minutes a day — enamel-safe, vegan, no sensiti…" [ref=e294]:
+              - generic [ref=e295]:
+                - generic [ref=e296]: Instagram
+                - generic [ref=e297]: 1:1
+              - paragraph [ref=e298]: Instagram — Visibly whiter teeth in 6 minutes a day — enamel-safe, vegan, no sensiti…
+          - generic [ref=e299]:
+            - button "Select asset" [ref=e300] [cursor=pointer]:
+              - img [ref=e302]
+              - button "Select asset" [ref=e305]:
+                - img [ref=e306]
+            - button "Instagram 9:16 Instagram — Visibly whiter teeth in 6 minutes a day — enamel-safe, vegan, no sensiti…" [ref=e308]:
+              - generic [ref=e309]:
+                - generic [ref=e310]: Instagram
+                - generic [ref=e311]: 9:16
+              - paragraph [ref=e312]: Instagram — Visibly whiter teeth in 6 minutes a day — enamel-safe, vegan, no sensiti…
+          - generic [ref=e313]:
+            - button "Select asset" [ref=e314] [cursor=pointer]:
+              - img [ref=e316]
+              - button "Select asset" [ref=e319]:
+                - img [ref=e320]
+            - button "TikTok 1:1 Whiter teeth in 6 minutes" [ref=e322]:
+              - generic [ref=e323]:
+                - generic [ref=e324]: TikTok
+                - generic [ref=e325]: 1:1
+              - paragraph [ref=e326]: Whiter teeth in 6 minutes
+          - generic [ref=e327]:
+            - button "Select asset" [ref=e328] [cursor=pointer]:
+              - img [ref=e330]
+              - button "Select asset" [ref=e333]:
+                - img [ref=e334]
+            - button "TikTok 9:16 Tiktok — Visibly whiter teeth in 6 minutes a day — enamel-safe, vegan, no sensiti…" [ref=e336]:
+              - generic [ref=e337]:
+                - generic [ref=e338]: TikTok
+                - generic [ref=e339]: 9:16
+              - paragraph [ref=e340]: Tiktok — Visibly whiter teeth in 6 minutes a day — enamel-safe, vegan, no sensiti…
+        - generic [ref=e341]:
+          - generic [ref=e342]:
+            - button "Previous" [ref=e343]:
+              - img
+              - text: Previous
+            - generic [ref=e344]: 1 selected
+          - generic [ref=e345]:
+            - button "Skip to Export" [ref=e346]:
+              - img
+              - text: Skip to Export
+            - 'button "Next: Animate" [ref=e347]':
+              - text: "Next: Animate"
+              - img

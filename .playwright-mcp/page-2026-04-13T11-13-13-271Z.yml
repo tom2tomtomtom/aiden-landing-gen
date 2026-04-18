@@ -1,0 +1,126 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - button [ref=e7] [cursor=pointer]:
+            - img [ref=e8]
+          - heading "Brand DNA Report" [level=1] [ref=e10]
+          - generic [ref=e11]:
+            - img [ref=e12]
+            - generic [ref=e15]: 4m 52s
+        - generic [ref=e16]:
+          - generic [ref=e17]: 2 brands analyzed
+          - button "Share" [ref=e18] [cursor=pointer]:
+            - img [ref=e19]
+            - generic [ref=e25]: Share
+          - button "Export PDF" [ref=e26] [cursor=pointer]:
+            - img [ref=e27]
+            - generic [ref=e30]: Export PDF
+    - navigation [ref=e31]:
+      - generic [ref=e34]:
+        - button "Overview" [ref=e35] [cursor=pointer]
+        - button "Visual DNA" [ref=e36] [cursor=pointer]
+        - button "Ad Intelligence" [ref=e37] [cursor=pointer]
+        - button "Analytics" [ref=e38] [cursor=pointer]
+        - button "Brand Intel" [ref=e39] [cursor=pointer]
+        - button "Strategic Analysis" [ref=e40] [cursor=pointer]
+        - button "Competitive Matrix" [ref=e41] [cursor=pointer]
+    - main [ref=e42]:
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - heading "Executive Summary" [level=2] [ref=e46]
+          - paragraph [ref=e48]: Red Bull maintains clear market leadership with 72/100 positive sentiment versus Monster's polarizing 35/100 mixed sentiment, despite Monster's 100% video format focus and targeted regional messaging. The data reveals Red Bull's consistent brand DNA across markets while Monster struggles with health perception issues and extreme consumption patterns among its user base.
+          - generic [ref=e49]:
+            - generic [ref=e50]:
+              - generic [ref=e51]:
+                - img [ref=e52]
+                - heading "Key Findings" [level=3] [ref=e55]
+              - list [ref=e56]:
+                - listitem [ref=e57]:
+                  - generic [ref=e58]: "01"
+                  - generic [ref=e59]: Red Bull's 'Gives You Wiiings' tagline maintains 93% LEARN_MORE CTA consistency with 34-character copy brevity, while Monster's 46-character copy focuses on 'UnleashTheBeast' with aggressive imagery
+                - listitem [ref=e60]:
+                  - generic [ref=e61]: "02"
+                  - generic [ref=e62]: Monster's 100% video format strategy contrasts Red Bull's diversified 77% video, 13% carousel, 10% image approach, suggesting different engagement philosophies
+                - listitem [ref=e63]:
+                  - generic [ref=e64]: "03"
+                  - generic [ref=e65]: "Public sentiment gap: Red Bull users express 'brand love/addiction' positively while Monster faces 'dependency concerns' and 'extreme consumption' reputation risks"
+                - listitem [ref=e66]:
+                  - generic [ref=e67]: "04"
+                  - generic [ref=e68]: Red Bull's F1 partnership creates prestige associations despite 2026 performance struggles, while Monster's UFC/motorsports partnerships drive gym culture integration
+                - listitem [ref=e69]:
+                  - generic [ref=e70]: "05"
+                  - generic [ref=e71]: "Regional messaging divergence: Monster's Spanish/Portuguese localization ('El defensor', 'Venado Martinez') versus Red Bull's consistent global 'Wings' messaging"
+            - generic [ref=e72]:
+              - generic [ref=e73]:
+                - img [ref=e74]
+                - heading "Strategic Implications" [level=3] [ref=e76]
+              - paragraph [ref=e77]: Monster's 100% video investment and regional personalization strategy shows creative ambition but faces significant reputation management challenges with health dependency concerns. Red Bull's diversified creative approach and positive sentiment foundation provide defensive advantages, though F1 performance issues create vulnerability windows. Monster's lower sentiment score (35 vs 72) despite strong engagement tactics suggests execution-perception gaps that require addressing.
+        - generic [ref=e78]:
+          - heading "Brands Analyzed" [level=2] [ref=e79]
+          - generic [ref=e80]:
+            - generic [ref=e81]:
+              - img "Red Bull logo" [ref=e83]
+              - heading "Red Bull" [level=3] [ref=e84]
+              - paragraph [ref=e85]: https://redbull.com
+              - paragraph [ref=e86]: "FB: Red Bull"
+              - paragraph [ref=e88]: Ad Creative Colors
+              - generic [ref=e96]:
+                - generic [ref=e97]:
+                  - img [ref=e98]
+                  - paragraph [ref=e101]: "30"
+                  - paragraph [ref=e102]: Ads
+                - generic [ref=e103]:
+                  - img [ref=e104]
+                  - paragraph [ref=e108]: "13"
+                  - paragraph [ref=e109]: Images
+                - generic [ref=e110]:
+                  - img [ref=e111]
+                  - paragraph [ref=e114]: 77%
+                  - paragraph [ref=e115]: Video
+                - generic [ref=e116]:
+                  - img [ref=e117]
+                  - paragraph [ref=e122]: 13%
+                  - paragraph [ref=e123]: Carousel
+                - generic [ref=e124]:
+                  - img [ref=e125]
+                  - paragraph [ref=e131]: "6"
+                  - paragraph [ref=e132]: Colors
+            - generic [ref=e133]:
+              - img "Monster Energy logo" [ref=e135]
+              - heading "Monster Energy" [level=3] [ref=e136]
+              - paragraph [ref=e137]: https://monsterenergy.com
+              - paragraph [ref=e138]: "FB: Monster Energy"
+              - generic [ref=e139]:
+                - generic [ref=e141]: "#9dc42c"
+                - generic [ref=e143]: "#2c8c14"
+                - generic [ref=e145]: "#d1e692"
+                - generic [ref=e147]: "#647c1c"
+                - generic [ref=e149]: "#444424"
+                - generic [ref=e151]: "#647c1c"
+              - generic [ref=e152]:
+                - generic [ref=e153]:
+                  - img [ref=e154]
+                  - paragraph [ref=e157]: "27"
+                  - paragraph [ref=e158]: Ads
+                - generic [ref=e159]:
+                  - img [ref=e160]
+                  - paragraph [ref=e164]: "0"
+                  - paragraph [ref=e165]: Images
+                - generic [ref=e166]:
+                  - img [ref=e167]
+                  - paragraph [ref=e170]: 100%
+                  - paragraph [ref=e171]: Video
+                - generic [ref=e172]:
+                  - img [ref=e173]
+                  - paragraph [ref=e178]: 0%
+                  - paragraph [ref=e179]: Carousel
+                - generic [ref=e180]:
+                  - img [ref=e181]
+                  - paragraph [ref=e187]: "6"
+                  - paragraph [ref=e188]: Colors
+    - contentinfo [ref=e189]:
+      - paragraph [ref=e191]: Brand DNA Analyzer // Powered by AIDEN & Redbaez
+  - region "Notifications alt+T"
+  - alert [ref=e192]

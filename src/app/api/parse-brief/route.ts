@@ -1,10 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { checkRateLimit } from '@/lib/rate-limit'
 
 export const runtime = 'nodejs'
 
 const MAX_FILE_SIZE = 10 * 1024 * 1024 // 10MB
 
 export async function POST(request: NextRequest) {
+  // Per-IP rate limit — no auth on this endpoint and PDF/DOCX parsing is
+  // CPU-heavy. Limits an anonymous attacker to ~10 10MB-files/minute/IP.
+  const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown'
+  const { allowed, retryAfter } = await checkRateLimit(ip)
+  if (!allowed) {
+    return NextResponse.json(
+      { error: 'Too many requests. Please wait a moment before uploading again.', code: 'RATE_LIMIT' },
+      { status: 429, headers: { 'Retry-After': String(retryAfter ?? 60) } }
+    )
+  }
+
   try {
     const formData = await request.formData()
     const file = formData.get('file') as File | null

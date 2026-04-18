@@ -1,0 +1,435 @@
+- generic [ref=e1]:
+  - generic [ref=e109]:
+    - banner [ref=e110]:
+      - generic [ref=e112]:
+        - generic [ref=e113]:
+          - button [ref=e114] [cursor=pointer]:
+            - img [ref=e115]
+          - heading "Brand DNA Report" [level=1] [ref=e117]
+          - generic [ref=e118]:
+            - img [ref=e119]
+            - generic [ref=e122]: 5m 4s
+        - generic [ref=e123]:
+          - generic [ref=e124]: 2 brands analyzed
+          - button "Share" [ref=e125] [cursor=pointer]:
+            - img [ref=e126]
+            - text: Share
+          - button "Export PDF" [ref=e132] [cursor=pointer]:
+            - img [ref=e133]
+            - text: Export PDF
+    - navigation [ref=e136]:
+      - generic [ref=e138]:
+        - button "Overview" [ref=e139] [cursor=pointer]
+        - button "Visual DNA" [ref=e140] [cursor=pointer]
+        - button "Ad Intelligence" [ref=e141] [cursor=pointer]
+        - button "Analytics" [ref=e142] [cursor=pointer]
+        - button "Brand Intel" [active] [ref=e143] [cursor=pointer]
+        - button "Social Pulse" [ref=e144] [cursor=pointer]
+        - button "Strategic Analysis" [ref=e145] [cursor=pointer]
+        - button "Competitive Matrix" [ref=e146] [cursor=pointer]
+    - main [ref=e147]:
+      - generic [ref=e510]:
+        - generic [ref=e511]:
+          - heading "Brand Intelligence" [level=2] [ref=e512]
+          - generic [ref=e513]:
+            - img [ref=e514]
+            - combobox [ref=e517]:
+              - option "All Brands" [selected]
+              - option "Red Bull"
+              - option "Monster Energy"
+        - generic [ref=e518]:
+          - generic [ref=e519]:
+            - heading "Red Bull" [level=3] [ref=e520]
+            - generic [ref=e521]: 7 press items · 4 activations · 4 campaigns
+          - generic [ref=e522]:
+            - generic [ref=e523]:
+              - generic [ref=e524]:
+                - img [ref=e525]
+                - heading "Press Coverage" [level=4] [ref=e528]
+                - generic [ref=e529]: 4 found
+              - generic [ref=e530]:
+                - link "Red Bull Sales Jump as 2025 Can Volumes Hit Record GuruFocus 2026-01 Red Bull delivered strongest growth in three years in 2025, selling almost 14 billion cans with net sales increasing 8.6% to record €12.2 billion." [ref=e532] [cursor=pointer]:
+                  - /url: https://www.gurufocus.com/news/8540587/red-bull-sales-jump-as-2025-can-volumes-hit-record
+                  - img [ref=e533]
+                  - generic [ref=e537]:
+                    - paragraph [ref=e538]: Red Bull Sales Jump as 2025 Can Volumes Hit Record
+                    - generic [ref=e539]:
+                      - generic [ref=e540]: GuruFocus
+                      - generic [ref=e541]: 2026-01
+                    - paragraph [ref=e542]: Red Bull delivered strongest growth in three years in 2025, selling almost 14 billion cans with net sales increasing 8.6% to record €12.2 billion.
+                - link "Popular Energy Drink Brand Will Roll Out a New Spring Edition Flavor Soon What Now 2025-12 Red Bull fans can expect Cherry Sakura flavor in both regular and sugar-free options in early 2026, following current Fuji Apple & Ginger edition." [ref=e544] [cursor=pointer]:
+                  - /url: https://whatnow.com/news/trending/popular-energy-drink-brand-will-roll-out-a-new-spring-edition-flavor-soon/
+                  - img [ref=e545]
+                  - generic [ref=e549]:
+                    - paragraph [ref=e550]: Popular Energy Drink Brand Will Roll Out a New Spring Edition Flavor Soon
+                    - generic [ref=e551]:
+                      - generic [ref=e552]: What Now
+                      - generic [ref=e553]: 2025-12
+                    - paragraph [ref=e554]: Red Bull fans can expect Cherry Sakura flavor in both regular and sugar-free options in early 2026, following current Fuji Apple & Ginger edition.
+                - link "Red Bull discontinues four popular energy drink flavors Yahoo Finance 2025-11 Red Bull discontinuing four flavors at start of 2026 including Amber Edition sugar-free and Green Edition Karuba Elderflower to make room for new flavors." [ref=e556] [cursor=pointer]:
+                  - /url: https://finance.yahoo.com/news/key-coca-cola-pepsi-rival-190300608.html
+                  - img [ref=e557]
+                  - generic [ref=e561]:
+                    - paragraph [ref=e562]: Red Bull discontinues four popular energy drink flavors
+                    - generic [ref=e563]:
+                      - generic [ref=e564]: Yahoo Finance
+                      - generic [ref=e565]: 2025-11
+                    - paragraph [ref=e566]: Red Bull discontinuing four flavors at start of 2026 including Amber Edition sugar-free and Green Edition Karuba Elderflower to make room for new flavors.
+                - link "Red Bull Boosts Can Sales at Fastest Past Since Pandemic Bloomberg 2026-01 Austrian company sold almost 14 billion cans in 2025, up more than 10% from previous year, with net sales rising 8.6% to record €12.2 billion." [ref=e568] [cursor=pointer]:
+                  - /url: https://www.bloomberg.com/news/articles/2026-01-21/red-bull-lifts-can-sales-at-fastest-past-since-pandemic-sn-says
+                  - img [ref=e569]
+                  - generic [ref=e573]:
+                    - paragraph [ref=e574]: Red Bull Boosts Can Sales at Fastest Past Since Pandemic
+                    - generic [ref=e575]:
+                      - generic [ref=e576]: Bloomberg
+                      - generic [ref=e577]: 2026-01
+                    - paragraph [ref=e578]: Austrian company sold almost 14 billion cans in 2025, up more than 10% from previous year, with net sales rising 8.6% to record €12.2 billion.
+            - generic [ref=e579]:
+              - generic [ref=e580]:
+                - img [ref=e581]
+                - heading "Press Releases" [level=4] [ref=e584]
+                - generic [ref=e585]: 3 found
+              - generic [ref=e586]:
+                - link "Oracle Red Bull Racing Announce 2026 Driver Line-Up Red Bull Racing 2025-12 Red Bull announces Isack Hadjar will join Max Verstappen for the 2026 Formula 1 season, alongside the debut of Red Bull Ford Powertrains." [ref=e588] [cursor=pointer]:
+                  - /url: https://www.redbullracing.com/int-en/oracle-red-bull-racing-announce-2026-driver-line-up
+                  - img [ref=e589]
+                  - generic [ref=e593]:
+                    - paragraph [ref=e594]: Oracle Red Bull Racing Announce 2026 Driver Line-Up
+                    - generic [ref=e595]:
+                      - generic [ref=e596]: Red Bull Racing
+                      - generic [ref=e597]: 2025-12
+                    - paragraph [ref=e598]: Red Bull announces Isack Hadjar will join Max Verstappen for the 2026 Formula 1 season, alongside the debut of Red Bull Ford Powertrains.
+                - link "Red Bull New York announces partnership with RWJBarnabas Health New York Red Bulls 2026-01 Red Bull New York announced a partnership agreement where RWJBarnabas Health will be naming rights partner of the club's new performance center." [ref=e600] [cursor=pointer]:
+                  - /url: https://www.newyorkredbulls.com/news/topics/press-release/
+                  - img [ref=e601]
+                  - generic [ref=e605]:
+                    - paragraph [ref=e606]: Red Bull New York announces partnership with RWJBarnabas Health
+                    - generic [ref=e607]:
+                      - generic [ref=e608]: New York Red Bulls
+                      - generic [ref=e609]: 2026-01
+                    - paragraph [ref=e610]: Red Bull New York announced a partnership agreement where RWJBarnabas Health will be naming rights partner of the club's new performance center.
+                - 'link "Red Bull Basement USA 2026: Event Info Red Bull 2026-01 Red Bull partners with Microsoft & AMD to equip participants with AI tools for innovation competition, with $100K grand prize." [ref=e612] [cursor=pointer]':
+                  - /url: https://www.redbull.com/us-en/events/red-bull-basement-usa-2026/
+                  - img [ref=e613]
+                  - generic [ref=e617]:
+                    - paragraph [ref=e618]: "Red Bull Basement USA 2026: Event Info"
+                    - generic [ref=e619]:
+                      - generic [ref=e620]: Red Bull
+                      - generic [ref=e621]: 2026-01
+                    - paragraph [ref=e622]: Red Bull partners with Microsoft & AMD to equip participants with AI tools for innovation competition, with $100K grand prize.
+            - generic [ref=e623]:
+              - generic [ref=e624]:
+                - img [ref=e625]
+                - heading "Brand Activations" [level=4] [ref=e628]
+                - generic [ref=e629]: 4 found
+              - generic [ref=e630]:
+                - link "Red Bull Basement USA 2026 2026-05 Innovation competition partnered with Microsoft & AMD focusing on AI tools and solutions, offering $100K grand prize and mentorship opportunities." [ref=e632] [cursor=pointer]:
+                  - /url: https://www.redbull.com/us-en/events/red-bull-basement-usa-2026/
+                  - img [ref=e633]
+                  - generic [ref=e637]:
+                    - paragraph [ref=e638]: Red Bull Basement USA 2026
+                    - generic [ref=e640]: 2026-05
+                    - paragraph [ref=e641]: Innovation competition partnered with Microsoft & AMD focusing on AI tools and solutions, offering $100K grand prize and mentorship opportunities.
+                - link "Red Bull Dance Your Style Qualifier Midwest USA 2026-04 Dance competition qualifier event taking place at Kauffman Center for the Performing Arts as part of Red Bull's global dance championship series." [ref=e643] [cursor=pointer]:
+                  - /url: https://www.redbull.com/us-en
+                  - img [ref=e644]
+                  - generic [ref=e648]:
+                    - paragraph [ref=e649]: Red Bull Dance Your Style Qualifier Midwest USA
+                    - generic [ref=e651]: 2026-04
+                    - paragraph [ref=e652]: Dance competition qualifier event taking place at Kauffman Center for the Performing Arts as part of Red Bull's global dance championship series.
+                - link "Red Bull Campus Clutch Valorant Tournament 2025-ongoing Platform for up-and-coming collegiate Valorant players, fostering gaming community and brand loyalty among aspiring esports athletes." [ref=e654] [cursor=pointer]:
+                  - /url: https://www.sponsorpulse.com/insights/red-bull-sponsorships-a-multi-faceted-approach-driving-brand-impact
+                  - img [ref=e655]
+                  - generic [ref=e659]:
+                    - paragraph [ref=e660]: Red Bull Campus Clutch Valorant Tournament
+                    - generic [ref=e662]: 2025-ongoing
+                    - paragraph [ref=e663]: Platform for up-and-coming collegiate Valorant players, fostering gaming community and brand loyalty among aspiring esports athletes.
+                - link "Red Bull Trailer Bars at Music Festivals 2025-ongoing Interactive spaces at major festivals like Bonnaroo and Lollapalooza allowing visitors to connect with brand and enjoy refreshments in festival atmosphere." [ref=e665] [cursor=pointer]:
+                  - /url: https://www.sponsorpulse.com/insights/red-bull-sponsorships-a-multi-faceted-approach-driving-brand-impact
+                  - img [ref=e666]
+                  - generic [ref=e670]:
+                    - paragraph [ref=e671]: Red Bull Trailer Bars at Music Festivals
+                    - generic [ref=e673]: 2025-ongoing
+                    - paragraph [ref=e674]: Interactive spaces at major festivals like Bonnaroo and Lollapalooza allowing visitors to connect with brand and enjoy refreshments in festival atmosphere.
+            - generic [ref=e675]:
+              - generic [ref=e676]:
+                - img [ref=e677]
+                - heading "Recent Campaigns" [level=4] [ref=e682]
+                - generic [ref=e683]: 4 found
+              - generic [ref=e684]:
+                - link "Red Bull Cherry Sakura Spring Edition 2026 2026-03 New seasonal flavor launch for spring 2026, inspired by Japanese cherry blossom taste, available in regular and sugar-free options." [ref=e686] [cursor=pointer]:
+                  - /url: https://whatnow.com/news/trending/popular-energy-drink-brand-will-roll-out-a-new-spring-edition-flavor-soon/
+                  - img [ref=e687]
+                  - generic [ref=e691]:
+                    - paragraph [ref=e692]: Red Bull Cherry Sakura Spring Edition 2026
+                    - generic [ref=e694]: 2026-03
+                    - paragraph [ref=e695]: New seasonal flavor launch for spring 2026, inspired by Japanese cherry blossom taste, available in regular and sugar-free options.
+                - link "Red Bull Fnatic Esports Partnership 2025-12 Expanded esports portfolio by partnering with London-based Fnatic organization, supporting rosters and content creators in League of Legends and Valorant." [ref=e697] [cursor=pointer]:
+                  - /url: https://www.rankred.com/red-bull-marketing-strategy/
+                  - img [ref=e698]
+                  - generic [ref=e702]:
+                    - paragraph [ref=e703]: Red Bull Fnatic Esports Partnership
+                    - generic [ref=e705]: 2025-12
+                    - paragraph [ref=e706]: Expanded esports portfolio by partnering with London-based Fnatic organization, supporting rosters and content creators in League of Legends and Valorant.
+                - link "Red Bull Campus Ambassador Program 2025-ongoing Initiative with over 4,000 Student Marketeers worldwide promoting Red Bull on campuses, organizing events and distributing samples to drive brand awareness." [ref=e708] [cursor=pointer]:
+                  - /url: https://www.rankred.com/red-bull-marketing-strategy/
+                  - img [ref=e709]
+                  - generic [ref=e713]:
+                    - paragraph [ref=e714]: Red Bull Campus Ambassador Program
+                    - generic [ref=e716]: 2025-ongoing
+                    - paragraph [ref=e717]: Initiative with over 4,000 Student Marketeers worldwide promoting Red Bull on campuses, organizing events and distributing samples to drive brand awareness.
+                - link "Red Bull Media House Content Strategy 2025-ongoing Comprehensive media approach treating Red Bull as entertainment company, producing high-octane lifestyle content over traditional product advertising." [ref=e719] [cursor=pointer]:
+                  - /url: https://iide.co/case-studies/marketing-strategy-of-red-bull/
+                  - img [ref=e720]
+                  - generic [ref=e724]:
+                    - paragraph [ref=e725]: Red Bull Media House Content Strategy
+                    - generic [ref=e727]: 2025-ongoing
+                    - paragraph [ref=e728]: Comprehensive media approach treating Red Bull as entertainment company, producing high-octane lifestyle content over traditional product advertising.
+            - generic [ref=e729]:
+              - generic [ref=e730]:
+                - img [ref=e731]
+                - heading "Social Presence" [level=4] [ref=e734]
+              - generic [ref=e735]:
+                - link "Instagram @redbull 33M" [ref=e736] [cursor=pointer]:
+                  - /url: https://www.instagram.com/redbull/
+                  - generic [ref=e737]:
+                    - generic [ref=e738]: Instagram
+                    - generic [ref=e739]: "@redbull"
+                  - generic [ref=e740]: 33M
+                - link "TikTok @redbull 20.7M" [ref=e741] [cursor=pointer]:
+                  - /url: https://www.tiktok.com/@redbull?lang=en
+                  - generic [ref=e742]:
+                    - generic [ref=e743]: TikTok
+                    - generic [ref=e744]: "@redbull"
+                  - generic [ref=e745]: 20.7M
+                - link "YouTube Red Bull 22M" [ref=e746] [cursor=pointer]:
+                  - /url: ""
+                  - generic [ref=e747]:
+                    - generic [ref=e748]: YouTube
+                    - generic [ref=e749]: Red Bull
+                  - generic [ref=e750]: 22M
+                - link "Twitter/X @redbull 2.08M" [ref=e751] [cursor=pointer]:
+                  - /url: ""
+                  - generic [ref=e752]:
+                    - generic [ref=e753]: Twitter/X
+                    - generic [ref=e754]: "@redbull"
+                  - generic [ref=e755]: 2.08M
+                - link "LinkedIn Red Bull 350K" [ref=e756] [cursor=pointer]:
+                  - /url: ""
+                  - generic [ref=e757]:
+                    - generic [ref=e758]: LinkedIn
+                    - generic [ref=e759]: Red Bull
+                  - generic [ref=e760]: 350K
+          - group [ref=e761]:
+            - generic "8 sources cited" [ref=e762] [cursor=pointer]
+        - generic [ref=e763]:
+          - generic [ref=e764]:
+            - heading "Monster Energy" [level=3] [ref=e765]
+            - generic [ref=e766]: 8 press items · 4 activations · 3 campaigns
+          - generic [ref=e767]:
+            - generic [ref=e768]:
+              - generic [ref=e769]:
+                - img [ref=e770]
+                - heading "Press Coverage" [level=4] [ref=e773]
+                - generic [ref=e774]: 4 found
+              - generic [ref=e775]:
+                - link "Monster benefits from surge in energy demand Food Business News 2026-03 Analysis of Monster's 2025 performance showing 27% increase in net income and continued growth in Ultra brand family." [ref=e777] [cursor=pointer]:
+                  - /url: https://www.foodbusinessnews.net/articles/29887-monster-benefits-from-surge-in-energy-demand
+                  - img [ref=e778]
+                  - generic [ref=e782]:
+                    - paragraph [ref=e783]: Monster benefits from surge in energy demand
+                    - generic [ref=e784]:
+                      - generic [ref=e785]: Food Business News
+                      - generic [ref=e786]: 2026-03
+                    - paragraph [ref=e787]: Analysis of Monster's 2025 performance showing 27% increase in net income and continued growth in Ultra brand family.
+                - 'link "Monster Energy: Fueling 2026''s Energy Drink Boom Ad-hoc News 2026-01 Industry analysis highlighting Monster''s dominant position in the energy drink market and zero-sugar expansion." [ref=e789] [cursor=pointer]':
+                  - /url: https://www.ad-hoc-news.de/boerse/news/ueberblick/monster-energy-fueling-2026-s-energy-drink-boom/68670361
+                  - img [ref=e790]
+                  - generic [ref=e794]:
+                    - paragraph [ref=e795]: "Monster Energy: Fueling 2026's Energy Drink Boom"
+                    - generic [ref=e796]:
+                      - generic [ref=e797]: Ad-hoc News
+                      - generic [ref=e798]: 2026-01
+                    - paragraph [ref=e799]: Industry analysis highlighting Monster's dominant position in the energy drink market and zero-sugar expansion.
+                - link "Monster takes on Alani Nu with female-focused energy drink Food Dive 2025-11 Coverage of Monster's upcoming FLRT female-focused energy drink line launching in early 2026." [ref=e801] [cursor=pointer]:
+                  - /url: https://www.fooddive.com/news/monster-launching-energy-drink-women-alani-nu-competitor/805779/
+                  - img [ref=e802]
+                  - generic [ref=e806]:
+                    - paragraph [ref=e807]: Monster takes on Alani Nu with female-focused energy drink
+                    - generic [ref=e808]:
+                      - generic [ref=e809]: Food Dive
+                      - generic [ref=e810]: 2025-11
+                    - paragraph [ref=e811]: Coverage of Monster's upcoming FLRT female-focused energy drink line launching in early 2026.
+                - link "Monster slammed after launching new energy drink for women Food Bible 2025-11 Coverage of social media backlash regarding Monster's FLRT female-focused energy drink announcement." [ref=e813] [cursor=pointer]:
+                  - /url: https://www.foodbible.com/news/us-food/monster-energy-women-drink-flrt-backlash-266222-20251119
+                  - img [ref=e814]
+                  - generic [ref=e818]:
+                    - paragraph [ref=e819]: Monster slammed after launching new energy drink for women
+                    - generic [ref=e820]:
+                      - generic [ref=e821]: Food Bible
+                      - generic [ref=e822]: 2025-11
+                    - paragraph [ref=e823]: Coverage of social media backlash regarding Monster's FLRT female-focused energy drink announcement.
+            - generic [ref=e824]:
+              - generic [ref=e825]:
+                - img [ref=e826]
+                - heading "Press Releases" [level=4] [ref=e829]
+                - generic [ref=e830]: 4 found
+              - generic [ref=e831]:
+                - link "Monster Beverage Reports 2025 Fourth Quarter and Full-Year Financial Results Monster Energy Company 2026-02 Monster reported 17.6% increase in fourth quarter sales to $2.13 billion and announced leadership changes including new regional CEOs." [ref=e833] [cursor=pointer]:
+                  - /url: https://investors.monsterbevcorp.com/news-releases/news-release-details/monster-beverage-reports-2025-fourth-quarter-and-full-year
+                  - img [ref=e834]
+                  - generic [ref=e838]:
+                    - paragraph [ref=e839]: Monster Beverage Reports 2025 Fourth Quarter and Full-Year Financial Results
+                    - generic [ref=e840]:
+                      - generic [ref=e841]: Monster Energy Company
+                      - generic [ref=e842]: 2026-02
+                    - paragraph [ref=e843]: Monster reported 17.6% increase in fourth quarter sales to $2.13 billion and announced leadership changes including new regional CEOs.
+                - link "Monster Energy Announced as Main Partner of WHOOP UCI Mountain Bike World Series PR Newswire 2026-02 Monster Energy becomes official energy drink partner of the WHOOP UCI Mountain Bike World Series with on-site activations at all 14 events." [ref=e845] [cursor=pointer]:
+                  - /url: https://www.prnewswire.com/news-releases/monster-energy-announced-as-main-partner-of-whoop-uci-mountain-bike-world-series-302676728.html
+                  - img [ref=e846]
+                  - generic [ref=e850]:
+                    - paragraph [ref=e851]: Monster Energy Announced as Main Partner of WHOOP UCI Mountain Bike World Series
+                    - generic [ref=e852]:
+                      - generic [ref=e853]: PR Newswire
+                      - generic [ref=e854]: 2026-02
+                    - paragraph [ref=e855]: Monster Energy becomes official energy drink partner of the WHOOP UCI Mountain Bike World Series with on-site activations at all 14 events.
+                - link "Cosm and Monster Energy Announce Multi-Year Sponsorship BevNET 2026-01 Monster Energy becomes Cosm's first-ever venue sponsor and official energy drink partner across all Cosm venues." [ref=e857] [cursor=pointer]:
+                  - /url: https://www.bevnet.com/pr/2026/01/22/cosm-and-monster-energy-announce-multiyear-sponsorship-to-fuel-fan-experience-across-all-cosm-venues
+                  - img [ref=e858]
+                  - generic [ref=e862]:
+                    - paragraph [ref=e863]: Cosm and Monster Energy Announce Multi-Year Sponsorship
+                    - generic [ref=e864]:
+                      - generic [ref=e865]: BevNET
+                      - generic [ref=e866]: 2026-01
+                    - paragraph [ref=e867]: Monster Energy becomes Cosm's first-ever venue sponsor and official energy drink partner across all Cosm venues.
+                - link "Tottenham Hotspur Announces Extension of Monster Energy Partnership Tottenham Hotspur 2026-01 Tottenham renewed their partnership with Monster Energy as their Official Energy Drink Partner until 2028." [ref=e869] [cursor=pointer]:
+                  - /url: https://www.tottenhamhotspur.com/news/2026/january/tottenham-hotspur-announces-extension-of-monster-energy-partnership/
+                  - img [ref=e870]
+                  - generic [ref=e874]:
+                    - paragraph [ref=e875]: Tottenham Hotspur Announces Extension of Monster Energy Partnership
+                    - generic [ref=e876]:
+                      - generic [ref=e877]: Tottenham Hotspur
+                      - generic [ref=e878]: 2026-01
+                    - paragraph [ref=e879]: Tottenham renewed their partnership with Monster Energy as their Official Energy Drink Partner until 2028.
+            - generic [ref=e880]:
+              - generic [ref=e881]:
+                - img [ref=e882]
+                - heading "Brand Activations" [level=4] [ref=e885]
+                - generic [ref=e886]: 4 found
+              - generic [ref=e887]:
+                - link "Monster Energy X Games League Partnership 2025-11 Three-year founding partnership making Monster the official energy drink of the X Games League starting 2026" [ref=e889] [cursor=pointer]:
+                  - /url: https://www.sportcal.com/news/monster-energy-in-as-first-founding-sponsor-of-x-games-league/
+                  - img [ref=e890]
+                  - generic [ref=e894]:
+                    - paragraph [ref=e895]: Monster Energy X Games League Partnership
+                    - generic [ref=e897]: 2025-11
+                    - paragraph [ref=e898]: Three-year founding partnership making Monster the official energy drink of the X Games League starting 2026
+                - link "SuperMotocross World Championship Title Sponsorship 2025-08 Extended partnership through 2030 with pre-race FanFest activations including Monster Barbers, tattoo artists, and VR simulators" [ref=e900] [cursor=pointer]:
+                  - /url: https://www.supermotocross.com/monster-energy-becomes-first-title-sponsor-of-the-smx-world-championship-series/
+                  - img [ref=e901]
+                  - generic [ref=e905]:
+                    - paragraph [ref=e906]: SuperMotocross World Championship Title Sponsorship
+                    - generic [ref=e908]: 2025-08
+                    - paragraph [ref=e909]: Extended partnership through 2030 with pre-race FanFest activations including Monster Barbers, tattoo artists, and VR simulators
+                - link "WHOOP UCI Mountain Bike World Series Partnership 2026-01 Main partnership with on-site activations at all 14 events beginning 2026, with branding and fan engagement" [ref=e911] [cursor=pointer]:
+                  - /url: https://www.pinkbike.com/news/monster-energy-named-main-partner-of-the-whoop-uci-mountain-bike-world-series.html
+                  - img [ref=e912]
+                  - generic [ref=e916]:
+                    - paragraph [ref=e917]: WHOOP UCI Mountain Bike World Series Partnership
+                    - generic [ref=e919]: 2026-01
+                    - paragraph [ref=e920]: Main partnership with on-site activations at all 14 events beginning 2026, with branding and fan engagement
+                - link "Cosm Immersive Venue Sponsorship 2026-01 First-ever venue sponsor for Cosm's immersive entertainment venues across Los Angeles, Dallas, Atlanta, and Detroit" [ref=e922] [cursor=pointer]:
+                  - /url: https://www.cosm.com/news/cosm-and-monster-energy-announce-multi-year-sponsorship-to-fuel-fan-experience-across-all-cosm-venues
+                  - img [ref=e923]
+                  - generic [ref=e927]:
+                    - paragraph [ref=e928]: Cosm Immersive Venue Sponsorship
+                    - generic [ref=e930]: 2026-01
+                    - paragraph [ref=e931]: First-ever venue sponsor for Cosm's immersive entertainment venues across Los Angeles, Dallas, Atlanta, and Detroit
+            - generic [ref=e932]:
+              - generic [ref=e933]:
+                - img [ref=e934]
+                - heading "Recent Campaigns" [level=4] [ref=e939]
+                - generic [ref=e940]: 3 found
+              - generic [ref=e941]:
+                - link "FLRT Female-Focused Energy Drink Launch 2026-03 Launching a new female-focused zero-sugar energy drink line with four flavors targeting the growing women's energy drink market" [ref=e943] [cursor=pointer]:
+                  - /url: https://www.dexerto.com/food/monster-energy-set-to-launch-female-focused-energy-drink-line-called-flrt-3283048/
+                  - img [ref=e944]
+                  - generic [ref=e948]:
+                    - paragraph [ref=e949]: FLRT Female-Focused Energy Drink Launch
+                    - generic [ref=e951]: 2026-03
+                    - paragraph [ref=e952]: Launching a new female-focused zero-sugar energy drink line with four flavors targeting the growing women's energy drink market
+                - link "2026 Product Innovation Pipeline 2025-09 Multiple new flavor releases including Monster Voodoo Grape Juice, Ultra Punk Punch, and Lando Norris Zero Sugar throughout 2026" [ref=e954] [cursor=pointer]:
+                  - /url: https://sporked.com/article/monster-energy-2026-releases/
+                  - img [ref=e955]
+                  - generic [ref=e959]:
+                    - paragraph [ref=e960]: 2026 Product Innovation Pipeline
+                    - generic [ref=e962]: 2025-09
+                    - paragraph [ref=e963]: Multiple new flavor releases including Monster Voodoo Grape Juice, Ultra Punk Punch, and Lando Norris Zero Sugar throughout 2026
+                - link "Early Release Marketing Strategy 2026-02 Strategic early release of new flavors at select retailers to generate buzz and test market demand before national rollout" [ref=e965] [cursor=pointer]:
+                  - /url: https://www.dbbnwa.com/articles/monster-energys-early-drink-launches-boost-strategic-marketing-momentum/
+                  - img [ref=e966]
+                  - generic [ref=e970]:
+                    - paragraph [ref=e971]: Early Release Marketing Strategy
+                    - generic [ref=e973]: 2026-02
+                    - paragraph [ref=e974]: Strategic early release of new flavors at select retailers to generate buzz and test market demand before national rollout
+            - generic [ref=e975]:
+              - generic [ref=e976]:
+                - img [ref=e977]
+                - heading "Brand Documents" [level=4] [ref=e980]
+                - generic [ref=e981]: 2 found
+              - generic [ref=e982]:
+                - link "Monster Beverage Corporation 2025 Annual Report annual-report Annual report containing financial results and business overview available through investor relations." [ref=e984] [cursor=pointer]:
+                  - /url: https://investors.monsterbevcorp.com/financial-information/annual-reports
+                  - img [ref=e985]
+                  - generic [ref=e989]:
+                    - paragraph [ref=e990]: Monster Beverage Corporation 2025 Annual Report
+                    - generic [ref=e992]: annual-report
+                    - paragraph [ref=e993]: Annual report containing financial results and business overview available through investor relations.
+                - link "Monster Beverage SEC Filings investor-deck SEC filings including 10-K annual reports and 10-Q quarterly reports available through investor relations." [ref=e995] [cursor=pointer]:
+                  - /url: https://investors.monsterbevcorp.com/financial-information/sec-filings
+                  - img [ref=e996]
+                  - generic [ref=e1000]:
+                    - paragraph [ref=e1001]: Monster Beverage SEC Filings
+                    - generic [ref=e1003]: investor-deck
+                    - paragraph [ref=e1004]: SEC filings including 10-K annual reports and 10-Q quarterly reports available through investor relations.
+            - generic [ref=e1005]:
+              - generic [ref=e1006]:
+                - img [ref=e1007]
+                - heading "Social Presence" [level=4] [ref=e1010]
+              - generic [ref=e1011]:
+                - link "Instagram @monsterenergy 11 million" [ref=e1012] [cursor=pointer]:
+                  - /url: https://www.instagram.com/monsterenergy/
+                  - generic [ref=e1013]:
+                    - generic [ref=e1014]: Instagram
+                    - generic [ref=e1015]: "@monsterenergy"
+                  - generic [ref=e1016]: 11 million
+                - link "TikTok @monsterenergy 4.7 million" [ref=e1017] [cursor=pointer]:
+                  - /url: https://www.tiktok.com/@monsterenergy
+                  - generic [ref=e1018]:
+                    - generic [ref=e1019]: TikTok
+                    - generic [ref=e1020]: "@monsterenergy"
+                  - generic [ref=e1021]: 4.7 million
+                - link "YouTube @monsterenergy 3.4 million" [ref=e1022] [cursor=pointer]:
+                  - /url: https://www.youtube.com/user/monsterenergy
+                  - generic [ref=e1023]:
+                    - generic [ref=e1024]: YouTube
+                    - generic [ref=e1025]: "@monsterenergy"
+                  - generic [ref=e1026]: 3.4 million
+                - link "Twitter/X @MonsterEnergy 2.6 million" [ref=e1027] [cursor=pointer]:
+                  - /url: https://x.com/monsterenergy
+                  - generic [ref=e1028]:
+                    - generic [ref=e1029]: Twitter/X
+                    - generic [ref=e1030]: "@MonsterEnergy"
+                  - generic [ref=e1031]: 2.6 million
+                - link "LinkedIn @monsterenergy 198,624" [ref=e1032] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/monsterenergy
+                  - generic [ref=e1033]:
+                    - generic [ref=e1034]: LinkedIn
+                    - generic [ref=e1035]: "@monsterenergy"
+                  - generic [ref=e1036]: 198,624
+          - group [ref=e1037]:
+            - generic "7 sources cited" [ref=e1038] [cursor=pointer]
+    - contentinfo [ref=e296]:
+      - paragraph [ref=e298]: Brand DNA Analyzer // Powered by AIDEN & Redbaez
+  - region "Notifications alt+T"
+  - alert [ref=e86]

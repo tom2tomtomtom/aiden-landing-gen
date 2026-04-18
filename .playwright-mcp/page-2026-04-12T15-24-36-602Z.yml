@@ -1,0 +1,62 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - link "BRAND DNA // ANALYZER" [ref=e6] [cursor=pointer]:
+          - /url: /dashboard
+          - heading "BRAND DNA // ANALYZER" [level=1] [ref=e7]
+        - generic [ref=e8]:
+          - generic [ref=e87]:
+            - generic [ref=e88]: starter
+            - generic [ref=e89]: 2/10 audits used
+          - link "Upgrade" [ref=e9] [cursor=pointer]:
+            - /url: /pricing
+            - img [ref=e10]
+            - text: Upgrade
+          - generic [ref=e90]: test@brandaudit.com
+          - button "Sign Out" [ref=e12] [cursor=pointer]:
+            - img [ref=e13]
+            - text: Sign Out
+    - main [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - img [ref=e19]
+          - generic [ref=e22]: Ad Library Scraping
+        - generic [ref=e23]:
+          - img [ref=e24]
+          - generic [ref=e26]: Color DNA Extraction
+        - generic [ref=e27]:
+          - img [ref=e28]
+          - generic [ref=e36]: AIDEN Strategic Analysis
+        - generic [ref=e37]:
+          - img [ref=e38]
+          - generic [ref=e40]: Ad Analytics Dashboard
+      - generic [ref=e42]:
+        - heading "Analyzing Brand DNA" [level=3] [ref=e104]
+        - generic [ref=e45]:
+          - generic [ref=e105]:
+            - generic [ref=e106]: Scraping Facebook ads for Coca-Cola
+            - generic [ref=e107]: 15%
+          - paragraph [ref=e110]: Querying Facebook Ad Library
+        - generic [ref=e72]:
+          - img [ref=e111]
+          - generic [ref=e113]: Collecting intelligence...
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - heading "Past Reports" [level=3] [ref=e78]:
+            - img [ref=e79]
+            - text: Past Reports
+          - generic [ref=e82]: 1 report
+        - link "Nike vs Adidas 13 Apr 2026 225s 2 brands" [ref=e92] [cursor=pointer]:
+          - /url: /report/ab225e7c-6c30-45a9-bd0c-0df88f1f70e6
+          - generic [ref=e93]:
+            - paragraph [ref=e94]: Nike vs Adidas
+            - generic [ref=e95]:
+              - generic [ref=e96]:
+                - img [ref=e97]
+                - text: 13 Apr 2026
+              - generic [ref=e100]: 225s
+              - generic [ref=e101]: 2 brands
+          - img [ref=e102]
+  - region "Notifications alt+T"
+  - alert [ref=e86]

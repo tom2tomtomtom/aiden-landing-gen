@@ -15,8 +15,8 @@ Versus ChatGPT "write me a brief" prompts: Brief Sharpener leads with critique, 
 ## 4. Where it lives
 
 - Domain: `brief-sharpener.aiden.services`
-- Repo: `tom2tomtomtom/brief-sharpener`
-- Local path: `/Users/tommyhyde/brief-sharpener`
+- Repo: `tom2tomtomtom/aiden-brief-sharpener`
+- Local path: `/Users/tommyhyde/aiden-brief-sharpener`
 - Railway: healthcheck at `/api/health`, auto-deploy from `main`
 
 ## 5. Tech stack

@@ -1,11 +1,25 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { timingSafeEqual } from 'node:crypto'
 import { createAdminClient } from '@/lib/supabase/admin'
 
 const ADMIN_SECRET = process.env.ADMIN_API_SECRET ?? ''
 
+// Constant-time bearer compare. Plain `!==` leaks the secret's matching
+// prefix length through response timing, which is exploitable over enough
+// samples. timingSafeEqual requires equal-length buffers; length mismatch
+// alone isn't useful because the secret is high-entropy random.
+function verifyBearer(authHeader: string | null, secret: string): boolean {
+  if (!authHeader || !secret) return false
+  const expected = `Bearer ${secret}`
+  const a = Buffer.from(authHeader)
+  const b = Buffer.from(expected)
+  if (a.length !== b.length) return false
+  return timingSafeEqual(a, b)
+}
+
 export async function GET(request: NextRequest) {
   const authHeader = request.headers.get('authorization')
-  if (!ADMIN_SECRET || authHeader !== `Bearer ${ADMIN_SECRET}`) {
+  if (!verifyBearer(authHeader, ADMIN_SECRET)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 

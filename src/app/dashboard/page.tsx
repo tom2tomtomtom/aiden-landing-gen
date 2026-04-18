@@ -101,12 +101,12 @@ export default async function DashboardPage() {
               >
                 Pricing
               </Link>
-              <Link
+              <a
                 href="https://www.aiden.services/dashboard"
                 className="text-white-dim text-sm hover:text-red-hot transition-colors"
               >
                 Back to Hub
-              </Link>
+              </a>
               <form action={signOut}>
                 <button
                   type="submit"

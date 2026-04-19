@@ -14,6 +14,25 @@ type OptionalVars = (typeof optionalVars)[number]
 
 type Env = Record<RequiredVars, string> & Partial<Record<OptionalVars, string>>
 
+// Canonical AIDEN hub Supabase project. Fail loudly if NEXT_PUBLIC_SUPABASE_URL
+// points anywhere else — prevents silent misrouting to a legacy/decommissioned
+// project (ref: 2026-04-19 Pitch incident, where hardcoded fallbacks
+// `|| 'https://ahenbjcauqpzsdcxeyfa.supabase.co'` silently redirected the
+// backend whenever Railway env wasn't threaded through).
+const EXPECTED_PROJECT_REFS = new Set(['bktujlufguenjytbdndn'])
+
+function validateSupabaseProjectRef(url: string): void {
+  const match = url.match(/^https:\/\/([^.]+)\.supabase\.co/)
+  const ref = match?.[1]
+  if (!ref || !EXPECTED_PROJECT_REFS.has(ref)) {
+    throw new Error(
+      `NEXT_PUBLIC_SUPABASE_URL points at an unexpected project (ref: ${ref ?? 'unparseable'}). ` +
+        `Expected one of: ${Array.from(EXPECTED_PROJECT_REFS).join(', ')}. ` +
+        'Update Railway env or add the new ref to EXPECTED_PROJECT_REFS in src/lib/env.ts.'
+    )
+  }
+}
+
 function validateEnv(): Env {
   const missing = requiredVars.filter((key) => !process.env[key])
 
@@ -22,6 +41,8 @@ function validateEnv(): Env {
       `Missing required environment variables:\n${missing.map((v) => `  - ${v}`).join('\n')}\n\nCheck your .env.local file or deployment environment configuration.`
     )
   }
+
+  validateSupabaseProjectRef(process.env.NEXT_PUBLIC_SUPABASE_URL as string)
 
   const env: Env = {} as Env
 

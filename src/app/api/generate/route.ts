@@ -9,6 +9,26 @@ import { checkRateLimit } from '@/lib/rate-limit'
 
 const client = new Anthropic()
 
+function extractJsonSubstring(text: string): string | null {
+  const fenceMatch = text.match(/```(?:json)?\s*([\s\S]*?)\s*```/)
+  const candidate = fenceMatch ? fenceMatch[1] : text
+  const startIdx = candidate.search(/[\{\[]/)
+  if (startIdx === -1) return null
+  const open = candidate[startIdx]
+  const close = open === '{' ? '}' : ']'
+  let depth = 0, inStr = false, esc = false
+  for (let i = startIdx; i < candidate.length; i++) {
+    const c = candidate[i]
+    if (esc) { esc = false; continue }
+    if (c === '\\') { esc = true; continue }
+    if (c === '"') { inStr = !inStr; continue }
+    if (inStr) continue
+    if (c === open) depth++
+    else if (c === close) { depth--; if (depth === 0) return candidate.slice(startIdx, i + 1) }
+  }
+  return null
+}
+
 // Every field below ends up in the Claude prompt. Without caps, an
 // authenticated user could deduct a single fixed token cost for /generate
 // but still inflate their Claude usage by shipping megabytes of text in
@@ -181,11 +201,11 @@ Return ONLY a raw JSON object with no markdown, no code fences, no commentary â€
       parsed = JSON.parse(textBlock.text) as GenerateResponse
     } catch {
       // Try to extract JSON from the response if it contains extra text
-      const match = textBlock.text.match(/\{[\s\S]*\}/)
-      if (!match) {
+      const extracted = extractJsonSubstring(textBlock.text)
+      if (!extracted) {
         return NextResponse.json({ error: 'Failed to parse AI response as JSON' }, { status: 500 })
       }
-      parsed = JSON.parse(match[0]) as GenerateResponse
+      parsed = JSON.parse(extracted) as GenerateResponse
     }
 
     // Derive top-level headline/subheadline from the recommended variant
